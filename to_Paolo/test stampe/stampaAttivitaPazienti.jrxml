@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final utlizzo versione della libreria JasperReports6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StampaAttivitaPazienti" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="814" leftMargin="14" rightMargin="14" topMargin="20" bottomMargin="20" uuid="7a7cf165-f898-4704-97b1-a83b0d8590fc">
+	<property name="ireport.zoom" value="1.2100000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.export.xls.white.page.background" value="false"/>
+	<property name="net.sf.jasperreports.export.xls.detect.cell.type" value="true"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#2D4262">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#2D4262">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#2D4262">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="DatasetStati" uuid="3478b858-4dc4-4439-8a9c-a148972fe7a2">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="stampaAttivitaPazienti.dataAdapter.xml"/>
+		<queryString language="xPath">
+			<![CDATA[/stampaAttivitaPazienti/testata/stati]]>
+		</queryString>
+		<field name="descrizione" class="java.lang.String">
+			<fieldDescription><![CDATA[descrizione]]></fieldDescription>
+		</field>
+		<field name="codice" class="java.lang.String">
+			<fieldDescription><![CDATA[codice]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="DatasetAttivita" uuid="de83aee0-ef9d-4b4d-b8e4-f257d6a47f86">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="stampaAttivitaPazienti.dataAdapter.xml"/>
+		<queryString language="xPath">
+			<![CDATA[/stampaAttivitaPazienti/listaAttivita/attivita]]>
+		</queryString>
+		<field name="pazienti" class="java.lang.String">
+			<fieldDescription><![CDATA[pazienti]]></fieldDescription>
+		</field>
+		<field name="dataOra" class="java.lang.String">
+			<fieldDescription><![CDATA[dataOra]]></fieldDescription>
+		</field>
+		<field name="tipologia" class="java.lang.String">
+			<fieldDescription><![CDATA[tipologia]]></fieldDescription>
+		</field>
+		<field name="nota" class="java.lang.String">
+			<fieldDescription><![CDATA[nota]]></fieldDescription>
+		</field>
+		<field name="assegnata" class="java.lang.String">
+			<fieldDescription><![CDATA[assegnata]]></fieldDescription>
+		</field>
+		<field name="aree" class="java.lang.String">
+			<fieldDescription><![CDATA[aree]]></fieldDescription>
+		</field>
+		<field name="stato" class="java.lang.String">
+			<fieldDescription><![CDATA[stato]]></fieldDescription>
+		</field>
+		<field name="eliminata" class="java.lang.String">
+			<fieldDescription><![CDATA[eliminata]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="DatasetAree" uuid="70dafdbe-1ee8-4393-a0a8-eeb1cf5b83fb">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="stampaAttivitaPazienti.dataAdapter.xml"/>
+		<queryString language="xPath">
+			<![CDATA[/stampaAttivitaPazienti/testata/aree]]>
+		</queryString>
+		<field name="descrizione" class="java.lang.String">
+			<fieldDescription><![CDATA[descrizione]]></fieldDescription>
+		</field>
+		<field name="codice" class="java.lang.String">
+			<fieldDescription><![CDATA[codice]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="dataset1" uuid="ab3ef87f-dff3-4ef0-bcc9-e52bff7e87d8">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="stampaAttivitaPazienti.dataAdapter.xml"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<subDataset name="dataset2" uuid="d16f15e7-2f4e-492e-a50d-89edf90e56e6">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="stampaAttivitaPazienti.dataAdapter.xml"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/stampaAttivitaPazienti]]>
+	</queryString>
+	<field name="logo" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/logo]]></fieldDescription>
+	</field>
+	<field name="dataDal" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/dataDal]]></fieldDescription>
+	</field>
+	<field name="dataAl" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/dataAl]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/tipo]]></fieldDescription>
+	</field>
+	<field name="area" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/area]]></fieldDescription>
+	</field>
+	<field name="gruppo" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/gruppo]]></fieldDescription>
+	</field>
+	<field name="operatore" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/operatore]]></fieldDescription>
+	</field>
+	<field name="assistiti" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/assistiti]]></fieldDescription>
+	</field>
+	<field name="dataOggi" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/dataOggi]]></fieldDescription>
+	</field>
+	<field name="includiEliminate" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/includiEliminate]]></fieldDescription>
+	</field>
+	<field name="includiNonAssegnate" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/includiNonAssegnate]]></fieldDescription>
+	</field>
+	<title>
+		<band height="115">
+			<staticText>
+				<reportElement x="110" y="20" width="38" height="15" uuid="f30d35fb-e81b-467f-a65c-d0f240181a37"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Dal:]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle" onErrorType="Icon">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="110" height="95" uuid="ed5e22e9-9967-4e4d-911f-1af427476937"/>
+				<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="110" y="0" width="704" height="20" uuid="0205c5da-4709-475a-9ad1-3f298d5c1897"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Stampa Attività Paziente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="20" width="22" height="15" uuid="ff0c79dd-287e-47c8-9081-8edfe4a943c9"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[al:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="148" y="20" width="102" height="15" uuid="8272d56d-a3a6-41d3-aede-70525ad29877"/>
+				<box leftPadding="2">
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dataDal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="272" y="20" width="132" height="15" uuid="960b19ad-4592-4095-a1b4-bf9caa6afca0"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dataAl}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="165" y="50" width="239" height="15" uuid="59e1419a-0f05-49be-a3c9-619822266c60"/>
+				<box leftPadding="2">
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="110" y="50" width="55" height="15" uuid="f9ac9494-1aa1-4e01-8789-24c08fad2c80"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tipologia:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="501" y="50" width="313" height="15" uuid="4443d7bb-75b0-46c4-aa73-a590ecc377e5"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{assistiti}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="404" y="50" width="97" height="15" uuid="e22a64f7-aad5-4a2a-b0fc-286b049dfc70"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Assistito:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="35" width="97" height="15" uuid="b00a20e4-362f-4b7f-88b2-1b217818f131"/>
+				<box leftPadding="2">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Operatore:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="501" y="35" width="313" height="15" uuid="1c72be38-37b4-43a5-8fd4-198235e6884e"/>
+				<box leftPadding="2">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{operatore}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="110" y="65" width="164" height="18" uuid="fd730621-2dd0-48ac-8fee-01d99742ee7f"/>
+				<box leftPadding="2">
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Stati Ricercati:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="501" y="20" width="313" height="15" uuid="52b3e5cd-2678-4750-a6a7-3cab4421c88f"/>
+				<box leftPadding="2">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gruppo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="404" y="20" width="97" height="15" uuid="93b5777d-9fa4-45f4-be14-e8e045e7ef3f"/>
+				<box leftPadding="2">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Gruppo:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="255" y="38" width="10" height="10" uuid="017e85d9-89d3-4be0-be01-482b5a31179d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="113" y="37" width="10" height="10" uuid="f6ec0a41-8292-41c2-899e-7ffc91cc0ea2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="272" y="35" width="132" height="15" uuid="569a3cc7-9a7c-475d-90ff-f56e753908f4"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Includi Eliminate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="35" width="119" height="15" uuid="cf74c5dd-aaf1-4204-979c-d8eeae1b19ec"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Includi non assegnate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="256" y="39" width="8" height="8" uuid="1c329a2a-d175-42b9-b2eb-1db9db429b5c">
+					<printWhenExpression><![CDATA[$F{includiEliminate}.equals( "Y" )]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="114" y="38" width="8" height="8" uuid="cfac1790-8fd2-4956-8bb0-e487394a8df2">
+					<printWhenExpression><![CDATA[$F{includiNonAssegnate}.equals( "Y" )]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="65" width="520" height="18" uuid="75badb90-38ac-4505-ba96-f7c1de83a3ad"/>
+				<box leftPadding="2" rightPadding="2">
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Aree ricercate:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="294" y="82" width="520" height="18" isPrintInFirstWholeBand="true" uuid="596a105f-e94d-4395-b8b8-958682c78174"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Horizontal" ignoreWidth="false">
+					<datasetRun subDataset="DatasetAree" uuid="51f46c6a-1c1d-4bdc-9bd6-da8887373fb9">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//testata/aree/area")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="18" width="130">
+						<textField isStretchWithOverflow="true">
+							<reportElement stretchType="RelativeToTallestObject" x="20" y="0" width="110" height="18" uuid="217f0934-735d-4ee9-bfd9-c584a5ae78f2"/>
+							<textElement verticalAlignment="Middle" markup="none"/>
+							<textFieldExpression><![CDATA[$F{descrizione}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="20" height="18" uuid="88ce949d-d8b2-46ab-8586-7e6e4d21276d"/>
+							<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA["<style backcolor='#" + $F{codice} + "' forecolor='#" + $F{codice} + "'>---</style>"]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="110" y="83" width="164" height="18" uuid="e399713f-4b81-4899-b650-16d6a14ef012"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Horizontal" ignoreWidth="false">
+					<datasetRun subDataset="DatasetStati" uuid="2e061bc5-cdec-44cd-b69a-ba0a68bb3f84">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//testata/stati/stato")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="18" width="82">
+						<textField>
+							<reportElement x="13" y="0" width="69" height="18" uuid="7cbfee47-499e-4d6b-8b8d-6b6bec4f8e71"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$F{descrizione}]]></textFieldExpression>
+						</textField>
+						<ellipse>
+							<reportElement x="4" y="7" width="4" height="4" backcolor="#000000" uuid="4efab8b1-0a47-46e0-93d8-761b067d5348"/>
+						</ellipse>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</title>
+	<detail>
+		<band height="90" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 1" style="table 1" x="0" y="0" width="814" height="90" uuid="9eac8c3a-1535-4856-8ff0-f86fd1b7d92b"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="DatasetAttivita" uuid="cff6e648-bb78-4fcd-a30d-77740cdd5927">
+						<datasetParameter name="net.sf.jasperreports.xml.source">
+							<datasetParameterExpression><![CDATA[$P{net.sf.jasperreports.xml.source}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_DATA_DOCUMENT">
+							<datasetParameterExpression><![CDATA[$P{XML_DATA_DOCUMENT}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_INPUT_STREAM">
+							<datasetParameterExpression><![CDATA[$P{XML_INPUT_STREAM}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_FILE">
+							<datasetParameterExpression><![CDATA[$P{XML_FILE}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_DATE_PATTERN">
+							<datasetParameterExpression><![CDATA[$P{XML_DATE_PATTERN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_NUMBER_PATTERN">
+							<datasetParameterExpression><![CDATA[$P{XML_NUMBER_PATTERN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_LOCALE">
+							<datasetParameterExpression><![CDATA[$P{XML_LOCALE}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_TIME_ZONE">
+							<datasetParameterExpression><![CDATA[$P{XML_TIME_ZONE}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//listaAttivita/attivita")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="8a39f935-213a-4a2e-b85c-3eb4743ef32d">
+						<jr:tableHeader style="table 1_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="15" forecolor="#FFFFFF" uuid="55fa52b7-4972-4873-97f0-8a035b76c859"/>
+								<box leftPadding="2"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font size="9" isBold="true" isItalic="false"/>
+								</textElement>
+								<text><![CDATA[Data ora Attività]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="900a30c5-f61a-42ea-b1c1-cb2be16a1171"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle" markup="styled">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA["<style isStrikeThrough='"+ $F{eliminata}.equals("Y")+ "'>"+$F{dataOra}+ "</style>"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="c9bfb4dd-3239-4a71-bae8-539efa4edd64">
+						<jr:tableHeader style="table 1_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="120" height="15" forecolor="#FFFFFF" uuid="9bf93fa6-435f-4212-8056-d1083ac9ba58"/>
+								<box leftPadding="2"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font size="9" isBold="true" isItalic="false"/>
+								</textElement>
+								<text><![CDATA[Tipologia]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="120" height="20" uuid="7397ec4d-cf66-42cf-9641-00e93114106b"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle" markup="styled">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA["<style isStrikeThrough='"+ $F{eliminata}.equals("Y")+ "'>"+$F{tipologia}+ "</style>"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="230" uuid="f786024d-de0d-4698-be14-99e42b9b9d4e">
+						<jr:tableHeader style="table 1_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="230" height="15" forecolor="#FFFFFF" uuid="07bbf036-98d9-41b8-a0fc-47e526fe3860"/>
+								<box leftPadding="2"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font size="9" isBold="true" isItalic="false"/>
+								</textElement>
+								<text><![CDATA[Descrizione]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="230" height="20" uuid="ac6f920d-fbb7-46a7-8eb7-c301618485f2"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle" markup="styled">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA["<style isStrikeThrough='"+ $F{eliminata}.equals("Y")+ "'>"+$F{nota} != null?$F{nota}: "" + "</style>"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="180" uuid="048d1348-c351-4e61-a283-919ce75255c6">
+						<jr:tableHeader style="table 1_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="180" height="15" forecolor="#FFFFFF" uuid="208ac35c-09ea-4750-8487-b89e748193a2"/>
+								<box leftPadding="2"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font size="9" isBold="true" isItalic="false"/>
+								</textElement>
+								<text><![CDATA[Assegnato a]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="180" height="20" uuid="5f04fae2-ea45-4e18-bcac-3f28ebc1fdf4"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle" markup="styled">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA["<style isStrikeThrough='"+ $F{eliminata}.equals("Y")+ "'>"+$F{assegnata} != null? $F{assegnata}: ""+ "</style>"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="f297a60e-5ec7-432e-b9cd-3ae122353d86">
+						<jr:tableHeader style="table 1_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="15" forecolor="#FFFFFF" uuid="94cc84a2-f293-4f6c-9cdf-dcaf301559b5"/>
+								<box leftPadding="2"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font size="9" isBold="true" isItalic="false"/>
+								</textElement>
+								<text><![CDATA[Area]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="100" height="20" uuid="b96b8878-31ad-45c0-bc17-386feb4c8baf"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle" markup="styled">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA["<style isStrikeThrough='"+ $F{eliminata}.equals("Y")+ "'>"+$F{aree}+ "</style>"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="93" uuid="ad924d02-eaa2-42a3-b634-f5faea89da2f">
+						<jr:tableHeader style="table 1_TH" height="16" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="93" height="15" forecolor="#FFFFFF" uuid="d271678f-7353-4a57-a28b-6a6de5248969"/>
+								<box leftPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Stato]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="93" height="20" uuid="6fd6bf07-914d-4263-b080-1dbc1d891138"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle" markup="styled">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA["<style isStrikeThrough='"+ $F{eliminata}.equals("Y")+ "'>"+$F{stato}+ "</style>"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="697" y="0" width="68" height="15" uuid="467ad72f-a42e-4bb7-b726-bcb35d1aa69b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" di"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="765" y="0" width="49" height="15" uuid="197e9623-2964-406b-8f42-b77c23076993"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="118" height="15" uuid="8df0838a-ed93-4e79-a67e-a906535d04fd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Generato il "+ new SimpleDateFormat("dd/MM/yyyy  HH:mm").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="0" width="578" height="15" uuid="670e43f4-11ab-422b-88b9-01c24af233e7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Stampa Attività Paziente"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

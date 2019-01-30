@@ -1,0 +1,181 @@
+{
+	"formInstanceValue": {
+		"id": "5ba0cf9888506e6d2b6e5825",
+		"insertUserId": 16,
+		"insertUser": "FM3",
+		"insertTimeUTC": 1537265560442,
+		"insertTime": 1537265560442,
+		"updateUserId": 16,
+		"updateUser": "FM3",
+		"updateTimeUTC": 1537265577633,
+		"updateTime": 1537265577633,
+		"organizationId": 2,
+		"valid": true,
+		"cancellationTime": null,
+		"cancellationUser": null,
+		"cancellationUserId": null,
+		"cancellationTimeUTC": null,
+		"formInstanceId": "5ba0cf9888506e6d2b6e5824",
+		"formDocument": {
+			"initData": {
+				"patient": {
+					"patientId": "324",
+					"firstName": "MARIA",
+					"lastName": "BIANCHI",
+					"sex": "F",
+					"birthDate": "1926-05-06",
+					"uniqueIdentifier": "324",
+					"phone": "",
+					"mobilePhone": "3405622357",
+					"email": "",
+					"language": "",
+					"deathDate": null,
+					"isDead": false
+				}
+			},
+			"formData":
+				{"Deliri":{"PCNSVere":{"code":"op_a","value":"SI"},"PCEPericolo":{"code":"op_b","value":"NO"},"PCQDerubando":{"code":"op_a","value":"SI"},"PCEPMTradisca":{"code":"op_b","value":"NO"},"PCOIVCasa":{"code":"op_a","value":"SI"},"PCPMAPEssere":{"code":"op_b","value":"NO"},"PCPACPropia":{"code":"op_a","value":"SI"},"PCFVAbbandonarlo":{"code":"op_b","value":"NO"},"PCITPCasa":{"code":"op_a","value":"SI"},"PCACIChiesto":{"code":"op_a","value":"SI"},"DFrequenza":{"code":"op_d","value":"Molto frequentemente","score":4},"DGravita":{"code":"op_c","value":"Marcate","score":3},"DSEPsicologico":{"code":"op_d","value":"Moderato","score":3}},"Allucinazioni":{"PAVEsistono":{"code":"op_b","value":"NO"},"PSVCSentisse":{"code":"op_b","value":"NO"},"PPPresenti":{"code":"op_a","value":"SI"},"PRVCAVedono":{"code":"op_b","value":"NO"},"PDSOSentono":{"code":"op_a","value":"SI"},"PRSCTPelle":{"code":"op_b","value":"NO"},"PRPSZCNota":{"code":"op_a","value":"SI"},"PRESInsolite":{"code":"op_b","value":"NO"},"AFrequenza":{"code":"op_d","value":"Molto frequentemente","score":4},"AGravita":{"code":"op_c","value":"Marcate","score":3},"ASEPsicologico":{"code":"op_d","value":"Moderato","score":3}},"AAggressivita":{"PPDRCollaborare":{"code":"op_a","value":"SI"},"PDIrritato":{"code":"op_b","value":"NO"},"POVCFMSuo":{"code":"op_a","value":"SI"},"PNonCollabora":{"code":"op_b","value":"NO"},"PPAComportamenti":{"code":"op_a","value":"SI"},"PGBArrabbiato":{"code":"op_b","value":"NO"},"PSPorte":{"code":"op_a","value":"SI"},"PTMCAltri":{"code":"op_b","value":"NO"},"PPACAggressivi":{"code":"op_a","value":"SI"},"AAFrequenza":{"code":"op_d","value":"Molto frequentemente","score":4},"AAGravita":{"code":"op_c","value":"Marcate","score":3},"AASEPsicologico":{"code":"op_d","value":"Moderato","score":3}},"DDisforia":{"PSETDepresso":{"code":"op_a","value":"SI"},"PHMPITristeza":{"code":"op_b","value":"NO"},"PPCFTriste":{"code":"op_a","value":"SI"},"PASFallito":{"code":"op_b","value":"NO"},"PDEPCPunito":{"code":"op_a","value":"SI"},"PSMScoraggiato":{"code":"op_b","value":"NO"},"PDEPFamiglia":{"code":"op_a","value":"SI"},"PDDMorte":{"code":"op_b","value":"NO"},"PPSDTristezza":{"code":"op_a","value":"SI"},"DDrequenza":{"code":"op_d","value":"Molto frequentemente","score":4},"DDravita":{"code":"op_c","value":"Marcate","score":3},"DDSEPsicologico":{"code":"op_d","value":"Moderato","score":3}},"Ansia":{"PMNervoso":{"code":"op_a","value":"SI"},"PDEACSFufuro":{"code":"op_b","value":"NO"},"PHMSDebole":{"code":"op_a","value":"SI"},"PHMRCorto":{"code":"op_b","value":"NO"},"PLAStomaco":{"code":"op_a","value":"SI"},"PECSRNervoso":{"code":"op_b","value":"NO"},"PDNDisturbato":{"code":"op_a","value":"SI"},"PMASAnsia":{"code":"op_b","value":"NO"},"AFrequenza":{"code":"op_d","value":"Molto frequentemente","score":4},"AGravita":{"code":"op_c","value":"Marcate","score":3},"ASEPsicologico":{"code":"op_d","value":"Moderato","score":3}},"EEuforia":{"PEFelice":{"code":"op_a","value":"SI"},"PSSEBene":{"code":"op_b","value":"NO"},"PTRRide":{"code":"op_a","value":"SI"},"PHSUmorismo":{"code":"op_b","value":"NO"},"PFEcherzi":{"code":"op_a","value":"SI"},"PCScherzi":{"code":"op_b","value":"NO"},"SVDEBravo":{"code":"op_a","value":"SI"},"PMASISTBene":{"code":"op_b","value":"NO"},"EEFrequenza":{"code":"op_d","value":"Molto frequentemente","score":4},"EEGravita":{"code":"op_c","value":"Marcate","score":3},"EESEPsicologico":{"code":"op_d","value":"Moderato","score":3}},"AIdifferenza":{"PHIVMCirconda":{"code":"op_a","value":"SI"},"PMSMASolito":{"code":"op_b","value":"NO"},"PMDIConversazione":{"code":"op_a","value":"SI"},"PCAMRSolito":{"code":"op_b","value":"NO"},"PCMFCasa":{"code":"op_a","value":"SI"},"PSMIAPAltri":{"code":"op_b","value":"NO"},"PHPIAParenti":{"code":"op_a","value":"SI"},"PMESInteressi":{"code":"op_b","value":"NO"},"PMANNuove":{"code":"op_a","value":"SI"},"AIFrequenza":{"code":"op_d","value":"Molto frequentemente","score":4},"AIGravita":{"code":"op_c","value":"Marcate","score":3},"AISEPsicologico":{"code":"op_d","value":"Moderato","score":3}},"Disinibizione":{"PSIPensaci":{"code":"op_a","value":"SI"},"PAIAConseguenza":{"code":"op_b","value":"NO"},"PPSConoscesse":{"code":"op_a","value":"SI"},"PDOIrrispettose":{"code":"op_b","value":"NO"},"PDVolgari":{"code":"op_a","value":"SI"},"PPAPrivate":{"code":"op_b","value":"NO"},"PPLiberta":{"code":"op_a","value":"SI"},"PMASDisinibizione":{"code":"op_b","value":"NO"},"DFrequenza":{"code":"op_c","value":"Frequentemente","score":3},"DGravita":{"code":"op_c","value":"Marcate","score":3},"DSEPsicologico":{"code":"op_d","value":"Moderato","score":3}},"ILabilita":{"PIAFacilita":{"code":"op_a","value":"SI"},"PHBCarattere":{"code":"op_b","value":"NO"},"PPRCambiamenti":{"code":"op_a","value":"SI"},"PPIMRabbia":{"code":"op_b","value":"NO"},"PInsofferente":{"code":"op_a","value":"SI"},"PINervoso":{"code":"op_b","value":"NO"},"PBFDSopportarlo":{"code":"op_a","value":"SI"},"PPASIrritabilita":{"code":"op_b","value":"NO"},"ILFrequenza":{"code":"op_d","value":"Molto frequentemente","score":4},"ILGravita":{"code":"op_c","value":"Marcate","score":3},"ILSEPsicologico":{"code":"op_d","value":"Moderato","score":3}},"CMAberrante":{"PCCaminare":{"code":"op_a","value":"SI"},"PCCaza":{"code":"op_b","value":"NO"},"PACRCArmadi":{"code":"op_a","value":"SI"},"PCMTVestiti":{"code":"op_b","value":"NO"},"PAParticolari":{"code":"op_a","value":"SI"},"PRCDGesti":{"code":"op_b","value":"NO"},"PAEccessivamente":{"code":"op_a","value":"SI"},"PPARipetitive":{"code":"op_b","value":"NO"},"CMAFrequenza":{"code":"op_d","value":"Molto frequentemente","score":4},"CMAGravita":{"code":"op_c","value":"Marcate","score":3},"CMASEPsicologico":{"code":"op_d","value":"Moderato","score":3}},"Sonno":{"PPDSonno":{"code":"op_a","value":"SI"},"PDAddormentarsi":{"code":"op_b","value":"NO"},"SADNotte":{"code":"op_a","value":"SI"},"VCSAttivita":{"code":"op_b","value":"NO"},"DFSvegli":{"code":"op_a","value":"SI"},"SVUCMattina":{"code":"op_b","value":"NO"},"SMPMattino":{"code":"op_a","value":"SI"},"DEDGiorno":{"code":"op_b","value":"NO"},"PPADisturbi":{"code":"op_a","value":"SI"},"SFrequenza":{"code":"op_d","value":"Molto frequentemente","score":4},"SGravita":{"code":"op_c","value":"Marcate","score":3},"SSEPsicologico":{"code":"op_d","value":"Moderato","score":3}},"DAAlimentazione":{"PPDAlimentazione":{"code":"op_a","value":"SI"},"PPAppetito":{"code":"op_b","value":"NO"},"PAApetito":{"code":"op_a","value":"SI"},"PDPeso":{"code":"op_b","value":"NO"},"PAPeso":{"code":"op_a","value":"SI"},"HCAAlimentari":{"code":"op_b","value":"NO"},"PCGRCibo":{"code":"op_a","value":"SI"},"HSSAbitudini":{"code":"op_b","value":"NO"},"PPADAppetito":{"code":"op_a","value":"SI"},"DAFrequenza":{"code":"op_d","value":"Molto frequentemente","score":4},"DAGravita":{"code":"op_c","value":"Marcate","score":3},"DASEPsicologico":{"code":"op_d","value":"Moderato","score":3}}},
+			"summaryFieldsData": [{
+				"key": "ICPCCommento",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCPat1",
+				"value": "test",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat1",
+				"value": 3,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "ICPCPat2",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat2",
+				"value": 4,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "ICPCPat3",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat3",
+				"value": 3,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "scoreICPCTotal",
+				"value": 10,
+				"isConcept": true,
+				"bundles": {
+					"it_IT": "Totale",
+					"en_GB": "Totale",
+					"es_ES": "12"
+				}
+			}],
+			"conceptFieldsData": [{
+				"key": "scoreICPCTotal",
+				"value": 10,
+				"bundles": {
+					"it_IT": "Totale",
+					"en_GB": "Totale",
+					"es_ES": "12"
+				}
+			}],
+			"metaData": []
+		},
+		"version": 1,
+		"status": "DRAFT",
+		"patient": {
+			"insertUserId": null,
+			"insertUser": null,
+			"insertTimeUTC": null,
+			"insertTime": null,
+			"updateUserId": null,
+			"updateUser": null,
+			"updateTimeUTC": null,
+			"updateTime": null,
+			"organizationId": null,
+			"valid": true,
+			"cancellationTime": null,
+			"cancellationUser": null,
+			"cancellationUserId": null,
+			"cancellationTimeUTC": null,
+			"firstName": "MARIA",
+			"lastName": "BIANCHI",
+			"sex": "F",
+			"birthDate": -1377734400000,
+			"uniqueIdentifier": "324",
+			"phone": "",
+			"mobilePhone": "3405622357",
+			"email": "",
+			"language": "",
+			"deathDate": null,
+			"isDead": false,
+			"patientId": "324",
+			"accountNumber": null
+		}
+	},
+	"urlInstance": "http://devsrv03.erossi.org:8080/HIS/fm3/#/runtime?application=HIS&extAuthToken=eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.7p8MLXJ6U2sjGKOp8Kem9aTKSYkSwGdKr3ySo-rTy93xUFMN3_oQWg.wu50_mlioYF2tH1T-SqeYg.Rak2CpdbjWOB-otmzgNYRtUhkoe70X_G-VMPf2d_6VXaaG_GzIec8-vl7vr85YfGRBbWy8I_UOXCMdGnrs065QV8qcTY5Wz-10QkRjh8ueiMtmWdKf4BDxUfQOd49pFAiWaL9Uaaw8o1yzC7zMorZlKrU1KcpOaLFHt6LO09F42fHUbu6pN6iZ0UmZodt8lR63LaKyeCQ4EA63srH5oCig.WuO6M5Ha91XjyvUGgeCNCw&formInstanceId=5ba0cf9888506e6d2b6e5824&fm_username=admin_rsa&hidePreviousVersions=true&hideValidation=true&hideTitle=true&hideExportButton=true&notifyParent=true&hidePrintButton=true",
+	"printAddInfoJson": {
+		"includeSignatures": true,
+		"logo": "logo_cavedine.png",
+		"userLogin":"Administratore",
+		"operators": [{
+			"name": "RSA AMMINISTRATORE",
+			"figuraProfessionale": "Amministratore"
+		}],
+		"signatures": [{
+			"name": "RSA AMMINISTRATORE",
+			"data": "dd/MM/YYYY HH:mm",
+			"url": "logo_cavedine.png"
+		}],
+		"patient": {
+			"patientId": "324",
+			"firstName": "MARIA",
+			"lastName": "BIANCHI",
+			"sex": "F",
+			"birthDate": "mag 6, 1926",
+			"uniqueIdentifier": "324",
+			"phone": "",
+			"mobilePhone": "3405622357",
+			"email": "",
+			"language": "",
+			"isDead": false
+		}
+	}
+}

@@ -1,0 +1,1915 @@
+<stampaRilevazioniAttivita>
+  <testata>
+    <daCartella>N</daCartella>
+    <logo>C:\Users\u08849\projects\to_Paolo\test stampe\logo.png</logo>
+    <dataDal>26/10/2018 00:00</dataDal>
+    <dataAl>26/12/2018 00:00</dataAl>
+    <tipo>Tutte</tipo>
+    <operatore>Tutti</operatore>
+    <servizio>Tutti</servizio>
+    <stato>Tutti</stato>
+    <dataOggi>26/11/2018</dataOggi>
+  </testata>
+  <rilevazioni>
+    <rilevazione>
+      <data>22/11/2018 00:01 - 23:59</data>
+      <decsrizione>rilevazione nr scariche</decsrizione>
+      <stato>Rilevato Bozza</stato>
+      <tipo>Alvo con rilevazione</tipo>
+      <servizi>
+        RSA
+        <br/>
+      </servizi>
+      <assistiti>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>ROSSI FRANCESCA - 16/02/1979</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+      </assistiti>
+      <parametri>
+        <parametro>
+          <descrizione>nr</descrizione>
+          <valore>1</valore>
+          <udm>Nr. Scariche</udm>
+        </parametro>
+      </parametri>
+      <operatori>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+      </operatori>
+    </rilevazione>
+    <rilevazione>
+      <data>22/11/2018 00:01 - 23:59</data>
+      <decsrizione>rilevazione nr scariche</decsrizione>
+      <stato>Rilevato Bozza</stato>
+      <tipo>Alvo con rilevazione</tipo>
+      <servizi>
+        RSA
+        <br/>
+      </servizi>
+      <assistiti>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>SPONTON CELESTE - 01/12/1945</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+      </assistiti>
+      <parametri>
+        <parametro>
+          <descrizione>nr</descrizione>
+          <valore>1</valore>
+          <udm>Nr. Scariche</udm>
+        </parametro>
+      </parametri>
+      <operatori>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+      </operatori>
+    </rilevazione>
+    <rilevazione>
+      <data>22/11/2018 00:01 - 23:59</data>
+      <decsrizione>rilevazione nr scariche</decsrizione>
+      <stato>Rilevato Bozza</stato>
+      <tipo>Alvo con rilevazione</tipo>
+      <servizi>
+        RSA
+        <br/>
+      </servizi>
+      <assistiti>
+        <assistito>
+          <nome>ROSSINI SERENA - 15/10/1930</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+      </assistiti>
+      <parametri>
+        <parametro>
+          <descrizione>nr</descrizione>
+          <valore>1</valore>
+          <udm>Nr. Scariche</udm>
+        </parametro>
+      </parametri>
+      <operatori>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+      </operatori>
+    </rilevazione>
+    <rilevazione>
+      <data>22/11/2018 00:01 - 23:59</data>
+      <decsrizione>rilevazione nr scariche</decsrizione>
+      <stato>Rilevato Bozza</stato>
+      <tipo>Alvo con rilevazione</tipo>
+      <servizi>
+        RSA
+        <br/>
+      </servizi>
+      <assistiti>
+        <assistito>
+          <nome>BROGIN RENZA - 15/07/1949</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+      </assistiti>
+      <parametri>
+        <parametro>
+          <descrizione>nr</descrizione>
+          <valore>1</valore>
+          <udm>Nr. Scariche</udm>
+        </parametro>
+      </parametri>
+      <operatori>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+      </operatori>
+    </rilevazione>
+    <rilevazione>
+      <data>21/11/2018 11:00 - 12:00</data>
+      <decsrizione>Test</decsrizione>
+      <stato>Rilevato Bozza</stato>
+      <tipo>Rilevazione BMI</tipo>
+      <servizi>
+        RSA
+        <br/>
+      </servizi>
+      <assistiti>
+        <assistito>
+          <nome>BIANCHI MARIA - 06/05/1926</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+      </assistiti>
+      <parametri>
+        <parametro>
+          <descrizione>Altezza</descrizione>
+          <valore>175</valore>
+          <udm>cm</udm>
+        </parametro>
+        <parametro>
+          <descrizione>BMI</descrizione>
+          <valore>2,5</valore>
+          <udm>BMI</udm>
+        </parametro>
+        <parametro>
+          <descrizione>Peso</descrizione>
+          <valore>60</valore>
+          <udm>Kg</udm>
+        </parametro>
+      </parametri>
+      <operatori>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+      </operatori>
+    </rilevazione>
+    <rilevazione>
+      <data>20/11/2018 11:00 - 12:00</data>
+      <decsrizione>Test attività</decsrizione>
+      <stato>Confermato</stato>
+      <tipo>Attività Teatrale (A)</tipo>
+      <servizi/>
+      <assistiti>
+        <assistito>
+          <nome>ROSSINI SERENA - 15/10/1930</nome>
+          <servizio>RSA</servizio>
+          <presenza>NO</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>FEDRIZZI LUISA - 28/05/1984</nome>
+          <servizio>Centro Diurno Verona</servizio>
+          <presenza>SI</presenza>
+          <partecipazione>Attiva</partecipazione>
+          <gradimento>3</gradimento>
+          <note/>
+        </assistito>
+        <assistito>
+          <nome>STRACCHI MATTEO - 04/02/1904</nome>
+          <servizio>RSA</servizio>
+          <presenza>NO</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+      </assistiti>
+      <parametri/>
+      <operatori>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+      </operatori>
+    </rilevazione>
+    <rilevazione>
+      <data>20/11/2018 12:00 - 12:10</data>
+      <decsrizione>Controllo HGT a digiuno e postprandiale XX volte alla settimana</decsrizione>
+      <stato>Confermato</stato>
+      <tipo>Rilevazione Glicemia</tipo>
+      <servizi>
+        RSA
+        <br/>
+      </servizi>
+      <assistiti>
+        <assistito>
+          <nome>MARTUSCIELLO ERNESTO - 12/06/1926</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+      </assistiti>
+      <parametri>
+        <parametro>
+          <descrizione>Glicemia</descrizione>
+          <valore>12</valore>
+          <udm>mg/dL</udm>
+        </parametro>
+      </parametri>
+      <operatori>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+      </operatori>
+    </rilevazione>
+    <rilevazione>
+      <data>19/11/2018 00:00 - 23:59</data>
+      <decsrizione>Rilevazione Alvo</decsrizione>
+      <stato>Confermato</stato>
+      <tipo>Alvo</tipo>
+      <servizi>
+        RSA
+        <br/>
+      </servizi>
+      <assistiti>
+        <assistito>
+          <nome>MARTUSCIELLO ERNESTO - 12/06/1926</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note>nella norma tutto ok</note>
+        </assistito>
+      </assistiti>
+      <parametri>
+        <parametro>
+          <descrizione>Scariche</descrizione>
+          <valore>3</valore>
+          <udm>Nr. Scariche</udm>
+        </parametro>
+      </parametri>
+      <operatori>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+      </operatori>
+    </rilevazione>
+    <rilevazione>
+      <data>12/11/2018 00:00 - 23:59</data>
+      <decsrizione>Rilevazione Alvo</decsrizione>
+      <stato>Confermato</stato>
+      <tipo>Alvo</tipo>
+      <servizi>
+        RSA
+        <br/>
+      </servizi>
+      <assistiti>
+        <assistito>
+          <nome>MARTUSCIELLO ERNESTO - 12/06/1926</nome>
+          <servizio>RSA</servizio>
+          <presenza>SI</presenza>
+          <partecipazione/>
+          <gradimento>0</gradimento>
+          <note/>
+        </assistito>
+      </assistiti>
+      <parametri>
+        <parametro>
+          <descrizione>Scariche</descrizione>
+          <valore/>
+          <udm>Nr. Scariche</udm>
+        </parametro>
+      </parametri>
+      <operatori>
+        <operatore>
+          <nome>RSA AMMINISTRATORE</nome>
+          <previsto>SI</previsto>
+          <motivo/>
+          <note/>
+        </operatore>
+      </operatori>
+    </rilevazione>
+  </rilevazioni>
+</stampaRilevazioniAttivita>

@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final utlizzo versione della libreria JasperReports6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RischioCadute" pageWidth="595" pageHeight="842" columnWidth="567" leftMargin="14" rightMargin="14" topMargin="21" bottomMargin="21" uuid="e3ba40d0-e7e2-4766-b339-60c9733e6b43">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conley"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="408"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="578"/>
+	<subDataset name="Operatori" uuid="7265e965-9a1a-4866-ac13-e912b1758530">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FM3_new_report_json\data\DataAdapterMiniMental.xml"/>
+		<queryString language="json">
+			<![CDATA[]]>
+		</queryString>
+		<field name="name" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="name"/>
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="figuraProfessionale" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="figuraProfessionale"/>
+			<fieldDescription><![CDATA[figuraProfessionale]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Firme" uuid="e1436784-bb8d-4b61-bc5c-6c588bda6172">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="cnx_miniMentalShort"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="391"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="595"/>
+		<queryString language="json">
+			<![CDATA[printAddInfoJson.signatures]]>
+		</queryString>
+		<field name="name" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="name"/>
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="data" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="data"/>
+			<fieldDescription><![CDATA[data]]></fieldDescription>
+		</field>
+		<field name="url" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="url"/>
+			<fieldDescription><![CDATA[url]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="dstPrueva" uuid="8c18aa60-f825-4164-8fd2-07a499d8185c">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="cnx_miniMentalShort"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="343"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="643"/>
+		<queryString language="json">
+			<![CDATA[formInstanceValue.formDocument.initData.patient]]>
+		</queryString>
+		<field name="patientId" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="patientId"/>
+			<fieldDescription><![CDATA[patientId]]></fieldDescription>
+		</field>
+		<field name="firstName" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="firstName"/>
+			<fieldDescription><![CDATA[firstName]]></fieldDescription>
+		</field>
+		<field name="lastName" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lastName"/>
+			<fieldDescription><![CDATA[lastName]]></fieldDescription>
+		</field>
+		<field name="sex" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="sex"/>
+			<fieldDescription><![CDATA[sex]]></fieldDescription>
+		</field>
+		<field name="birthDate" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="birthDate"/>
+			<fieldDescription><![CDATA[birthDate]]></fieldDescription>
+		</field>
+		<field name="uniqueIdentifier" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="uniqueIdentifier"/>
+			<fieldDescription><![CDATA[uniqueIdentifier]]></fieldDescription>
+		</field>
+		<field name="phone" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="phone"/>
+			<fieldDescription><![CDATA[phone]]></fieldDescription>
+		</field>
+		<field name="mobilePhone" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="mobilePhone"/>
+			<fieldDescription><![CDATA[mobilePhone]]></fieldDescription>
+		</field>
+		<field name="email" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="email"/>
+			<fieldDescription><![CDATA[email]]></fieldDescription>
+		</field>
+		<field name="language" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="language"/>
+			<fieldDescription><![CDATA[language]]></fieldDescription>
+		</field>
+		<field name="deathDate" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="deathDate"/>
+			<fieldDescription><![CDATA[deathDate]]></fieldDescription>
+		</field>
+		<field name="isDead" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="isDead"/>
+			<fieldDescription><![CDATA[isDead]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Patient" uuid="61b2b5d1-98ad-4756-9139-f1e05e2e5711">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CDS"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="465"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="521"/>
+		<queryString language="json">
+			<![CDATA[]]>
+		</queryString>
+		<field name="patientId" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.patientId]]></fieldDescription>
+		</field>
+		<field name="firstName" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.firstName]]></fieldDescription>
+		</field>
+		<field name="lastName" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.lastName]]></fieldDescription>
+		</field>
+		<field name="sex" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.sex]]></fieldDescription>
+		</field>
+		<field name="birthDate" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.birthDate]]></fieldDescription>
+		</field>
+		<field name="uniqueIdentifier" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.uniqueIdentifier]]></fieldDescription>
+		</field>
+		<field name="phone" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.phone]]></fieldDescription>
+		</field>
+		<field name="mobilePhone" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.mobilePhone]]></fieldDescription>
+		</field>
+		<field name="email" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.email]]></fieldDescription>
+		</field>
+		<field name="language" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.language]]></fieldDescription>
+		</field>
+		<field name="deathDate" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.deathDate]]></fieldDescription>
+		</field>
+		<field name="isDead" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.isDead]]></fieldDescription>
+		</field>
+		<field name="tesseraSanitaria" class="java.lang.String">
+			<fieldDescription><![CDATA[printAddInfoJson.patient.tesseraSanitaria]]></fieldDescription>
+		</field>
+		<field name="dataValutazione" class="java.lang.String">
+			<fieldDescription><![CDATA[printAddInfoJson.dataValutazione]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="includeSignatures" class="java.lang.String">
+		<fieldDescription><![CDATA[printAddInfoJson.includeSignatures]]></fieldDescription>
+	</field>
+	<field name="logo" class="java.lang.String">
+		<fieldDescription><![CDATA[printAddInfoJson.logo]]></fieldDescription>
+	</field>
+	<field name="conley" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.indice.conley]]></fieldDescription>
+	</field>
+	<field name="statoConley" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.indice.statoConley]]></fieldDescription>
+	</field>
+	<field name="userLogin" class="java.lang.String">
+		<fieldDescription><![CDATA[printAddInfoJson.userLogin]]></fieldDescription>
+	</field>
+	<field name="LMaiCapito" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.LMaiCapito.code]]></fieldDescription>
+	</field>
+	<field name="ESAgitato" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.ESAgitato.code]]></fieldDescription>
+	</field>
+	<field name="HCNMarcia" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HCNMarcia.code]]></fieldDescription>
+	</field>
+	<field name="HDGPericolo" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HDGPericolo.code]]></fieldDescription>
+	</field>
+	<field name="ECad3Mesi" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.ECad3Mesi.code]]></fieldDescription>
+	</field>
+	<field name="HMHVCaporigi" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HMHVCaporigi.code]]></fieldDescription>
+	</field>
+	<field name="indiceConley" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.indiceConley]]></fieldDescription>
+	</field>
+	<field name="scoreConleyTotale" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.scoreConleyTotale]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<image onErrorType="Icon">
+				<reportElement x="1" y="0" width="131" height="48" uuid="0b9474c1-30e2-45f8-a328-c7647b8bdf79"/>
+				<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="145" y="0" width="422" height="48" uuid="96f6139b-d1a4-462e-b4b4-2df9962d04f1"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="145" y="0" width="421" height="48" uuid="127f379b-1bf2-4cab-ab18-0699bc0ed50d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RISCHIO CADUTE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="90">
+			<componentElement>
+				<reportElement x="0" y="0" width="567" height="90" uuid="f5ed5118-26fb-4012-8d75-0e2b12cdc366">
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Patient" uuid="2bd82ac9-71f9-47e4-b200-034189b183f3">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="90" width="567">
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="120" y="58" width="190" height="15" uuid="4f95cec6-d7f5-477b-b676-a8a1cbf6af61"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{phone} != null ? $F{phone} : "" ]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="310" y="41" width="80" height="15" uuid="a6aa52ef-de44-4694-afcd-33769ee9be53"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Data di Nascita]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="120" y="24" width="190" height="15" uuid="e24e62d7-cc95-49a1-803c-c3724f0faa00"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{lastName}+ " "+ $F{firstName}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="24" width="120" height="15" uuid="eeeba47b-07f5-46ac-b92e-92742c9c9e9d"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Nome e Cognome]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="310" y="24" width="80" height="15" uuid="62d4311e-ef94-42ed-a2a1-ef83b8982c79"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Codice fiscale]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="390" y="24" width="177" height="15" uuid="e2e418c5-237c-4ba3-ac84-c1c2f2732a29"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{uniqueIdentifier}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="58" width="120" height="15" uuid="052dc754-34a9-47af-a653-5d909db9d552"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Contatto telefonico]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="390" y="58" width="177" height="15" uuid="4ce9118d-e21f-4de0-88a4-f1e1506ceac4"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{sex}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="1" width="148" height="20" uuid="c347d692-ade7-424c-af78-807420682a1e"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="10" isBold="true"/>
+							</textElement>
+							<text><![CDATA[ANAGRAFICA ASSISTITO]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="0" y="41" width="120" height="15" uuid="ff59e4c4-2478-4272-9c29-5cc9ea2c322b"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Tessera Sanitaria]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="310" y="58" width="80" height="15" uuid="8a547d0b-8526-4e25-918b-26646296b4fc"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Sesso]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="390" y="41" width="177" height="15" uuid="24895491-45d5-4f91-8770-94d45207db17"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd").parse($F{birthDate})]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="120" y="41" width="190" height="15" uuid="715ef4d2-1062-4426-b217-84590e7309d7"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{tesseraSanitaria}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="75" width="120" height="15" uuid="359829a2-219b-45b5-9bb9-606b8982c8b6"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Data di valutazione]]></text>
+						</staticText>
+						<textField isBlankWhenNull="true">
+							<reportElement x="120" y="75" width="190" height="15" uuid="90912b79-2b2a-4780-ad26-a86084ada74d"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyy").format( new SimpleDateFormat("dd/MM/yyy HH:mm").parse($F{dataValutazione}))]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="86">
+			<staticText>
+				<reportElement x="0" y="4" width="170" height="20" uuid="79658799-b657-4d38-95c9-f8e9948e931d"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Informazioni Generali]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="30" width="210" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="04e72f19-8486-4c4a-8a96-0007d64afd4b"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#2D4262"/>
+					<topPen lineWidth="0.5" lineColor="#2D4262"/>
+					<leftPen lineWidth="0.5" lineColor="#2D4262"/>
+					<bottomPen lineWidth="0.5" lineColor="#2D4262"/>
+					<rightPen lineWidth="0.5" lineColor="#2D4262"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Operatore]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="210" y="30" width="357" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="c8c728b7-d319-439d-b3a8-b3cd435407ac"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#2D4262"/>
+					<topPen lineWidth="0.5" lineColor="#2D4262"/>
+					<leftPen lineWidth="0.5" lineColor="#2D4262"/>
+					<bottomPen lineWidth="0.5" lineColor="#2D4262"/>
+					<rightPen lineWidth="0.5" lineColor="#2D4262"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Figura professionale]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="0" y="45" width="567" height="20" uuid="b52ce3cf-a948-4038-b053-8c7d4021ba11"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Operatori" uuid="f64d3f43-ffad-41e2-a680-39214056feeb">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("printAddInfoJson.operators")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="20" width="567">
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="210" y="0" width="357" height="20" uuid="1744ee0a-89a9-45a4-8fb5-8f8a6438fc8d"/>
+							<box topPadding="3" leftPadding="5">
+								<pen lineColor="#2D4262"/>
+								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+							</box>
+							<textFieldExpression><![CDATA[$F{figuraProfessionale}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="210" height="20" uuid="71e74567-a5f8-4e69-9de0-8c74a01bc413"/>
+							<box topPadding="3" leftPadding="5">
+								<pen lineColor="#2D4262"/>
+								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+							</box>
+							<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="71" width="170" height="15" uuid="3091d5ca-78dd-4d80-accf-b0415fb24e24"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Commento]]></text>
+			</staticText>
+		</band>
+		<band height="330">
+			<textField>
+				<reportElement x="1" y="1" width="349" height="15" uuid="4603f4e8-466f-454f-ad4f-4ac398314007"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Le è mai capitato di non raggiungere in tempo il bagno"]]></textFieldExpression>
+			</textField>
+			<ellipse>
+				<reportElement x="363" y="2" width="10" height="10" uuid="cc435ceb-b243-45c6-8d0b-30faa4f57f0f"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="365" y="4" width="6" height="6" backcolor="#000000" uuid="8df3bc72-5f44-4beb-a6c6-1a105e739b59">
+					<printWhenExpression><![CDATA[$F{LMaiCapito}.equals("op1a")]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement x="433" y="2" width="10" height="10" uuid="3ff4f4de-8b7f-4c54-a817-df68ec56fbb8"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="435" y="4" width="6" height="6" backcolor="#000000" uuid="a496720f-10f8-4211-b3eb-b184d5d6dbc5">
+					<printWhenExpression><![CDATA[$F{LMaiCapito}.equals("op1b")]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement x="381" y="0" width="30" height="15" uuid="70312395-d85d-4340-8c15-a9e6110306a7"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="0" width="30" height="15" uuid="1ce0c745-31ab-4f68-b41c-ee9596c96d19"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement x="363" y="24" width="10" height="10" uuid="3aae6262-9f69-4c17-ba21-123df6a42861"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="365" y="26" width="6" height="6" backcolor="#000000" uuid="91713a2c-ae0f-484d-845b-504b593eaa86">
+					<printWhenExpression><![CDATA[$F{HCNMarcia}.equals("op2a")]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement x="433" y="24" width="10" height="10" uuid="1bd57e7a-287b-423e-a99d-b40e1e333b40"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="435" y="26" width="6" height="6" backcolor="#000000" uuid="edaefc14-d3c4-4ab3-aaf5-cd72c9a22000">
+					<printWhenExpression><![CDATA[$F{HCNMarcia}.equals("op2b")]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement x="381" y="22" width="30" height="15" uuid="bda75ae4-80f1-4bd8-ac8a-37b7f0583e39"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="22" width="30" height="15" uuid="e7e82532-b63c-4db1-bc80-d109c8356c72"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1" y="22" width="349" height="15" uuid="c6229882-c786-4d7e-942c-a910df35af5c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Ha compromissione nella marcia"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="43" width="349" height="15" uuid="a53a9b17-299c-42ff-bfed-6b63297e3c90"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["E' spesso agitato"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="63" width="349" height="15" uuid="e2572721-aa3d-40da-9598-a833c7d6f571"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Ha deterioramento del giudizio e/o assenza del senso del pericolo"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="85" width="349" height="15" uuid="242ee69b-7b1e-4136-9f05-1033056d8460"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["E' caduto negli ultimi 3 mesi"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="108" width="349" height="15" uuid="faa3a813-f298-49ef-aa08-44f925253dc8"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Ha mai avuto vertigini o capogiri"]]></textFieldExpression>
+			</textField>
+			<ellipse>
+				<reportElement x="363" y="45" width="10" height="10" uuid="d3b46d38-268a-45bb-84bb-a18cbe22acf9"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="365" y="47" width="6" height="6" backcolor="#000000" uuid="5b5e267a-d2e6-44b9-9549-29629e4cf622">
+					<printWhenExpression><![CDATA[$F{ESAgitato}.equals("op3a")]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement x="433" y="45" width="10" height="10" uuid="938ed958-d6d1-4a77-8a88-2a399632cc38"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="435" y="47" width="6" height="6" backcolor="#000000" uuid="d2283a93-9691-4c75-8da1-6e11b5bc7c27">
+					<printWhenExpression><![CDATA[$F{ESAgitato}.equals("op3b")]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement x="381" y="43" width="30" height="15" uuid="68843c17-dc38-4be3-b59a-5668eefa5d47"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="43" width="30" height="15" uuid="3931ff0e-112f-4c25-b7e1-b6bb2cd98b2c"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement x="363" y="65" width="10" height="10" uuid="1ed1a800-7611-49be-ac28-6f995b1741b5"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="365" y="67" width="6" height="6" backcolor="#000000" uuid="c8e785f7-2746-42fc-b32e-8bb93bf018f4">
+					<printWhenExpression><![CDATA[$F{HDGPericolo}.equals("op4a")]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement x="433" y="65" width="10" height="10" uuid="ad641802-88b0-4365-9d65-859a40987387"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="435" y="67" width="6" height="6" backcolor="#000000" uuid="3c0f34a4-756b-4f68-bfa4-1fad8167273f">
+					<printWhenExpression><![CDATA[$F{HDGPericolo}.equals("op4b")]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement x="381" y="63" width="30" height="15" uuid="a624593f-79c8-41be-a671-5ca802c698d4"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="63" width="30" height="15" uuid="caf916d2-67e3-451d-a512-66813457e7d7"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement x="363" y="87" width="10" height="10" uuid="21f84434-68ea-48b2-b554-21487877caef"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="365" y="89" width="6" height="6" backcolor="#000000" uuid="4eacb732-9639-4a99-83b1-c01824968a19">
+					<printWhenExpression><![CDATA[$F{ECad3Mesi}.equals("op5a")]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement x="433" y="87" width="10" height="10" uuid="a408a8e5-4634-429c-ad47-1b008e9dda8d"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="435" y="89" width="6" height="6" backcolor="#000000" uuid="632ad33b-be37-4f13-884d-0ddc6e538c42">
+					<printWhenExpression><![CDATA[$F{ECad3Mesi}.equals("op5b")]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement x="381" y="85" width="30" height="15" uuid="34c2c0e0-fedd-48bd-b2d8-029a9204c53e"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="85" width="30" height="15" uuid="63fe778e-5c12-46d4-89a0-e76275d1c418"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement x="363" y="110" width="10" height="10" uuid="1c35c9ad-4282-48f8-be6a-10d1fe8bd15e"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="365" y="112" width="6" height="6" backcolor="#000000" uuid="20becd76-8a2c-4e82-aee2-44fd542d2ec4">
+					<printWhenExpression><![CDATA[$F{HMHVCaporigi}.equals("op6a")]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement x="433" y="110" width="10" height="10" uuid="7ce0152b-67d7-4a9b-84df-1a1d886bf788"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="435" y="112" width="6" height="6" backcolor="#000000" uuid="aa195af0-a451-46fb-a962-a42fdccd24e2">
+					<printWhenExpression><![CDATA[$F{HMHVCaporigi}.equals("op6b")]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement x="381" y="108" width="30" height="15" uuid="6b5e945a-2db8-49b0-929d-ab4d46718741"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="108" width="30" height="15" uuid="7e2bc930-2b9b-4fbd-9a5a-35abdd8a3b57"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="63" y="150" width="445" height="22" backcolor="#E0E0E0" uuid="2ccbe67c-55df-4bf3-8605-ff5a98dff764"/>
+				<box leftPadding="5"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["INDICE DI CONLEY"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="193" y="153" width="80" height="15" backcolor="#FFFFFF" uuid="5840301a-ef61-4d34-a464-a42c18e55b14"/>
+				<box rightPadding="5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{scoreConleyTotale}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="260" width="566" height="70" uuid="26367427-dad4-44d3-a804-2f152af24082"/>
+				<textElement markup="html"/>
+				<text><![CDATA[<b>Leggenda</b>
+<ul><li>Valori compresi tra 0 e 1 indicano un rischio minimo di caduta..</li>
+<li>I valori compresi tra 2 e 10 indicano, in progressione, un rischio di caduta da basso ad alto.</li>
+<li>Il punteggio uguale o superiore a 2 (punteggio di cut-off) identifica un paziente in condizione dirischio.</li>
+</ul>]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="283" y="153" width="211" height="15" backcolor="#FFFFFF" uuid="27b29871-d782-4422-85dc-de8a2a2b8a7c"/>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{indiceConley}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="99">
+			<printWhenExpression><![CDATA[$F{includeSignatures}  =="true"]]></printWhenExpression>
+			<staticText>
+				<reportElement x="321" y="2" width="62" height="20" uuid="6c1903c0-1094-4079-8a66-4e4a2f8f6da1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firme:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="319" y="15" width="248" height="84" uuid="a4eac71a-f5b1-4a00-a6a6-da83f2f7768a"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Firme" uuid="2d0254f8-7090-4a45-90c8-724a85669024">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("printAddInfoJson.signatures")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="84" width="248">
+						<image scaleImage="FillFrame">
+							<reportElement x="62" y="8" width="185" height="58" uuid="7fc18bf8-51ee-45d6-98ac-49ad12ebf26f">
+								<printWhenExpression><![CDATA[$F{url} != null || $F{url} != ""]]></printWhenExpression>
+							</reportElement>
+							<imageExpression><![CDATA[$F{url}]]></imageExpression>
+						</image>
+						<textField>
+							<reportElement x="62" y="23" width="185" height="26" uuid="73d05fe0-e2c1-4f8e-8083-31edabc1f930">
+								<printWhenExpression><![CDATA[$F{url} == null || $F{url} == ""]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Right" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="0" y="68" width="247" height="16" uuid="1b5e644b-9603-4bbc-9871-39cc3640c52f"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{name} + " - " + $F{data}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="482" y="19" width="53" height="19" uuid="56a8c778-fb97-4e37-9312-f0ab68274072"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pagina  "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="19" width="190" height="19" uuid="31c48700-8372-428f-829e-1a295c91d006"/>
+				<textElement verticalAlignment="Top" markup="styled">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Generato il "+ new SimpleDateFormat("dd/MM/yyyy HH:mm").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="537" y="19" width="14" height="19" uuid="91afe9a0-82e7-4633-929a-cd793bcbe147"/>
+				<textElement verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" di "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="552" y="19" width="15" height="19" uuid="727780f5-c56e-414f-ae3e-29355663bef2"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="19" width="269" height="19" uuid="bf20a5ff-4c1a-41af-9b77-a5c2c1ee3961"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Rischio Cadute"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="299" height="19" uuid="8aebe15d-1d3e-471f-9433-0e05d78c7b40"/>
+				<textElement verticalAlignment="Bottom" markup="styled">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userLogin} !=""  && $F{userLogin} !=null?  "Generato da "+$F{userLogin} +"\n": ""]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

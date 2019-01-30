@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>
+          scheda per capire il controllo degli campi summary e concept
+        </h2>
+      </div>
+      <div class="panel-body">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="form-group">
+            <label>
+              hoby @campo summary hobys
+            </label>
+            <br>
+            <input type="text" summary="hoby" ng-model="formData.hoby">
+          </div>
+          <div class="form-group">
+            <label>
+              quanti <b>song</b> ti piace oggi ? (val menore a 10) @campo concept_summary songs
+            </label>
+            <br>
+            <input type="number" concept="scoresongsTotal" summary ng-model="formData.song">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

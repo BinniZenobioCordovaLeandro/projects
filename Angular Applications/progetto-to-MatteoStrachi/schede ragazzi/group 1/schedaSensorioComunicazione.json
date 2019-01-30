@@ -1,0 +1,65 @@
+[{
+  "id": null,
+  "insertUserId": 15,
+  "insertUser": "Config FM3",
+  "insertTimeUTC": 1537351036393,
+  "insertTime": 1537351036393,
+  "updateUserId": 15,
+  "updateUser": "Config FM3",
+  "updateTimeUTC": 1537351304993,
+  "updateTime": 1537351304993,
+  "organizationId": 2,
+  "valid": true,
+  "cancellationTime": null,
+  "cancellationUser": null,
+  "cancellationUserId": null,
+  "cancellationTimeUTC": null,
+  "name": "Sensorio Comunicazione",
+  "code": "schedaSensorioComunicazione",
+  "html": "<div class=\"panel panel-primary\">\n\n  <div class=\"panel-body\" ng-click=\"selectRadio();\">\n    <div class=\"form-horizontal\">\n\n      <div class=\"col-sm-12 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-12\">Commento</label>\n          <div class=\"col-sm-12\">\n            <textarea class=\"form-control\" ng-model=\"formData.comento\" rows=\"5\"></textarea>\n            <input class=\"form-control\" summary=\"SCcomento\" ng-model=\"formData.comento\"\n                   ng-show=\"false\" type=\"text\">\n          </div>\n        </div>\n      </div>\n\n      <div class=\"col-sm-6 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-12 col-md-3\">Linguaggio (Comprensione)*</label>\n          <div class=\"col-sm-12 col-md-9\">\n            <div class=\"form-inline\">\n              <label class=\"ui-radio\" ng-click=\"formData.linguaggioCompresione={code:'op1a',score:0}\"><input\n                                                                                                                                   type=\"radio\"  ng-required=\"true\" value=\"op1a\" ng-model=\"formData.linguaggioCompresione.code\"><span>Normale</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.linguaggioCompresione={code:'op1b',score:1}\"><input\n                                                                                                                                   type=\"radio\"  ng-required=\"true\" value=\"op1b\" ng-model=\"formData.linguaggioCompresione.code\"><span>Comprende\n                solo frasi semplici</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.linguaggioCompresione={code:'op1c',score:2}\"><input\n                                                                                                                                   type=\"radio\"  ng-required=\"true\" value=\"op1c\" ng-model=\"formData.linguaggioCompresione.code\"><span>Comprensione\n                non valutabile</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.linguaggioCompresione={code:'op1d',score:3}\"><input\n                                                                                                                                   type=\"radio\"  ng-required=\"true\" value=\"op1d\" ng-model=\"formData.linguaggioCompresione.code\"><span>Non\n                comprende</span></label>\n              <input class=\"form-control\" summary=\"SCComprensione\" ng-model=\"formData.linguaggioCompresione.score\"\n                     ng-show=\"false\" type=\"text\">\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"col-sm-6 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-12 col-md-3\">Linguaggio (Produzione)*</label>\n          <div class=\"col-sm-12 col-md-9\">\n            <div class=\"form-inline\">\n              <label class=\"ui-radio\" ng-click=\"formData.linguaggioProduzione={code:'op2a',score:0}\"><input\n                                                                                                                                  type=\"radio\"  ng-required=\"true\" value=\"op2a\" ng-model=\"formData.linguaggioProduzione.code\"><span>Parla\n                normalmente</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.linguaggioProduzione={code:'op2b',score:1}\"><input\n                                                                                                                                  type=\"radio\"  ng-required=\"true\" value=\"op2b\" ng-model=\"formData.linguaggioProduzione.code\"><span>Linguaggio\n                menomato, ma esprime comunque il suo pensiero</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.linguaggioProduzione={code:'op2c',score:2}\"><input\n                                                                                                                                  type=\"radio\"  ng-required=\"true\" value=\"op2c\" ng-model=\"formData.linguaggioProduzione.code\"><span>Si\n                comprendono solo parole isolate</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.linguaggioProduzione={code:'op2d',score:3}\"><input\n                                                                                                                                  type=\"radio\"  ng-required=\"true\" value=\"op2d\" ng-model=\"formData.linguaggioProduzione.code\"><span>Non\n                si esprime</span></label>\n              <input class=\"form-control\" summary=\"SCProduzione\" ng-model=\"formData.linguaggioProduzione.score\"\n                     ng-show=\"false\" type=\"text\">\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"col-sm-6 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-12 col-md-3\">Udito*</label>\n          <div class=\"col-sm-12 col-md-9\">\n            <div class=\"form-check-inline\">\n              <label class=\"ui-radio\" ng-click=\"formData.udito={code:'op3a',score:0}\"><input\n                                                                                                                   type=\"radio\"  ng-required=\"true\" value=\"op3a\" ng-model=\"formData.udito.code\"><span>Normale</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.udito={code:'op3b',score:1}\"><input\n                                                                                                                   type=\"radio\"  ng-required=\"true\" value=\"op3b\" ng-model=\"formData.udito.code\"><span>Deficit,\n                ma udito adeguato alle necessità personali</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.udito={code:'op3c',score:2}\"><input\n                                                                                                                   type=\"radio\"  ng-required=\"true\" value=\"op3c\" ng-model=\"formData.udito.code\"><span>Grave\n                deficit non correggibile</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.udito={code:'op3d',score:3}\"><input\n                                                                                                                   type=\"radio\"  ng-required=\"true\" value=\"op3d\" ng-model=\"formData.udito.code\"><span>Sordità\n                completa</span></label>\n              <input class=\"form-control\" summary=\"SCUdito\" ng-model=\"formData.udito.score\"\n                     ng-show=\"false\" type=\"text\">\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"col-sm-6 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-12 col-md-3\">Vista*</label>\n          <div class=\"col-sm-12 col-md-9\">\n            <div class=\"form-check-inline\">\n              <label class=\"ui-radio\" ng-click=\"formData.vista={code:'op4a',score:0}\"><input\n                                                                                                                   type=\"radio\"  ng-required=\"true\" value=\"op4a\" ng-model=\"formData.vista.code\"><span>Normale</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.vista={code:'op4b',score:1}\"><input\n                                                                                                                   type=\"radio\"  ng-required=\"true\" value=\"op4b\" ng-model=\"formData.vista.code\"><span>Deficit,\n                ma vista adeguato alle necessità personali</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.vista={code:'op4c',score:2}\"><input\n                                                                                                                   type=\"radio\"  ng-required=\"true\" value=\"op4c\" ng-model=\"formData.vista.code\"><span>Grave\n                deficit non correggibile</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.vista={code:'op4d',score:3}\"><input\n                                                                                                                   type=\"radio\"  ng-required=\"true\" value=\"op4d\" ng-model=\"formData.vista.code\"><span>Cecità\n                completa</span></label>\n              <input class=\"form-control\" summary=\"SCVista\" ng-model=\"formData.vista.score\" ng-show=\"false\" type=\"text\">\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"col-sm-6 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-12 col-md-3\">PUNTEGGIO</label>\n          <div class=\"col-sm-12 col-md-2\">\n            <input class=\"form-control\" concept=\"scoreSCTotal\" summary ng-model=\"formData.scoreTotale\" type=\"text\">\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>",
+  "javascript": "var cacoloScoreTotale=function(){\n  var somma=null;\n  if(formData.linguaggioCompresione != undefined ){\n    somma+=formData.linguaggioCompresione.score;\n  }if(formData.linguaggioProduzione != undefined ){\n    somma+=formData.linguaggioProduzione.score;\n  }if(formData.udito != undefined ){\n    somma+=formData.udito.score;\n  }if(formData.vista != undefined ){\n    somma+=formData.vista.score;\n  }\n  formData.scoreTotale=somma;\n\n};\n\nregisterFunction(\"cacoloScoreTotale\",cacoloScoreTotale);\n\nvar selectRadio = function (event) {\n  cacoloScoreTotale();\n};\nregisterFunction(\"selectRadio\", selectRadio);",
+  "css": null,
+  "version": 5,
+  "status": "DRAFT",
+  "bundleValues": {
+    "it_IT": {
+      "SCComprensione": "",
+      "SCUdito": "",
+      "SCcomento": "",
+      "SCProduzione": "",
+      "SCVista": ""
+    },
+    "en_GB": {
+      "SCComprensione": "",
+      "SCUdito": "",
+      "SCcomento": "",
+      "SCProduzione": "",
+      "SCVista": ""
+    },
+    "es_ES": {
+      "SCComprensione": "",
+      "SCUdito": "",
+      "SCcomento": "",
+      "SCProduzione": "",
+      "SCVista": ""
+    },
+    "de_DE": {
+      "SCComprensione": "",
+      "SCUdito": "",
+      "SCcomento": "",
+      "SCProduzione": "",
+      "SCVista": ""
+    }
+  },
+  "templateFileName": null,
+  "templateApplications": null,
+  "repositoryEnabled": null,
+  "signatureEnabled": null,
+  "signatureNotMandatory": null,
+  "sendTxtEnabled": null,
+  "sendPrivacyEnabled": null,
+  "cda2Enabled": null,
+  "cda2Xlts": null,
+  "cancellableEnabled": null,
+  "saveAsDraftWhenInvalid": null
+}]

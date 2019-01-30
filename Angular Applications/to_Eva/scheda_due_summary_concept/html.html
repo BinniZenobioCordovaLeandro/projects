@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>
+          Ricupero di Dati dalla scheda_uno_summary_concept
+        </h2>
+      </div>
+      <div class="panel-body">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="row">
+            <div ng-show="viewData.info" class="alert alert-info">
+              <button type="button" class="close" ng-click="viewData.alert = false">&times;</button>
+              <strong>Informazione !</strong> {{viewData.infoMessage}}
+            </div>
+            <div ng-show="viewData.alert" class="alert alert-danger">
+              <button type="button" class="close" ng-click="viewData.alert = false">&times;</button>
+              <strong>Attenzione !</strong> {{viewData.alertMessage}}
+            </div>
+            <div ng-show="viewData.success" class="alert alert-success">
+              <button type="button" class="close" ng-click="viewData.success = false">&times;</button>
+              <strong>Rallegrarsi! </strong> {{viewData.successMessage}}
+            </div>
+          </div>
+          <div class="">
+            <div class="form-group">
+              <label class="form-label" for="conceptName">conceptName</label>
+              <input class="form-control" id="conceptName" type="text" ng-model="formData.conceptName" placeholder="scoresongsTotal">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="templateName">templateName</label>
+              <input class="form-control" id="templateName" type="text" ng-model="formData.templateName" placeholder="scheda_uno_summary_concept">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="templateVersion">templateVersion</label>
+              <input class="form-control" id="templateVersion" type="text" ng-model="formData.templateVersion" placeholder="1">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="dateFrom">dateFrom</label>
+              <input class="form-control" id="dateFrom" type="date" ng-model="formData.dateFrom" placeholder="2018-10-09">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="dateTo">dateTo</label>
+              <input class="form-control" id="dateTo" type="date" ng-model="formData.dateTo" placeholder="2018-10-10">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="patientId">patientId</label>
+              <input class="form-control" id="patientId" type="text" ng-model="formData.patientId" placeholder="29">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="includeDraft">includeDraft</label>&nbsp;&nbsp;
+              <input class="form-control" id="includeDraft" type="text" ng-model="formData.includeDraft" placeholder="true">
+              <!-- <label class="ui-checkbox"><input id="includeDraft" type="checkbox" value="true" ng-model="formData.includeDraft" placeholder="true"><span>includeDraft</span></label> -->
+            </div>
+          </div>
+
+        </div>
+        <div class="panel-footer">
+
+          <div class="form-group">
+            <button class="btn btn-primary" type="button" name="button" ng-click="findFMConceptInstanceValue()">findFMConceptInstanceValue()</button>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-secondary" type="button" name="button" ng-click="getLastConcept()">getLastConcept()</button>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success" type="button" name="button" ng-click="findFMConceptValue()">findFMConceptValue()</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsonDataAdapter class="net.sf.jasperreports.data.json.JsonDataAdapterImpl">
+  <name>scheda-ecocolor-doppler-vasi-collo 2 dataAdapter</name>
+  <dataFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="repositoryDataLocation">
+    <location>scheda-ecocolor-doppler-vasi-collo2(3).json</location>
+  </dataFile>
+  <language>json</language>
+  <useConnection>true</useConnection>
+  <timeZone xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://java.sun.com" xsi:type="java:java.lang.String">Europe/Berlin</timeZone>
+  <locale xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://java.sun.com" xsi:type="java:java.lang.String">it_IT</locale>
+  <selectExpression></selectExpression>
+  <datePattern>yyyy-MM-dd'T'HH:mm:ss.SSSZ</datePattern>
+</jsonDataAdapter>

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final utlizzo versione della libreria JasperReports6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sottoReport.sezioneAssicurato" pageWidth="545" pageHeight="842" columnWidth="545" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4fc08a0b-07e1-4635-985e-14da673055c9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="INAIL\inail.dataAdapter.xml"/>
+	<style name="Style_TittlePrincipale" mode="Opaque" backcolor="#BFC9CA">
+		<pen lineStyle="Solid"/>
+		<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+	</style>
+	<style name="Style_TittleSecondari" mode="Opaque" backcolor="#D5DBDB">
+		<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+	</style>
+	<style name="Style_tittle_testo" mode="Opaque" backcolor="#EAEDED">
+		<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+			<pen lineColor="#F1F0F7"/>
+			<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+			<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+		</box>
+	</style>
+	<style name="Style_testo" mode="Opaque">
+		<pen lineColor="#F1F0F7"/>
+		<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+			<pen lineColor="#F1F0F7"/>
+			<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+			<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+		</box>
+	</style>
+	<queryString language="json">
+		<![CDATA[.]]>
+	</queryString>
+	<field name="tipo.certificato" class="java.lang.String">
+		<fieldDescription><![CDATA[cerType]]></fieldDescription>
+	</field>
+	<field name="per.cognome" class="java.lang.String">
+		<fieldDescription><![CDATA[perLastName]]></fieldDescription>
+	</field>
+	<field name="per.nome" class="java.lang.String">
+		<fieldDescription><![CDATA[perFirstName]]></fieldDescription>
+	</field>
+	<field name="per.sesso" class="java.lang.String">
+		<fieldDescription><![CDATA[perGender]]></fieldDescription>
+	</field>
+	<field name="per.nato.comune" class="java.lang.String">
+		<fieldDescription><![CDATA[perBirthPlace.description]]></fieldDescription>
+	</field>
+	<field name="per.nato.provincia" class="java.lang.String">
+		<fieldDescription><![CDATA[perBirthPlace.province.description]]></fieldDescription>
+	</field>
+	<field name="per.nato.data" class="java.lang.String">
+		<fieldDescription><![CDATA[perBirthDate]]></fieldDescription>
+	</field>
+	<field name="per.nato.nazionalita" class="java.lang.String">
+		<fieldDescription><![CDATA[perNationality.description]]></fieldDescription>
+	</field>
+	<field name="per.domicilio.comune" class="java.lang.String">
+		<fieldDescription><![CDATA[perHMunicipality.description]]></fieldDescription>
+	</field>
+	<field name="per.domicilio.provincia" class="java.lang.String">
+		<fieldDescription><![CDATA[perHMunicipality.province.description]]></fieldDescription>
+	</field>
+	<field name="per.domicilio.capitale" class="java.lang.String">
+		<fieldDescription><![CDATA[perHHealthDistrict]]></fieldDescription>
+	</field>
+	<field name="per.domicilio.indirizzo" class="java.lang.String">
+		<fieldDescription><![CDATA[perHAddress]]></fieldDescription>
+	</field>
+	<field name="per.domicilio.numero.civico" class="java.lang.String">
+		<fieldDescription><![CDATA[perHAddressNumber]]></fieldDescription>
+	</field>
+	<field name="per.ISTAT" class="java.lang.String">
+		<fieldDescription><![CDATA[perIstat]]></fieldDescription>
+	</field>
+	<field name="per.ASL" class="java.lang.String">
+		<fieldDescription><![CDATA[perHHealthDistrict]]></fieldDescription>
+	</field>
+	<field name="per.fiscale" class="java.lang.String">
+		<fieldDescription><![CDATA[perUniqueIdentifier]]></fieldDescription>
+	</field>
+	<field name="per.telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[perTel1Number]]></fieldDescription>
+	</field>
+	<field name="per.cellulare" class="java.lang.String">
+		<fieldDescription><![CDATA[perTel2Number]]></fieldDescription>
+	</field>
+	<field name="per.assenza" class="java.lang.String">
+		<fieldDescription><![CDATA[perAbsent]]></fieldDescription>
+	</field>
+	<field name="evento.avenuto.data" class="java.lang.String">
+		<fieldDescription><![CDATA[evtDate]]></fieldDescription>
+	</field>
+	<field name="evento.avenuto.comune" class="java.lang.String">
+		<fieldDescription><![CDATA[evtMunicipality.description]]></fieldDescription>
+	</field>
+	<field name="riservato.datore.cognome" class="java.lang.String">
+		<fieldDescription><![CDATA[empCompanyName]]></fieldDescription>
+	</field>
+	<field name="riservato.datore.indirizzo" class="java.lang.String">
+		<fieldDescription><![CDATA[empCompanyAddress]]></fieldDescription>
+	</field>
+	<field name="riservato.datore.numero.civico" class="java.lang.String">
+		<fieldDescription><![CDATA[empCompanyAddressNumber]]></fieldDescription>
+	</field>
+	<field name="riservato.datore.comune" class="java.lang.String">
+		<fieldDescription><![CDATA[empMunicipality.description]]></fieldDescription>
+	</field>
+	<field name="riservato.settore.lavorativo" class="java.lang.String">
+		<fieldDescription><![CDATA[empBranch]]></fieldDescription>
+	</field>
+	<field name="riservato.attivitalavorativa.attuale" class="java.lang.String">
+		<fieldDescription><![CDATA[evtTask]]></fieldDescription>
+	</field>
+	<field name="riservato.attivitalavorativa.precedente" class="java.lang.String">
+		<fieldDescription><![CDATA[evtPreviousTasks]]></fieldDescription>
+	</field>
+	<field name="riservato.descrizione.cause" class="java.lang.String">
+		<fieldDescription><![CDATA[evtCircumstances]]></fieldDescription>
+	</field>
+	<field name="riservato.assicurato.abbandonato.giorno" class="java.lang.String">
+		<fieldDescription><![CDATA[evtDatehourLeave]]></fieldDescription>
+	</field>
+	<field name="riservato.assicurato.abbandonato.ore" class="java.lang.String">
+		<fieldDescription><![CDATA[evtDatehourLeave]]></fieldDescription>
+	</field>
+	<field name="riservato.data" class="java.lang.String">
+		<fieldDescription><![CDATA[evtDate]]></fieldDescription>
+	</field>
+	<field name="per.diagnosi" class="java.lang.String">
+		<fieldDescription><![CDATA[cerDiagnosis]]></fieldDescription>
+	</field>
+	<field name="per.prognosi.giornodal" class="java.lang.String">
+		<fieldDescription><![CDATA[cerDateFrom]]></fieldDescription>
+	</field>
+	<field name="per.prognosi.gionofinno" class="java.lang.String">
+		<fieldDescription><![CDATA[cerDateTo]]></fieldDescription>
+	</field>
+	<field name="assicurato.sintesi" class="java.lang.String">
+		<fieldDescription><![CDATA[cerObjexamination]]></fieldDescription>
+	</field>
+	<field name="assicurato.diagnosi" class="java.lang.String">
+		<fieldDescription><![CDATA[cerDiagnosis]]></fieldDescription>
+	</field>
+	<field name="assicurato.accertamenti" class="java.lang.String">
+		<fieldDescription><![CDATA[evtVerifications]]></fieldDescription>
+	</field>
+	<field name="assicurato.prescrizioni" class="java.lang.String">
+		<fieldDescription><![CDATA[evtPrescriptions]]></fieldDescription>
+	</field>
+	<field name="assicurato.esami" class="java.lang.String">
+		<fieldDescription><![CDATA[cerExams]]></fieldDescription>
+	</field>
+	<field name="assicurato.altro" class="java.lang.String">
+		<fieldDescription><![CDATA[cerOtherexams]]></fieldDescription>
+	</field>
+	<field name="assicurato.presume.invalidita.pemanente" class="java.lang.String">
+		<fieldDescription><![CDATA[cerPermanenthandicap]]></fieldDescription>
+	</field>
+	<field name="assicurato.prognosi.riservata" class="java.lang.String">
+		<fieldDescription><![CDATA[cerPrognosisType]]></fieldDescription>
+	</field>
+	<field name="assicurato.pericolo.vita" class="java.lang.String">
+		<fieldDescription><![CDATA[cerLifethreat]]></fieldDescription>
+	</field>
+	<field name="assicurato.caso.mortale" class="java.lang.String">
+		<fieldDescription><![CDATA[cerDeadlyCase]]></fieldDescription>
+	</field>
+	<field name="assicurato.disposta.autopsia" class="java.lang.String">
+		<fieldDescription><![CDATA[cerAutopsyRequested]]></fieldDescription>
+	</field>
+	<field name="assicurato.nessuna.delle.precedenti" class="java.lang.String">
+		<fieldDescription><![CDATA[cerPrognosisType]]></fieldDescription>
+	</field>
+	<field name="assicurato.ricovero.ospedaliero" class="java.lang.String">
+		<fieldDescription><![CDATA[cerHospital]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.postumi" class="java.lang.String">
+		<fieldDescription><![CDATA[evtHasConsequences]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.postumi.quali" class="java.lang.String">
+		<fieldDescription><![CDATA[evtConsequencesDescription]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.invalido.civile" class="java.lang.String">
+		<fieldDescription><![CDATA[cerDisabled]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.pensionato.inps" class="java.lang.String">
+		<fieldDescription><![CDATA[cerRetired]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.altro" class="java.lang.String">
+		<fieldDescription><![CDATA[certificateOther]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.osservazione" class="java.lang.String">
+		<fieldDescription><![CDATA[cerObservations]]></fieldDescription>
+	</field>
+	<field name="assicurato.luogo" class="java.lang.String">
+		<fieldDescription><![CDATA[cerMunicipality.description]]></fieldDescription>
+	</field>
+	<field name="assicurato.dataRilascio" class="java.lang.String">
+		<fieldDescription><![CDATA[cerReleaseDate]]></fieldDescription>
+	</field>
+	<field name="assicurato.codiceMedico.presidioSanitario" class="java.lang.String">
+		<fieldDescription><![CDATA[doctor.code]]></fieldDescription>
+	</field>
+	<field name="assicurato.descrizione" class="java.lang.String">
+		<fieldDescription><![CDATA[doctor.descriptions]]></fieldDescription>
+	</field>
+	<field name="assicurato.medico.codiceFiscale" class="java.lang.String">
+		<fieldDescription><![CDATA[doctor.taxCode]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="73" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="4" width="545" height="69" uuid="0fda6f2c-e1a3-4fb3-8b8a-9a2559946653"/>
+				<staticText>
+					<reportElement style="Style_TittlePrincipale" x="0" y="0" width="545" height="20" uuid="317cbf3b-21dd-419b-9af1-a24cfd274db9"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[RISERVATO ALL'ASICURATO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Style_TittleSecondari" x="0" y="30" width="545" height="15" uuid="5c065c31-b0ef-4f28-b761-75e95495ae3d"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Datore di lavoro attuale]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="49" width="545" height="10" uuid="aede95fb-7162-4097-b63e-3701bcf7a0e8"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Cognome e nome o ragione sociale]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="59" width="545" height="10" uuid="1e9fb1c5-2211-4fad-ba3c-1467cab5deb5"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{riservato.datore.cognome}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="4" width="545" height="20" uuid="2cc3f976-3825-4949-992a-ab844151dbe3"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="430" height="10" uuid="0976c0f6-6486-4c40-8621-5c740be26f2a"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{riservato.datore.indirizzo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="430" height="10" uuid="fedfd7f5-7015-4b52-a1f8-e01e43dab09d"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Indirizzo (via, piazza, ecc.)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="440" y="10" width="105" height="10" uuid="d355964d-a1e3-47bb-a57a-c32853b84d8f"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{riservato.datore.numero.civico}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="440" y="0" width="105" height="10" uuid="f678c812-8c22-4b8b-ab35-93452602cd44"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Numero Civico]]></text>
+				</staticText>
+			</frame>
+		</band>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="4" width="545" height="20" uuid="b4ecf63b-a0ff-4416-9666-9e5453c3bcdc"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="545" height="10" uuid="ab6a509b-fd4e-4f40-a039-0ecef31bde58"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{riservato.datore.comune}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="545" height="10" uuid="c0cb0f11-91d8-4096-8c5a-1f06fc459b1d"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Comune]]></text>
+				</staticText>
+			</frame>
+		</band>
+		<band height="39">
+			<frame>
+				<reportElement x="0" y="10" width="545" height="29" uuid="fb40c7c9-5aa8-4cc3-9188-793eac75c732"/>
+				<staticText>
+					<reportElement style="Style_TittleSecondari" x="0" y="0" width="545" height="15" uuid="c0e9eb86-7a9d-45ec-801d-caac49b94887"/>
+					<textElement>
+						<font size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Settore lavorativo]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="10" y="18" width="8" height="8" uuid="a460a440-7ffb-4cec-bc47-dee9d8fbe68a"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="12" y="20" width="4" height="4" backcolor="#000000" uuid="edb80e9c-8321-446e-89a8-dfdf16512f52">
+						<printWhenExpression><![CDATA[$F{riservato.settore.lavorativo}.equals("I")]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="92" y="18" width="8" height="8" uuid="de37e1e4-0ccb-4ce6-8056-a1f354b46866"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="94" y="20" width="4" height="4" backcolor="#000000" uuid="a1afc890-05ab-473c-bae5-c2174f025d7d">
+						<printWhenExpression><![CDATA[$F{riservato.settore.lavorativo}.equals("A")]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="510" y="15" width="30" height="14" uuid="a960c05f-0835-4eeb-bb32-4052251814ce"/>
+					<box padding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Altro]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="410" y="15" width="70" height="14" uuid="a59f1989-e5b6-4593-a245-c2f21e71bfb9"/>
+					<box padding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Servizi o terzario]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="280" y="15" width="100" height="14" uuid="7e1ccf4f-87fb-4dd7-90e6-447c4c322c1b"/>
+					<box padding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Pubblica amministrazione]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="190" y="15" width="60" height="14" uuid="07d99b48-9982-4b2f-9379-8bd1eaa89fb0"/>
+					<box padding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Artigianato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="100" y="15" width="60" height="14" uuid="eac02716-fe24-4bb8-96c8-ea456a7799d6"/>
+					<box padding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Industria]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="18" y="15" width="60" height="14" uuid="cb3f7255-b1b7-4f4e-aacf-82ebd3139a0f"/>
+					<box padding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Agricoltura]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="182" y="18" width="8" height="8" uuid="03d3c418-2b3a-47f0-b67a-81a961ddea7b"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="184" y="20" width="4" height="4" backcolor="#000000" uuid="c45d6375-29b9-42fd-8d43-f350f8e99a15">
+						<printWhenExpression><![CDATA[$F{riservato.settore.lavorativo}.equals("S")]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="272" y="18" width="8" height="8" uuid="c04cbbf8-2f53-410c-9998-bfe3e962705a"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="402" y="18" width="8" height="8" uuid="151e16ef-3c6a-42b4-b73a-aae57368e6db"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="502" y="18" width="8" height="8" uuid="e42e3f21-e752-48f9-8bf5-b7c16564cf76"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="274" y="20" width="4" height="4" backcolor="#000000" uuid="aa7a15cd-f9ce-4de3-b1dd-97e6e9fb4491">
+						<printWhenExpression><![CDATA[$F{riservato.settore.lavorativo}.equals("X")]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="404" y="20" width="4" height="4" backcolor="#000000" uuid="19c7a5cc-a07f-49a2-b8e4-a002631a42b1">
+						<printWhenExpression><![CDATA[$F{riservato.settore.lavorativo}.equals("Y")]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="504" y="20" width="4" height="4" backcolor="#000000" uuid="d99a6069-2c0a-43eb-9357-6ba354b54cd3">
+						<printWhenExpression><![CDATA[$F{riservato.settore.lavorativo}.equals("Z")]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+			</frame>
+		</band>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="4" width="545" height="20" uuid="1c3792ab-91be-4587-aedc-fa1206f013de"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="545" height="10" uuid="707a2ac5-3e1d-4c16-9f16-eb69cf3dab1f"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Atiività lavorativa attuale (mansione)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="545" height="10" uuid="6c5a5cd9-b5b2-44cd-b1d4-982d5142d9f8"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{riservato.attivitalavorativa.attuale}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="4" width="545" height="20" uuid="dad27147-144b-4f39-8330-a16d5e1096ea"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="545" height="10" uuid="7a21c275-779c-4d02-80fc-97d6d5f6dbff"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Attività lavorative precedente svolte]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="545" height="10" uuid="5a613763-deef-4747-b271-a947a4898f1c"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{riservato.attivitalavorativa.precedente}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="4" width="545" height="20" uuid="7ab56524-9423-4c09-9160-a0ad5ed99c72"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="545" height="10" uuid="f35be249-58e6-4c70-aaf7-7fa884c92601"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Descrizione delle cause e circostanze dell'infortunio]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="545" height="10" uuid="d1941652-47f5-4972-812a-9fa639784a17"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{riservato.descrizione.cause}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="78">
+			<frame>
+				<reportElement x="0" y="4" width="545" height="70" uuid="03029ca5-69c0-486a-ab8c-c86bf8061fa4"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="291" y="60" width="254" height="10" uuid="8894aae4-fc7c-4cf3-b356-4315381e334b"/>
+					<textElement>
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[L'assicurato : ..................................................................................................]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Style_tittle_testo" x="0" y="60" width="210" height="10" uuid="eae2ed19-268e-42b7-9baf-12624a9c7e77"/>
+					<textElement>
+						<font size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["DATA : "+String.valueOf(new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.text.SimpleDateFormat("yyyyMMdd").parse($F{riservato.data})))]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="545" height="10" uuid="58640510-9e09-4b66-a34b-69d2ffc0b815"/>
+					<textElement>
+						<font size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["L'assicurato dichiara di aver abbandonato il lavoro il "+String.valueOf(new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.text.SimpleDateFormat("yyyyMMdd").parse($F{riservato.assicurato.abbandonato.giorno})))+" alle "+String.valueOf(new java.text.SimpleDateFormat("HH:mm").format(new java.text.SimpleDateFormat("yyyyMMddHHmm").parse($F{riservato.assicurato.abbandonato.ore})))]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,184 @@
+{
+	"formInstanceValue": {
+		"id": "5ba0cf9888506e6d2b6e5825",
+		"insertUserId": 16,
+		"insertUser": "FM3",
+		"insertTimeUTC": 1537265560442,
+		"insertTime": 1537265560442,
+		"updateUserId": 16,
+		"updateUser": "FM3",
+		"updateTimeUTC": 1537265577633,
+		"updateTime": 1537265577633,
+		"organizationId": 2,
+		"valid": true,
+		"cancellationTime": null,
+		"cancellationUser": null,
+		"cancellationUserId": null,
+		"cancellationTimeUTC": null,
+		"formInstanceId": "5ba0cf9888506e6d2b6e5824",
+		"formDocument": {
+			"initData": {
+				"patient": {
+					"patientId": "324",
+					"firstName": "MARIA",
+					"lastName": "BIANCHI",
+					"sex": "F",
+					"birthDate": "1926-05-06",
+					"uniqueIdentifier": "324",
+					"phone": "3405622357",
+					"mobilePhone": "",
+					"email": "",
+					"language": "",
+					"deathDate": null,
+					"isDead": false
+				}
+			},
+			"formData": 
+{"AFamiliare":"gagshdagsd","AFisiologica":"213","Allergie":"3","Diagnosi":"4","MCardiovasc":{"MCardiovascolari":{"code":"op_a","value":"SI","valvulopatia":true,"cardoIschemica":true,"ScompCardiac":true,"fibrilArteriale":true,"paceMaker":true},"MCardiovascolariAltro":"1","SVascolareAltro":"2","EmolinfopatieAltro":"3","ARespiratorioAltro":"4","GatroentericoAltro":"5","RGUrinarioAltro":"6","MSeCuteAltro":"7","EMetabolicoAltro":"8","NeurologicoAltro":"9","PsichiatricoAltro":"10","ODSensoAltro":"11","SVascolare":{"code":"op_a","value":"SI","ipertArteriosa":true,"AterrCarotidea":true,"AAInferioi":true},"Emolinfopatie":{"code":"op_a","value":"SI","Anemia":true,"Neoplasie":true},"ARespiratorio":{"code":"op_a","value":"SI","BPCO":true,"EPolmonare":true},"Gatroenterico":{"code":"op_a","value":"SI","Diverticol":true,"Neoplasie":true,"Colelitiasi":true,"Epatite":true},"RGUrinario":{"code":"op_a","value":"SI","InsRenal":true,"Litiasi":true,"Neoplasie":true,"IProtatisca":true,"PUterino":true,"PVescicale":true},"MSeCute":{"code":"op_a","value":"SI","OOsteoporosi":true,"Fratture":true,"msNeoplasie":true},"EMetabolico":{"code":"op_a","value":"SI","Tireopatia":true,"Diabete":true,"Dislipidemia":true},"Neurologico":{"code":"op_a","value":"SI","Parkinson":true,"IctusTIA":true,"Epilessia":true,"nNeoplasie":true},"Psichiatrico":{"code":"op_a","value":"SI","Ansia":true,"Depressione":true,"Psicosi":true},"ODSenso":{"code":"op_a","value":"SI","DVisivo":true,"DUditivo":true,"odsNeoplasie":true,"Olfattivo":true}},"FDRischio":{"FDSsigaretta":"1","ADAlcolici":"2","Familiarita":"3","EProfessionale":"4","Scolarita":"5","frDiabete":"6","IArteriosa":"7","EsProfessionale":"8","DislipObesita":"9","DDSonno":"10","ApneeNotturne":"11"},"IMedAltro":"1","esamObiettivo":"2","TerapIAtto":"5"}
+			
+,
+			"summaryFieldsData": [{
+				"key": "ICPCCommento",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCPat1",
+				"value": "test",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat1",
+				"value": 3,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "ICPCPat2",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat2",
+				"value": 4,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "ICPCPat3",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat3",
+				"value": 3,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "scoreICPCTotal",
+				"value": 10,
+				"isConcept": true,
+				"bundles": {
+					"it_IT": "Totale",
+					"en_GB": "Totale",
+					"es_ES": "12"
+				}
+			}],
+			"conceptFieldsData": [{
+				"key": "scoreICPCTotal",
+				"value": 10,
+				"bundles": {
+					"it_IT": "Totale",
+					"en_GB": "Totale",
+					"es_ES": "12"
+				}
+			}],
+			"metaData": []
+		},
+		"version": 1,
+		"status": "DRAFT",
+		"patient": {
+			"insertUserId": null,
+			"insertUser": null,
+			"insertTimeUTC": null,
+			"insertTime": null,
+			"updateUserId": null,
+			"updateUser": null,
+			"updateTimeUTC": null,
+			"updateTime": null,
+			"organizationId": null,
+			"valid": true,
+			"cancellationTime": null,
+			"cancellationUser": null,
+			"cancellationUserId": null,
+			"cancellationTimeUTC": null,
+			"firstName": "MARIA",
+			"lastName": "BIANCHI",
+			"sex": "F",
+			"birthDate": -1377734400000,
+			"uniqueIdentifier": "324",
+			"phone": "",
+			"mobilePhone": "3405622357",
+			"email": "",
+			"language": "",
+			"deathDate": null,
+			"isDead": false,
+			"patientId": "324",
+			"accountNumber": null
+		}
+	},
+	"urlInstance": "http://devsrv03.erossi.org:8080/HIS/fm3/#/runtime?application=HIS&extAuthToken=eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.7p8MLXJ6U2sjGKOp8Kem9aTKSYkSwGdKr3ySo-rTy93xUFMN3_oQWg.wu50_mlioYF2tH1T-SqeYg.Rak2CpdbjWOB-otmzgNYRtUhkoe70X_G-VMPf2d_6VXaaG_GzIec8-vl7vr85YfGRBbWy8I_UOXCMdGnrs065QV8qcTY5Wz-10QkRjh8ueiMtmWdKf4BDxUfQOd49pFAiWaL9Uaaw8o1yzC7zMorZlKrU1KcpOaLFHt6LO09F42fHUbu6pN6iZ0UmZodt8lR63LaKyeCQ4EA63srH5oCig.WuO6M5Ha91XjyvUGgeCNCw&formInstanceId=5ba0cf9888506e6d2b6e5824&fm_username=admin_rsa&hidePreviousVersions=true&hideValidation=true&hideTitle=true&hideExportButton=true&notifyParent=true&hidePrintButton=true",
+	"printAddInfoJson": {
+		"includeSignatures": true,
+		"dataValutazione":"22/10/2015 13:16",
+		"userLogin":"RSA AMMINISTRATORE fSA AMMINISTRATeRE",
+		"logo": "logo_cavedine.png",
+		"operators": [{
+			"name": "RSA AMMINISTRATORE fSA AMMINISTRATeRE",
+			"figuraProfessionale": "Amministratore"
+		}],
+		"signatures": [{
+			"name": "RSA AMMINISTRATORE",
+			"data": "dd/MM/YYYY HH:mm",
+			"url": "logo_cavedine.png"
+		}],
+		"patient": {
+			"patientId": "324",
+			"firstName": "MARIA",
+			"lastName": "BIANCHI",
+			"sex": "F",
+			"birthDate": "mag 6, 1926",
+			"uniqueIdentifier": "324",
+			"phone": "",
+			"mobilePhone": "3405622357",
+			"email": "",
+			"language": "",
+			"isDead": false
+		}
+	}
+}

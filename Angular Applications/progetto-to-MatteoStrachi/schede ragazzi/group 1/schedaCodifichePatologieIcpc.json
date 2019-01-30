@@ -1,0 +1,61 @@
+[{
+  "id": null,
+  "insertUserId": 4,
+  "insertUser": "Katie Wilson",
+  "insertTimeUTC": 1538483656926,
+  "insertTime": 1538483656926,
+  "updateUserId": 4,
+  "updateUser": "Katie Wilson",
+  "updateTimeUTC": 1538578195609,
+  "updateTime": 1538578195609,
+  "organizationId": 2,
+  "valid": true,
+  "cancellationTime": null,
+  "cancellationUser": null,
+  "cancellationUserId": null,
+  "cancellationTimeUTC": null,
+  "name": "Codifiche Patologie ICPC",
+  "code": "schedaCodifichePatologieIcpc",
+  "html": "\n<div class=\"panel panel-primary\">\n  <div class=\"panel-body\" ng-click=\"selectRadio();\">\n    <div class=\"row\">\n      <div class=\"col-sm-4 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-12\">Commento</label>\n          <div class=\"col-sm-12\">\n            <textarea class=\"form-control\" type=\"text\" rows=\"5\" ng-model=\"formData.commento\"> </textarea>\n            <input class=\"form-control\" type=\"text\" summary=\"ICPCCommento\" ng-model=\"formData.commento\" ng-show=\"false\"> \n          </div>\n        </div>\n      </div>\n      <div class=\"col-sm-4 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-3\">Codice ICPC prima patologia*</label>\n          <div class=\"col-sm-9\">\n            <input class=\"form-control\" type=\"text\" summary=\"ICPCPat1\" ng-model=\"formData.ICPCPat1\" required=\"true\">\n          </div>\n        </div>\n      </div>\n      <div class=\"col-sm-4 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-3\">Gravità prima patologia*</label>\n          <div class=\"col-sm-9\"  >\n            <div ng-class=\"[{'g-color':formData.gravitaPrimaPatologia.code},{'r-color':!formData.gravitaPrimaPatologia.code}]\">\n              <label class=\"ui-radio\"  ng-click=\"formData.gravitaPrimaPatologia={code:'op1a', value:'Non presente', score:0}\"><input type=\"radio\" ng-required=\"true\"  value=\"op1a\" ng-model=\"formData.gravitaPrimaPatologia.code\"><span>Non presente</span></label>\n              <label class=\"ui-radio\"  ng-click=\"formData.gravitaPrimaPatologia={code:'op1b', value:'Lieve', score:1}\"><input type=\"radio\" ng-required=\"true\" value=\"op1b\" ng-model=\"formData.gravitaPrimaPatologia.code\"><span>Lieve</span></label>\n              <label class=\"ui-radio\"  ng-click=\"formData.gravitaPrimaPatologia={code:'op1c', value:'Moderata', score:2}\"><input type=\"radio\" ng-required=\"true\" value=\"op1c\" ng-model=\"formData.gravitaPrimaPatologia.code\"><span>Moderata</span></label>\n              <label class=\"ui-radio\"  ng-click=\"formData.gravitaPrimaPatologia={code:'op1d', value:'Grave', score:3}\"><input type=\"radio\" ng-required=\"true\" value=\"op1d\" ng-model=\"formData.gravitaPrimaPatologia.code\"><span>Grave</span></label>\n              <label class=\"ui-radio\"  ng-click=\"formData.gravitaPrimaPatologia={code:'op1e', value:'Molto Grave', score:4}\"><input type=\"radio\" ng-required=\"true\"  value=\"op1e\" ng-model=\"formData.gravitaPrimaPatologia.code\"><span>Molto Grave</span></label>\n              <input class=\"form-control\" type=\"text\" summary=\"ICPCGravPat1\" ng-model=\"formData.gravitaPrimaPatologia.score\" ng-show=\"false\" >\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-sm-4 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-3\">Codice ICPC seconda patologia</label>\n          <div class=\"col-sm-9\">\n            <input class=\"form-control\" type=\"text\" summary=\"ICPCPat2\" ng-model=\"formData.ICPCPat2\">\n          </div>\n        </div>\n      </div>\n      <div class=\"col-sm-4 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-3\">Gravità seconda patologia</label>\n          <div class=\"col-sm-9\">\n            <div class=\"form-inline\" >\n              <label class=\"ui-radio\" ng-click=\"formData.gravitaSecondaPatologia={code:'op2a', value:'Non presente', score:0}\"><input type=\"radio\" value=\"op2a\" ng-model=\"formData.gravitaSecondaPatologia.code\"><span>Non presente</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.gravitaSecondaPatologia={code:'op2b', value:'Lieve', score:1}\"><input type=\"radio\" value=\"op2b\" ng-model=\"formData.gravitaSecondaPatologia.code\"><span>Lieve</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.gravitaSecondaPatologia={code:'op2c', value:'Moderata', score:2}\"><input type=\"radio\" value=\"op2c\" ng-model=\"formData.gravitaSecondaPatologia.code\"><span>Moderata</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.gravitaSecondaPatologia={code:'op2d', value:'Grave', score:3}\"><input type=\"radio\" value=\"op2d\" ng-model=\"formData.gravitaSecondaPatologia.code\"><span>Grave</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.gravitaSecondaPatologia={code:'op2e', value:'Molto Grave', score:4}\"><input type=\"radio\" value=\"op2e\" ng-model=\"formData.gravitaSecondaPatologia.code\"><span>Molto Grave</span></label>\n              <input class=\"form-control\" type=\"text\" summary=\"ICPCGravPat2\" ng-model=\"formData.gravitaSecondaPatologia.score\" ng-show=\"false\">\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-sm-4 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-3\">Codice ICPC terza patologia </label>\n          <div class=\"col-sm-9\">\n            <input class=\"form-control\" summary=\"ICPCPat3\" type=\"text\" ng-model=\"formData.ICPCPat3\">\n          </div>\n        </div>\n      </div>\n      <div class=\"col-sm-4 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-3\">Gravità terza patologia</label>\n          <div class=\"col-sm-9\">\n            <div class=\"form-inline\">\n              <label class=\"ui-radio\" ng-click=\"formData.gravitaTerzaPatologia={code:'op3a', value:'Non presente', score:0}\"><input type=\"radio\" value=\"op3a\" ng-model=\"formData.gravitaTerzaPatologia.code\"><span>Non presente</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.gravitaTerzaPatologia={code:'op3b', value:'Lieve', score:1}\"><input type=\"radio\" value=\"op3b\" ng-model=\"formData.gravitaTerzaPatologia.code\"><span>Lieve</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.gravitaTerzaPatologia={code:'op3c', value:'Moderata', score:2}\"><input type=\"radio\" value=\"op3c\" ng-model=\"formData.gravitaTerzaPatologia.code\"><span>Moderata</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.gravitaTerzaPatologia={code:'op3d', value:'Grave', score:3}\"><input type=\"radio\" value=\"op3d\" ng-model=\"formData.gravitaTerzaPatologia.code\"><span>Grave</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.gravitaTerzaPatologia={code:'op3e', value:'Molto Grave', score:4}\"><input type=\"radio\" value=\"op3e\" ng-model=\"formData.gravitaTerzaPatologia.code\"><span>Molto Grave</span></label>\n              <input class=\"form-control\" type=\"text\" summary=\"ICPCGravPat3\" ng-model=\"formData.gravitaTerzaPatologia.score\" ng-show=\"false\">\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-sm-12 col-md-12\">\n        <div class=\"form-group\">\n          <label class=\"col-sm-6 col-md-3\">Punteggio Totale</label>\n          <div class=\"col-sm-6 col-md-2\">\n            <input class=\"form-control\" type=\"number\" summary  concept=\"scoreICPCTotal\" ng-model=\"formData.scoreTotale\" readonly>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n",
+  "javascript": "\n\n\nvar initForm = function () {\n  if (!formData) {\n    formData.commento=\"\";\n    formData.ICPCPat1=\"\";\n    formData.ICPCPat2=\"\";\n    formData.ICPCPat3=\"\";\n    }\n};\n\nvar calcoloTotalePunteggio =  function(){\n      var somma=null;\n  \t\tif (formData.gravitaPrimaPatologia != undefined )\n          somma += formData.gravitaPrimaPatologia.score;\n  \t\tif (formData.gravitaSecondaPatologia != undefined )\n          somma += formData.gravitaSecondaPatologia.score;\n  \t\tif (formData.gravitaTerzaPatologia != undefined )\n          somma += formData.gravitaTerzaPatologia.score;\n  \t  formData.scoreTotale=somma;\n};\n\nregisterFunction(\"calcoloTotalePunteggio\",calcoloTotalePunteggio);\n\nvar selectRadio = function(event){\n    calcoloTotalePunteggio();\n};\nregisterFunction(\"selectRadio\",selectRadio);\n\nfunction init (){\n  initForm();\n}\ninit();\n\n\n\n\n",
+  "css": ".r-color {\n  border:1px solid #e94b3b;\n  padding: 18px 5px 5px;\n  border-radius:2px;\n}\n\n.g-color {\n  border:1px solid #23ae89;\n  padding: 18px 5px 5px;\n  border-radius:2px;\n}\n",
+  "version": 20,
+  "status": "DRAFT",
+  "bundleValues": {
+    "it_IT": {
+      "ICPCGravPat1": "",
+      "ICPCPat1": "",
+      "ICPCCommento": "",
+      "ICPCPat2": "",
+      "ICPCPat3": "",
+      "ICPCGravPat3": "",
+      "ICPCGravPat2": ""
+    },
+    "en_GB": {
+      "ICPCGravPat1": "",
+      "ICPCGravPat3": "",
+      "ICPCGravPat2": ""
+    },
+    "es_ES": {
+      "ICPCGravPat1": "",
+      "ICPCGravPat3": "",
+      "ICPCGravPat2": ""
+    },
+    "de_DE": {
+      "ICPCGravPat1": "",
+      "ICPCGravPat3": "",
+      "ICPCGravPat2": ""
+    }
+  },
+  "templateFileName": "schedaCodifichePatologieIcpc.jasper",
+  "templateApplications": {},
+  "repositoryEnabled": null,
+  "signatureEnabled": null,
+  "signatureNotMandatory": null,
+  "sendTxtEnabled": null,
+  "sendPrivacyEnabled": null,
+  "cda2Enabled": null,
+  "cda2Xlts": null,
+  "cancellableEnabled": null,
+  "saveAsDraftWhenInvalid": null
+}]

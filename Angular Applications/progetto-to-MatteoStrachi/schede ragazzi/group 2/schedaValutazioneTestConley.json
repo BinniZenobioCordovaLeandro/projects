@@ -1,0 +1,73 @@
+[{
+  "id": null,
+  "insertUserId": 4,
+  "insertUser": "Katie Wilson",
+  "insertTimeUTC": 1538559643337,
+  "insertTime": 1538559643337,
+  "updateUserId": 15,
+  "updateUser": "Config FM3",
+  "updateTimeUTC": 1539350015177,
+  "updateTime": 1539350015177,
+  "organizationId": 2,
+  "valid": true,
+  "cancellationTime": null,
+  "cancellationUser": null,
+  "cancellationUserId": null,
+  "cancellationTimeUTC": null,
+  "name": "Valutazione rischio cadute (Test di Conley)",
+  "code": "schedaValutazioneTestConley",
+  "html": "<div class=\"panel panel-primary\">\n  <div class=\"panel-heading\">\n    INDICE DI CONLEY\n  </div>\n  <div class=\"panel-body\">\n    <div class=\"form-horizontal\" ng-click=\"calcoloScore();\">\n      <div class=\"form-group\">\n        <label class=\"col-md-6 col-lg-5\">Le è mai capitato di non raggiungere in tempo il bagno?</label>\n        <div class=\"col-md-6 col-lg-7\">\n          <label class=\"ui-radio\"><input ng-change=\"formData.LMaiCapito={code:'op1a',score:1}\" ng-model=\"formData.LMaiCapito.code\" value=\"op1a\" type=\"radio\"><span>SI</span></label>\n          <label class=\"ui-radio\"><input ng-change=\"formData.LMaiCapito={code:'op1b',score:0}\" ng-model=\"formData.LMaiCapito.code\" value=\"op1b\" type=\"radio\"><span>NO</span></label>\n          <input summary=\"LMaiCapito\" ng-model=\"formData.LMaiCapito.score\" ng-show=\"false\" type=\"number\">\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <label class=\"col-md-6 col-lg-5\">Ha compromissione nella marcia?</label>\n        <div class=\"col-md-6 col-lg-7\">\n          <label class=\"ui-radio\"><input ng-change=\"formData.HCNMarcia={code:'op2a',score:1}\" ng-model=\"formData.HCNMarcia.code\" value=\"op2a\" type=\"radio\"><span>SI</span></label>\n          <label class=\"ui-radio\"><input ng-change=\"formData.HCNMarcia={code:'op2b',score:0}\" ng-model=\"formData.HCNMarcia.code\" value=\"op2b\" type=\"radio\"><span>NO</span></label>\n          <input summary=\"HCNMarcia\" ng-model=\"formData.HCNMarcia.score\" ng-show=\"false\" type=\"number\">\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <label class=\"col-md-6 col-lg-5\">E' spesso agitato?</label>\n        <div class=\"col-md-6 col-lg-7\">\n          <label class=\"ui-radio\"><input ng-change=\"formData.ESAgitato={code:'op3a',score:2}\" ng-model=\"formData.ESAgitato.code\" value=\"op3a\" type=\"radio\"><span>SI</span></label>\n          <label class=\"ui-radio\"><input ng-change=\"formData.ESAgitato={code:'op3b',score:0}\" ng-model=\"formData.ESAgitato.code\" value=\"op3b\" type=\"radio\"><span>NO</span></label>\n          <input summary=\"ESAgitato\" ng-model=\"formData.ESAgitato.score\" ng-show=\"false\" type=\"number\">\n\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <label class=\"col-md-6 col-lg-5\">Ha deterioramento del giudizio e/o assenza del senso del pericolo?</label>\n        <div class=\"col-md-6 col-lg-7\">\n          <label class=\"ui-radio\"><input ng-change=\"formData.HDGPericolo={code:'op4a',score:3}\" ng-model=\"formData.HDGPericolo.code\" value=\"op4a\" type=\"radio\"><span>SI</span></label>\n          <label class=\"ui-radio\"><input ng-change=\"formData.HDGPericolo={code:'op4b',score:0}\" ng-model=\"formData.HDGPericolo.code\" value=\"op4b\" type=\"radio\"><span>NO</span></label>\n          <input summary=\"HDGPericolo\" ng-model=\"formData.HDGPericolo.score\" ng-show=\"false\" type=\"number\">\n\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <label class=\"col-md-6 col-lg-5\">E' caduto negli ultimi 3 mesi?</label>\n        <div class=\"col-md-6 col-lg-7\">\n          <label class=\"ui-radio\"><input ng-change=\"formData.ECad3Mesi={code:'op5a',score:2}\" ng-model=\"formData.ECad3Mesi.code\" value=\"op5a\" type=\"radio\"><span>SI</span></label>\n          <label class=\"ui-radio\"><input ng-change=\"formData.ECad3Mesi={code:'op5b',score:0}\" ng-model=\"formData.ECad3Mesi.code\" value=\"op5b\" type=\"radio\"><span>NO</span></label>\n          <input summary=\"ECad3Mesi\" ng-model=\"formData.ECad3Mesi.score\" ng-show=\"false\" type=\"number\">\n\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <label class=\"col-md-6 col-lg-5\">Ha mai avuto vertigini o capogiri?</label>\n        <div class=\"col-md-6 col-lg-7\">\n\n          <label class=\"ui-radio\"><input ng-change=\"formData.HMHVCaporigi={code:'op6a',score:1}\" ng-model=\"formData.HMHVCaporigi.code\" value=\"op6a\" type=\"radio\"><span>SI</span></label>\n          <label class=\"ui-radio\"><input ng-change=\"formData.HMHVCaporigi={code:'op6b',score:0}\" ng-model=\"formData.HMHVCaporigi.code\" value=\"op6b\" type=\"radio\"><span>NO</span></label>\n          <input summary=\"HMHVCaporigi\" ng-model=\"formData.HMHVCaporigi.score\" ng-show=\"false\" type=\"number\">\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <label class=\"col-md-6 col-lg-5\">INDICE DI CONLEY</label>\n        <div class=\"col-md-6 col-lg-5\">\n          <div class=\"row\">\n            <div class=\"col-md-3\">\n              <input class=\"form-control\" concept=\"scoreConleyTotale\" summary ng-model=\"formData.scoreConleyTotale\" type=\"number\" readonly>\n            </div>\n            <div class=\"col-md-9\">\n              <input class=\"form-control\" summary=\"indiceConley\" ng-model=\"formData.indiceConley\" type=\"text\" readonly>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n<div class=\"panel-footer\">\n  <div class=\"panel-body\">\n    <div class=\"row\">\n      <h5 class=\"col-md-12\"><b>SCALA INDICE DI CONLEY</b></h5>\n      <div class=\"form-horizontal\">\n        <label class=\"col-md-12\">Valori compresi <b>tra 0 e 1</b> indicano un <b>rischio minimo</b> di\n          caduta.</label>\n        <label class=\"col-md-12\">I valori compresi <b>tra 2 e 10</b> indicano, in progressione, un <b>rischio\n          di caduta da basso ad alto.</b></label>\n        <label class=\"col-md-12\">Il punteggio <b>uguale o superiore a 2</b> (punteggio di <b>cut-off</b>)\n          identifica un paziente in condizione di<b>rischio.</b></label>\n      </div>\n    </div>\n\n  </div>\n</div>      \n</div>",
+  "javascript": "\nvar calcoloScore = function(){\nvar element = null, somma = null, indice = \"\";\n  for(var i in formData){\n    element=formData[i]; \n    if(element && element.score >=0){\n      somma=somma+element.score;\n    }\n  }\n  if(somma < 2) indice=\"Non a rischio\";\n  if(somma > 1) indice=\"A rischio di caduta\";\n  formData.scoreConleyTotale=somma;\n  formData.indiceConley=indice;\n};\n\nregisterFunction(\"calcoloScore\",calcoloScore);",
+  "css": null,
+  "version": 1,
+  "status": "DRAFT",
+  "bundleValues": {
+    "it_IT": {
+      "ECad3Mesi": "",
+      "ESAgitato": "",
+      "HCNMarcia": "",
+      "HDGPericolo": "",
+      "LMaiCapito": "",
+      "HMHVCaporigi": "",
+      "indiceConley": ""
+    },
+    "en_GB": {
+      "ECad3Mesi": "",
+      "ESAgitato": "",
+      "HCNMarcia": "",
+      "HDGPericolo": "",
+      "LMaiCapito": "",
+      "HMHVCaporigi": "",
+      "indiceConley": ""
+    },
+    "es_ES": {
+      "ECad3Mesi": "",
+      "ESAgitato": "",
+      "HCNMarcia": "",
+      "HDGPericolo": "",
+      "LMaiCapito": "",
+      "HMHVCaporigi": "",
+      "indiceConley": ""
+    },
+    "de_DE": {
+      "ECad3Mesi": "",
+      "ESAgitato": "",
+      "HCNMarcia": "",
+      "HDGPericolo": "",
+      "LMaiCapito": "",
+      "HMHVCaporigi": "",
+      "indiceConley": ""
+    }
+  },
+  "templateFileName": null,
+  "templateApplications": null,
+  "repositoryEnabled": null,
+  "signatureEnabled": null,
+  "signatureNotMandatory": null,
+  "sendTxtEnabled": null,
+  "sendPrivacyEnabled": null,
+  "cda2Enabled": null,
+  "cda2Xlts": null,
+  "cancellableEnabled": null,
+  "saveAsDraftWhenInvalid": null
+}]

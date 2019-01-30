@@ -1,0 +1,73 @@
+[{
+  "id": null,
+  "insertUserId": 4,
+  "insertUser": "Katie Wilson",
+  "insertTimeUTC": 1536044194867,
+  "insertTime": 1536044194867,
+  "updateUserId": 15,
+  "updateUser": "Config FM3",
+  "updateTimeUTC": 1539615707137,
+  "updateTime": 1539615707137,
+  "organizationId": 2,
+  "valid": true,
+  "cancellationTime": null,
+  "cancellationUser": null,
+  "cancellationUserId": null,
+  "cancellationTimeUTC": null,
+  "name": "Disfagia  Assistenziale",
+  "code": "schedaDisfagiaAssistenziale",
+  "html": "<section class=\"panel panel-default\">\n  <div class=\"panel-body\">\n    <div class=\"row\">\n      <label class=\"col-md-2\">Momento di osservazione</label>\n      <div class=\"col-md-10\">\n        <div class=\"form-inline\">\n          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.momentodiosservazione={code:'disfA_op0a',score:1}; deleteValue()\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.momentodiosservazione.code\" value=\"disfA_op0a\"><span>Colazione</span></label>\n          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.momentodiosservazione={code:'disfA_op0b',score:2}; deleteValue()\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.momentodiosservazione.code\" value=\"disfA_op0b\"><span>Pranzo</span></label>\n          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.momentodiosservazione={code:'disfA_op0c',score:3}; deleteValue()\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.momentodiosservazione.code\" value=\"disfA_op0c\"><span>Cena</span></label>\n          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.momentodiosservazione={code:'disfA_op0d',score:4}; deleteValue()\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.momentodiosservazione.code\" value=\"disfA_op0d\"><span>Merenda</span></label>\n          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.momentodiosservazione={code:'disfA_op0e',score:5}\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.momentodiosservazione.code\" value=\"disfA_op0e\"><span>Altro</span></label>\n          <input class=\"form-control\" type=\"text\" name=\"input_momentodiosservazione\" ng-if=\"formData.disfAssist.momentodiosservazione.code=='disfA_op0e'\" ng-model=\"formData.disfAssist.momentodiosservazioneAltro\" placeholder=\"Altro momento...\" style=\"margin-bottom: 10px; max-width:350px;\">\n          <input type=\"text\" summary=\"DisfA_item0\" ng-model=\"formData.disfAssist.momentodiosservazione.score\" ng-show=\"false\">\n        </div>\n      </div>\n    </div>\n    <div class=\"divider divider-md \"></div>\n    <div class=\"row\">\n      <div class=\"col-xs-12 col-sm-12 col-md-12\">\n        <div class=\"row\">\n          <div class=\"col-md-12\">\n            <div class=\"panel panel-primary\">\n              <div class=\"panel-heading\">\n                Segni e sintomi\t\n              </div>\n              <div class=\"panel-body\">\n                <div class=\"form-horizontal\">\n                  <div class=\"col-sm-6 col-md-4\">\n                    <div class=\"form-group\">\n                      <label class=\"col-sm-12\">Residuo di cibo in bocca</label>\n                      <div class=\"col-sm-12\">\n                        <div class=\"form-inline\">\n                          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.residuodicivoinbocca={code:'disfA_op1a',score:1}\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.residuodicivoinbocca.code\" value=\"disfA_op1a\"><span>Si</span></label>\n                          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.residuodicivoinbocca={code:'disfA_op1b',score:0}\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.residuodicivoinbocca.code\" value=\"disfA_op1b\"><span>No</span></label>\n                          <input type=\"text\" summary=\"DisfA_item1\" ng-model=\"formData.disfAssist.residuodicivoinbocca.score\" ng-show=\"false\">\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                  <div class=\"col-sm-6 col-md-4\">\n                    <div class=\"form-group\">\n                      <label class=\"col-sm-12\">Sbavature/Scialorrea</label>\n                      <div class=\"col-sm-12\">\n                        <div class=\"form-inline\">\n                          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.sbavatureScialorrea={code:'disfA_op2a',score:1}\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.sbavatureScialorrea.code\" value=\"disfA_op2a\"><span>Si</span></label>\n                          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.sbavatureScialorrea={code:'disfA_op2b',score:0}\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.sbavatureScialorrea.code\" value=\"disfA_op2b\"><span>No</span></label>\n                          <input type=\"text\" summary=\"DisfA_item2\" ng-model=\"formData.disfAssist.sbavatureScialorrea.score\" ng-show=\"false\">\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                  <div class=\"col-sm-6 col-md-4\">\n                    <div class=\"form-group\">\n                      <label class=\"col-sm-12\">Tosse o starnuti durante\\dopo l'alimentazione</label>\n                      <div class=\"col-sm-12\">\n                        <div class=\"form-inline\">\n                          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.tosseOstarnutiinAlimentazione={code:'disfA_op3a',score:1}\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.tosseOstarnutiinAlimentazione.code\" value=\"disfA_op3a\"><span>Si</span></label>\n                          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.tosseOstarnutiinAlimentazione={code:'disfA_op3b',score:0}\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.tosseOstarnutiinAlimentazione.code\" value=\"disfA_op3b\"><span>No</span></label>\n                          <input type=\"text\" summary=\"DisfA_item3\" ng-model=\"formData.disfAssist.tosseOstarnutiinAlimentazione.score\" ng-show=\"false\">\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                  <div class=\"col-sm-6 col-md-4\">\n                    <div class=\"form-group\">\n                      <label class=\"col-sm-12\">Difficoltà di contenimento del cibo in bocca</label>\n                      <div class=\"col-sm-12\">\n                        <div class=\"form-inline\">\n                          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.difficultadicontenimnetodelcivo={code:'disfA_op4a',score:1}\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.difficultadicontenimnetodelcivo.code\" value=\"disfA_op4a\"><span>Si</span></label>\n                          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.difficultadicontenimnetodelcivo={code:'disfA_op4b',score:0}\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.difficultadicontenimnetodelcivo.code\" value=\"disfA_op4b\"><span>No</span></label>\n                          <input type=\"text\" summary=\"DisfA_item4\" ng-model=\"formData.disfAssist.difficultadicontenimnetodelcivo.score\" ng-show=\"false\">\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                  <div class=\"col-sm-6 col-md-4\">\n                    <div class=\"form-group\">\n                      <label class=\"col-sm-12\">Rispetto delle indicazioni dietetiche</label>\n                      <div class=\"col-sm-12\">\n                        <div class=\"form-inline\">\n                          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.rispettodelleindicazionidietetiche={code:'disfA_op5a',score:1}\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.rispettodelleindicazionidietetiche.code\" value=\"disfA_op5a\"><span>Si</span></label>\n                          <label class=\"ui-radio\" ng-click=\"formData.disfAssist.rispettodelleindicazionidietetiche={code:'disfA_op5b',score:0}\"><input type=\"radio\" name=\"\" ng-model=\"formData.disfAssist.rispettodelleindicazionidietetiche.code\" value=\"disfA_op5b\"><span>No</span></label>\n                          <input type=\"text\" summary=\"DisfA_item5\" ng-model=\"formData.disfAssist.rispettodelleindicazionidietetiche.score\" ng-show=\"false\">\n                        </div>\n                      </div>\n                    </div>\n                  </div> \n                  <div class=\"col-sm-4 col-md-12\">\n                    <div class=\"form-group\">\n                      <label class=\"col-sm-12\">(se Si specificare con quale alimento si è verificato l'evento)</label>\n                      <div class=\"col-sm-12\">\n                        <textarea class=\"form-control\" rows=\"5\" ng-model=\"formData.disfAssist.specificareconqualealimento\"></textarea>\n                        <input type=\"text\" summary=\"DisfA_item6\" ng-model=\"formData.disfAssist.specificareconqualealimento\" ng-show=\"false\">\n                      </div>\n                    </div>\n                  </div> \n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+  "javascript": "var deleteValue = function(){\n        formData.disfAssist.momentodiosservazioneAltro = '';\n};\n\nregisterFunction(\"deleteValue\",deleteValue);",
+  "css": ".panel-primary, .panel-primary>.panel-heading {\n  border-color: #4d648d !important;\n}\n.panel-heading {\n  background-color : #4d648d !important;\n}",
+  "version": 1,
+  "status": "PUBLISHED",
+  "bundleValues": {
+    "it_IT": {
+      "DisfA_item0": "",
+      "DisfA_item4": "",
+      "DisfA_item3": "",
+      "DisfA_item2": "",
+      "DisfA_item1": "",
+      "DisfA_item6": "",
+      "DisfA_item5": ""
+    },
+    "en_GB": {
+      "DisfA_item0": "",
+      "DisfA_item4": "",
+      "DisfA_item3": "",
+      "DisfA_item2": "",
+      "DisfA_item1": "",
+      "DisfA_item6": "",
+      "DisfA_item5": ""
+    },
+    "es_ES": {
+      "DisfA_item0": "",
+      "DisfA_item4": "",
+      "DisfA_item3": "",
+      "DisfA_item2": "",
+      "DisfA_item1": "",
+      "DisfA_item6": "",
+      "DisfA_item5": ""
+    },
+    "de_DE": {
+      "DisfA_item0": "",
+      "DisfA_item4": "",
+      "DisfA_item3": "",
+      "DisfA_item2": "",
+      "DisfA_item1": "",
+      "DisfA_item6": "",
+      "DisfA_item5": ""
+    }
+  },
+  "templateFileName": null,
+  "templateApplications": null,
+  "repositoryEnabled": null,
+  "signatureEnabled": null,
+  "signatureNotMandatory": null,
+  "sendTxtEnabled": null,
+  "sendPrivacyEnabled": null,
+  "cda2Enabled": null,
+  "cda2Xlts": null,
+  "cancellableEnabled": null,
+  "saveAsDraftWhenInvalid": null
+}]

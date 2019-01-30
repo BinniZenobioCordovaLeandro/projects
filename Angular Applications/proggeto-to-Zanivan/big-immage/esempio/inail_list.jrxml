@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InailList" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" resourceBundle="bundles/inail_list" uuid="9b751a4a-d6d6-4e0a-ac83-3d3e1d8e27df">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="InailSimpleListDataAdapter.xml"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#EEEFF0"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table" mode="Opaque" forecolor="#4532F0" backcolor="#94F7F2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#CACED0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D8D8D8"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="24618069-8553-4f6a-b42f-5a4e93a9acbc">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="InailSimpleListDataAdapter.xml"/>
+		<queryString language="json">
+			<![CDATA[entries]]>
+		</queryString>
+		<field name="id" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="id"/>
+			<fieldDescription><![CDATA[entries.id]]></fieldDescription>
+		</field>
+		<field name="medicName" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="doctor.descriptionLang1"/>
+			<fieldDescription><![CDATA[entries.doctor.descriptionLang1]]></fieldDescription>
+		</field>
+		<field name="perLastName" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="perLastName"/>
+			<fieldDescription><![CDATA[entries.perLastName]]></fieldDescription>
+		</field>
+		<field name="perFirstName" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="perFirstName"/>
+			<fieldDescription><![CDATA[entries.perFirstName]]></fieldDescription>
+		</field>
+		<field name="cerReleaseDate" class="java.util.Date">
+			<property name="net.sf.jasperreports.json.field.expression" value="cerReleaseDate"/>
+			<fieldDescription><![CDATA[entries.cerReleaseDate]]></fieldDescription>
+		</field>
+		<field name="lastextraction" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lastextraction"/>
+			<fieldDescription><![CDATA[entries.lastextraction]]></fieldDescription>
+		</field>
+		<field name="extracted" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="extracted"/>
+			<fieldDescription><![CDATA[entries.extracted]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="HIS_ORGANIZATION_NAME" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["Barcola Hospital"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="HIS_ORGANIZATION_CODE" class="java.lang.String">
+		<defaultValueExpression><![CDATA["nyc"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BASE_DIR" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGES_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{BASE_DIR} + "/images/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="JSON_INPUT_STREAM" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.source" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.sources" class="java.util.List" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.date.pattern" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.number.pattern" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="JSON_LOCALE" class="java.util.Locale" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.locale.code" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="JSON_TIME_ZONE" class="java.util.TimeZone" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.timezone.id" class="java.lang.String" isForPrompting="false"/>
+	<queryString language="JSON">
+		<![CDATA[doctor.descriptionLang1]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="entries.id"/>
+		<fieldDescription><![CDATA[entries.id]]></fieldDescription>
+	</field>
+	<field name="medico" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="entries.doctor.descriptionLang1"/>
+		<fieldDescription><![CDATA[entries.doctor.descriptionLang1]]></fieldDescription>
+	</field>
+	<field name="perLastName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="entries.perLastName"/>
+		<fieldDescription><![CDATA[entries.perLastName]]></fieldDescription>
+	</field>
+	<field name="perFirstName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="entries.perFirstName"/>
+		<fieldDescription><![CDATA[entries.perFirstName]]></fieldDescription>
+	</field>
+	<field name="cerReleaseDate" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="entries.cerReleaseDate"/>
+		<fieldDescription><![CDATA[entries.cerReleaseDate]]></fieldDescription>
+	</field>
+	<field name="cerHospital" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="entries.cerHospital"/>
+		<fieldDescription><![CDATA[entries.cerHospital]]></fieldDescription>
+	</field>
+	<field name="lastextraction" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="entries.lastextraction"/>
+		<fieldDescription><![CDATA[entries.lastextraction]]></fieldDescription>
+	</field>
+	<field name="extracted" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="entries.extracted"/>
+		<fieldDescription><![CDATA[entries.extracted]]></fieldDescription>
+	</field>
+	<title>
+		<band height="135" splitType="Stretch">
+			<textField>
+				<reportElement x="90" y="0" width="464" height="20" uuid="e5b62f03-be0b-4fb7-8eec-13d54f6b904d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{HIS_ORGANIZATION_NAME}]]></textFieldExpression>
+			</textField>
+			<image onErrorType="Icon">
+				<reportElement x="0" y="0" width="90" height="80" uuid="9d40cc32-582c-4e03-9302-ac6cfddd8fdb"/>
+				<imageExpression><![CDATA["images/logo.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement key="" x="90" y="30" width="464" height="31" uuid="ba7dffa2-4fc8-4e2a-aba3-31d1ee067c63"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{reportTitle}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="115" width="60" height="20" uuid="edd170a7-a35a-4494-9307-305f9c18d229"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Protocollo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="115" width="90" height="20" uuid="63cbcbdd-388c-4abc-974e-4a21bc20d0b8"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Data rilascio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="115" width="170" height="20" uuid="6ecad458-b88b-4bef-bcf5-2843c2f2e5b6"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="115" width="150" height="20" uuid="d8e19e2b-c206-4afb-a361-f55b19ec6177"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paziente]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<componentElement>
+				<reportElement stretchType="ElementGroupBottom" x="0" y="0" width="554" height="30" uuid="38a65ab3-f1dc-412e-99cf-8aa5d0be8788"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Dataset1" uuid="3cf9e168-d6bd-4bde-86e6-68e8be1c0201">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("entries")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="30" width="554">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="30" uuid="c1e9b50d-c681-44fc-b615-2a44ffc89a81"/>
+							<box leftPadding="2">
+								<topPen lineWidth="1.0"/>
+								<leftPen lineWidth="1.0"/>
+								<bottomPen lineWidth="1.0"/>
+								<rightPen lineWidth="1.0"/>
+							</box>
+							<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="380" y="0" width="90" height="30" uuid="101e1623-fb18-4b75-beb6-99b8f0f92d97"/>
+							<box>
+								<topPen lineWidth="1.0"/>
+								<leftPen lineWidth="1.0"/>
+								<bottomPen lineWidth="1.0"/>
+								<rightPen lineWidth="1.0"/>
+							</box>
+							<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{cerReleaseDate})]]></textFieldExpression>
+							<patternExpression><![CDATA[$R{dateFormatB}]]></patternExpression>
+						</textField>
+						<textField>
+							<reportElement x="210" y="0" width="170" height="30" uuid="9705f8eb-9c1e-40bd-93be-c66bf29c0b22"/>
+							<box leftPadding="2">
+								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textFieldExpression><![CDATA[$F{medicName}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="60" y="0" width="150" height="30" uuid="6076ce8b-79cf-4cd2-ba66-84d3608b9e6e"/>
+							<box leftPadding="2">
+								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textFieldExpression><![CDATA[$F{perFirstName} + " " +$F{perLastName}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+	<summary>
+		<band height="65"/>
+	</summary>
+</jasperReport>

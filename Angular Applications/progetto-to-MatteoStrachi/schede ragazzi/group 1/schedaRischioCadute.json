@@ -1,0 +1,73 @@
+[{
+  "id": null,
+  "insertUserId": 4,
+  "insertUser": "Katie Wilson",
+  "insertTimeUTC": 1536582707778,
+  "insertTime": 1536582707778,
+  "updateUserId": 4,
+  "updateUser": "Katie Wilson",
+  "updateTimeUTC": 1537536120757,
+  "updateTime": 1537536120757,
+  "organizationId": 2,
+  "valid": true,
+  "cancellationTime": null,
+  "cancellationUser": null,
+  "cancellationUserId": null,
+  "cancellationTimeUTC": null,
+  "name": "Rischio Cadute",
+  "code": "schedaRischioCadute",
+  "html": "<form class=\"form-horizontal\">\n    <section class=\"panel panel-primary \">\n        <div class=\"panel-heading\">\n            <b>Valutazione rischio cadute (Test di Conley)</b>\n        </div>\n        <div class=\"panel-body\" ng-click=\"clickRadio();\">\n            <div class=\"col-md-12\">\n                <div class=\"form-group\">\n                    <label class=\"col-xs-12 col-md-6 col-lg-4\">Le è mai capitato di non raggiungere in tempo il bagno:</label>\n                    <div class=\"col-xs-12 col-md-6 col-lg-8\">\n                        <label class=\"ui-radio\" ng-click=\"formData.valutazione.RTBagno = {code:'op1a',score:1}\">\n                            <input type=\"radio\" ng-value=\"'op1a'\" ng-model=\"formData.valutazione.RTBagno.code\">\n                            <span>Si</span></label>\n                        <label class=\"ui-radio\" ng-click=\"formData.valutazione.RTBagno = {code:'op1b',score:0}\">\n                            <input type=\"radio\" ng-value=\"'op1b'\" ng-model=\"formData.valutazione.RTBagno.code\">\n                            <span>No</span></label>\n                        <input summary=\"RCRTBagno\" ng-model=\"formData.valutazione.RTBagno.score\" ng-show=\"false\" type=\"number\">\n                    </div>\n                </div>\n                <div class=\"form-group\">\n                    <label class=\"col-xs-12 col-md-6 col-lg-4\">Ha compromissione nella marcia:</label>\n                    <div class=\"col-xs-12 col-md-6 col-lg-8\">\n                        <label class=\"ui-radio\" ng-click=\"formData.valutazione.HCMarica = {code:'op2a',score:1}\">\n                            <input type=\"radio\" ng-value=\"'op2a'\" ng-model=\"formData.valutazione.HCMarica.code\">\n                            <span>Si</span></label>\n                        <label class=\"ui-radio\" ng-click=\"formData.valutazione.HCMarica = {code:'op2b',score:0}\">\n                            <input type=\"radio\" ng-value=\"'op2b'\" ng-model=\"formData.valutazione.HCMarica.code\">\n                            <span>No</span></label>\n                        <input summary=\"RCHCMarica\" ng-model=\"formData.valutazione.HCMarica.score\" ng-show=\"false\" type=\"number\">\n\n                    </div>\n                </div>\n                <div class=\"form-group\">\n                    <label class=\"col-xs-12 col-md-6 col-lg-4\">E' spesso agitato:</label>\n                    <div class=\"col-xs-12 col-md-6 col-lg-8\">\n                        <label class=\"ui-radio\" ng-click=\"formData.valutazione.ESAagitato = {code:'op3a',score:1}\">\n                            <input type=\"radio\" ng-value=\"'op3a'\" ng-model=\"formData.valutazione.ESAagitato.code\">\n                            <span>Si</span></label>\n                        <label class=\"ui-radio\" ng-click=\"formData.valutazione.ESAagitato = {code:'op3b',score:0}\">\n                            <input type=\"radio\" ng-value=\"'op3b'\" ng-model=\"formData.valutazione.ESAagitato.code\">\n                            <span>No</span></label>\n                        <input summary=\"RCESAagitato\" ng-model=\"formData.valutazione.ESAagitato.score\" ng-show=\"false\"\n                            type=\"number\">\n                    </div>\n                </div>\n                <div class=\"form-group\">\n                    <label class=\"col-xs-12 col-md-6 col-lg-4\">Ha deterioramento del giudizio e/o assenza del senso del\n                        pericolo:</label>\n                    <div class=\"col-xs-12 col-md-6 col-lg-8\">\n                        <label class=\"ui-radio\" ng-click=\"formData.valutazione.HDGuidizio = {code:'op4a',score:1}\">\n                            <input type=\"radio\" ng-value=\"'op4a'\" ng-model=\"formData.valutazione.HDGuidizio.code\">\n                            <span>Si</span></label>\n                        <label class=\"ui-radio\" ng-click=\"formData.valutazione.HDGuidizio = {code:'op4b',score:0}\">\n                            <input type=\"radio\" ng-value=\"'op4b'\" ng-model=\"formData.valutazione.HDGuidizio.code\">\n                            <span>No</span></label>\n                        <input summary=\"RCHDGuidizio\" ng-model=\"formData.valutazione.HDGuidizio.score\" ng-show=\"false\"\n                            type=\"number\">\n                    </div>\n                </div>\n                <div class=\"form-group\">\n                    <label class=\"col-xs-12 col-md-6 col-lg-4\">E' caduto negli ultimi 3 mesi:</label>\n                    <div class=\"col-xs-12 col-md-6 col-lg-8\">\n                        <label class=\"ui-radio\" ng-click=\"formData.valutazione.ECNU3Mesi = {code:'op5a',score:1}\">\n                            <input type=\"radio\" ng-value=\"'op5a'\" ng-model=\"formData.valutazione.ECNU3Mesi.code\">\n                            <span>Si</span></label>\n                        <label class=\"ui-radio\" ng-click=\"formData.valutazione.ECNU3Mesi = {code:'op5b',score:0}\">\n                            <input type=\"radio\" ng-value=\"'op5b'\" ng-model=\"formData.valutazione.ECNU3Mesi.code\">\n                            <span>No</span></label>\n                        <input summary=\"RCECNU3Mesi\" ng-model=\"formData.valutazione.ECNU3Mesi.score\" ng-show=\"false\"\n                            type=\"number\">\n                    </div>\n                </div>\n                <div class=\"form-group\">\n                    <label class=\"col-xs-12 col-md-6 col-lg-4\">Ha mai avuto vertigini o capogiri:</label>\n                    <div class=\"col-xs-12 col-md-6 col-lg-8\">\n                        <label class=\"ui-radio\" ng-click=\"formData.valutazione.HAVCapogiri = {code:'op6a',score:1}\">\n                            <input type=\"radio\" ng-value=\"'op6a'\" ng-model=\"formData.valutazione.HAVCapogiri.code\">\n                            <span>Meno che mensilmente</span></label>\n                        <label class=\"ui-radio\" ng-click=\"formData.valutazione.HAVCapogiri = {code:'op6b',score:0}\">\n                            <input type=\"radio\" ng-value=\"'op6b'\" ng-model=\"formData.valutazione.HAVCapogiri.code\">\n                            <span>No</span></label>\n                       \t\t <input summary=\"RCHAVCapogiri\" ng-model=\"formData.valutazione.HAVCapogiri.score\" ng-show=\"false\"\n                            type=\"number\">\n                    </div>\n                </div>\n                <div class=\"form-group\">\n                    <h5 class=\"col-xs-12 col-md-6 col-lg-4\"><b>INDICE DI CONLEY</b></h5>\n                    <div class=\"col-xs-12 col-md-6 col-lg-8\">\n                        <div class=\"form-inline\">\n                            <input class=\"form-control\" concept=\"scoreRCADUTETotal\" summary type=\"number\" ng-model=\"formData.indice.conley\" readonly>\n                            <input class=\"form-control\" summary=\"RCStatoConley\" style=\"width:30%;\" type=\"text\" ng-model=\"formData.indice.statoConley\"\n                                readonly>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"panel-footer\">\n            <div class=\"panel-body\">\n                <div class=\"row\">\n                    <h5 class=\"col-md-12\"><b>SCALA INDICE DI CONLEY</b></h5>\n                    <div class=\"form-horizontal\">\n                        <label class=\"col-md-12\">Valori compresi <b>tra 0 e 1</b> indicano un <b>rischio minimo</b> di\n                            caduta.</label>\n                        <label class=\"col-md-12\">I valori compresi <b>tra 2 e 10</b> indicano, in progressione, un <b>rischio\n                                di caduta da basso ad alto.</b></label>\n                        <label class=\"col-md-12\">Il punteggio <b>uguale o superiore a 2</b> (punteggio di <b>cut-off</b>)\n                            identifica un paziente in condizione di<b>rischio.</b></label>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </section>\n</form>",
+  "javascript": "function initFormRischioCadute() {\n  if (!formData.valutazione) {\n    formData.valutazione ={};\n    formData.indice ={conley:null,statoConley:null};\n  }\n}\n\nfunction calcRischioCadute(){\n  var array = [], element = null, count = 0, count2 = 0, somma=0;\n  var print = null;\n  \n  for (var i in formData.valutazione){\n    print = formData.valutazione[i].score;\n    console.log(\"PRINT:\"+print);\n    element = formData.valutazione[i].score; \n    if (element > 0){\n      somma = somma + element;\n    }\n  }\n\n  var msg = \"\";\n  if (somma >=0 && somma <=1){\n    msg =\"Rischio minimo\";\n  }else if (somma >= 2 && somma <= 10 ){\n    msg =\"rischio di caduta da basso ad alto\";\n  }\n\n  formData.indice.conley = somma;\n  formData.indice.statoConley = msg;\n}\n\n\nvar clickRadio = function(event){\n  if (formData.valutazione != changeJson){\n    calcRischioCadute();\n  }\n  var changeJson = angular.copy(formData.valutazione);\n};\nregisterFunction(\"clickRadio\",clickRadio);\n\nfunction init (){\n  initFormRischioCadute();\n}\ninit();\n\nvar saveConceptSegments = function () {\n  registerConcept(\"scoreSchedaRischio\",\"formData.indice.conley\");\n};\n\nvar preSaveFunction = function(instanceValueId) {\n  saveConceptSegments();\n};\nregisterPreSaveFunction(preSaveFunction);\n\nregisterConcept(\"scoreSchedaRischio\",\"formData.indice.conley\");",
+  "css": null,
+  "version": 1,
+  "status": "DRAFT",
+  "bundleValues": {
+    "it_IT": {
+      "RCHAVCapogiri": "",
+      "RCHCMarica": "",
+      "RCECNU3Mesi": "",
+      "RCRTBagno": "",
+      "RCStatoConley": "",
+      "RCHDGuidizio": "",
+      "RCESAagitato": ""
+    },
+    "en_GB": {
+      "RCHAVCapogiri": "",
+      "RCHCMarica": "",
+      "RCECNU3Mesi": "",
+      "RCRTBagno": "",
+      "RCStatoConley": "",
+      "RCHDGuidizio": "",
+      "RCESAagitato": ""
+    },
+    "es_ES": {
+      "RCHAVCapogiri": "",
+      "RCHCMarica": "",
+      "RCECNU3Mesi": "",
+      "RCRTBagno": "",
+      "RCStatoConley": "",
+      "RCHDGuidizio": "",
+      "RCESAagitato": ""
+    },
+    "de_DE": {
+      "RCHAVCapogiri": "",
+      "RCHCMarica": "",
+      "RCECNU3Mesi": "",
+      "RCRTBagno": "",
+      "RCStatoConley": "",
+      "RCHDGuidizio": "",
+      "RCESAagitato": ""
+    }
+  },
+  "templateFileName": null,
+  "templateApplications": null,
+  "repositoryEnabled": null,
+  "signatureEnabled": null,
+  "signatureNotMandatory": null,
+  "sendTxtEnabled": null,
+  "sendPrivacyEnabled": null,
+  "cda2Enabled": null,
+  "cda2Xlts": null,
+  "cancellableEnabled": null,
+  "saveAsDraftWhenInvalid": null
+}]

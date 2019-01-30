@@ -1,0 +1,183 @@
+{
+	"formInstanceValue": {
+		"id": "5ba0cf9888506e6d2b6e5825",
+		"insertUserId": 16,
+		"insertUser": "FM3",
+		"insertTimeUTC": 1537265560442,
+		"insertTime": 1537265560442,
+		"updateUserId": 16,
+		"updateUser": "FM3",
+		"updateTimeUTC": 1537265577633,
+		"updateTime": 1537265577633,
+		"organizationId": 2,
+		"valid": true,
+		"cancellationTime": null,
+		"cancellationUser": null,
+		"cancellationUserId": null,
+		"cancellationTimeUTC": null,
+		"formInstanceId": "5ba0cf9888506e6d2b6e5824",
+		"formDocument": {
+			"initData": {
+				"patient": {
+					"patientId": "324",
+					"firstName": "MARIA",
+					"lastName": "BIANCHI",
+					"sex": "F",
+					"birthDate": "1926-05-06",
+					"uniqueIdentifier": "324",
+					"phone": "",
+					"mobilePhone": "3405622357",
+					"email": "",
+					"language": "",
+					"deathDate": null,
+					"isDead": false
+				}
+			},
+			"formData":
+			{"FMtorie":{"DMotorio":{"code":"op1b","value":"1)","score":1},"DMotorioCommento":"sd","IMotoria":{"code":"op2c","value":"Necessita di una supervisione e di aiuto nel nutrirsi","score":2},"IMotoriaCommento":"sd","AFCompromessa":{"code":"op3a","value":"Cammina senza aiuto o autonomamente con il bastone","score":0},"DMSpontanea":{"code":"op4c","value":"Siede inattivo più spesso del normale, ma un semplice stimolo lo porta ad iniziare una attività spontanea","score":2},"DMPersonale":{"code":"op5a","value":"Può attendere all'igiene della propria persona senza aiuto; per esempio: lavarsi, pettinarsi, spazzolarsi i capelli, lavarsi i denti","score":0},"CVIntestino":{"code":"op6c","value":"Ha occasionale difficoltà con la diuresi, ma riesce a mantenere un controllo completo se sollecitato e prontamente accompagnato alla toilette","score":2}},"FIntellettive":{"COSpaziale":{"code":"op7a","value":"E' completamente orientato nel tempo e nello spazio","score":0},"COSpazialeCommento":"sd","COTemporale":{"code":"op8b","value":"1)","score":1},"COTemporaleCommento":"sd","COPersonale":{"code":"op9a","value":"Conosce con precisione il proprio nome, occupazione, data di nascita","score":0},"COPersonaleCommento":"sd","CMRecente":{"code":"op10a","value":"Non ha disturbi della memoria recente; conosce ciò che è accaduto nelle ultime 24 ore","score":0},"CMRecenteCommento":"sd","CMRemota":{"code":"op11a","value":"Nessun disturbo della memoria remota; in conversazioni dettagliate il paziente ricorda i nomi delle persone importanti per lui ed altri eventi accaduti durante gli anni dell'infanzia e della giovinezza","score":0},"CMRemotaCommento":"sd","CVigilanza":{"code":"op12c","value":"Di tanto in tanto il paziente appare leggermente assopito","score":2},"CConcentrazione":{"code":"op13a","value":"Non ha difficoltà a concentrarsi, cioè non ha difficoltà a raccogliere i propri pensieri nella situazione del colloquio, nel seguire i programmi televisivi, o nella lettura di un testo scritto","score":0},"IAVelocitaAzioni":{"code":"op14c","value":"Quando al paziente viene fatta urgenza, la sua prestazione peggiora, ma riesce a fare ciò che gli viene richiesto","score":2},"Astrazione":{"code":"op15d","value":"3)","score":3},"AFCInutili":{"code":"op16c","value":"Occasionalmente è troppo loquace ed esagera nei dettagli e non ha comunque alcun problema nell'attenersi al filo del discorso","score":2},"Distraibilita":{"code":"op17c","value":"L'attenzione viene ogni tanto attratta da stimoli insignificanti","score":2},"DistraibilitaCommento":"sddddddd","RCRApropriate":{"code":"op18d","value":"3)","score":3},"LEmotiva":{"code":"op19a","value":"Il paziente riesce a controllare normalmente le proprie reazioni","score":0},"RMotivazione":{"code":"op20c","value":"Necessita di considerevole incoraggiamento per iniziare qualsiasi lavoro e mostra, di solito, solo interesse passivo","score":2}},"SVCRNDemenza":{"Confusione":{"code":"op21a","value":"0) E' in grado di pensare chiaramente ed ha contatti non alterati con il proprio ambiente","score":0},"ConfusioneCommento":"sd","Irritabilita":{"code":"op22c","value":"Mostra ogni tanto segni di irritabilità, specialmente se gli vengono rivolte domande indiscrete","score":2},"IrritabilitaCommento":"sd","Ansia":{"code":"op23c","value":"E' di tanto in tanto preoccupato, anche per motivi poco importanti, ma è in grado di controllare i propri sentimenti","score":2},"Angoscia":{"code":"op24a","value":"Non presente segni fisici né mentali di angoscia","score":0},"AngosciaCommento":"sddddd","DUmore":{"code":"op25c","value":"Di tanto in tanto il paziente appare depresso e in atteggiamento di autocritica, ma predominano i periodi di morale più alto","score":2},"DUmoreCommento":"sddddddddddddddddd","Irrequietezza":{"code":"op26c","value":"Mostra segni di irrequietezza, cioè cambia spesso posizione durante la conversazione; ha difficoltà nel mantenere ferme le mani e piedi e tocca continuamente i vari oggetti","score":2}},"scoreGBSfMtorie":1.17,"scoreGBSfIntellettive":1.21,"scoreGBSsVCRNDemenza":1.33,"scoreGBSTotal":1.23,"scoreGBScala":" Assenza di deterioramento"},
+			"summaryFieldsData": [{
+				"key": "ICPCCommento",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCPat1",
+				"value": "test",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat1",
+				"value": 3,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "ICPCPat2",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat2",
+				"value": 4,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "ICPCPat3",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat3",
+				"value": 3,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "scoreICPCTotal",
+				"value": 10,
+				"isConcept": true,
+				"bundles": {
+					"it_IT": "Totale",
+					"en_GB": "Totale",
+					"es_ES": "12"
+				}
+			}],
+			"conceptFieldsData": [{
+				"key": "scoreICPCTotal",
+				"value": 10,
+				"bundles": {
+					"it_IT": "Totale",
+					"en_GB": "Totale",
+					"es_ES": "12"
+				}
+			}],
+			"metaData": []
+		},
+		"version": 1,
+		"status": "DRAFT",
+		"patient": {
+			"insertUserId": null,
+			"insertUser": null,
+			"insertTimeUTC": null,
+			"insertTime": null,
+			"updateUserId": null,
+			"updateUser": null,
+			"updateTimeUTC": null,
+			"updateTime": null,
+			"organizationId": null,
+			"valid": true,
+			"cancellationTime": null,
+			"cancellationUser": null,
+			"cancellationUserId": null,
+			"cancellationTimeUTC": null,
+			"firstName": "MARIA",
+			"lastName": "BIANCHI",
+			"sex": "F",
+			"birthDate": -1377734400000,
+			"uniqueIdentifier": "324",
+			"phone": "",
+			"mobilePhone": "3405622357",
+			"email": "",
+			"language": "",
+			"deathDate": null,
+			"isDead": false,
+			"patientId": "324",
+			"accountNumber": null
+		}
+	},
+	"urlInstance": "http://devsrv03.erossi.org:8080/HIS/fm3/#/runtime?application=HIS&extAuthToken=eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.7p8MLXJ6U2sjGKOp8Kem9aTKSYkSwGdKr3ySo-rTy93xUFMN3_oQWg.wu50_mlioYF2tH1T-SqeYg.Rak2CpdbjWOB-otmzgNYRtUhkoe70X_G-VMPf2d_6VXaaG_GzIec8-vl7vr85YfGRBbWy8I_UOXCMdGnrs065QV8qcTY5Wz-10QkRjh8ueiMtmWdKf4BDxUfQOd49pFAiWaL9Uaaw8o1yzC7zMorZlKrU1KcpOaLFHt6LO09F42fHUbu6pN6iZ0UmZodt8lR63LaKyeCQ4EA63srH5oCig.WuO6M5Ha91XjyvUGgeCNCw&formInstanceId=5ba0cf9888506e6d2b6e5824&fm_username=admin_rsa&hidePreviousVersions=true&hideValidation=true&hideTitle=true&hideExportButton=true&notifyParent=true&hidePrintButton=true",
+	"printAddInfoJson": {
+		"includeSignatures": true,
+		"logo": "logo_cavedine.png",
+		"userLogin":"Administratore",
+		"operators": [{
+			"name": "RSA AMMINISTRATORE",
+			"figuraProfessionale": "Amministratore"
+		}],
+		"signatures": [{
+			"name": "RSA AMMINISTRATORE",
+			"data": "dd/MM/YYYY HH:mm",
+			"url": "logo_cavedine.png"
+		}],
+		"patient": {
+			"patientId": "324",
+			"firstName": "MARIA",
+			"lastName": "BIANCHI",
+			"sex": "F",
+			"birthDate": "mag 6, 1926",
+			"uniqueIdentifier": "324",
+			"phone": "",
+			"mobilePhone": "3405622357",
+			"email": "",
+			"language": "",
+			"isDead": false
+		}
+	}
+}
+
+

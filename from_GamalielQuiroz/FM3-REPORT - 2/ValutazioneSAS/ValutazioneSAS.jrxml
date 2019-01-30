@@ -1,0 +1,2644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final utlizzo versione della libreria JasperReports5.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ValutazioneSAS" pageWidth="595" pageHeight="842" columnWidth="567" leftMargin="14" rightMargin="14" topMargin="21" bottomMargin="21" uuid="e3ba40d0-e7e2-4766-b339-60c9733e6b43">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SAS"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="401"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="585"/>
+	<subDataset name="Operatori" uuid="7265e965-9a1a-4866-ac13-e912b1758530">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FM3_new_report_json\data\DataAdapterMiniMental.xml"/>
+		<queryString language="json">
+			<![CDATA[]]>
+		</queryString>
+		<field name="name" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="name"/>
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="figuraProfessionale" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="figuraProfessionale"/>
+			<fieldDescription><![CDATA[figuraProfessionale]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Firme" uuid="e1436784-bb8d-4b61-bc5c-6c588bda6172">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="cnx_miniMentalShort"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="391"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="595"/>
+		<queryString language="json">
+			<![CDATA[printAddInfoJson.signatures]]>
+		</queryString>
+		<field name="name" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="name"/>
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="data" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="data"/>
+			<fieldDescription><![CDATA[data]]></fieldDescription>
+		</field>
+		<field name="url" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="url"/>
+			<fieldDescription><![CDATA[url]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="dstPrueva" uuid="8c18aa60-f825-4164-8fd2-07a499d8185c">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="cnx_miniMentalShort"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="343"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="643"/>
+		<queryString language="json">
+			<![CDATA[formInstanceValue.formDocument.initData.patient]]>
+		</queryString>
+		<field name="patientId" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="patientId"/>
+			<fieldDescription><![CDATA[patientId]]></fieldDescription>
+		</field>
+		<field name="firstName" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="firstName"/>
+			<fieldDescription><![CDATA[firstName]]></fieldDescription>
+		</field>
+		<field name="lastName" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lastName"/>
+			<fieldDescription><![CDATA[lastName]]></fieldDescription>
+		</field>
+		<field name="sex" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="sex"/>
+			<fieldDescription><![CDATA[sex]]></fieldDescription>
+		</field>
+		<field name="birthDate" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="birthDate"/>
+			<fieldDescription><![CDATA[birthDate]]></fieldDescription>
+		</field>
+		<field name="uniqueIdentifier" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="uniqueIdentifier"/>
+			<fieldDescription><![CDATA[uniqueIdentifier]]></fieldDescription>
+		</field>
+		<field name="phone" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="phone"/>
+			<fieldDescription><![CDATA[phone]]></fieldDescription>
+		</field>
+		<field name="mobilePhone" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="mobilePhone"/>
+			<fieldDescription><![CDATA[mobilePhone]]></fieldDescription>
+		</field>
+		<field name="email" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="email"/>
+			<fieldDescription><![CDATA[email]]></fieldDescription>
+		</field>
+		<field name="language" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="language"/>
+			<fieldDescription><![CDATA[language]]></fieldDescription>
+		</field>
+		<field name="deathDate" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="deathDate"/>
+			<fieldDescription><![CDATA[deathDate]]></fieldDescription>
+		</field>
+		<field name="isDead" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="isDead"/>
+			<fieldDescription><![CDATA[isDead]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Patient" uuid="f70ad27f-3257-44bb-984a-2f4b4b23ae3e">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CDS"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="465"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="521"/>
+		<queryString language="json">
+			<![CDATA[]]>
+		</queryString>
+		<field name="patientId" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.patientId]]></fieldDescription>
+		</field>
+		<field name="firstName" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.firstName]]></fieldDescription>
+		</field>
+		<field name="lastName" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.lastName]]></fieldDescription>
+		</field>
+		<field name="sex" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.sex]]></fieldDescription>
+		</field>
+		<field name="birthDate" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.birthDate]]></fieldDescription>
+		</field>
+		<field name="uniqueIdentifier" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.uniqueIdentifier]]></fieldDescription>
+		</field>
+		<field name="phone" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.phone]]></fieldDescription>
+		</field>
+		<field name="mobilePhone" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.mobilePhone]]></fieldDescription>
+		</field>
+		<field name="email" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.email]]></fieldDescription>
+		</field>
+		<field name="language" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.language]]></fieldDescription>
+		</field>
+		<field name="deathDate" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.deathDate]]></fieldDescription>
+		</field>
+		<field name="isDead" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.isDead]]></fieldDescription>
+		</field>
+		<field name="tesseraSanitaria" class="java.lang.String">
+			<fieldDescription><![CDATA[printAddInfoJson.patient.tesseraSanitaria]]></fieldDescription>
+		</field>
+		<field name="dataValutazione" class="java.lang.String">
+			<fieldDescription><![CDATA[printAddInfoJson.dataValutazione]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="includeSignatures" class="java.lang.String">
+		<fieldDescription><![CDATA[printAddInfoJson.includeSignatures]]></fieldDescription>
+	</field>
+	<field name="logo" class="java.lang.String">
+		<fieldDescription><![CDATA[printAddInfoJson.logo]]></fieldDescription>
+	</field>
+	<field name="userLogin" class="java.lang.String">
+		<fieldDescription><![CDATA[printAddInfoJson.userLogin]]></fieldDescription>
+	</field>
+	<field name="MSPNASolito" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSPNASolito.code]]></fieldDescription>
+	</field>
+	<field name="HPSMotivo" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HPSMotivo.code]]></fieldDescription>
+	</field>
+	<field name="MSFTSpaventato" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSFTSpaventato.code]]></fieldDescription>
+	</field>
+	<field name="MSPezzi" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSPezzi.code]]></fieldDescription>
+	</field>
+	<field name="STBene" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.STBene.code]]></fieldDescription>
+	</field>
+	<field name="MTGBraccia" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MTGBraccia.code]]></fieldDescription>
+	</field>
+	<field name="HMTDCollo" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HMTDCollo.code]]></fieldDescription>
+	</field>
+	<field name="MSDStanco" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSDStanco.code]]></fieldDescription>
+	</field>
+	<field name="SCNonHoProblemi" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SCNonHoProblemi.code]]></fieldDescription>
+	</field>
+	<field name="HCGola" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HCGola.code]]></fieldDescription>
+	</field>
+	<field name="MSConfuso" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSConfuso.code]]></fieldDescription>
+	</field>
+	<field name="MSCSvenire" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSCSvenire.code]]></fieldDescription>
+	</field>
+	<field name="PIESProblemi" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.PIESProblemi.code]]></fieldDescription>
+	</field>
+	<field name="SFManiPiedi" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SFManiPiedi.code]]></fieldDescription>
+	</field>
+	<field name="HDPSDgerire" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HDPSDgerire.code]]></fieldDescription>
+	</field>
+	<field name="HSSUrinare" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HSSUrinare.code]]></fieldDescription>
+	</field>
+	<field name="HMSCalde" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HMSCalde.code]]></fieldDescription>
+	</field>
+	<field name="MSFCArrossata" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSFCArrossata.code]]></fieldDescription>
+	</field>
+	<field name="PSFacilmente" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.PSFacilmente.code]]></fieldDescription>
+	</field>
+	<field name="HGIncubi" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HGIncubi.code]]></fieldDescription>
+	</field>
+	<field name="MSPNASolitoAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSPNASolitoAltro]]></fieldDescription>
+	</field>
+	<field name="HPSMotivoAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HPSMotivoAltro]]></fieldDescription>
+	</field>
+	<field name="MSFTSpaventatoAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSFTSpaventatoAltro]]></fieldDescription>
+	</field>
+	<field name="MSPezziAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSPezziAltro]]></fieldDescription>
+	</field>
+	<field name="STBeneAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.STBeneAltro]]></fieldDescription>
+	</field>
+	<field name="MTGBracciaAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MTGBracciaAltro]]></fieldDescription>
+	</field>
+	<field name="HMTDColloAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HMTDColloAltro]]></fieldDescription>
+	</field>
+	<field name="MSDStancoAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSDStancoAltro]]></fieldDescription>
+	</field>
+	<field name="SCNonHoProblemiAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SCNonHoProblemiAltro]]></fieldDescription>
+	</field>
+	<field name="HCGolaAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HCGolaAltro]]></fieldDescription>
+	</field>
+	<field name="MSConfusoAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSConfusoAltro]]></fieldDescription>
+	</field>
+	<field name="MSCSvenireAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSCSvenireAltro]]></fieldDescription>
+	</field>
+	<field name="PIESProblemiAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.PIESProblemiAltro]]></fieldDescription>
+	</field>
+	<field name="SFManiPiediAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SFManiPiediAltro]]></fieldDescription>
+	</field>
+	<field name="HDPSDgerireAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HDPSDgerireAltro]]></fieldDescription>
+	</field>
+	<field name="HSSUrinareAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HSSUrinareAltro]]></fieldDescription>
+	</field>
+	<field name="HMSCaldeAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HMSCaldeAltro]]></fieldDescription>
+	</field>
+	<field name="MSFCArrossataAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.MSFCArrossataAltro]]></fieldDescription>
+	</field>
+	<field name="PSFacilmenteAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.PSFacilmenteAltro]]></fieldDescription>
+	</field>
+	<field name="HGIncubiAltro" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.HGIncubiAltro]]></fieldDescription>
+	</field>
+	<field name="scala" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.scala]]></fieldDescription>
+	</field>
+	<field name="scoreSASTotal" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.scoreSASTotal]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="150" splitType="Stretch">
+			<image onErrorType="Icon">
+				<reportElement x="1" y="0" width="131" height="48" uuid="0b9474c1-30e2-45f8-a328-c7647b8bdf79"/>
+				<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="132" y="0" width="434" height="48" uuid="127f379b-1bf2-4cab-ab18-0699bc0ed50d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ZUNG SELF - RATING ANXIETY SCALE (SAS)]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="0" y="60" width="567" height="90" uuid="fbf2e1df-c121-4a6a-ac53-53fb1aac7d56">
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Patient" uuid="8d89bde5-0504-4f00-b405-fba4554537ba">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="90" width="567">
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="120" y="58" width="190" height="15" uuid="32dd4769-d9f0-4197-bbd7-477579166b9e"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[($F{phone} != null ? $F{phone} : "" )]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="310" y="41" width="80" height="15" uuid="77e6d8a3-7142-4f94-b3cc-0417b53c7c0f"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Data di Nascita]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="120" y="24" width="190" height="15" uuid="1d4f0306-f263-47cd-8c0e-bb991667c81a"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{lastName}+ " "+ $F{firstName}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="24" width="120" height="15" uuid="b0204bc2-bc8f-4046-a77d-f83311b77c2b"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Nome e Cognome]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="310" y="24" width="80" height="15" uuid="2542ed17-f9dc-4889-bd9b-17112196e5d9"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Codice fiscale]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="390" y="24" width="177" height="15" uuid="d6c415ea-53c3-40ab-9b07-390f93e38b50"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{uniqueIdentifier}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="58" width="120" height="15" uuid="7c324538-af7a-4db7-a0f8-154d3c27e93a"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Contatto telefonico]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="390" y="58" width="177" height="15" uuid="543f2f0a-d209-475f-97b4-837dd4ccc075"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{sex}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="1" width="148" height="20" uuid="fd2b9026-6db5-44c8-878d-a4321276091d"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="10" isBold="true"/>
+							</textElement>
+							<text><![CDATA[ANAGRAFICA ASSISTITO]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="0" y="41" width="120" height="15" uuid="1a8d0158-7986-4ac5-8214-91dd076df538"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Tessera Sanitaria]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="310" y="58" width="80" height="15" uuid="7a73d570-5517-4f7a-a63f-a933070d8e5c"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Sesso]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="390" y="41" width="177" height="15" uuid="6ad9a047-3a07-4fc6-a8fa-076c4b2fd7bd"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd").parse($F{birthDate})]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="120" y="41" width="190" height="15" uuid="f614d8f8-fa95-43ac-831e-621701649ac3"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{tesseraSanitaria}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="75" width="120" height="15" uuid="b34f58cb-67f2-4688-b19a-a5922d664a8a"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Data di valutazione]]></text>
+						</staticText>
+						<textField isBlankWhenNull="true">
+							<reportElement x="120" y="75" width="190" height="15" uuid="3f422fec-55b2-45b5-9b5d-1cbe6e9d0978"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyy").format( new SimpleDateFormat("dd/MM/yyy HH:mm").parse($F{dataValutazione}))]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</title>
+	<detail>
+		<band height="65">
+			<staticText>
+				<reportElement x="0" y="4" width="170" height="20" uuid="79658799-b657-4d38-95c9-f8e9948e931d"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Informazioni Generali]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="30" width="210" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="04e72f19-8486-4c4a-8a96-0007d64afd4b"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#2D4262"/>
+					<topPen lineWidth="0.5" lineColor="#2D4262"/>
+					<leftPen lineWidth="0.5" lineColor="#2D4262"/>
+					<bottomPen lineWidth="0.5" lineColor="#2D4262"/>
+					<rightPen lineWidth="0.5" lineColor="#2D4262"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Operatore]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="210" y="30" width="357" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="c8c728b7-d319-439d-b3a8-b3cd435407ac"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#2D4262"/>
+					<topPen lineWidth="0.5" lineColor="#2D4262"/>
+					<leftPen lineWidth="0.5" lineColor="#2D4262"/>
+					<bottomPen lineWidth="0.5" lineColor="#2D4262"/>
+					<rightPen lineWidth="0.5" lineColor="#2D4262"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Figura professionale]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="0" y="45" width="567" height="20" uuid="b52ce3cf-a948-4038-b053-8c7d4021ba11"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Operatori" uuid="f64d3f43-ffad-41e2-a680-39214056feeb">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("printAddInfoJson.operators")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="20" width="567">
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="210" y="0" width="357" height="20" uuid="1744ee0a-89a9-45a4-8fb5-8f8a6438fc8d"/>
+							<box topPadding="3" leftPadding="5">
+								<pen lineColor="#2D4262"/>
+								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+							</box>
+							<textFieldExpression><![CDATA[$F{figuraProfessionale}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="210" height="20" uuid="71e74567-a5f8-4e69-9de0-8c74a01bc413"/>
+							<box topPadding="3" leftPadding="5">
+								<pen lineColor="#2D4262"/>
+								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+							</box>
+							<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="764">
+			<frame>
+				<reportElement positionType="Float" x="0" y="0" width="558" height="40" uuid="c7c95cbc-839a-42ce-a639-1424085837b5"/>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="86ef6939-0498-4d9c-b2bf-25a872ea7db5"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="241ff355-1613-4a7b-a356-1000dfd96048"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="238" y="20" width="40" height="15" uuid="2acd32e2-1c5a-41cf-9f28-db0d2e6daa83"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="78" y="22" width="10" height="10" uuid="bf75930b-76d4-4179-a9f6-de23f023d996"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="3c0362ad-c02a-45e1-989c-6eeae07e4546">
+						<printWhenExpression><![CDATA[$F{MSPNASolito}.equals("op1a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="ddcc727e-f3bf-4614-bed0-532a2fdbd335">
+						<printWhenExpression><![CDATA[$F{MSPNASolito}.equals("op1c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="3713cd04-8c9b-4244-a077-d14073d11a9d"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="78" y="22" width="10" height="10" uuid="85cc0290-cedc-49d9-a3c7-51943d5e805f">
+						<printWhenExpression><![CDATA[$F{MSPNASolito}.equals("op1b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="258" height="20" uuid="76b8f749-0b52-44b3-a253-ae2250e131f8"/>
+					<textFieldExpression><![CDATA[$F{MSPNASolitoAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="230" height="20" uuid="8863d160-c3f2-4447-8cb3-70cb75285c27"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[1. Mi sento più nervoso ed agitato del solito]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="c71c2847-ea65-4891-aa6c-b5a71c1cad3b"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="223" y="22" width="10" height="10" uuid="dac60c46-e178-458a-92e3-3fc2b9931c89">
+						<printWhenExpression><![CDATA[$F{MSPNASolito}.equals("op1d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="2d8b3a37-d1bc-4776-a443-c6a073b9f97f"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="f64b480a-9638-4e30-b4de-cee8da7bc1f7"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="40" width="549" height="40" uuid="abbe5198-49ac-431f-8c03-3d08eb8eec0e"/>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="4fda41f0-ad2b-4190-8dd2-49961941e191"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="9758494b-11eb-4bdf-83ef-2bdefd11127d"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="317133e1-2d9b-4eb5-a662-0f6ba248917f"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="9f13228d-d394-487f-af24-3b88728deaa0"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="16bb2d9a-d0e6-455e-8456-31ddebd2303b">
+						<printWhenExpression><![CDATA[$F{HPSMotivo}.equals("op2a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="7ef95cae-693e-4b9f-b595-4ca69991fdd1"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="d35fc70b-8140-47a0-acec-dbc09d614e3b"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[2. Ho paura senza motivo]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="1b8f2ae4-6929-4e2b-b1d9-2c5935844c1a"/>
+					<textFieldExpression><![CDATA[$F{HPSMotivoAltro}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="45d0ecc4-a41d-4d49-a346-0824ddaa4acb"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="02af466a-a8a5-42d8-b2bb-79827e91517d">
+						<printWhenExpression><![CDATA[$F{HPSMotivo}.equals("op2d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="61f07398-688f-42e0-9a84-6bd96ed76a17">
+						<printWhenExpression><![CDATA[$F{HPSMotivo}.equals("op2c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="78" y="22" width="10" height="10" uuid="ffee6aaf-aa08-45e5-a9e0-52c295f16f03"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="60b50d92-5a2e-4696-a3a4-e0db141a3655"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="78" y="22" width="10" height="10" uuid="d5ea305b-f1a1-40e7-abec-5e4f0a0901ab">
+						<printWhenExpression><![CDATA[$F{HPSMotivo}.equals("op2b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="80" width="549" height="40" uuid="a6178f61-f624-4419-bf02-5f8e643a15c6"/>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="82dff8bc-a84e-4008-92a0-42f39ba35c16"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="90e09488-ac27-448a-8a05-7a8f9647ca71"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="17d70f34-4516-4800-818f-f12f32e59555"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="e39d2aed-6352-4d67-8c3d-0a65fb0fc941"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="cb1e1521-82df-4e17-b390-542e3f8b10de"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="9d76f78f-e7bf-4420-8cc9-e624793b6091">
+						<printWhenExpression><![CDATA[$F{MSFTSpaventato}.equals("op3d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="69c98f0b-c9d3-46ce-9024-7c3ad1318eb2"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="e5d7d49d-56f8-4e87-a5a2-04217ca23c0b">
+						<printWhenExpression><![CDATA[$F{MSFTSpaventato}.equals("op3a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="ac16a8f0-ef73-4e14-ba89-ffc6848d5b12">
+						<printWhenExpression><![CDATA[$F{MSFTSpaventato}.equals("op3c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="e76157c9-2d3a-45eb-8dba-c82799a73ae2"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="18c67e18-95e8-452e-9f2e-e24114f349e7"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[3. Mi sento facilmente turbato e spaventato]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="13b1d5fb-008f-43de-aaca-a39934cc15dd"/>
+					<textFieldExpression><![CDATA[$F{MSFTSpaventatoAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="74d0ab95-5150-4eda-826f-a0cacc1d65a8">
+						<printWhenExpression><![CDATA[$F{MSFTSpaventato}.equals("op3b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="c89c328c-aa40-439e-8a32-54fcef1fa090"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="120" width="549" height="40" uuid="f6677fa5-2421-4293-9d05-1bc20436a115"/>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="21d52a70-ad93-4650-9093-6a2114d424dc"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="d05fc04d-9752-45cd-87ce-f06aacf4c637"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[4. Mi sento a pezzi]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="aac3f6d2-fb23-42fa-be12-3172f98aa0de"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="98a90d42-9a1d-47f4-9982-97de399b3876"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="1398dd79-df7f-4386-96ce-35291e3fb80d"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="eeb473d8-e392-452f-b089-981e268e1798"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="83eb6612-6f79-4538-a70b-cb1192428f5f"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="26f2e7ae-fd26-4353-be88-dfe9c143b1e0"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="41ff4ddf-8525-47e2-a22c-0ac1e52c7c58">
+						<printWhenExpression><![CDATA[$F{MSPezzi}.equals("op4d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="878becc3-fed6-4719-948a-94628fa91e39">
+						<printWhenExpression><![CDATA[$F{MSPezzi}.equals("op4b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="e3c9168c-4416-47c8-9eef-4a27167e58d0"/>
+					<textFieldExpression><![CDATA[$F{MSPezziAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="adab4787-69b6-44b3-8b01-b0617dfeeb6b"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="512483d2-fe55-4727-912d-76ba99b94805">
+						<printWhenExpression><![CDATA[$F{MSPezzi}.equals("op4a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="bda21659-2da3-40b7-baa4-f599812079db">
+						<printWhenExpression><![CDATA[$F{MSPezzi}.equals("op4c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="160" width="549" height="40" uuid="b3eb6496-7d0b-4620-acbe-7e68ce14cbb0"/>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="7ed15022-a960-4c11-822e-3069c706deb1"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="32af421d-4d6a-4064-9902-082fe2e1cadf"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="582ef911-1f7e-46ea-8d0f-53deb2289dce"/>
+				</rectangle>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="19d9e30d-e86e-4a1d-917d-6c44d49e7139"/>
+					<textFieldExpression><![CDATA[$F{STBeneAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="b7739117-7576-4350-a7b6-59adedf34880">
+						<printWhenExpression><![CDATA[$F{STBene}.equals("op5a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="d84b4f14-a5e5-4fb8-9068-e4fad63275e7"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="76cf29cb-3106-44c0-8e01-e062379e30b1"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="400" height="20" uuid="8e79579f-2fb7-441c-9d95-f22f608b5b33"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[5. Sento che tutto va bene; non capiterà nulla di negativo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="433ccc94-3000-4b0c-b2ac-092607045b43"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="32dabb41-b683-4ddc-b16e-916d83b613ed">
+						<printWhenExpression><![CDATA[$F{STBene}.equals("op5d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="4dd69a1e-f3fc-48b5-a6fe-007fdc0926a5">
+						<printWhenExpression><![CDATA[$F{STBene}.equals("op5b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="37448b4c-825b-4fd3-8922-510abb1ea444"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="0a31bbae-a6b3-4fb5-95aa-29983d8a187d">
+						<printWhenExpression><![CDATA[$F{STBene}.equals("op5c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="0031f5e5-6e51-4a96-ae5d-a8a9be8ab76e"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="200" width="549" height="40" uuid="5721aeb3-0ffd-45e5-b30e-3c5dfebe6eb1"/>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="d16d878f-a907-46c9-acce-3ae52321a340"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="9d391369-27a4-4a41-a65e-7d908da19f6b"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="15287b32-a614-4c51-b811-1bf5dbc16fef"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="6547c99f-ea13-45e6-b264-d4ac4a7e5954"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="5a1671eb-5b9a-4b37-b211-66e70b309ff6">
+						<printWhenExpression><![CDATA[$F{MTGBraccia}.equals("op6b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="21d8f644-5124-4707-ade6-b0e72bc5f7b9">
+						<printWhenExpression><![CDATA[$F{MTGBraccia}.equals("op6c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="b9126276-5c48-45a3-9c5e-10662e7d4ccd">
+						<printWhenExpression><![CDATA[$F{MTGBraccia}.equals("op6d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="8ab57942-5fb0-42cb-ae56-5501fac6966d"/>
+					<textFieldExpression><![CDATA[$F{MTGBracciaAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="452cef00-e598-4074-ab3a-2afbae711961">
+						<printWhenExpression><![CDATA[$F{MTGBraccia}.equals("op6a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="77c8f64d-7d62-443e-89f2-52b9102c1a4f"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="00764242-eb81-439b-aad8-557bc7250540"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="276eb864-5ca8-4486-ba79-90c82e5faca0"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="9e21bdd4-5e0b-4be5-a9b9-73223d422c5b"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="4a7804c6-00f4-4138-8e1c-d41d078e1ee1"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[6. Mi tremano gambe e braccia]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="240" width="549" height="40" uuid="09354608-e0b2-4417-a5f2-e6ed30f80005"/>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="77178b74-b257-4411-a9ff-46bae12306f9"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="1151efa0-cd2b-4cfd-84fa-1d369bcf0a60"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="5a177a8f-d624-477a-919d-cf8077ccc6b8"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="94fe9a65-d278-48b8-b244-2c64c382fd2a">
+						<printWhenExpression><![CDATA[$F{HMTDCollo}.equals("op7c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="3870a625-5386-4de4-a143-30c76e06aedf">
+						<printWhenExpression><![CDATA[$F{HMTDCollo}.equals("op7b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="2903c3b9-8381-4d65-aa7f-762eac40fc88"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="9b12ef39-296d-46b0-ac42-f29813164156"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="99a309c7-02d4-470f-99f1-50b0ea7a7781">
+						<printWhenExpression><![CDATA[$F{HMTDCollo}.equals("op7a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="a8aaa758-f4a4-423f-a036-e4f67ce73e40"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="7527f85e-e632-472d-8822-1c19dacb485b"/>
+					<textFieldExpression><![CDATA[$F{HMTDColloAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="f174bb75-a95c-4c43-960f-3110929abde2">
+						<printWhenExpression><![CDATA[$F{HMTDCollo}.equals("op7d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="340" height="20" uuid="c9bb3953-ba72-4fff-8659-91746396bae2"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[7. Ho mal di testa e dolori a capo e collo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="30d879bc-3c61-46e6-a38f-de246251ec2f"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="7c191a02-aadc-4528-aff1-12092ab9920a"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="280" width="549" height="40" uuid="f1af3f51-b541-402b-b3bc-40be7024a3a3"/>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="5f11bf13-f2fc-47ac-8c72-e73903b9d249"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="85e9b65d-eece-410a-a118-bc0b1b4fd046"/>
+				</rectangle>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="581245ec-6209-48dc-83db-9299fa8b9852"/>
+					<textFieldExpression><![CDATA[$F{MSDStancoAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="4e20f4e4-76ba-41a2-9716-83d0086a9c82"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="69a6235d-7bd9-42b7-acad-751833382097"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="48ba827f-8152-43b1-a2dd-13c6744d1fa9"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[8. Mi sento debole e stanco]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="04b18a3f-82d9-42dd-b450-0fdbe7517609"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="d3e17440-4805-4179-9252-54b5c166840f">
+						<printWhenExpression><![CDATA[$F{MSDStanco}.equals("op8b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="ec1fbad8-7a23-4dda-ba30-39dafcd8f2c8">
+						<printWhenExpression><![CDATA[$F{MSDStanco}.equals("op8a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="b00f0204-048b-41d8-b543-a5752284156e"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="50917b17-dae7-4cfd-a3aa-b851c394025f"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="dad072a3-2058-46e6-b612-9746d577e81b">
+						<printWhenExpression><![CDATA[$F{MSDStanco}.equals("op8d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="d29871f0-fa86-475c-aad9-99b2f50ca63f"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="43dfdce5-1b2c-4e98-a4c1-6c6ea2205f4b">
+						<printWhenExpression><![CDATA[$F{MSDStanco}.equals("op8c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="320" width="549" height="40" uuid="1113db62-9db0-4738-9d2c-8cf09049d4b0"/>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="567ca910-6f9f-41e0-9313-9a4908e8cf3c"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="468264fe-263d-4693-aa90-56f7dfcf7f4c"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="24f1ae3a-1364-400c-b40f-72ebb0dc730e"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="b2cdd537-03cf-438c-9bb2-ff15465c564e"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="79297595-dbbc-42bc-8bb0-316b80d43968">
+						<printWhenExpression><![CDATA[$F{SCNonHoProblemi}.equals("op9c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="ea44f0b9-2bab-4a06-82cb-1cafc2aeb4cc">
+						<printWhenExpression><![CDATA[$F{SCNonHoProblemi}.equals("op9b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="fece55f9-4b53-424a-b2a2-456fe01b4ea3">
+						<printWhenExpression><![CDATA[$F{SCNonHoProblemi}.equals("op9a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="c8ee8963-3f60-4ac3-b043-1c863c8ab817"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[9. Sono calmo e non ho problemi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="2dff2cc2-8355-416f-bcea-fffe7e9ef0d1"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="7527c798-7299-4710-97f1-328d7f8faed0"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="b3322fe5-3bb3-47ce-b6bf-b942b5c6dd14"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="6c919485-0522-480b-bd15-3e35b533588f">
+						<printWhenExpression><![CDATA[$F{SCNonHoProblemi}.equals("op9d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="cce09096-06e2-48a6-bbf8-73bced211e26"/>
+					<textFieldExpression><![CDATA[$F{SCNonHoProblemiAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="9af9bfb9-a91a-46c2-820a-590e5a28946e"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="360" width="549" height="40" uuid="9e9ccf32-a102-4223-845e-c6f538f3618c"/>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="fdcdbf67-f7e2-4803-8378-24e714161978"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="811550d9-3a1a-4ae8-9550-0bf1851300eb"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="339d2f1e-a312-4888-a8db-5e3f05a391f8">
+						<printWhenExpression><![CDATA[$F{HCGola}.equals("op10d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="8ac63d51-1848-42da-9818-f6936618c4ab"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="33a514ff-e291-4411-9eee-0ded63c37801"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="80ce25b7-289a-444c-bdf9-740c8bc48eee"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="683e1958-93d9-4609-bf7b-80c46d12c1a1"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="a7d990fa-62e7-408c-997a-d7f9fec65a89"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="5fa36dc9-0d5b-40f5-aaa4-50b6e83acb08"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[10. Ho il cuore in gola]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="3f3fabdf-003b-4322-9064-57d11bc27c46"/>
+					<textFieldExpression><![CDATA[$F{HCGolaAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="84963ba7-2898-411d-bcf0-eeb096211558"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="399f7ea2-4011-4a96-952e-665cf2f0ca4a">
+						<printWhenExpression><![CDATA[$F{HCGola}.equals("op10b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="28101b67-6798-4dd5-8570-7c56ad45ba2e">
+						<printWhenExpression><![CDATA[$F{HCGola}.equals("op10c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="853ec5b4-b226-4121-b00e-1051df66b55d">
+						<printWhenExpression><![CDATA[$F{HCGola}.equals("op10a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="400" width="549" height="40" uuid="4c59bf3a-1b63-4f1b-95dc-68849c71a5ad"/>
+				<rectangle>
+					<reportElement x="78" y="22" width="10" height="10" uuid="9bfd33f7-51a0-4749-825a-e8ad494037ef"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="bb46c925-0c40-4943-80fe-b752e360dc57"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="e90e4509-c882-4b7b-99f6-3bbef70d1f11"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="78" y="22" width="10" height="10" uuid="e97ac2ff-d248-4ad1-be9e-3e1f3a46d271">
+						<printWhenExpression><![CDATA[$F{MSConfuso}.equals("op11b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="142f13ad-bd42-4c6f-80bc-62984dbfc929">
+						<printWhenExpression><![CDATA[$F{MSConfuso}.equals("op11a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="ba8d8c62-d358-4a22-9a78-36e62fb3fab3"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="e51017c4-577c-45c4-90e2-87e8fb9539b8"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="0eda7424-da40-4798-90f0-5da986877314"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="ece41de1-4951-4311-8877-2a8522663ffb"/>
+					<box leftPadding="5" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[11. Mi sento confuso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="223" y="22" width="10" height="10" uuid="c5ef0780-5672-4717-8cae-b0f192a2e194">
+						<printWhenExpression><![CDATA[$F{MSConfuso}.equals("op11d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="96e71fc9-3f6b-4096-99d9-3dfebb6a735d">
+						<printWhenExpression><![CDATA[$F{MSConfuso}.equals("op11c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="cd24e881-07ed-47bb-bea2-b45a9ba22f30"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="08ba4950-35fa-4e35-a1b0-c77c1c6da7f5"/>
+					<textFieldExpression><![CDATA[$F{MSConfusoAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="238" y="20" width="40" height="15" uuid="f84102bd-79ed-4339-9b4e-facc6230b14b"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="440" width="549" height="40" uuid="cc5983e1-08e1-4144-bf06-8bc816b73249"/>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="837c4733-fc8d-47cd-b8f9-e586db0d05ee"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="fd43ac85-0b32-40f4-aa15-01b59f0be3b3"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="47a1d18f-d12c-483f-8019-f5b115579bd9"/>
+				</rectangle>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="d68a8506-5092-406d-b5b1-9d86668a227c"/>
+					<textFieldExpression><![CDATA[$F{MSCSvenireAltro}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="78" y="22" width="10" height="10" uuid="5a04adc6-bc11-4355-9bca-e355f355c308"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="2700e71b-2cfa-435a-8493-39de97d16072"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="2ea75282-36aa-45e1-9732-3838e8b14fcc"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="78" y="22" width="10" height="10" uuid="7d31d125-b35e-44e8-8043-720654b3b1a9">
+						<printWhenExpression><![CDATA[$F{MSCSvenire}.equals("op12b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="5a66d466-97f8-4e41-8b7d-05bb3955a991">
+						<printWhenExpression><![CDATA[$F{MSCSvenire}.equals("op12d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="28fa97b2-a86b-49c3-931f-6258c921a5ee"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="f6ec515f-e6dd-41a0-b825-90600a56b980">
+						<printWhenExpression><![CDATA[$F{MSCSvenire}.equals("op12a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="f12dc350-acee-4c05-9ff9-21f394ba4cc7"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="1835c600-f467-4ec2-93a5-3242f43468ed">
+						<printWhenExpression><![CDATA[$F{MSCSvenire}.equals("op12c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="2acb6324-6171-44c7-9900-f6f19e11682f"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[12. Mi sento come svenire]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="480" width="549" height="40" uuid="b76e9bc9-17df-42fa-a340-ee725a3ad976"/>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="8d44f1ec-c9c8-48af-96f1-5db5a777c88f"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="840cc0b6-b0b7-406f-b483-451edcc4a32f"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="a8f0cf82-e705-43a1-8a6c-aeffb8720f9d"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="d7cbec2f-f805-41d7-b71b-9a5c0bdfb817">
+						<printWhenExpression><![CDATA[$F{PIESProblemi}.equals("op13a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="85b6b55d-67cc-4890-b924-81b60bc19bd1"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="4add4b3f-dab0-4f17-9e02-2f773ed772f9"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="c6fa7d57-676b-4781-913c-6f35d4dfab8d"/>
+					<textFieldExpression><![CDATA[$F{PIESProblemiAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="e09e96b1-992f-459f-8674-75b6285e3b43"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="61621bda-3b78-4ea2-89a8-cac6b7b519e7">
+						<printWhenExpression><![CDATA[$F{PIESProblemi}.equals("op13d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="e0f6ea6d-624a-479a-b0b8-499a35c06e44"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="94d4c063-041d-4cae-8b1e-136647d5d650">
+						<printWhenExpression><![CDATA[$F{PIESProblemi}.equals("op13c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="9dd4d301-0a8c-496c-acc4-36db42b886ff"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="5fc51d35-72f5-4006-bf9c-8bd1a5272f7a">
+						<printWhenExpression><![CDATA[$F{PIESProblemi}.equals("op13b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="858a6c7c-8fea-4ecf-8b83-6c25512c009e"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[13. Posso inspirare ed espirare senza problemi]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="520" width="549" height="40" uuid="af4121cb-7277-4fe0-8d47-b56cc2f38bd9"/>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="c21e303f-f5ef-4e95-ab14-f89251e85b01"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="7ac2cc51-52eb-46e1-a57a-c37f66bc794d"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="07dc7903-2f8b-44ff-a31c-56169d794f4c"/>
+				</rectangle>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="99a070c8-93d6-4bb4-8e6c-e634ccc61844"/>
+					<textFieldExpression><![CDATA[$F{SFManiPiediAltro}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="b127dfcf-3f5e-4d6e-b89a-00c27fbd86e0"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="1edbcf6e-d2d4-4bec-8e3e-a964bf26306e"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="b2368cb5-1c90-4cad-8411-0208cad8f417">
+						<printWhenExpression><![CDATA[$F{SFManiPiedi}.equals("op14b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="ffd22141-eaad-401e-9ac4-d1749f6866b4"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="63b8b0c6-064f-46a9-a568-ad65ab469a56"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="c2487c9f-0f35-4a0d-b7a5-7821042d7155">
+						<printWhenExpression><![CDATA[$F{SFManiPiedi}.equals("op14d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="279d3e09-e29d-4a4e-bc51-2ee32488b42f">
+						<printWhenExpression><![CDATA[$F{SFManiPiedi}.equals("op14c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="d0de8342-0923-4a28-b273-ea40744d71c8">
+						<printWhenExpression><![CDATA[$F{SFManiPiedi}.equals("op14a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="361" height="20" uuid="50d31fe3-5886-4172-bd06-d5668bba1b95"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[14. Sento formicolare le dita di mani e piedi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="59bed48e-11e2-456e-a940-65ee5f9a1adb"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="560" width="549" height="43" uuid="6230606f-7121-4b14-aee2-e7a4f4c7edfd"/>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="4b663a98-2099-43ef-98e9-05318e35f332"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="281fdf72-05ea-4bca-918c-c78a9be39e20"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="25bd1cb3-e55a-4239-897a-b41de1897a30"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="d89d8342-d42f-4d25-9528-2586cc8f02b8"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="8f240aff-2070-4b36-8652-e428db4e61a4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="ca29a10a-626e-47f6-ab98-a720252db8b2"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="eb7156f5-def9-4d58-bd49-a61d93056ae3">
+						<printWhenExpression><![CDATA[$F{HDPSDgerire}.equals("op15a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="350" height="20" uuid="ff450fce-f225-4161-bf8c-b67c32f16715"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[15. Ho dolori di pancia e stento a digerire]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="bde14f2f-acde-47c2-a92a-e6fde559687c"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="77029b15-d3a7-4bf5-8c47-d9d6534bcb79">
+						<printWhenExpression><![CDATA[$F{HDPSDgerire}.equals("op15d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="f5802616-18a3-4180-b54e-32aac575c4fe">
+						<printWhenExpression><![CDATA[$F{HDPSDgerire}.equals("op15c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="93b379d2-32c3-4e1d-8873-b5783db02b3d">
+						<printWhenExpression><![CDATA[$F{HDPSDgerire}.equals("op15b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="23" width="249" height="20" uuid="b4405aea-8f9b-4b19-ba55-2df187962d72"/>
+					<textFieldExpression><![CDATA[$F{HDPSDgerireAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="4772564a-7e83-4a99-a78c-c110bec8833f"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="604" width="549" height="40" uuid="0593dc53-276e-467b-b37a-8fddb2118eb0"/>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="93fe6720-5554-4002-a245-773c439910f8"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="fb3a54b6-7f0a-4b6a-8ce7-b9381e119c26"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="4eb2f09a-12d7-49bf-ab8b-dcec7be9ad11"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="3db43a1c-3c2f-415e-a25d-8bfff2e8bf54">
+						<printWhenExpression><![CDATA[$F{HSSUrinare}.equals("op16b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="346a965e-31f7-4b7a-9c5b-3df62d1ca87e"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[16. Ho Spesso lo stimolo ad urinare]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="78c4a427-d623-457b-9184-61b62de5c417">
+						<printWhenExpression><![CDATA[$F{HSSUrinare}.equals("op16d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="d394951e-7630-4f7b-8375-15cd5e1d8410"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="a87c873d-b41d-4d8a-919d-3d44de825218"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="bb460b8f-a2b5-43bd-991a-8f6ee29832c8"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="38608302-1356-4df1-b060-a4940710563f"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="b90ea349-3b14-4a4d-b147-805985102ce3"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="d92b32e8-409d-468b-9423-ea33b1c31009"/>
+					<textFieldExpression><![CDATA[$F{HSSUrinareAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="c8ba2315-67bd-422a-95fb-1c65b4be3369">
+						<printWhenExpression><![CDATA[$F{HSSUrinare}.equals("op16a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="fb626eaf-9256-4b3e-9133-f254f29bfbe6">
+						<printWhenExpression><![CDATA[$F{HSSUrinare}.equals("op16c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="644" width="549" height="40" uuid="a39e3a8c-2a0a-473c-b94e-047a5eb8048d"/>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="e02914a4-b743-49ac-b7a3-d7039797c76b"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="fe23f7d0-c522-42da-bba9-fa9362497140"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="d879f64b-48cd-4ecc-9ca6-6e67772ee117"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="3156e878-f858-4144-8a65-5c267f976292"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="ca90ec6e-6c93-42da-98c7-9478f7bed1ab">
+						<printWhenExpression><![CDATA[$F{HMSCalde}.equals("op17d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="223145d2-03e4-4330-bf8a-4ce905cc520e"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="388d0c55-9d3f-40b8-8431-074e7335b347">
+						<printWhenExpression><![CDATA[$F{HMSCalde}.equals("op17b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="557c2715-81d7-46f8-9d5e-3fb859fa5653"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="224ba1ed-841a-4a7d-83e2-4f942ca50833">
+						<printWhenExpression><![CDATA[$F{HMSCalde}.equals("op17c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="6f269ab4-266f-47f4-b944-88b928a1998c"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[17. Ho le mani secche e calde]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="e16ed286-9e62-4238-bab4-fdd899a0010f">
+						<printWhenExpression><![CDATA[$F{HMSCalde}.equals("op17a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="2b9030a7-9e39-4f7e-af36-7003e6b9ca26"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="8539cd02-e1c3-4c92-982b-f09d4b345f8d"/>
+					<textFieldExpression><![CDATA[$F{HMSCaldeAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="aaf8d02e-2075-4d07-9504-ae668caebbf7"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="684" width="549" height="40" uuid="071a9b44-456a-4b95-af65-f41ca910445a"/>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="23dce2a5-1aec-4967-ba27-4ead2dce68cc"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="4ea29f65-35a2-45e8-b576-6ac8b9a28b1f"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="ff1e0d0e-af66-4a00-ab46-e194acb55e11"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="fecbcc3e-93e6-476a-81a1-3011f6127eb8"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="2a9499aa-ab08-4a31-8f6d-61c0e0a5e821"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="46c533f8-613b-41f4-bb20-590036fe1453">
+						<printWhenExpression><![CDATA[$F{MSFCArrossata}.equals("op18d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="e40e8c8d-06b4-42d9-a725-42b2ded9b5c7">
+						<printWhenExpression><![CDATA[$F{MSFCArrossata}.equals("op18c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="c7363236-5d81-4b79-9b6b-0d4be7c199b1"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="f11af5f5-41ae-4425-a04d-0e5c512d807b"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="ba5b10d6-b28c-493d-90ce-d8c13e44bcbf">
+						<printWhenExpression><![CDATA[$F{MSFCArrossata}.equals("op18a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="361" height="20" uuid="a35d2e0b-f227-4c9c-acbc-e85b7127fcfa"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[18. Mi sento la faccia calda ed arrossata]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="f15b02b7-8e97-4bef-b7c4-cc3d617e4cb9">
+						<printWhenExpression><![CDATA[$F{MSFCArrossata}.equals("op18b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="26b032e1-fec7-480b-b571-f2073c0bf235"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="22ce1810-55a6-4a66-b621-be5d2d08df29"/>
+					<textFieldExpression><![CDATA[$F{MSFCArrossataAltro}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="724" width="549" height="40" uuid="a6da23f0-43c6-4faa-9283-c7b27dc1a1c8"/>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="541db993-98b2-485c-94f2-a8bb24796cdd"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="16" y="22" width="10" height="10" uuid="a0a9b2ba-cb44-439f-a7c0-e52a2b6dd917"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="93eb3f26-f53d-481a-8be3-e5136d106b39"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="2a3cfa20-61c3-42ab-a77b-fbb3f88c91ba">
+						<printWhenExpression><![CDATA[$F{PSFacilmente}.equals("op19c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="20852110-4e40-4aeb-a371-8419f0f1f73d">
+						<printWhenExpression><![CDATA[$F{PSFacilmente}.equals("op19a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="be1eec0a-c6d2-43f0-90a7-6230666990e0">
+						<printWhenExpression><![CDATA[$F{PSFacilmente}.equals("op19d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="91372172-08c3-464e-bd68-dec10195706b"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="0" width="350" height="20" uuid="8c4261a8-4190-4e1a-bcc4-1d52fedc3770"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[19. Prendo sonno facilmente]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="52c59025-a385-44e5-8553-175629e07162"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="20" width="249" height="20" uuid="b2109b32-b582-4ca4-9d9d-e1ef6612a5d3"/>
+					<textFieldExpression><![CDATA[$F{PSFacilmenteAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="4ae907ad-11a9-4bff-b6f2-6c5777e7d927">
+						<printWhenExpression><![CDATA[$F{PSFacilmente}.equals("op19b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="f30999f5-0571-4f1b-accf-ccd894fba7f7"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="66881457-2b2f-4488-bf9b-0d306063e151"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="a719dd1c-15d3-4c1b-a6c7-0b62d5a9ff2a"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+			</frame>
+		</band>
+		<band height="41">
+			<frame>
+				<reportElement positionType="Float" x="0" y="-2" width="549" height="38" uuid="ac94229a-13e6-47cd-8a7c-fe3a55ed2944"/>
+				<rectangle>
+					<reportElement x="222" y="22" width="10" height="10" uuid="a136fb94-e147-4861-b015-5218bafaebc4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="94" y="20" width="42" height="15" uuid="ebfa2cec-4b0e-4248-a399-8906b2a13067"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[A volte]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement isPrintRepeatedValues="false" x="300" y="18" width="249" height="20" uuid="16c71f88-5558-4efa-9542-98847f5886d3"/>
+					<textFieldExpression><![CDATA[$F{HGIncubiAltro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="20" width="38" height="15" uuid="c85f5019-4fc5-47a6-ac6f-8229fd39a8de"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Mai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="20" width="40" height="15" uuid="f2dbf02c-1fc9-4fab-b365-18484058eaeb"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Spesso]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="152" y="22" width="10" height="10" uuid="268cf05a-024f-4353-a7f3-cc88e049441a"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="16" y="24" width="10" height="10" uuid="52d96a82-6829-4d02-8d6b-1ffbb94e7c69"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="79" y="22" width="10" height="10" uuid="56806121-dffe-492b-a9e2-966ccde3d33d"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="152" y="22" width="10" height="10" uuid="e6d9bd29-ab30-4991-a4d5-87968907ee23">
+						<printWhenExpression><![CDATA[$F{HGIncubi}.equals("op20c")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="284" height="20" uuid="63254cf5-16ae-4dd1-b489-743958200d1c"/>
+					<box leftPadding="5" bottomPadding="1" rightPadding="5">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[20. Ho gli incubi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="222" y="22" width="10" height="10" uuid="3ec8ac4a-d5de-4e15-8bfc-9a2def23cf50">
+						<printWhenExpression><![CDATA[$F{HGIncubi}.equals("op20d")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="20" width="40" height="15" uuid="53a3ffe4-81c1-47a1-84a0-01d283b6a204"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Sempre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="22" width="10" height="10" uuid="a982def8-f094-4f6b-a97d-b54202e85c1e">
+						<printWhenExpression><![CDATA[$F{HGIncubi}.equals("op20a")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="22" width="10" height="10" uuid="96cd2e45-8cf4-4005-8df1-f46226025ff3">
+						<printWhenExpression><![CDATA[$F{HGIncubi}.equals("op20b")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[X]]></text>
+				</staticText>
+			</frame>
+		</band>
+		<band height="150">
+			<textField isBlankWhenNull="true">
+				<reportElement x="131" y="70" width="30" height="20" uuid="70a2ab46-f2e8-437a-88cc-441ac9c7628b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{scoreSASTotal}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="161" y="70" width="200" height="20" uuid="64aa2fe7-7232-4877-84b2-0a3f5e8d895e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{scala}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="70" width="121" height="20" uuid="0a477fe4-39d0-4841-9bf6-a63e3be0d148"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PUNTEGGIO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="110" width="495" height="20" uuid="f32f0c83-7276-4955-959c-66b5c0997c43"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ZUNG SELF-RATING ANXIETY SCALE (SAS)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="10" y="130" width="318" height="20" uuid="100ce3f6-5e18-42f3-912b-2ad24aba0ac2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1-50 assenza di ansia \n"+
+"51-80 presenza di ansia"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="99">
+			<printWhenExpression><![CDATA[$F{includeSignatures}  =="true"]]></printWhenExpression>
+			<staticText>
+				<reportElement x="321" y="2" width="62" height="20" uuid="6c1903c0-1094-4079-8a66-4e4a2f8f6da1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firme:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="319" y="15" width="248" height="84" uuid="a4eac71a-f5b1-4a00-a6a6-da83f2f7768a"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Firme" uuid="2d0254f8-7090-4a45-90c8-724a85669024">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("printAddInfoJson.signatures")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="84" width="248">
+						<image scaleImage="FillFrame">
+							<reportElement x="62" y="8" width="185" height="58" uuid="7fc18bf8-51ee-45d6-98ac-49ad12ebf26f">
+								<printWhenExpression><![CDATA[$F{url} != null || $F{url} != ""]]></printWhenExpression>
+							</reportElement>
+							<imageExpression><![CDATA[$F{url}]]></imageExpression>
+						</image>
+						<textField>
+							<reportElement x="62" y="23" width="185" height="26" uuid="73d05fe0-e2c1-4f8e-8083-31edabc1f930">
+								<printWhenExpression><![CDATA[$F{url} == null || $F{url} == ""]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Right" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="0" y="68" width="247" height="16" uuid="1b5e644b-9603-4bbc-9871-39cc3640c52f"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{name} + " - " + $F{data}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="191" y="17" width="290" height="19" uuid="f1872d20-d21e-414e-82c2-31e74bd7e1bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ZUNG SELF - RATING ANXIETY SCALE (SAS)"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="299" height="19" uuid="eb8c10fe-163f-4cc1-8649-8b6507a9e648"/>
+				<textElement verticalAlignment="Bottom" markup="styled">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userLogin} !=""  && $F{userLogin} !=null?  "Generato da "+$F{userLogin} +"\n": ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="17" width="53" height="19" uuid="8fbaa947-5bb0-4ad2-9b38-628918ab411d"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pagina  "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="537" y="17" width="14" height="19" uuid="2346f2a1-5333-49b9-ac37-8c82ad0a4355"/>
+				<textElement verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" di "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="552" y="17" width="15" height="19" uuid="17a5f917-050f-4b3c-a7d9-f26c2a38c127"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="17" width="190" height="19" uuid="38f27be7-0e8a-46a3-a1c7-38fdc0accc6d"/>
+				<textElement verticalAlignment="Top" markup="styled">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Generato il "+ new SimpleDateFormat("dd/MM/yyyy HH:mm").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

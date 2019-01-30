@@ -1,0 +1,40 @@
+{
+  "QACaduta": {
+    "code": "qac3",
+    "value": "Sera"
+  },
+  "LDcaduta": {
+    "code": "ldca4",
+    "value": "Bagno"
+  },
+  "ComunicacioneCC": {
+    "code": "comcc1",
+    "value": "SI"
+  },
+  "data": "2018-11-12T13:00:37.478Z",
+  "TCaduta": {
+    "Accasciamento": {
+      "code": "op1b",
+      "value": "NO"
+    },
+    "Azzardo": {
+      "code": "op2a",
+      "value": "SI"
+    },
+    "DAttack": {
+      "code": "op3b",
+      "value": "NO"
+    },
+    "IScivolon": {
+      "code": "op4a",
+      "value": "SI"
+    },
+    "SVertiginoso": {
+      "code": "op5b",
+      "value": "NO"
+    },
+    "Altro": "testo to finire... !"
+  },
+  "lista" : [1,2,3,4,5,6],
+  "listav2" : [{"name" : "a", "secondName" :"b"},{"name" : "c", "secondName" :"d"}]
+}

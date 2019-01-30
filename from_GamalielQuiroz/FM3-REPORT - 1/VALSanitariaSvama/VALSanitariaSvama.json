@@ -1,0 +1,180 @@
+{
+	"formInstanceValue": {
+		"id": "5ba0cf9888506e6d2b6e5825",
+		"insertUserId": 16,
+		"insertUser": "FM3",
+		"insertTimeUTC": 1537265560442,
+		"insertTime": 1537265560442,
+		"updateUserId": 16,
+		"updateUser": "FM3",
+		"updateTimeUTC": 1537265577633,
+		"updateTime": 1537265577633,
+		"organizationId": 2,
+		"valid": true,
+		"cancellationTime": null,
+		"cancellationUser": null,
+		"cancellationUserId": null,
+		"cancellationTimeUTC": null,
+		"formInstanceId": "5ba0cf9888506e6d2b6e5824",
+		"formDocument": {
+			"initData": {
+				"patient": {
+					"patientId": "324",
+					"firstName": "MARIA",
+					"lastName": "BIANCHI",
+					"sex": "F",
+					"birthDate": "1926-05-06",
+					"uniqueIdentifier": "324",
+					"phone": "",
+					"mobilePhone": "3405622357",
+					"email": "",
+					"language": "",
+					"deathDate": null,
+					"isDead": false
+				}
+			},
+			"formData":
+			{"patologie":{"itemDieci":{"code":"op10d","score":4},"itemSedici":{"code":"op16d","score":4}}},
+			"summaryFieldsData": [{
+				"key": "ICPCCommento",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCPat1",
+				"value": "test",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat1",
+				"value": 3,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "ICPCPat2",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat2",
+				"value": 4,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "ICPCPat3",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat3",
+				"value": 3,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "scoreICPCTotal",
+				"value": 10,
+				"isConcept": true,
+				"bundles": {
+					"it_IT": "Totale",
+					"en_GB": "Totale",
+					"es_ES": "12"
+				}
+			}],
+			"conceptFieldsData": [{
+				"key": "scoreICPCTotal",
+				"value": 10,
+				"bundles": {
+					"it_IT": "Totale",
+					"en_GB": "Totale",
+					"es_ES": "12"
+				}
+			}],
+			"metaData": []
+		},
+		"version": 1,
+		"status": "DRAFT",
+		"patient": {
+			"insertUserId": null,
+			"insertUser": null,
+			"insertTimeUTC": null,
+			"insertTime": null,
+			"updateUserId": null,
+			"updateUser": null,
+			"updateTimeUTC": null,
+			"updateTime": null,
+			"organizationId": null,
+			"valid": true,
+			"cancellationTime": null,
+			"cancellationUser": null,
+			"cancellationUserId": null,
+			"cancellationTimeUTC": null,
+			"firstName": "MARIA",
+			"lastName": "BIANCHI",
+			"sex": "F",
+			"birthDate": -1377734400000,
+			"uniqueIdentifier": "324",
+			"phone": "",
+			"mobilePhone": "3405622357",
+			"email": "",
+			"language": "",
+			"deathDate": null,
+			"isDead": false,
+			"patientId": "324",
+			"accountNumber": null
+		}
+	},
+	"urlInstance": "http://devsrv03.erossi.org:8080/HIS/fm3/#/runtime?application=HIS&extAuthToken=eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.7p8MLXJ6U2sjGKOp8Kem9aTKSYkSwGdKr3ySo-rTy93xUFMN3_oQWg.wu50_mlioYF2tH1T-SqeYg.Rak2CpdbjWOB-otmzgNYRtUhkoe70X_G-VMPf2d_6VXaaG_GzIec8-vl7vr85YfGRBbWy8I_UOXCMdGnrs065QV8qcTY5Wz-10QkRjh8ueiMtmWdKf4BDxUfQOd49pFAiWaL9Uaaw8o1yzC7zMorZlKrU1KcpOaLFHt6LO09F42fHUbu6pN6iZ0UmZodt8lR63LaKyeCQ4EA63srH5oCig.WuO6M5Ha91XjyvUGgeCNCw&formInstanceId=5ba0cf9888506e6d2b6e5824&fm_username=admin_rsa&hidePreviousVersions=true&hideValidation=true&hideTitle=true&hideExportButton=true&notifyParent=true&hidePrintButton=true",
+	"printAddInfoJson": {
+		"includeSignatures": false,
+		"logo": "logo_cavedine.png",
+		"operators": [{
+			"name": "RSA AMMINISTRATORE",
+			"figuraProfessionale": "Amministratore"
+		}],
+		"signatures": [{
+			"name": "RSA AMMINISTRATORE",
+			"data": "05/05/2018 08:05",
+			"url": "logo_cavedine.png"
+		}],
+		"patient": {
+			"patientId": "324",
+			"firstName": "MARIA",
+			"lastName": "BIANCHI",
+			"sex": "F",
+			"birthDate": "mag 6, 1926",
+			"uniqueIdentifier": "324",
+			"phone": "",
+			"mobilePhone": "3405622357",
+			"email": "",
+			"language": "",
+			"isDead": false
+		}
+	}
+}

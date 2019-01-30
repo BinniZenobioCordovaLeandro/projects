@@ -1,0 +1,1254 @@
+<form class="form-validation" name="validationForm" novalidate onload="finishLoading()">
+    <div class="modal-header">
+        <h3 class="modal-title">{{certType | translate}}</h3>
+    </div>
+
+        <wizard name="inailWizard" indicators-position="top" edit-mode="true">
+
+
+            <!-- dati personali -->
+            <wz-step wz-order="0" wz-title="{{'inail.wizardStep0'|translate}}">
+                <div class="modal-body scrollable-modal-body">
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label ng-binding">{{'inail.birthInfo' | translate}}</label>
+                            <hr style="margin-top: -6px;margin-bottom: 7px;"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label class="control-label">{{'inps.name.fam'|translate}}</label>
+                                <input class="form-control" name="patient_namefam" ng-model="certData.personal.lastName" ng-required="true"  ng-disabled="readOnly" maxlength="30"/>
+                                <p class="help-block-highligh" ng-if="validationForm.patient_namefam.$error.required">{{'inail.requiredField'|translate}}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label class="control-label">{{'inps.name.giv'|translate}}</label>
+                                <input class="form-control" name="patient_namegiv" ng-model="certData.personal.firstName" ng-required="true"  ng-disabled="readOnly" maxlength="30"/>
+                                <p class="help-block-highligh" ng-if="validationForm.patient_namegiv.$error.required">{{'inail.requiredField'|translate}}</p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label class="control-label">{{'inps.ssn'|translate}}</label>
+                                <input class="form-control" name="patient_cf" ng-model="certData.personal.uniqueIdentifier" ng-required="true" ng-disabled="readOnly"
+                                pattern="^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$"/>
+                                <p class="help-block-highligh" ng-if="validationForm.patient_cf.$error.required">{{'inail.requiredField'|translate}}</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="control-label">{{'accounting_birth_date'|translate}}</label>
+                            <div class="input-group">
+                                <input class="form-control" close-text="Close" ng-disabled="readOnly"
+                                        datepicker-options="datePickerBirthDate.dateOptions" ng-required="true"
+                                        is-open="datePickerBirthDate.opened" name="datePickerBirthDate"
+                                        ng-model="certData.personal.birthDate" show-button-bar="false" show-weeks="false" type="text"
+                                        uib-datepicker-popup="dd/MM/yyyy"/>
+                                <span class="input-group-btn">
+                                    <button ng-disabled="readOnly" class="btn btn-default" ng-click="datePickerBirthDate.opened = !datePickerBirthDate.opened" type="button">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    </button>
+                                </span>
+
+                            </div>
+                            <p class="help-block-highligh" ng-if="validationForm.datePickerBirthDate.$error.required">{{'inail.requiredField'|translate}}</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <label class="control-label">{{'patient.home.sex'|translate}}</label>
+                                <select class="form-control"
+                                        data-ng-options="item as item.value for item in genders track by item.id"
+                                        name="patientGender" ng-required="true"
+                                        ng-disabled="readOnly"
+                                        ng-model="certData.personal.gender">
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <label>{{'patient_birthPlace'|translate}}</label>
+                                <catalog-search-input   label ="patient_birthPlace"
+                                                        validation-form="validationForm"
+                                                        field-prefix="inail."
+                                                        field-name="patient_birthPlace"
+                                                        entity-field="certData.personal.birthPlace"
+                                                        class-name="Municipality"
+                                                        clear-disabled="readOnly"
+                                                        input-disabled="readOnly"
+                                                        model-field="certData.personal.birthPlace"
+                                                        force-modal="true"
+                                                        ng-change-func="municipalityChanged('patient_birthPlace',item)"
+                                                        include-invalid="true"
+                                                        required="true"
+                                                        show-code="false"></catalog-search-input>
+                                <p class=" help-block-highligh" ng-if="validationForm.patient_birthPlace.$error.required">{{'inail.requiredField'|translate}}</p>
+                                <p class=" help-block-highligh" ng-if="validationForm.patient_birthPlace.$error.invalidField">{{'inail.invalidFormat'|translate}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label>{{'inail.province' | translate}}</label>
+                                <catalog-search-input   label ="patient_birth_province"
+                                                        validation-form="validationForm"
+                                                        entity-field="certData.personal.birthProvince"
+                                                        field-prefix="inail."
+                                                        field-name="birth_province"
+                                                        class-name="Province"
+                                                        show-code="false"
+                                                        required="true"
+                                                        force-modal="true"
+                                                        model-field="certData.personal.birthProvince"
+                                                        ng-change-func="provinceChanged('birth_province',item)"
+                                                        clear-disabled="readOnly"
+                                                        input-disabled="readOnly"
+                                                        ></catalog-search-input>
+                                <p class="help-block-highligh" ng-if="validationForm.birth_province.$error.required">{{'inail.requiredField'|translate}}</p>
+                                <p class="help-block-highligh" ng-if="validationForm.birth_province.$error.pattern">{{'inail.invalidFormat'|translate}}</p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-2">
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <label>{{'patient_nationality'|translate}}</label>
+                                <catalog-search-input   label ="patient_nationality"
+                                                        validation-form="validationForm"
+                                                        field-properties="fieldProperties"
+                                                        field-prefix="patient_"
+                                                        field-name="nationality"
+                                                        class-name="Country"
+                                                        show-code="false"
+                                                        required="true"
+                                                        force-modal="true"
+                                                        model-field="certData.personal.nationality"
+                                                        ng-change-func="validationForm.$dirty=true"
+                                                        clear-disabled="readOnly"
+                                                        input-disabled="readOnly">
+                                </catalog-search-input>
+                                <p class=" help-block-highligh" ng-if="validationForm.nationality.$error.required">{{'inail.requiredField'|translate}}</p>
+                                <p class=" help-block-highligh" ng-if="validationForm.nationality.$error.invalidField">{{'inail.invalidFormat'|translate}}</p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.istat'|translate}}</label>
+                                <input class="form-control" name="pat_istat" ng-model="certData.personal.istat" ng-disabled="readOnly" maxlength="6" ng-required="true"/>
+                                <p class="help-block-highligh" ng-if="validationForm.pat_istat.$error.required">{{'inail.requiredField'|translate}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label ng-binding">{{'inail.homeInfo' | translate}}</label>
+                            <hr style="margin-top: -6px;margin-bottom: 7px;"/>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-xs-1">
+                            <label class="control-label">{{'inail.residenzaEstera' | translate}}</label><br/>
+                            <select class="form-control" name="residenzaEstera" ng-disabled="readOnly" ng-model="certData.personal.home.residenzaEstera"
+                            data-ng-options="item as item.value | translate for item in yesNo track by item.id">
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">{{'inps.address.str'|translate}}</label>
+                                    <input class="form-control" name="pat_h_address" ng-model="certData.personal.home.address" ng-required="true" ng-disabled="readOnly" maxlength="50"/>
+                                    <p class="help-block-highligh" ng-if="validationForm.pat_h_address.$error.required">{{'inail.requiredField'|translate}}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label class="control-label">{{'inps.address.str.n'|translate}}</label>
+                                    <input class="form-control" name="pat_h_address_n" ng-model="certData.personal.home.addressNumber" ng-required="true"  ng-disabled="readOnly" maxlength="5"/>
+                                    <p class="help-block-highligh" ng-if="validationForm.pat_h_address_n.$error.required">{{'inail.requiredField'|translate}}</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">{{'inps.municipality2'|translate}}</label>
+                                    <div class="form-group" show-errors='{showSuccess: true}'>
+                                        <catalog-search-input   label ="patient_address_municipality"
+                                                                validation-form="validationForm"
+                                                                entity-field="certData.personal.home.municipality"
+                                                                field-prefix="inail."
+                                                                field-name="home_municipality"
+                                                                class-name="Municipality"
+                                                                ng-change-func="municipalityChanged('home_municipality',item)"
+                                                                show-code="false"
+                                                                force-modal="true"
+                                                                ng-required="true"
+                                                                clear-disabled="readOnly"
+                                                                input-disabled="readOnly"
+                                                                model-field="certData.personal.home.municipality"
+                                                                required="true"
+                                                                ></catalog-search-input>
+                                        <p class=" help-block-highligh" ng-if="validationForm.home_municipality.$error.required">{{'inail.requiredField'|translate}}</p>
+                                        <p class=" help-block-highligh" ng-if="validationForm.home_municipality.$error.invalidField">{{'inail.invalidFormat'|translate}}</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">{{'inps.address.zip'|translate}}</label>
+                                    <input name="homeZipCode" class="form-control" ng-model="certData.personal.home.zipCode" ng-required="true"  ng-disabled="readOnly" maxlength="5"/>
+                                    <p class="help-block-highligh" ng-if="validationForm.homeZipCode.$error.required">{{'inail.requiredField'|translate}}</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label>{{'inail.province' | translate}}</label>
+                                    <catalog-search-input label ="home_province"
+                                        validation-form="validationForm"
+                                        entity-field="certData.personal.home.province"
+                                        field-prefix="inail."
+                                        field-name="home_province"
+                                        class-name="Province"
+                                        show-code="false"
+                                        force-modal="true"
+                                        required="true"
+                                        clear-disabled="readOnly"
+                                        input-disabled="readOnly"
+                                        model-field="certData.personal.home.province"
+                                        ></catalog-search-input>
+                                        <p class=" help-block-highligh" ng-if="validationForm.home_province.$error.required">{{'inail.requiredField'|translate}}</p>
+                                        <p class=" help-block-highligh" ng-if="validationForm.home_province.$error.invalidField">{{'inail.invalidFormat'|translate}}</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label>{{'patient_healthDistrict'|translate}}</label>
+                                    <catalog-search-input   label ="patient_healthDistrict"
+                                                            validation-form="validationForm"
+                                                            entity-field="certData.personal.home.healthDistrict"
+                                                            field-prefix="patient_home"
+                                                            field-name="home_healthDistrict"
+                                                            force-modal="true"
+                                                            class-name="HealthDistrict"
+                                                            model-field="certData.personal.home.healthDistrict"
+                                                            clear-disabled="readOnly"
+                                                            input-disabled="readOnly">
+                                    </catalog-search-input>
+                                    <p class=" help-block-highligh" ng-if="validationForm.home_healthDistrict.$error.required">{{'patient_addressInnerForm_municipality_required'|translate}}</p>
+                                    <p class=" help-block-highligh" ng-if="validationForm.home_healthDistrict.$error.invalidField">{{'patient_addressInnerForm_municipality_invalid'|translate}}</p>
+                                </div>
+                            </div>
+
+
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-9"></div>
+                        <div class="col-md-3">
+                            <button class="btn btn-default" ng-click="copyAddress()" ng-disabled="readOnly">{{'inail.copyAddress'|translate}}</button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label ng-binding">{{'inail.residenceInfo' | translate}}</label>
+                            <hr style="margin-top: -6px;margin-bottom: 7px;"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-xs-1">
+                                <label class="control-label">{{'inail.residenzaEstera' | translate}}</label><br/>
+                                <select class="form-control" name="residenzaEstera" ng-disabled="readOnly" ng-model="certData.personal.legal.residenzaEstera"
+                                data-ng-options="item as item.value | translate for item in yesNo track by item.id">
+                                </select>
+                            </div>
+
+                            <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label class="control-label">{{'inps.address.str'|translate}}</label>
+                                        <input class="form-control" name="per_l_address" ng-model="certData.personal.legal.address" ng-required="true" ng-disabled="readOnly" maxlength="50"/>
+                                        <p class="help-block-highligh" ng-if="validationForm.per_l_address.$error.required">{{'inail.requiredField'|translate}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="form-group">
+                                        <label class="control-label">{{'inps.address.str.n'|translate}}</label>
+                                        <input class="form-control" name="per_l_address_n" ng-model="certData.personal.legal.addressNumber" ng-required="true"  ng-disabled="readOnly" maxlength="5"/>
+                                        <p class="help-block-highligh" ng-if="validationForm.per_l_address_n.$error.required">{{'inail.requiredField'|translate}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label class="control-label">{{'inps.municipality2'|translate}}</label>
+                                        <div class="form-group" show-errors='{showSuccess: true}'>
+                                            <catalog-search-input   label ="patient_address_municipality"
+                                                                    validation-form="validationForm"
+                                                                    entity-field="certData.personal.legal.municipality"
+                                                                    field-prefix="inail."
+                                                                    field-name="legal_municipality"
+                                                                    class-name="Municipality"
+                                                                    ng-change-func="municipalityChanged('legal_municipality',item)"
+                                                                    show-code="false"
+                                                                    required="true"
+                                                                    force-modal="true"
+                                                                    clear-disabled="readOnly"
+                                                                    input-disabled="readOnly"
+                                                                    model-field="certData.personal.legal.municipality"
+                                                                    ></catalog-search-input>
+                                            <p class=" help-block-highligh" ng-if="validationForm.legal_municipality.$error.required">{{'inail.requiredField'|translate}}</p>
+                                            <p class=" help-block-highligh" ng-if="validationForm.legal_municipality.$error.invalidField">{{'inail.invalidFormat'|translate}}</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label class="control-label">{{'inps.address.zip'|translate}}</label>
+                                        <input class="form-control" name="per_l_zip" ng-model="certData.personal.legal.zipCode" ng-required="true"  ng-disabled="readOnly" maxlength="5"/>
+                                        <p class="help-block-highligh" ng-if="validationForm.per_l_zip.$error.required">{{'inail.requiredField'|translate}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-1">
+                                    <div class="form-group">
+                                        <label>{{'inail.province' | translate}}</label>
+                                        <catalog-search-input label ="legal_province"
+                                            validation-form="validationForm"
+                                            entity-field="certData.personal.legal.province"
+                                            field-prefix="inail."
+                                            field-name="legal_province"
+                                            class-name="Province"
+                                            show-code="false"
+                                            required="true"
+                                            force-modal="true"
+                                            clear-disabled="readOnly"
+                                            input-disabled="readOnly"
+                                            model-field="certData.personal.legal.province"
+                                            ></catalog-search-input>
+                                            <p class=" help-block-highligh" ng-if="validationForm.legal_province.$error.required">{{'inail.requiredField'|translate}}</p>
+                                            <p class=" help-block-highligh" ng-if="validationForm.legal_province.$error.invalidField">{{'inail.invalidFormat'|translate}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group" show-errors='{showSuccess: true}'>
+                                        <label>{{'patient_healthDistrict'|translate}}</label>
+                                        <catalog-search-input   label ="patient_healthDistrict"
+                                                                validation-form="validationForm"
+                                                                entity-field="certData.personal.legal.healthDistrict"
+                                                                field-prefix="patient_legal"
+                                                                field-name="legal_healthDistrict"
+                                                                class-name="HealthDistrict"
+                                                                force-modal="true"
+                                                                clear-disabled="readOnly"
+                                                                input-disabled="readOnly"
+                                                                model-field="certData.selectedPatient.healthDistrict">
+                                        </catalog-search-input>
+                                        <p class=" help-block-highligh" ng-if="validationForm.legal_healthDistrict.$error.required">{{'inail.requiredField'|translate}}</p>
+                                        <p class=" help-block-highligh" ng-if="validationForm.legal_healthDistrict.$error.invalidField">{{'inail.invalidFormat'|translate}}</p>
+
+                                    </div>
+                                </div>
+                        </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label ng-binding">{{'inail.phoneInfo' | translate}}</label>
+                            <hr style="margin-top: -6px;margin-bottom: 7px;"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-1">
+                                <label class="control-label">{{'inail.assente' | translate}}</label><br/>
+                                <select class="form-control" name="assente" ng-disabled="readOnly" ng-model="certData.personal.absent"
+                                data-ng-options="item as item.value | translate for item in yesNo track by item.id">
+                                </select>
+                            </div>
+
+                        <div class="col-xs-1">
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <label>
+                                    <span>{{'patient_contacts_phone'|translate}}</span>
+                                </label>
+                                <input class="form-control" name="phone_areaCode" ng-disabled="readOnly || certData.personal.absent.id"
+                                ng-model="certData.personal.phone_areaCode" type="text"
+                                maxlength="5" ng-pattern="/^([+]?)[0-9]+$/" ng-required="noMobilePhone()">
+                                <p class="help-block-highligh" ng-if="validationForm.phone_areaCode.$error.required">
+                                    {{'inail.requiredField'|translate}}</p>
+                                <p class="help-block-highligh" ng-if="validationForm.phone_areaCode.$error.pattern">
+                                    {{'inail.invalidFormat'|translate}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <label><span>&nbsp;</span></label>
+                                <input class="form-control" name="phone" ng-disabled="readOnly || certData.personal.absent.id" ng-model="certData.personal.phone" type="text"
+                                validation-form="validationForm"  maxlength="15" ng-pattern="/^[0-9]+$/" ng-required="noMobilePhone()">
+                                <p class="help-block-highligh" ng-if="validationForm.phone.$error.required">
+                                    {{'inail.requiredField'|translate}}</p>
+                                <p class="help-block-highligh" ng-if="validationForm.phone.$error.pattern">
+                                    {{'inail.invalidFormat'|translate}}</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-xs-1">
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <label>
+                                    <span>{{'patient_contacts_mobile'|translate}}</span>
+                                </label>
+                                <input class="form-control" name="mobilePhone_areaCode" ng-disabled="readOnly || certData.personal.absent.id" ng-model="certData.personal.mobilePhone_areaCode"
+                                type="text" maxlength="5" ng-pattern="/^([+]?)[0-9]+$/" ng-required="noPhone()">
+                                <p class="help-block-highligh" ng-if="validationForm.mobilePhone_areaCode.$error.required">
+                                    {{'inail.requiredField'|translate}}</p>
+                                <p class="help-block-highligh" ng-if="validationForm.mobilePhone_areaCode.$error.pattern">
+                                    {{'inail.invalidFormat'|translate}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <label><span>&nbsp;</span></label>
+                                <input class="form-control" name="mobilePhone" ng-disabled="readOnly || certData.personal.absent.id" ng-model="certData.personal.mobilePhone"
+                                type="text" maxlength="15" ng-pattern="/^[0-9]+$/" ng-required="noPhone()">
+                                <p class="help-block-highligh" ng-if="validationForm.mobilePhone.$error.required">
+                                    {{'inail.requiredField'|translate}}</p>
+                                <p class="help-block-highligh" ng-if="validationForm.mobilePhone.$error.pattern">
+                                    {{'inail.invalidFormat'|translate}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </wz-step>
+
+
+            <!-- certificato -->
+            <wz-step wz-order="1" wz-title="{{'inail.wizardStep1'|translate}}">
+                <div class="modal-body scrollable-modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label ng-binding">{{'inail.luogoRilascio' | translate}}</label>
+                            <hr style="margin-top: -6px;margin-bottom: 7px;"/>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label class="control-label">{{'inps.municipality2'|translate}}</label>
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <catalog-search-input   label ="patient_address_municipality"
+                                                            validation-form="validationForm"
+                                                            entity-field="certData.certificate.municipality"
+                                                            field-prefix="inail."
+                                                            field-name="certificate_municipality"
+                                                            class-name="Municipality"
+                                                            show-code="false"
+                                                            required="true"
+                                                            ng-readOnly="readOnly"
+                                                            clear-disabled="readOnly"
+                                                            input-disabled="readOnly"
+                                                            ng-change-func="municipalityChanged('certificate_municipality',item)"
+                                                            force-modal="true"
+                                                            model-field="certData.certificate.municipality"
+                                                            ></catalog-search-input>
+                                    <p class=" help-block-highligh" ng-if="validationForm.certificate_municipality.$error.required">{{'inail.requiredField'|translate}}</p>
+                                    <p class=" help-block-highligh" ng-if="validationForm.certificate_municipality.$error.invalidField">{{'inail.invalidFormat'|translate}}</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <label>{{'inail.province' | translate}}</label>
+                                <catalog-search-input label ="certificate_province"
+                                    validation-form="validationForm"
+                                    entity-field="certData.certificate.province"
+                                    field-prefix="inail."
+                                    field-name="certificate_province"
+                                    class-name="Province"
+                                    show-code="false"
+                                    required="true"
+                                    ng-readOnly="readOnly"
+                                    clear-disabled="readOnly"
+                                    input-disabled="readOnly"
+                                    model-field="certData.certificate.province"
+                                    force-modal="true"
+                                    ></catalog-search-input>
+                                    <p class=" help-block-highligh" ng-if="validationForm.certificate_province.$error.required">{{'inail.requiredField'|translate}}</p>
+                                    <p class=" help-block-highligh" ng-if="validationForm.certificate_province.$error.invalidField">{{'inail.invalidFormat'|translate}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+
+                            <label class="control-label">{{'inail.releaseDate'|translate}}</label>
+                            <div class="input-group">
+                                <input class="form-control" close-text="Close" ng-disabled="readOnly"
+                                        datepicker-options="datePickerReleaseDate.dateOptions" ng-required="true"
+                                        is-open="datePickerReleaseDate.opened" name="datePickerReleaseDate"
+                                        ng-model="certData.certificate.releaseDate" show-button-bar="false" show-weeks="false" type="text"
+                                        uib-datepicker-popup="dd/MM/yyyy" />
+                                <span class="input-group-btn">
+                                    <button ng-disabled="readOnly" class="btn btn-default" ng-click="datePickerReleaseDate.opened = !datePickerReleaseDate.opened" type="button">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <p class=" help-block-highligh" ng-if="validationForm.datePickerReleaseDate.$error.required">{{'inail.requiredField'|translate}}</p>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label ng-binding">{{'inail.certificato' | translate}}</label>
+                            <hr style="margin-top: -6px;margin-bottom: 7px;"/>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.certificateType'|translate}}</label>
+                                <select class="form-control"
+                                        data-ng-options="item as item.value | translate for item in certificateTypes track by item.id"
+                                        name="certificateType"
+                                        ng-disabled="readOnly"
+                                        ng-model="certData.certificate.type">
+                                    </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.prognosisType'|translate}}</label>
+                                <select class="form-control"
+                                        data-ng-options="item as item.value | translate for item in prognosisTypes track by item.id"
+                                        name="prognosisType"
+                                        ng-disabled="readOnly"
+                                        ng-model="certData.certificate.prognosisType"
+                                        ng-change="prognosisTypeChanged()">
+                                    </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+
+                            <label class="control-label">{{'inail.from'|translate}}</label>
+                            <div class="input-group">
+                                <input class="form-control" close-text="Close" ng-disabled="readOnly || certData.certificate.prognosisType.id!='NORMAL'"
+                                        datepicker-options="datePickerCertificateDateFrom.dateOptions" ng-required="certData.certificate.prognosisType.id=='NORMAL'"
+                                        is-open="datePickerCertificateDateFrom.opened" name="datePickerCertificateDateFrom"
+                                        ng-model="certData.certificate.dateFrom" show-button-bar="false" show-weeks="false" type="text"
+                                        uib-datepicker-popup="dd/MM/yyyy"/>
+                                <span class="input-group-btn">
+                                    <button ng-disabled="readOnly" class="btn btn-default" ng-click="datePickerCertificateDateFrom.opened = !datePickerCertificateDateFrom.opened" type="button">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <p class=" help-block-highligh" ng-if="validationForm.datePickerCertificateDateFrom.$error.required">{{'inail.requiredField'|translate}}</p>
+                        </div>
+
+                        <div class="col-sm-2">
+
+                            <label class="control-label">{{'inail.to'|translate}}</label>
+                            <div class="input-group">
+                                <input class="form-control" close-text="Close" ng-disabled="readOnly || certData.certificate.prognosisType.id!='NORMAL'"
+                                        datepicker-options="datePickerCertificateDateTo.dateOptions" ng-required="certData.certificate.prognosisType.id=='NORMAL'"
+                                        is-open="datePickerCertificateDateTo.opened" name="datePickerCertificateDateTo"
+                                        ng-model="certData.certificate.dateTo" show-button-bar="false" show-weeks="false" type="text"
+                                        uib-datepicker-popup="dd/MM/yyyy" />
+                                <span class="input-group-btn">
+                                    <button ng-disabled="readOnly" class="btn btn-default" ng-click="datePickerCertificateDateTo.opened = !datePickerCertificateDateTo.opened" type="button">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <p class=" help-block-highligh" ng-if="validationForm.datePickerCertificateDateTo.$error.required">{{'inail.requiredField'|translate}}</p>
+                        </div>
+
+
+                        <div class="col-sm-2" ng-disabled="readOnly">
+                            <label class="control-label" for="temporaryReadmission">{{'inail.temporaryReadmission'|translate}}</label>
+                            <div id="temporaryReadmission">
+                                <label class="ui-radio hradio">
+                                    <input name="radioTemporaryReadmission" id="readm_true" ng-model="certData.certificate.temporaryReadmission"
+                                            ng-value="true" type="radio" ng-disabled="readOnly" ng-required="false">
+                                    <span>{{'inail.radio.yes'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioTemporaryReadmission" id="readm_false" ng-model="certData.certificate.temporaryReadmission"
+                                            ng-value="false" type="radio" ng-disabled="readOnly" ng-required="false">
+                                    <span>{{'inail.radio.no'|translate}}</span>
+                                </label>
+                            </div>
+                            <p class="help-block" ng-if="validationForm.temporaryReadmission.$error.required">
+                                {{'inail.requiredField'|translate}}
+                            </p>
+                        </div>
+
+                        <div class="col-sm-2" ng-disabled="readOnly">
+                            <label class="control-label" for="deadlyCase">{{'inail.deadlyCase'|translate}}</label>
+                            <div id="deadlyCase">
+                                <label class="ui-radio hradio">
+                                    <input name="radioDeadlyCase" id="deadlyCase_true" ng-model="certData.certificate.deadlyCase" ng-disabled="readOnly" ng-value="true" type="radio">
+                                    <span>{{'inail.radio.yes'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioDeadlyCase" id="deadlyCase_false" ng-model="certData.certificate.deadlyCase" ng-disabled="readOnly" ng-value="false" type="radio">
+                                    <span>{{'inail.radio.no'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioDeadlyCase" id="deadlyCase_nd" ng-model="certData.certificate.deadlyCase" ng-disabled="readOnly" ng-value="" type="radio">
+                                    <span>{{'inail.radio.null'|translate}}</span>
+                                </label>
+                            </div>
+                            <p class="help-block" ng-if="validationForm.deadlyCase.$error.required">
+                                {{'inail.requiredField'|translate}}
+                            </p>
+                        </div>
+
+                        <div class="col-md-2" ng-disabled="readOnly">
+                            <label class="control-label" for="autopsyRequested">{{'inail.autopsyRequested'|translate}}</label>
+                            <div id="autopsyRequested">
+                                <label class="ui-radio hradio">
+                                    <input name="radioAutopsyRequested" id="autopsyRequested_true" ng-model="certData.certificate.autopsyRequested" ng-disabled="readOnly" ng-value="true" type="radio">
+                                    <span>{{'inail.radio.yes'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioAutopsyRequested" id="autopsyRequested_false" ng-model="certData.certificate.autopsyRequested" ng-disabled="readOnly" ng-value="false" type="radio">
+                                    <span>{{'inail.radio.no'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioAutopsyRequested" id="rautopsyRequested_nd" ng-model="certData.certificate.autopsyRequested" ng-disabled="readOnly" ng-value="" type="radio">
+                                    <span>{{'inail.radio.null'|translate}}</span>
+                                </label>
+                            </div>
+                            <p class="help-block" ng-if="validationForm.autopsyRequested.$error.required">
+                                {{'inail.requiredField'|translate}}
+                            </p>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.certificate.diagnosis'|translate}}</label>
+                                <input class="form-control" name="diagnosi" ng-model="certData.certificate.diagnosis" ng-required="true" ng-disabled="readOnly" maxlength="228"/>
+                                <p class="help-block-highligh" ng-if="validationForm.diagnosi.$error.required">{{'inail.requiredField'|translate}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.certificate.objectiveExamination'|translate}}</label>
+                                <input class="form-control" name="obj_exam" ng-model="certData.certificate.objectiveExamination" ng-required="true" ng-disabled="readOnly" maxlength="228"/>
+                                <p class="help-block-highligh" ng-if="validationForm.obj_exam.$error.required">{{'inail.requiredField'|translate}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.certificate.exams'|translate}}</label>
+                                <input class="form-control" ng-model="certData.certificate.exams" ng-required="false" ng-disabled="readOnly" maxlength="130"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.certificate.otherExams'|translate}}</label>
+                                <input class="form-control" ng-model="certData.certificate.otherExams" ng-required="false" ng-disabled="readOnly" maxlength="100"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.certificate.observation'|translate}}</label>
+                                <input class="form-control" ng-model="certData.certificate.observations" ng-required="false" ng-disabled="readOnly" maxlength="130"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <label class="control-label" for="lifeThreat">{{'inail.certificate.lifeThreat'|translate}}</label>
+                            <div id="lifeThreat">
+                                <label class="ui-radio hradio">
+                                    <input name="radioLifeThreat" id="lifeThreat_true" ng-model="certData.certificate.lifeThreat" ng-disabled="readOnly" ng-value="true" type="radio">
+                                    <span>{{'inail.radio.yes'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioLifeThreat" id="lifeThreat_false" ng-model="certData.certificate.lifeThreat" ng-disabled="readOnly" ng-value="false" type="radio">
+                                    <span>{{'inail.radio.no'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioLifeThreat" id="lifeThreat_nd" ng-model="certData.certificate.lifeThreat" ng-disabled="readOnly" ng-value="" type="radio">
+                                    <span>{{'inail.radio.null'|translate}}</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-10">
+                                <label class="control-label" for="permanentHandicap">{{'inail.certificate.permanentHandicap'|translate}}</label>
+                                <div id="permanentHandicap">
+                                    <label class="ui-radio hradio">
+                                        <input name="radioPermanentHandicap" id="permanentHandicap_true" ng-model="certData.certificate.permanentHandicap"
+                                            ng-disabled="readOnly" ng-value="true" type="radio" ng-required="false">
+                                        <span>{{'inail.radio.yes'|translate}}</span>
+                                    </label>
+                                    <label class="ui-radio hradio">
+                                        <input name="radioPermanentHandicap" id="permanentHandicap_false" ng-model="certData.certificate.permanentHandicap" ng-disabled="readOnly"
+                                                ng-value="false" type="radio" ng-required="false">
+                                        <span>{{'inail.radio.no'|translate}}</span>
+                                    </label>
+                                </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <label class="control-label" for="hospitalization">{{'inail.certificate.hospitalization'|translate}}</label>
+                            <div id="hospitalization">
+                                <label class="ui-radio hradio">
+                                    <input name="radioHospitalization" id="hospitalization_true" ng-model="certData.certificate.hospitalization" ng-disabled="readOnly" ng-value="true" type="radio">
+                                    <span>{{'inail.radio.yes'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioHospitalization" id="hospitalization_false" ng-model="certData.certificate.hospitalization" ng-disabled="readOnly" ng-value="false" type="radio">
+                                    <span>{{'inail.radio.no'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioHospitalization" id="hospitalization_nd" ng-model="certData.certificate.hospitalization" ng-disabled="readOnly" ng-value="" type="radio">
+                                    <span>{{'inail.radio.null'|translate}}</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-10">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.certificate.hospital'|translate}}</label>
+                                <input class="form-control" name="hospital" ng-model="certData.certificate.hospital" ng-required="certData.certificate.hospitalization==true"
+                                ng-disabled="readOnly || certData.certificate.hospitalization!=true" maxlength="100"/>
+                                <p class="help-block-highligh" ng-if="validationForm.hospital.$error.required">{{'inail.requiredField'|translate}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <label class="control-label" for="retired">{{'inail.certificate.retired'|translate}}</label>
+                            <div id="retired">
+                                <label class="ui-radio hradio">
+                                    <input name="radioRetired" id="retired_true" ng-model="certData.certificate.retired" ng-disabled="readOnly" ng-value="true" type="radio">
+                                    <span>{{'inail.radio.yes'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioRetired" id="retired_false" ng-model="certData.certificate.retired" ng-disabled="readOnly" ng-value="false" type="radio">
+                                    <span>{{'inail.radio.no'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioRetired" id="retired_nd" ng-model="certData.certificate.retired" ng-disabled="readOnly" ng-value="" type="radio">
+                                    <span>{{'inail.radio.null'|translate}}</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="control-label" for="disabled">{{'inail.certificate.disabled'|translate}}</label>
+                            <div id="disabled">
+                                <label class="ui-radio hradio">
+                                    <input name="radioDisabled" id="disabled_true" ng-model="certData.certificate.disabled" ng-disabled="readOnly" ng-value="true" type="radio">
+                                    <span>{{'inail.radio.yes'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioDisabled" id="disabled_false" ng-model="certData.certificate.disabled" ng-disabled="readOnly" ng-value="false" type="radio">
+                                    <span>{{'inail.radio.no'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioDisabled" id="disabled_nd" ng-model="certData.certificate.disabled" ng-disabled="readOnly" ng-value="" type="radio">
+                                    <span>{{'inail.radio.null'|translate}}</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="control-label" for="certificateOther">{{'inail.certificate.certificateOther'|translate}}</label>
+                            <div id="certificateOther">
+                                <label class="ui-radio hradio">
+                                    <input name="radioCertificateOther" id="certificateOther_true" ng-model="certData.certificate.certificateOther" ng-disabled="readOnly" ng-value="true" type="radio">
+                                    <span>{{'inail.radio.yes'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioCertificateOther" id="certificateOther_false" ng-model="certData.certificate.certificateOther" ng-disabled="readOnly" ng-value="false" type="radio">
+                                    <span>{{'inail.radio.no'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioCertificateOther" id="certificateOther_nd" ng-model="certData.certificate.certificateOther" ng-disabled="readOnly" ng-value="" type="radio">
+                                    <span>{{'inail.radio.null'|translate}}</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.certificate.specification'|translate}}</label>
+                                <input class="form-control" ng-model="certData.certificate.specification" ng-required="false" ng-disabled="readOnly" maxlength="30"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-xs-6">
+                            <label class="control-label">{{'inps.medicFilter'|translate}}</label>
+                            <input class="form-control" ng-model="certData.certificate.medic.descriptionLang1" ng-required="true" ng-disabled="true"/>
+                            <p class="help-block" ng-if="validationForm.doctor.$error.required">{{'inail.requiredField'|translate}}</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="control-label" for="transcribed">{{'inail.certificate.transcribed'|translate}}</label>
+                            <div id="transcribed">
+                                <label class="ui-radio hradio">
+                                    <input name="radioTranscribed" id="transcribed_true" ng-model="certData.certificate.transcribed" ng-value="true" type="radio" ng-disabled="readOnly">
+                                    <span>{{'inail.radio.yes'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioTranscribed" id="transcribed_false" ng-model="certData.certificate.transcribed" ng-value="false" type="radio" ng-disabled="readOnly">
+                                    <span>{{'inail.radio.no'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioTranscribed" id="transcribed_nd" ng-model="certData.certificate.transcribed" ng-value="" type="radio" ng-disabled="readOnly">
+                                    <span>{{'inail.radio.null'|translate}}</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </wz-step>
+
+            <!-- Evento -->
+            <wz-step wz-order="2" wz-title="{{'inail.wizardStep2'|translate}}">
+                <div class="modal-body scrollable-modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label ng-binding">{{'inail.wizardStep2' | translate}}</label>
+                            <hr style="margin-top: -6px;margin-bottom: 7px;"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <label>{{'inail.home_municipality'|translate}}</label>
+                                    <catalog-search-input   label ="event_municipality"
+                                        validation-form="validationForm"
+                                        field-prefix="inail."
+                                        field-name="event_municipality"
+                                        class-name="Municipality"
+                                        model-field="certData.event.municipality"
+                                        include-invalid="true"
+                                        ng-change-func="municipalityChanged('event_municipality',item)"
+                                        required="true"
+                                        readOnly="readOnly"
+                                        clear-disabled="readOnly"
+                                        input-disabled="readOnly"
+                                        force-modal="true"
+                                        show-code="false">
+                                    </catalog-search-input>
+                                    <p class="help-block-highligh" ng-if="validationForm.event_municipality.$error.required">{{'inail.requiredField'|translate}}</p>
+                                    <p class="help-block-highligh" ng-if="validationForm.event_municipality.$error.pattern">{{'inail.invalidFormat'|translate}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label>{{'inail.province' | translate}}</label>
+                                <catalog-search-input label ="event_province"
+                                    validation-form="validationForm"
+                                    entity-field="certData.event.province"
+                                    field-prefix="inail."
+                                    field-name="event_province"
+                                    class-name="Province"
+                                    show-code="false"
+                                    required="true"
+                                    ng-readOnly="readOnly"
+                                    clear-disabled="readOnly"
+                                    input-disabled="readOnly"
+                                    model-field="certData.event.province"
+                                    force-modal="true"
+                                    ></catalog-search-input>
+                                    <p class="help-block-highligh" ng-if="validationForm.event_province.$error.required">{{'inail.requiredField'|translate}}</p>
+                                    <p class="help-block-highligh" ng-if="validationForm.event_province.$error.pattern">{{'inail.invalidFormat'|translate}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.istat'|translate}}</label>
+                                <input class="form-control" name="event_istat" ng-model="certData.event.istat" ng-disabled="readOnly" maxlength="6" ng-required="true"/>
+                                <p class="help-block-highligh" ng-if="validationForm.event_istat.$error.required">{{'inail.requiredField'|translate}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="control-label">{{'inps.evtDate'|translate}}</label>
+                            <div class="input-group">
+
+                                <input  class="form-control"
+                                        close-text="Close"
+                                        ng-disabled="readOnly"
+                                        datepicker-options="datePickerEvtDate.dateOptions"
+                                        ng-required="true"
+                                        is-open="datePickerEvtDate.opened"
+                                        name="datePickerEvtDate"
+                                        ng-model="certData.event.date"
+                                        show-button-bar="false"
+                                        show-weeks="false"
+                                        type="text"
+
+                                        uib-datepicker-popup="dd/MM/yyyy" />
+
+                                <span class="input-group-btn">
+                                    <button ng-disabled="readOnly" class="btn btn-default" ng-click="datePickerEvtDate.opened = !datePickerEvtDate.opened" type="button" ng-disabled="readOnly">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <p class="help-block-highligh" ng-if="validationForm.datePickerEvtDate.$error.required">{{'inail.requiredField'|translate}}</p>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="control-label">{{'inps.evtDatehourLeave'|translate}}</label>
+                            <div class="input-group">
+                                <input class="form-control" close-text="Close" ng-disabled="readOnly"
+                                        datepicker-options="datePickerEvtDatehourLeave.dateOptions" ng-required="false"
+                                        is-open="datePickerEvtDatehourLeave.opened" name="datePickerEvtDatehourLeave"
+                                        ng-model="certData.event.datehourLeave" show-button-bar="false" show-weeks="false" type="text"
+                                        uib-datepicker-popup="dd/MM/yyyy" />
+                                <span class="input-group-btn">
+                                    <button ng-disabled="readOnly" class="btn btn-default" ng-click="datePickerEvtDatehourLeave.opened = !datePickerEvtDatehourLeave.opened" type="button">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-1" style="margin-top: -37px;">
+                            <label class="control-label"><span>&nbsp;</span></label>
+                            <div ng-model="certData.event.datehourLeave">
+                                <uib-timepicker class="ui-timepicker"
+                                    hour-step="1" minute-step="1" ng-disabled="readOnly"
+                                    name="datePickerEvtDatehourLeaveHour"
+                                    show-meridian="false"></uib-timepicker>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.event.circumstances'|translate}}</label>
+                                <input class="form-control" ng-model="certData.event.circumstances" ng-required="false" ng-disabled="readOnly" maxlength="130"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.event.task'|translate}}</label>
+                                <input class="form-control" ng-model="certData.event.task" ng-required="false" ng-disabled="readOnly" maxlength="50"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.event.previousTasks'|translate}}</label>
+                                <input class="form-control" ng-model="certData.event.previousTasks" ng-required="false" ng-disabled="readOnly" maxlength="150"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label ng-binding">{{'inail.medicalHistory' | translate}}</label>
+                            <hr style="margin-top: -6px;margin-bottom: 7px;"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="control-label" for="hasConsequences">{{'inail.event.hasConsequences'|translate}}</label>
+                            <div id="hasConsequences">
+                                <label class="ui-radio hradio">
+                                    <input name="radioHasConsequences" id="hasConsequences_true" ng-model="certData.event.hasConsequences" ng-value="true" type="radio" ng-disabled="readOnly">
+                                    <span>{{'inail.radio.yes'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioHasConsequences" id="hasConsequences_true" ng-model="certData.event.hasConsequences" ng-value="false" type="radio" ng-disabled="readOnly">
+                                    <span>{{'inail.radio.no'|translate}}</span>
+                                </label>
+                                <label class="ui-radio hradio">
+                                    <input name="radioHasConsequences" id="hasConsequences_true" ng-model="certData.event.hasConsequences" ng-value="" type="radio" ng-disabled="readOnly">
+                                    <span>{{'inail.radio.null'|translate}}</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.event.consequences'|translate}}</label>
+                                <input class="form-control" name="consequences" ng-model="certData.event.consequencesDescription" ng-required="certData.event.hasConsequences"
+                                ng-disabled="readOnly || !certData.event.hasConsequences" maxlength="130"/>
+                                <p class="help-block-highligh" ng-if="validationForm.consequences.$error.required">{{'inail.requiredField'|translate}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.event.verifications'|translate}}</label>
+                                <input class="form-control" name="verifications" ng-model="certData.event.verifications" ng-required="true" ng-disabled="readOnly" maxlength="130"/>
+                                <p class="help-block-highligh" ng-if="validationForm.verifications.$error.required">{{'inail.requiredField'|translate}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.event.prescriptions'|translate}}</label>
+                                <input class="form-control" ng-model="certData.event.prescriptions" ng-required="false" ng-disabled="readOnly" maxlength="80"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </wz-step>
+
+            <!-- datore di lavoro -->
+            <wz-step wz-order="3" wz-title="{{'inail.wizardStep3'|translate}}">
+                <div class="modal-body scrollable-modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label ng-binding">{{'inail.currentEmployer' | translate}}</label>
+                            <hr style="margin-top: -6px;margin-bottom: 7px;"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.employer.branch'|translate}}</label>
+                                <select class="form-control"
+                                        data-ng-options="item as item.value | translate for item in jobBranches track by item.id"
+                                        name="branch"
+                                        ng-disabled="readOnly"
+                                        ng-required="true"
+                                        ng-model="certData.employer.branch">
+                                    </select>
+                                    <p class="help-block-highligh" ng-if="validationForm.branch.$error.required">{{'inail.requiredField'|translate}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.employer.companyName'|translate}}</label>
+                                <input class="form-control" ng-model="certData.employer.companyName" ng-required="false" ng-disabled="readOnly" maxlength="70"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.employer.companyAddress'|translate}}</label>
+                                <input class="form-control" ng-model="certData.employer.companyAddress" ng-required="false" ng-disabled="readOnly" maxlength="50"/>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label class="control-label">{{'inail.employer.companyAddressN'|translate}}</label>
+                                <input class="form-control" ng-model="certData.employer.companyAddressNumber" ng-required="false" ng-disabled="readOnly" maxlength="5"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label>{{'patient_birthPlace'|translate}}</label>
+                                    <catalog-search-input   label ="inail."
+                                                            validation-form="validationForm"
+                                                            field-prefix="inail."
+                                                            field-name="empMunicipality"
+                                                            class-name="Municipality"
+                                                            model-field="certData.employer.municipality"
+                                                            include-invalid="true"
+                                                            force-modal="true"
+                                                            ng-change-func="municipalityChanged('employer_municipality',item)"
+                                                            show-code="false"
+                                                            required="true"
+                                                            clear-disabled="readOnly"
+                                                            input-disabled="readOnly">
+
+                                    </catalog-search-input>
+                                    <p class=" help-block-highligh" ng-if="validationForm.empMunicipality.$error.required">{{'inail.requiredField'|translate}}</p>
+                                    <p class=" help-block-highligh" ng-if="validationForm.empMunicipality.$error.invalidField">{{'inail.invalidFormat'|translate}}</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>{{'inail.province' | translate}}</label>
+                                    <catalog-search-input label ="emp_birth_province"
+                                        validation-form="validationForm"
+                                        entity-field="certData.employer.birthProvince"
+                                        field-prefix="inail."
+                                        field-name="emp_birth_province"
+                                        class-name="Province"
+                                        show-code="false"
+                                        force-modal="true"
+                                        required="true"
+                                        ng-readOnly="readOnly"
+                                        model-field="certData.employer.birthProvince"
+                                        clear-disabled="readOnly"
+                                        input-disabled="readOnly"></catalog-search-input>
+                                    <p class=" help-block-highligh" ng-if="validationForm.emp_birth_province.$error.required">{{'inail.requiredField'|translate}}</p>
+                                    <p class=" help-block-highligh" ng-if="validationForm.emp_birth_province.$error.invalidField">{{'inail.invalidFormat'|translate}}</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label class="control-label">{{'inail.zip'|translate}}</label>
+                                        <input name="empZip" class="form-control" ng-model="certData.employer.zip" ng-disabled="readOnly" ng-required="true"/>
+                                        <p class=" help-block-highligh" ng-if="validationForm.empZip.$error.required">{{'inail.requiredField'|translate}}</p>
+                                    </div>
+                                </div>
+
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">{{'inail.istat'|translate}}</label>
+                                    <input name="emp_istat" ng-required="true" class="form-control" ng-model="certData.employer.istat" ng-disabled="readOnly" maxlength="6"/>
+                                    <p class=" help-block-highligh" ng-if="validationForm.emp_istat.$error.required">{{'inail.requiredField'|translate}}</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                </div>
+            </wz-step>
+
+            <div class="text-right ng-scope modal-footer">
+
+
+
+                <button class="btn btn-default" ng-click="requestGoBack()">
+                    <i class="fa fa-fw fa-undo"></i>
+                </button>
+
+                <button class="btn btn-default" ng-click="requestGoForward()" ng-hide="ctrl.currentStepIndex>2">{{'inps.avanti'|translate}}</button>
+
+                <button class="btn btn-default" ng-disabled="isButtonDeleteDisabled()" ng-click="requestDelete()">
+                    {{'inps.buttonBar.cancella'|translate}}
+                </button>
+
+                <button class="btn btn-default" ng-disabled="isButtonSaveDisabled()" ng-click="requestSave()">
+                    <i class="fa fa-fw fa-save"></i>{{'inps.buttonBar.salva'|translate}}
+                </button>
+
+
+                <button class="btn btn-default" ng-disabled="isButtonValidateDisabled() || !validationForm.$valid" ng-click="requestSave('VALIDATED')">
+                    {{'inail.validate'|translate}}
+                </button>
+
+                <button class="btn btn-default" ng-disabled="isButtonPrintDisabled()" ng-click="requestPrint()">
+                    {{'inps.buttonBar.stampa'|translate}}
+                </button>
+
+                <button class="btn btn-default" ng-disabled="isButtonDraftDisabled()" ng-click="requestSave('DRAFT')" >
+                    {{'inail.revertToDraft'|translate}}
+                </button>
+
+
+
+            </div>
+        </wizard>
+
+    </div>
+    </form>

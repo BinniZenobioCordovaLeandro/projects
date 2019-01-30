@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final utlizzo versione della libreria JasperReports6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sottoReport.sezioneAssicurato" pageWidth="545" pageHeight="842" columnWidth="545" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4fc08a0b-07e1-4635-985e-14da673055c9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="INAIL\inail.dataAdapter.xml"/>
+	<style name="Style_TittlePrincipale" mode="Opaque" backcolor="#BFC9CA">
+		<pen lineStyle="Solid"/>
+		<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+	</style>
+	<queryString language="json">
+		<![CDATA[.]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement style="Style_TittlePrincipale" x="0" y="4" width="545" height="20" uuid="317cbf3b-21dd-419b-9af1-a24cfd274db9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ISTRUZIONI PER LA COMPILAZIONE
+]]></text>
+			</staticText>
+		</band>
+		<band height="30">
+			<textField>
+				<reportElement x="0" y="10" width="170" height="20" uuid="414c73f2-d9ae-4f57-9b7c-5f846998ba64"/>
+				<textElement markup="html">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DENOMINAZIONE"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="180" y="10" width="364" height="20" uuid="3d832d58-16cf-4c83-a730-8d9e48da6cec"/>
+				<textElement textAlignment="Justified" markup="html"/>
+				<textFieldExpression><![CDATA["<p>Certificazione Medica di Infortunio Lavorativo</p>"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="30">
+			<textField>
+				<reportElement x="0" y="10" width="170" height="20" uuid="979493ae-fdf3-4679-8712-50a2264b96b0"/>
+				<textElement markup="html">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NUMERO (identifica il modulo)"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="180" y="10" width="364" height="20" uuid="3e6fecc5-5da7-45a2-935c-17fe3bf98725"/>
+				<textElement textAlignment="Justified" markup="html"/>
+				<textFieldExpression><![CDATA["<p>Mod. 1 SS</p>"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="30">
+			<textField>
+				<reportElement x="0" y="10" width="170" height="20" uuid="828ebc7e-b716-4480-8849-9b94b0b6aaac"/>
+				<textElement markup="html">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DESCRIZIONE"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="180" y="10" width="364" height="20" uuid="17b993ec-0b36-4135-9c1c-8e71bd11b91f"/>
+				<textElement textAlignment="Justified" markup="html"/>
+				<textFieldExpression><![CDATA["<p>Certificato medico (primo, continuativo, definitivo, riammissione in temporanea) di infortunio che lʼassicurato dovrà inviare allʼINAIL e al datore di lavoro.<br> I lavoratori agricoli autonomi e gli artigiani, in quanto datori di lavoro, sono tenuti ad inoltrare direttamente il certificato allʼINAIL corredato da apposita denuncia. Il certificato è composto di due pagine.</p><br><p><b>La pag. 1 è predisposta in tre copie:</b><ul><li>Copia A per lʼassicurato.</li><li>Copia B per lʼINAIL.</li><li>Copia C per il datore di lavoro.</li></ul></p><br><p>Essa contiene:<ul><li>Dati anagrafici dellʼassicurato, dati identificativi del datore di lavoro, cause e circostanze dellʼevento sottoscritti dallʼassicurato.</li><li>Diagnosi, prognosi sottoscritte dal medico certificatore.</li></ul></p><br><p><b>La pag. 2 è predisposta in due copie:</b><ul><li>Copia A per lʼassicurato.</li><li>Copia B per lʼINAIL.</li></ul></p><br><p>Essa contiene:<ul><li>Dati sensibili riferiti allo stato di salute del soggetto per i quali si applicano le disposizioni legislative in tema di “privacy”.</li></ul></p><br>"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="30">
+			<textField>
+				<reportElement x="0" y="10" width="170" height="20" uuid="89bd7c64-806c-4043-b6ab-dc2ee952749a"/>
+				<textElement markup="html">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["A COSA SERVE"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="180" y="10" width="364" height="20" uuid="160bbe8a-f6bc-472e-b527-2a0f694a06ab"/>
+				<textElement textAlignment="Justified" markup="html"/>
+				<textFieldExpression><![CDATA["<p>A certificare lo stato di inabilità temporanea assoluta al lavoro dellʼassicurato derivato da un infortunio lavorativo.</p>"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="30">
+			<textField>
+				<reportElement x="0" y="10" width="170" height="20" uuid="1f7e3d31-f894-4d7d-95ad-1e86439e87a6"/>
+				<textElement markup="html">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["QUANDO SI USA"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="180" y="10" width="364" height="20" uuid="d172e901-34f6-4de4-aaba-c5396ecdf136"/>
+				<textElement textAlignment="Justified" markup="html"/>
+				<textFieldExpression><![CDATA["<p>Quando un medico rileva uno stato di inabilità temporanea al lavoro, o la cessazione dello stesso, derivato da lesioni riportate a seguito di un evento che presenta le caratteristiche di un infortunio lavorativo.</p>"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="30">
+			<textField>
+				<reportElement x="0" y="10" width="170" height="20" uuid="10d27bd1-8e17-499d-b67f-8b87047808bc"/>
+				<textElement markup="html">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NOTE"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="180" y="10" width="364" height="20" uuid="835aa15c-bac8-4d0b-a704-213f7a6869b1"/>
+				<textElement textAlignment="Justified" markup="html"/>
+				<textFieldExpression><![CDATA["<p>Il modulo è stato predisposto in versione tipografica ed informatica.</p>"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

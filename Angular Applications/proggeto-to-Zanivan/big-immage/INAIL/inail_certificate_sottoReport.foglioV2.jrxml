@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final utlizzo versione della libreria JasperReports6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sottoReport.foglioV1" pageWidth="555" pageHeight="762" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b404143d-4026-43d2-8bbb-6a8739b608fb">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="INAIL\inail.dataAdapter.xml"/>
+	<style name="Style_TittlePrincipale" mode="Opaque" backcolor="#BFC9CA">
+		<pen lineStyle="Solid"/>
+	</style>
+	<style name="Style_tittle_testo" mode="Opaque" backcolor="#EAEDED">
+		<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+			<pen lineColor="#F1F0F7"/>
+			<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+			<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+		</box>
+	</style>
+	<style name="Style_testo" mode="Opaque">
+		<pen lineColor="#F1F0F7"/>
+		<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+			<pen lineColor="#F1F0F7"/>
+			<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+			<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#F1F0F7"/>
+		</box>
+	</style>
+	<parameter name="tipo_copia" class="java.lang.String" isForPrompting="false"/>
+	<queryString language="json">
+		<![CDATA[]]>
+	</queryString>
+	<field name="tipo.certificato" class="java.lang.String">
+		<fieldDescription><![CDATA[cerType]]></fieldDescription>
+	</field>
+	<field name="tipo.certificato.riammissione" class="java.lang.String">
+		<fieldDescription><![CDATA[cerTemporaryReadmission]]></fieldDescription>
+	</field>
+	<field name="per.cognome" class="java.lang.String">
+		<fieldDescription><![CDATA[perLastName]]></fieldDescription>
+	</field>
+	<field name="per.nome" class="java.lang.String">
+		<fieldDescription><![CDATA[perFirstName]]></fieldDescription>
+	</field>
+	<field name="per.sesso" class="java.lang.String">
+		<fieldDescription><![CDATA[perGender]]></fieldDescription>
+	</field>
+	<field name="per.nato.comune" class="java.lang.String">
+		<fieldDescription><![CDATA[perBirthPlace.description]]></fieldDescription>
+	</field>
+	<field name="per.nato.provincia" class="java.lang.String">
+		<fieldDescription><![CDATA[perBirthPlace.province.description]]></fieldDescription>
+	</field>
+	<field name="per.nato.data" class="java.lang.String">
+		<fieldDescription><![CDATA[perBirthDate]]></fieldDescription>
+	</field>
+	<field name="per.nato.nazionalita" class="java.lang.String">
+		<fieldDescription><![CDATA[perNationality.description]]></fieldDescription>
+	</field>
+	<field name="per.domicilio.comune" class="java.lang.String">
+		<fieldDescription><![CDATA[perHMunicipality.description]]></fieldDescription>
+	</field>
+	<field name="per.domicilio.provincia" class="java.lang.String">
+		<fieldDescription><![CDATA[perHMunicipality.province.description]]></fieldDescription>
+	</field>
+	<field name="per.cap" class="java.lang.String">
+		<fieldDescription><![CDATA[perHHealthDistrict]]></fieldDescription>
+	</field>
+	<field name="per.domicilio.indirizzo" class="java.lang.String">
+		<fieldDescription><![CDATA[perLAddressZip]]></fieldDescription>
+	</field>
+	<field name="per.domicilio.numero.civico" class="java.lang.String">
+		<fieldDescription><![CDATA[perHAddressNumber]]></fieldDescription>
+	</field>
+	<field name="per.ISTAT" class="java.lang.String">
+		<fieldDescription><![CDATA[perIstat]]></fieldDescription>
+	</field>
+	<field name="per.ASL" class="java.lang.String">
+		<fieldDescription><![CDATA[perHHealthDistrict.code]]></fieldDescription>
+	</field>
+	<field name="per.fiscale" class="java.lang.String">
+		<fieldDescription><![CDATA[perUniqueIdentifier]]></fieldDescription>
+	</field>
+	<field name="per.telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[perTel1Number]]></fieldDescription>
+	</field>
+	<field name="per.cellulare" class="java.lang.String">
+		<fieldDescription><![CDATA[perTel2Number]]></fieldDescription>
+	</field>
+	<field name="per.assenza" class="java.lang.String">
+		<fieldDescription><![CDATA[perAbsent]]></fieldDescription>
+	</field>
+	<field name="evento.avenuto.data" class="java.lang.String">
+		<fieldDescription><![CDATA[evtDate]]></fieldDescription>
+	</field>
+	<field name="evento.avenuto.comune" class="java.lang.String">
+		<fieldDescription><![CDATA[evtMunicipality.description]]></fieldDescription>
+	</field>
+	<field name="riservato.datore.cognome" class="java.lang.String">
+		<fieldDescription><![CDATA[empCompanyName]]></fieldDescription>
+	</field>
+	<field name="riservato.datore.indirizzo" class="java.lang.String">
+		<fieldDescription><![CDATA[empCompanyAddress]]></fieldDescription>
+	</field>
+	<field name="riservato.datore.numero.civico" class="java.lang.String">
+		<fieldDescription><![CDATA[empCompanyAddressNumber]]></fieldDescription>
+	</field>
+	<field name="riservato.datore.comune" class="java.lang.String">
+		<fieldDescription><![CDATA[empMunicipality.description]]></fieldDescription>
+	</field>
+	<field name="riservato.settore.lavorativo" class="java.lang.String">
+		<fieldDescription><![CDATA[empBranch]]></fieldDescription>
+	</field>
+	<field name="riservato.attivitalavorativa.attuale" class="java.lang.String">
+		<fieldDescription><![CDATA[evtTask]]></fieldDescription>
+	</field>
+	<field name="riservato.attivitalavorativa.precedente" class="java.lang.String">
+		<fieldDescription><![CDATA[evtPreviousTasks]]></fieldDescription>
+	</field>
+	<field name="riservato.descrizione.cause" class="java.lang.String">
+		<fieldDescription><![CDATA[evtCircumstances]]></fieldDescription>
+	</field>
+	<field name="riservato.assicurato.abbandonato.giorno" class="java.lang.String">
+		<fieldDescription><![CDATA[evtDatehourLeave]]></fieldDescription>
+	</field>
+	<field name="riservato.assicurato.abbandonato.ore" class="java.lang.String">
+		<fieldDescription><![CDATA[evtDatehourLeave]]></fieldDescription>
+	</field>
+	<field name="riservato.data" class="java.lang.String">
+		<fieldDescription><![CDATA[evtDate]]></fieldDescription>
+	</field>
+	<field name="per.diagnosi" class="java.lang.String">
+		<fieldDescription><![CDATA[cerDiagnosis]]></fieldDescription>
+	</field>
+	<field name="per.prognosi.giornodal" class="java.lang.String">
+		<fieldDescription><![CDATA[cerDateFrom]]></fieldDescription>
+	</field>
+	<field name="per.prognosi.gionofinno" class="java.lang.String">
+		<fieldDescription><![CDATA[cerDateTo]]></fieldDescription>
+	</field>
+	<field name="assicurato.sintesi" class="java.lang.String">
+		<fieldDescription><![CDATA[cerObjexamination]]></fieldDescription>
+	</field>
+	<field name="assicurato.diagnosi" class="java.lang.String">
+		<fieldDescription><![CDATA[cerDiagnosis]]></fieldDescription>
+	</field>
+	<field name="assicurato.accertamenti" class="java.lang.String">
+		<fieldDescription><![CDATA[evtVerifications]]></fieldDescription>
+	</field>
+	<field name="assicurato.prescrizioni" class="java.lang.String">
+		<fieldDescription><![CDATA[evtPrescriptions]]></fieldDescription>
+	</field>
+	<field name="assicurato.esami" class="java.lang.String">
+		<fieldDescription><![CDATA[cerExams]]></fieldDescription>
+	</field>
+	<field name="assicurato.altro" class="java.lang.String">
+		<fieldDescription><![CDATA[cerOtherexams]]></fieldDescription>
+	</field>
+	<field name="assicurato.presume.invalidita.pemanente" class="java.lang.String">
+		<fieldDescription><![CDATA[cerPermanenthandicap]]></fieldDescription>
+	</field>
+	<field name="assicurato.prognosi.riservata" class="java.lang.String">
+		<fieldDescription><![CDATA[cerPrognosisType]]></fieldDescription>
+	</field>
+	<field name="assicurato.pericolo.vita" class="java.lang.String">
+		<fieldDescription><![CDATA[cerLifethreat]]></fieldDescription>
+	</field>
+	<field name="assicurato.caso.mortale" class="java.lang.String">
+		<fieldDescription><![CDATA[cerDeadlyCase]]></fieldDescription>
+	</field>
+	<field name="assicurato.disposta.autopsia" class="java.lang.String">
+		<fieldDescription><![CDATA[cerAutopsyRequested]]></fieldDescription>
+	</field>
+	<field name="assicurato.nessuna.delle.precedenti" class="java.lang.String">
+		<fieldDescription><![CDATA[cerPrognosisType]]></fieldDescription>
+	</field>
+	<field name="assicurato.ricovero.ospedaliero" class="java.lang.String">
+		<fieldDescription><![CDATA[cerHospital]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.postumi" class="java.lang.String">
+		<fieldDescription><![CDATA[evtHasConsequences]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.postumi.quali" class="java.lang.String">
+		<fieldDescription><![CDATA[evtConsequencesDescription]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.invalido.civile" class="java.lang.String">
+		<fieldDescription><![CDATA[cerDisabled]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.pensionato.inps" class="java.lang.String">
+		<fieldDescription><![CDATA[cerRetired]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.altro" class="java.lang.String">
+		<fieldDescription><![CDATA[certificateOther]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.altro.specificazione" class="java.lang.String">
+		<fieldDescription><![CDATA[cerSpecification]]></fieldDescription>
+	</field>
+	<field name="assicurato.datiRiferiti.osservazione" class="java.lang.String">
+		<fieldDescription><![CDATA[cerObservations]]></fieldDescription>
+	</field>
+	<field name="assicurato.luogo" class="java.lang.String">
+		<fieldDescription><![CDATA[cerMunicipality.description]]></fieldDescription>
+	</field>
+	<field name="assicurato.dataRilascio" class="java.lang.String">
+		<fieldDescription><![CDATA[cerReleaseDate]]></fieldDescription>
+	</field>
+	<field name="assicurato.codiceMedico.presidioSanitario" class="java.lang.String">
+		<fieldDescription><![CDATA[doctor.code]]></fieldDescription>
+	</field>
+	<field name="assicurato.descrizione" class="java.lang.String">
+		<fieldDescription><![CDATA[doctor.descriptions]]></fieldDescription>
+	</field>
+	<field name="assicurato.medico.codiceFiscale" class="java.lang.String">
+		<fieldDescription><![CDATA[doctor.taxCode]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement style="Style_TittlePrincipale" x="0" y="0" width="555" height="20" uuid="e032036c-97e4-4d17-9710-8c16995eb300"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICAZIONE MEDICA DI INFORTUNIO]]></text>
+			</staticText>
+		</band>
+		<band height="21">
+			<frame>
+				<reportElement x="18" y="0" width="537" height="21" uuid="80d68804-1c57-4521-90b0-4e20aa7c6ee0"/>
+				<ellipse>
+					<reportElement x="0" y="5" width="10" height="10" uuid="652b3612-d4be-455b-8637-9f5c81660b12"/>
+				</ellipse>
+				<ellipse>
+					<reportElement x="2" y="7" width="6" height="6" backcolor="#000000" uuid="03d4d1f0-fdf4-4f5f-8ca5-d79840b82d46">
+						<printWhenExpression><![CDATA[$F{tipo.certificato}.equals("FIRST")]]></printWhenExpression>
+					</reportElement>
+				</ellipse>
+				<ellipse>
+					<reportElement x="84" y="5" width="10" height="10" uuid="43ec9682-c8d7-4663-a7ae-7054da802bbd"/>
+				</ellipse>
+				<ellipse>
+					<reportElement x="86" y="7" width="6" height="6" backcolor="#000000" uuid="4d0c0955-e8d2-4f6c-a75d-ff54fc2fb424">
+						<printWhenExpression><![CDATA[$F{tipo.certificato}.equals("CONTINUOUS")]]></printWhenExpression>
+					</reportElement>
+				</ellipse>
+				<ellipse>
+					<reportElement x="227" y="5" width="10" height="10" uuid="d0dde368-7a41-4012-b230-2deb1e5a0c99"/>
+				</ellipse>
+				<ellipse>
+					<reportElement x="229" y="7" width="6" height="6" backcolor="#000000" uuid="0e9a78bd-d5b3-45d2-8207-233191374dc2">
+						<printWhenExpression><![CDATA[$F{tipo.certificato}.equals("FINAL")]]></printWhenExpression>
+					</reportElement>
+				</ellipse>
+				<staticText>
+					<reportElement x="10" y="0" width="52" height="21" uuid="f9133963-2b80-47d4-bb8b-aa50bd045279"/>
+					<box padding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[PRIMO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="0" width="103" height="21" uuid="5c4324da-f044-4fd9-b839-ef66f991a0d9"/>
+					<box padding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[CONTINUATIVO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="237" y="0" width="75" height="21" uuid="d59a5e1f-e1e2-4809-a7f9-68562f68d95f"/>
+					<box padding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[DEFINITIVO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="347" y="0" width="190" height="21" uuid="496551d7-c734-4eb4-9005-8271c0014124"/>
+					<box padding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[RIAMMISSIONE IN TEMPORANEA]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="337" y="5" width="10" height="10" uuid="d2ad7383-de9d-4d2f-9730-34312a3b442b"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="339" y="7" width="6" height="6" backcolor="#000000" uuid="46c812ed-9775-4e91-a16c-bb99499479a1">
+						<printWhenExpression><![CDATA[Boolean.parseBoolean($F{tipo.certificato.riammissione})]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+			</frame>
+		</band>
+		<band height="30">
+			<frame>
+				<reportElement x="0" y="10" width="555" height="20" uuid="a03cc71b-d948-48ff-afd7-e96a0ae21ea3"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="220" height="10" uuid="c20f8406-6f33-41f7-acde-ef917682dd7e"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Cognome]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="220" height="10" uuid="27abe450-a1ec-448f-a3fb-62031b131d0c"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.cognome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="230" y="0" width="210" height="10" uuid="a25374dd-10c5-40ce-a383-17d6c50786b9"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Nome]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="230" y="10" width="210" height="10" uuid="b76f95f6-c334-440a-8f4a-4bb5a4fcc0ec"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.nome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="450" y="0" width="105" height="10" uuid="d5617ad4-6500-4de2-a61f-41c0e7144a7a"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Sesso]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="450" y="10" width="105" height="10" uuid="b50102ca-24d0-491c-be31-b39b49bf381c"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.sesso}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="4" width="555" height="20" uuid="d3ea263f-2f33-45ca-96aa-e061a8e90c4a"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="220" height="10" uuid="2c75178b-8c4a-48e7-ad1d-6a9f84014544"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Nato a (comune)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="220" height="10" uuid="5649bce6-a432-4e1f-a0c1-e7e88b8046fb"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.nato.comune}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="230" y="0" width="100" height="10" uuid="9235401e-5d78-4e61-b01a-8152212df788"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Nato a (provincia)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="230" y="10" width="100" height="10" uuid="496bb57b-4099-47e6-8ac8-148a54ee2a14"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.nato.provincia}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="450" y="0" width="105" height="10" uuid="62036bfb-428b-4140-b971-632c63458c09"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Nazionalità]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="450" y="10" width="105" height="10" uuid="1c2d65b9-c3ee-4ff1-b550-247227691689"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.nato.nazionalita}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="340" y="0" width="100" height="10" uuid="7f74f8bb-2358-4cec-a4fc-df4dc610992a"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Data]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="340" y="10" width="100" height="10" uuid="130924e4-c13b-4c8b-a6d9-2d82965f1e6c"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[String.valueOf(new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.text.SimpleDateFormat("yyyyMMdd").parse($F{per.nato.data})))]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="4" width="555" height="20" uuid="d4a6e0d1-cd90-4212-bec7-f3a407c87a5e"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="330" height="10" uuid="32eead86-d2e9-422e-9d5a-fa5af08ea0ed"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Domiciliato in (comune)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="330" height="10" uuid="8c18dcc3-25ea-4449-bc7b-fa4f610908a0"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.domicilio.comune}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="340" y="0" width="100" height="10" uuid="ce60cf60-2bda-433c-88cd-d7d3e178e238"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Domiciliato in (provincia)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="340" y="10" width="100" height="10" uuid="ebb8fa20-073a-4fa2-b467-657c26be9b3b"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.domicilio.provincia}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="450" y="0" width="105" height="10" uuid="d3f87f64-cc41-4c50-83aa-f03d010c6d46"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[CAP]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="450" y="10" width="105" height="10" uuid="75e68ead-1754-444c-a4cf-511d866f7ca3"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.cap}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="4" width="555" height="20" uuid="f51a941d-5b01-4e85-acfe-d336d079cf85"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="440" height="10" uuid="95975888-358b-4960-9277-ba73a30d5c0d"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Indirizzo (via, piazza, ecc.)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="440" height="10" uuid="33743e45-3fab-4cdf-8e76-28765c2b8b87"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.domicilio.indirizzo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="450" y="0" width="105" height="10" uuid="0e2e755c-efdf-46d6-b4db-d42c9ab35735"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Numero civico]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="450" y="10" width="105" height="10" uuid="eab2bc01-492e-44d8-b915-d9b37c602b76"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.domicilio.numero.civico}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="4" width="555" height="20" uuid="b384af9f-1c43-4574-9299-f4e25b459d5b"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="130" height="10" uuid="f68f0511-4f5f-494a-b703-6aec897bcece"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Codice ISTAT]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="130" height="10" uuid="bf82711f-8b9c-4266-9631-73227b4f4b56"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.ISTAT}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="140" y="10" width="130" height="10" uuid="e63dc1d0-b7c8-4e5c-bedd-bcbab00d307e"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.ASL}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="140" y="0" width="130" height="10" uuid="05e17d52-cd37-4efd-9c6b-601aac3461c6"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Codice ASL]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="280" y="10" width="275" height="10" uuid="04cee930-f9a6-4d56-a2c2-69d3db9d9f1b"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.fiscale}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="280" y="0" width="275" height="10" uuid="8f1b8c38-7eaf-4ff8-9ebf-23bf165185d8"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Codice fiscale]]></text>
+				</staticText>
+			</frame>
+		</band>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="4" width="555" height="20" uuid="ef7346ce-8c6a-4a42-b2f9-81abe273cf6a"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="130" height="10" uuid="3758c0a7-44c1-4c92-8a50-b0b0c61332fc"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Telefono]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="130" height="10" uuid="83146253-e4b5-41f9-b65b-6e0199fd796e"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.telefono}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="140" y="0" width="130" height="10" uuid="6d843e88-5ea3-4fb3-ba92-7e694f06666c"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Celulare]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="140" y="10" width="130" height="10" uuid="01595147-9f23-4d8f-b2e1-e264386f79e7"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{per.cellulare}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="280" y="0" width="130" height="10" uuid="799b18d0-5f5f-40dd-a830-42e70e91b662"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Assenza recapire telefonici]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="280" y="10" width="130" height="10" uuid="6884f455-49c1-4ad4-bbc5-d7f179c256a9"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[Boolean.parseBoolean($F{per.assenza})? "Sì":"No"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="420" y="0" width="135" height="20" uuid="6f403b0c-d3ee-4f48-a80f-cb5139435e38"/>
+					<textElement textAlignment="Justified">
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[Lʼindicazione del numero di telefono potrà consentire una più tempestiva ed efficace erogazione delle prestazioni da parte dellʼINAIL a favore del lavoratore.]]></text>
+				</staticText>
+			</frame>
+		</band>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="4" width="555" height="20" uuid="634ab2d2-e29f-4a99-ac18-40c891a2cad2"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="130" height="10" uuid="676a0c99-0409-47d7-afb3-ac4e1f6e589e"/>
+					<textElement>
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[L'evento è avenuto il (data)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="130" height="10" uuid="d4b7eee9-5588-4e5f-92d6-f97fc67abc44"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[String.valueOf(new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.text.SimpleDateFormat("yyyyMMdd").parse($F{evento.avenuto.data})))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="140" y="10" width="415" height="10" uuid="72ad2d89-0a42-41d6-ab5b-9f2fe403c531"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{evento.avenuto.comune}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="140" y="0" width="415" height="10" uuid="bed16602-da23-46ea-8872-d694d8d38f4b"/>
+					<textElement>
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[in (comune o stato estero)]]></text>
+				</staticText>
+			</frame>
+		</band>
+		<band height="19">
+			<frame>
+				<reportElement x="0" y="4" width="555" height="15" uuid="4c943bcc-6103-4ab3-8dd0-a1bb929d4d9c"/>
+				<box>
+					<pen lineColor="#E1DFF0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#E1DFF0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#E1DFF0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#E1DFF0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#E1DFF0"/>
+				</box>
+				<subreport>
+					<reportElement x="5" y="0" width="545" height="15" uuid="a1df3f7e-84d4-41a6-a726-af463464e487"/>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource(".")]]></dataSourceExpression>
+					<subreportExpression><![CDATA["inail_certificate_sottoReport.sezioneAssicurato.jasper"]]></subreportExpression>
+				</subreport>
+			</frame>
+		</band>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="4" width="555" height="20" uuid="4de62dbb-8460-4d0c-8963-aebb50a22892"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="555" height="10" uuid="efdb60f2-16c7-45be-8e59-62d3dc3e6d13"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Diagnosi]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="555" height="10" uuid="d590ff81-c098-42ed-a1ba-01d0ec5ea228"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{assicurato.diagnosi}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="40">
+			<frame>
+				<reportElement x="0" y="4" width="555" height="36" uuid="d83e7cd1-1dfd-4b04-97ba-b12dca095a15"/>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="555" height="10" uuid="eacd9521-1ba4-4984-a89c-591992d120e1"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Prognosi]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="555" height="10" uuid="81585f40-daa1-4fe1-b286-7ca1921b380e"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Inabilità temporanea assoluta al lavoro dal giorno "+String.valueOf(new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.text.SimpleDateFormat("yyyyMMdd").parse($F{per.prognosi.giornodal})))+" fino a tutto il "+String.valueOf(new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.text.SimpleDateFormat("yyyyMMdd").parse($F{per.prognosi.gionofinno})))]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="20" width="555" height="16" uuid="52f66aae-0ad6-4215-84e1-c00c6cc8d198"/>
+					<textElement textAlignment="Justified">
+						<font size="5"/>
+					</textElement>
+					<text><![CDATA[Se la durata dellʼassenza dal lavoro è superiore ai 60 giorni continuativi, al fine di verificare lʼidoneità alla mansione specifica, è necessaria la visita da parte del medico competente prima della ripresa lavoro. (Art. 41 c. 2 lett. e-ter D.Lgs. 81/2008 e s.m.i.)]]></text>
+				</staticText>
+			</frame>
+		</band>
+		<band height="30">
+			<frame>
+				<reportElement x="0" y="10" width="555" height="20" uuid="b0979347-660f-463a-8449-77a08fc591f6"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="0" y="10" width="440" height="10" uuid="3ca82692-b341-4a68-a5b3-19f1223251d7"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{assicurato.luogo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="0" y="0" width="440" height="10" uuid="69b2bbd8-28e7-4764-91e6-93a59443d1d7"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Luogo]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Style_testo" x="450" y="10" width="105" height="10" uuid="4a9c4fee-7821-4e57-b682-1cd1a71698fb"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[String.valueOf(new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.text.SimpleDateFormat("yyyyMMdd").parse($F{assicurato.dataRilascio})))]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Style_tittle_testo" x="450" y="0" width="105" height="10" uuid="5e16cde4-b618-4e33-ab0e-f252c48320ea"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Data di rilascio]]></text>
+				</staticText>
+			</frame>
+		</band>
+		<band height="11"/>
+		<band height="19">
+			<break>
+				<reportElement x="0" y="0" width="554" height="1" uuid="a304d90b-4e14-4256-9327-6d97b228fb95"/>
+			</break>
+			<frame>
+				<reportElement x="0" y="4" width="555" height="15" uuid="dfcdcb90-b5b4-4c00-ae74-270c0a679931"/>
+				<box>
+					<pen lineColor="#E1DFF0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#E1DFF0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#E1DFF0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#E1DFF0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#E1DFF0"/>
+				</box>
+				<subreport>
+					<reportElement x="5" y="0" width="545" height="15" uuid="8be28530-4c49-411c-bc1f-1ec86e049b98"/>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource(".")]]></dataSourceExpression>
+					<subreportExpression><![CDATA["inail_certificate_sottoReport.sezioneIstruzioni.jasper"]]></subreportExpression>
+				</subreport>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="91">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+			<staticText>
+				<reportElement style="Style_tittle_testo" x="260" y="51" width="295" height="10" uuid="eebe2a0b-1bec-4d76-ad39-782cb221f880"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Timbro e firma del Medico : ..................................................................................................]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Style_tittle_testo" x="450" y="81" width="60" height="10" uuid="9575632a-33ff-4f2a-a639-e9217d188f56"/>
+				<box rightPadding="0"/>
+				<textElement textAlignment="Right">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pagina " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Style_tittle_testo" x="510" y="81" width="45" height="10" uuid="87f6d60c-654f-4f82-ae43-82472e484655"/>
+				<textElement textAlignment="Left">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" di " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Style_tittle_testo" x="0" y="81" width="198" height="10" uuid="a7bca09c-42a3-47d2-ab68-cb31be8c28fc"/>
+				<textElement textAlignment="Center" markup="html">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>"+$P{tipo_copia}+"</b> - Tip. INAIL -3/2012"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

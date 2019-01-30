@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final utlizzo versione della libreria JasperReports6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Principale" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c68b0a2f-d847-4e41-971c-4210ef1f59c6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="INAIL\inail.dataAdapter.xml"/>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="className" class="java.lang.String">
+		<fieldDescription><![CDATA[className]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="480" y="10" width="75" height="20" uuid="0560728a-362b-4cec-b4cd-bc940d15eeff"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mod. 1 SS]]></text>
+			</staticText>
+			<image hAlign="Left" vAlign="Middle">
+				<reportElement x="0" y="0" width="90" height="40" uuid="d0f40101-ed8e-47d6-ad42-c77e3d300755"/>
+				<imageExpression><![CDATA["images/logoInail.svg"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="20" splitType="Immediate">
+			<property name="com.jaspersoft.studio.layout"/>
+			<subreport isUsingCache="true" runToBottom="true" overflowType="Stretch">
+				<reportElement key="" positionType="Float" mode="Transparent" x="0" y="0" width="555" height="20" uuid="3b9815f4-efb0-4494-ae23-e63a08706419"/>
+				<subreportParameter name="tipo_copia">
+					<subreportParameterExpression><![CDATA["Copia A - per l'Assicurato"]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource(".")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["inail_certificate_sottoReport.foglioV1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="21">
+			<property name="com.jaspersoft.studio.layout"/>
+			<break>
+				<reportElement x="0" y="0" width="554" height="1" uuid="00099458-0074-447e-82c3-042a07c5c80e"/>
+			</break>
+			<subreport isUsingCache="true" runToBottom="true">
+				<reportElement x="0" y="1" width="555" height="20" uuid="825d2115-e676-4996-8a73-89fe679ec2d1"/>
+				<subreportParameter name="tipo_copia">
+					<subreportParameterExpression><![CDATA["Copia B - per l'INAIL"]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource(".")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["inail_certificate_sottoReport.foglioV1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="21">
+			<property name="com.jaspersoft.studio.layout"/>
+			<break>
+				<reportElement x="0" y="0" width="554" height="1" uuid="a26e4a58-afb5-4052-96c4-5c2a7a0f45f2"/>
+			</break>
+			<subreport isUsingCache="true" runToBottom="true">
+				<reportElement x="0" y="1" width="555" height="20" uuid="de2c4b43-ec91-4f22-aeda-f25eb14ae7e9"/>
+				<subreportParameter name="tipo_copia">
+					<subreportParameterExpression><![CDATA["Copia C - per il Datore di Lavoro"]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource(".")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["inail_certificate_sottoReport.foglioV2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

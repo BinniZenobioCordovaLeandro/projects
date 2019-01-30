@@ -1,0 +1,6 @@
+NOTE:
+  STEPS:
+  [ ] SQL: determinare i variabile con una query:
+      * ogni variabile deve di tornare zero si se determina che può essere nulla.
+  [ ] JASPER: fare il modello e mettere la query di prima.
+      * mettere la validazione per un denomitore con valore zero.

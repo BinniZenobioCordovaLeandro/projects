@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<field name="tipo.certificato" class="java.lang.String">
+  <fieldDescription><![CDATA[cerType]]></fieldDescription>
+</field>
+<field name="per.cognome" class="java.lang.String">
+  <fieldDescription><![CDATA[perLastName]]></fieldDescription>
+</field>
+<field name="per.nome" class="java.lang.String">
+  <fieldDescription><![CDATA[perFirstName]]></fieldDescription>
+</field>
+<field name="per.sesso" class="java.lang.String">
+  <fieldDescription><![CDATA[perGender]]></fieldDescription>
+</field>
+<field name="per.nato.comune" class="java.lang.String">
+  <fieldDescription><![CDATA[perBirthPlace.description]]></fieldDescription>
+</field>
+<field name="per.nato.provincia" class="java.lang.String">
+  <fieldDescription><![CDATA[perBirthPlace.province]]></fieldDescription>
+</field>
+<field name="per.nato.data" class="java.lang.String">
+  <fieldDescription><![CDATA[perBirthDate]]></fieldDescription>
+</field>
+<field name="per.nato.nazionalita" class="java.lang.String">
+  <fieldDescription><![CDATA[perNationality.description]]></fieldDescription>
+</field>
+<field name="per.domicilio.comune" class="java.lang.String">
+  <fieldDescription><![CDATA[perHMunicipality.description]]></fieldDescription>
+</field>
+<field name="per.domicilio.provincia" class="java.lang.String">
+  <fieldDescription><![CDATA[perHMunicipality.province]]></fieldDescription>
+</field>
+<field name="per.domicilio.capitale" class="java.lang.String">
+  <fieldDescription><![CDATA[perHHealthDistrict]]></fieldDescription>
+</field>
+<field name="per.domicilio.indirizzo" class="java.lang.String">
+  <fieldDescription><![CDATA[perHAddress]]></fieldDescription>
+</field>
+<field name="per.domicilio.numero.civico" class="java.lang.String">
+  <fieldDescription><![CDATA[perHAddressNumber]]></fieldDescription>
+</field>
+<field name="per.ISTAT" class="java.lang.String">
+  <fieldDescription><![CDATA[perIstat]]></fieldDescription>
+</field>
+<field name="per.ASL" class="java.lang.String">
+  <fieldDescription><![CDATA[perHHealthDistrict]]></fieldDescription>
+</field>
+<field name="per.fiscale" class="java.lang.String">
+  <fieldDescription><![CDATA[perUniqueIdentifier]]></fieldDescription>
+</field>
+<field name="per.telefono" class="java.lang.String">
+  <fieldDescription><![CDATA[perTel1Number]]></fieldDescription>
+</field>
+<field name="per.cellulare" class="java.lang.String">
+  <fieldDescription><![CDATA[perTel2Number]]></fieldDescription>
+</field>
+<field name="per.assenza" class="java.lang.String">
+  <fieldDescription><![CDATA[perAbsent]]></fieldDescription>
+</field>
+<field name="evento.avenuto.data" class="java.lang.String">
+  <fieldDescription><![CDATA[evtDate]]></fieldDescription>
+</field>
+<field name="evento.avenuto.comune" class="java.lang.String">
+  <fieldDescription><![CDATA[evtMunicipality.description]]></fieldDescription>
+</field>
+<field name="riservato.datore.cognome" class="java.lang.String">
+  <fieldDescription><![CDATA[empCompanyName]]></fieldDescription>
+</field>
+<field name="riservato.datore.indirizzo" class="java.lang.String">
+  <fieldDescription><![CDATA[empCompanyAddress]]></fieldDescription>
+</field>
+<field name="riservato.datore.numero.civico" class="java.lang.String">
+  <fieldDescription><![CDATA[empCompanyAddressNumber]]></fieldDescription>
+</field>
+<field name="riservato.datore.comune" class="java.lang.String">
+  <fieldDescription><![CDATA[empMunicipality.description]]></fieldDescription>
+</field>
+<field name="riservato.settore.lavorativo" class="java.lang.String">
+  <fieldDescription><![CDATA[empBranch]]></fieldDescription>
+</field>
+<field name="riservato.attivitalavorativa.attuale" class="java.lang.String">
+  <fieldDescription><![CDATA[evtTask]]></fieldDescription>
+</field>
+<field name="riservato.attivitalavorativa.precedente" class="java.lang.String">
+  <fieldDescription><![CDATA[evtPreviousTasks]]></fieldDescription>
+</field>
+<field name="riservato.descrizione.cause" class="java.lang.String">
+  <fieldDescription><![CDATA[evtCircumstances]]></fieldDescription>
+</field>
+<field name="riservato.assicurato.abbandonato.giorno" class="java.lang.String">
+  <fieldDescription><![CDATA[evtDatehourLeave]]></fieldDescription>
+</field>
+<field name="riservato.assicurato.abbandonato.ore" class="java.lang.String">
+  <fieldDescription><![CDATA[evtDatehourLeave]]></fieldDescription>
+</field>
+<field name="riservato.data" class="java.lang.String">
+  <fieldDescription><![CDATA[evtDate]]></fieldDescription>
+</field>
+<field name="per.diagnosi" class="java.lang.String">
+  <fieldDescription><![CDATA[cerDiagnosis]]></fieldDescription>
+</field>
+<field name="per.prognosi.giornodal" class="java.lang.String">
+  <fieldDescription><![CDATA[cerDateFrom]]></fieldDescription>
+</field>
+<field name="per.prognosi.gionofinno" class="java.lang.String">
+  <fieldDescription><![CDATA[cerDateTo]]></fieldDescription>
+</field>
+<field name="assicurato.sintesi" class="java.lang.String">
+  <fieldDescription><![CDATA[cerObjexamination]]></fieldDescription>
+</field>
+<field name="assicurato.diagnosi" class="java.lang.String">
+  <fieldDescription><![CDATA[cerDiagnosis]]></fieldDescription>
+</field>
+<field name="assicurato.accertamenti" class="java.lang.String">
+  <fieldDescription><![CDATA[evtVerifications]]></fieldDescription>
+</field>
+<field name="assicurato.prescrizioni" class="java.lang.String">
+  <fieldDescription><![CDATA[evtPrescriptions]]></fieldDescription>
+</field>
+<field name="assicurato.esami" class="java.lang.String">
+  <fieldDescription><![CDATA[cerExams]]></fieldDescription>
+</field>
+<field name="assicurato.altro" class="java.lang.String">
+  <fieldDescription><![CDATA[cerOtherexams]]></fieldDescription>
+</field>
+<field name="assicurato.presume.invalidita.pemanente" class="java.lang.String">
+  <fieldDescription><![CDATA[cerPermanenthandicap]]></fieldDescription>
+</field>
+<field name="assicurato.prognosi.riservata" class="java.lang.String">
+  <fieldDescription><![CDATA[cerPrognosisType]]></fieldDescription>
+</field>
+<field name="assicurato.pericolo.vita" class="java.lang.String">
+  <fieldDescription><![CDATA[cerLifethreat]]></fieldDescription>
+</field>
+<field name="assicurato.caso.mortale" class="java.lang.String">
+  <fieldDescription><![CDATA[cerDeadlyCase]]></fieldDescription>
+</field>
+<field name="assicurato.disposta.autopsia" class="java.lang.String">
+  <fieldDescription><![CDATA[cerAutopsyRequested]]></fieldDescription>
+</field>
+<field name="assicurato.nessuna.delle.precedenti" class="java.lang.String">
+  <fieldDescription><![CDATA[cerPrognosisType]]></fieldDescription>
+</field>
+<field name="assicurato.ricovero.ospedaliero" class="java.lang.String">
+  <fieldDescription><![CDATA[cerHospital]]></fieldDescription>
+</field>
+<field name="assicurato.datiRiferiti.postumi" class="java.lang.String">
+  <fieldDescription><![CDATA[evtHasConsequences]]></fieldDescription>
+</field>
+<field name="assicurato.datiRiferiti.postumi.quali" class="java.lang.String">
+  <fieldDescription><![CDATA[evtConsequencesDescription]]></fieldDescription>
+</field>
+<field name="assicurato.datiRiferiti.invalido.civile" class="java.lang.String">
+  <fieldDescription><![CDATA[cerDisabled]]></fieldDescription>
+</field>
+<field name="assicurato.datiRiferiti.pensionato.inps" class="java.lang.String">
+  <fieldDescription><![CDATA[cerRetired]]></fieldDescription>
+</field>
+<field name="assicurato.datiRiferiti.altro" class="java.lang.String">
+  <fieldDescription><![CDATA[certificateOther]]></fieldDescription>
+</field>
+<field name="assicurato.datiRiferiti.osservazione" class="java.lang.String">
+  <fieldDescription><![CDATA[cerObservations]]></fieldDescription>
+</field>
+<field name="assicurato.luogo" class="java.lang.String">
+  <fieldDescription><![CDATA[cerMunicipality]]></fieldDescription>
+</field>
+<field name="assicurato.dataRilascio" class="java.lang.String">
+  <fieldDescription><![CDATA[cerReleaseDate]]></fieldDescription>
+</field>
+<field name="assicurato.codiceMedico.presidioSanitario" class="java.lang.String">
+  <fieldDescription><![CDATA[doctor.code]]></fieldDescription>
+</field>
+<field name="assicurato.descrizione" class="java.lang.String">
+  <fieldDescription><![CDATA[doctor.descriptions]]></fieldDescription>
+</field>
+<field name="assicurato.medico.codiceFiscale" class="java.lang.String">
+  <fieldDescription><![CDATA[doctor.taxCode]]></fieldDescription>
+</field>

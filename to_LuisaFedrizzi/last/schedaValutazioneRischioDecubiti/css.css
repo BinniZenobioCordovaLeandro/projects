@@ -1,0 +1,27 @@
+.divider-dashed{
+  border-top:1px dashed #e9e9e9;;
+}
+.divider-solid{
+  border-top:1px solid #e9e9e9;;
+}
+.input-massimo-sm {
+  max-width:100px;
+}
+
+
+.list-radio label {
+  display:block;
+  position: relative;
+  margin: 0 20px 10px;
+  font-size: 14px;
+  line-height: 20px;
+  height: auto;
+}
+
+.panel-primary, .panel-primary>.panel-heading {
+  border-color: #4d648d !important;
+}
+
+.panel-primary>.panel-heading {
+  background-color : #4d648d !important;
+}

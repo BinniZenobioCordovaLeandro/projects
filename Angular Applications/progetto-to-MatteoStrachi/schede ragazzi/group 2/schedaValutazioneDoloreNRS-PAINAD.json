@@ -1,0 +1,73 @@
+[{
+  "id": null,
+  "insertUserId": 4,
+  "insertUser": "Katie Wilson",
+  "insertTimeUTC": 1538999633507,
+  "insertTime": 1538999633507,
+  "updateUserId": 4,
+  "updateUser": "Katie Wilson",
+  "updateTimeUTC": 1539853354612,
+  "updateTime": 1539853354612,
+  "organizationId": 2,
+  "valid": true,
+  "cancellationTime": null,
+  "cancellationUser": null,
+  "cancellationUserId": null,
+  "cancellationTimeUTC": null,
+  "name": "Scala di Valutazione del dolore NRS - PAINAD",
+  "code": "schedaValutazioneDoloreNRS-PAINAD",
+  "html": "<div class=\"panel panel-body\">\n    <div class=\"\">\n        <h4>NRS (DA SOMMINISTRARE AGLI OSPITI COLLABORANTI)</h4>\n        <div class=\"form-group\">\n            <label class=\"col-md-4 col-sm-5\">\n                Valore numerico da 0 a 10 (0 corrisponde ad assenza di dolore, 10 corrisponde al massimo del dolore\n                immaginabile)\n            </label>\n            <div class=\"col-md-8 col-sm-7\">\n                <div class=\"ui-select\">\n                    <select ng-model=\"formData.valutaDolore\" ng-options=\"item.value for item in viewData.scalaDolore track by item.code\"\n                        ng-change=\"calcNRS();\">\n                    </select>\n                    <input type=\"number\" ng-model=\"formData.valutaDolore.value\" ng-show=\"false\" summary=\"VALDOLORE_valutaDolore\">\n                </div>\n            </div>\n        </div>\n    </div>\n    <div ng-click=\"selectedRadio($event);\">\n        <div class=\"divider divider-dashed divider-sm pull-in\"></div>\n        <h4>PAINAD (DA SOMMINISTRARE AGLI OSPITI CON DECADIMENTO COGNITIVO)</h4>\n        <div class=\"form-group\">\n            <label class=\"col-md-2 col-sm-3\">Respirazione</label>\n            <div class=\"col-md-10 col-sm-9\">\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_1a\" ng-model=\"formData.respitazione.code\" ng-change=\"formData.respitazione={'code':'opP_1a','score':0}\">\n                    <span>Normale</span>\n                </label>\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_1b\" ng-model=\"formData.respitazione.code\" ng-change=\"formData.respitazione={'code':'opP_1b','score':1}\">\n                    <span>Respiro affannoso</span>\n                </label>\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_1c\" ng-model=\"formData.respitazione.code\" ng-change=\"formData.respitazione={'code':'opP_1c','score':2}\">\n                    <span>Respiro rumoroso e affannoso, alternanza di periodi di apnea e polipnea</span>\n                </label>\n                <input type=\"number\" ng-model=\"formData.respitazione.score\" ng-show=\"false\" summary=\"VALDOLORE_Respirazione\">\n            </div>\n        </div>\n        <div class=\"divider divider-dashed divider-sm pull-in\"></div>\n        <div class=\"form-group\">\n            <label class=\"col-md-2 col-sm-3\">Vocalizzazione</label>\n            <div class=\"col-md-10 col-sm-9\">\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_2a\" ng-model=\"formData.vocalizzazione.code\" ng-change=\"formData.vocalizzazione={'code':'opP_2a','score':0}\">\n                    <span>Nessun problema</span>\n                </label>\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_2b\" ng-model=\"formData.vocalizzazione.code\" ng-change=\"formData.vocalizzazione={'code':'opP_2b','score':1}\">\n                    <span>Pianti occasionali o brontoli</span>\n                </label>\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_2c\" ng-model=\"formData.vocalizzazione.code\" ng-change=\"formData.vocalizzazione={'code':'opP_2c','score':2}\">\n                    <span>Ripetuti urli o lamenti</span>\n                </label>\n                <input type=\"number\" ng-model=\"formData.vocalizzazione.score\" ng-show=\"false\" summary=\"VALDOLORE_Vocalizzazione\">\n            </div>\n        </div>\n        <div class=\"divider divider-dashed divider-sm pull-in\"></div>\n        <div class=\"form-group\">\n            <label class=\"col-md-2 col-sm-3\">Espressione del volto</label>\n            <div class=\"col-md-10 col-sm-9\">\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_3a\" ng-model=\"formData.espressioneVolto.code\" ng-change=\"formData.espressioneVolto={'code':'opP_3a','score':0}\">\n                    <span>Sorridente o inespressivo</span>\n                </label>\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_3b\" ng-model=\"formData.espressioneVolto.code\" ng-change=\"formData.espressioneVolto={'code':'opP_3b','score':1}\">\n                    <span>Triste e/o ciglia aggrottate</span>\n                </label>\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_3c\" ng-model=\"formData.espressioneVolto.code\" ng-change=\"formData.espressioneVolto={'code':'opP_3c','score':2}\">\n                    <span>Smorfie</span>\n                </label>\n                <input type=\"number\" ng-model=\"formData.espressioneVolto.score\" ng-show=\"false\" summary=\"VALDOLORE_Espressione\">\n            </div>\n        </div>\n        <div class=\"divider divider-dashed divider-sm pull-in\"></div>\n        <div class=\"form-group\">\n            <label class=\"col-md-2 col-sm-3\">Linguaggio del corpo</label>\n            <div class=\"col-md-10 col-sm-9\">\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_4a\" ng-model=\"formData.linguaggioCorpo.code\" ng-change=\"formData.linguaggioCorpo={'code':'opP_4a','score':0}\">\n                    <span>Rilassato</span>\n                </label>\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_4b\" ng-model=\"formData.linguaggioCorpo.code\" ng-change=\"formData.linguaggioCorpo={'code':'opP_4b','score':1}\">\n                    <span>Teso</span>\n                </label>\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_4c\" ng-model=\"formData.linguaggioCorpo.code\" ng-change=\"formData.linguaggioCorpo={'code':'opP_4c','score':2}\">\n                    <span>Rigido con i pugni chiusi o che tenta di colpire</span>\n                </label>\n                <input type=\"number\" ng-model=\"formData.linguaggioCorpo.score\" ng-show=\"false\" summary=\"VALDOLORE_Linguaggio\">\n            </div>\n        </div>\n        <div class=\"divider divider-dashed divider-sm pull-in\"></div>\n        <div class=\"form-group\">\n            <label class=\"col-md-2 col-sm-3\">Consolazione</label>\n            <div class=\"col-md-10 col-sm-9\">\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_5a\" ng-model=\"formData.consolazione.code\" ng-change=\"formData.consolazione={'code':'opP_5a','score':0}\">\n                    <span>Nessun bisogno di essere consolato</span>\n                </label>\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_5b\" ng-model=\"formData.consolazione.code\" ng-change=\"formData.consolazione={'code':'opP_5b','score':1}\">\n                    <span>Confuso e che cerca rassicurazioni</span>\n                </label>\n                <label class=\"ui-radio\">\n                    <input type=\"radio\" value=\"opP_5c\" ng-model=\"formData.consolazione.code\" ng-change=\"formData.consolazione={'code':'opP_5c','score':2}\">\n                    <span>Incapacità di distrazione e/o consolazione</span>\n                </label>\n                <input type=\"number\" ng-model=\"formData.consolazione.score\" ng-show=\"false\" summary=\"VALDOLORE_Consolazione\">\n            </div>\n        </div>\n        <div class=\"divider divider-dashed divider-sm pull-in\"></div>\n        <div class=\"form-group\">\n            <label class=\"col-md-2 col-sm-3\">Osservazioni</label>\n            <div class=\"col-md-10 col-sm-9\">\n                <textarea class=\"form-control\" ng-model=\"formData.osservazioni\" rows=\"5\"></textarea>\n                <input type=\"text\" class=\"form-control\" ng-model=\"formData.osservazioni\" ng-show=\"false\" summary=\"VALDOLORE_Osservazioni\">\n            </div>\n        </div>\n\n    </div>\n    <div class=\"panel-footer\">\n        <div class=\"panel-body\">\n            <h4>PUNTEGGI CALCOLATI:</h4>\n            <div class=\"form-group\">\n                <label class=\"col-md-5 col-sm-6\">Valutazione del dolore PAINAD</label>\n                <div class=\"col-md-7 col-sm-6\">\n                    <input type=\"number\" class=\"form-control input-massimo-sm\" ng-model=\"formData.scorePAINAD\" concept=\"scoreValDolorePAINAD\"\n                        summary readonly>\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label class=\"col-md-5 col-sm-6\">Valutazione del dolore NRS (alternativo a PAINAD)</label>\n                <div class=\"col-md-7 col-sm-6\">\n                    <input type=\"number\" class=\"form-control input-massimo-sm\" ng-model=\"formData.scoreNRS\" concept=\"scoreValDoloreNRS\"\n                        summary readonly>\n                </div>\n            </div>\n            <legend>Scala PAINAD:</legend>\n            <li>0-1 dolore assente </li>\n            <li>2-4 dolore lieve </li>\n            <li>5-7 dolore moderato </li>\n            <li>8-10 dolore severo </li>\n        </div>\n\n    </div>\n</div>",
+  "javascript": "\nvar calcPAINAD = function(group){\n  var elm, somma = null, scala=\"\";\n  for(var i in group){\n    elm = group[i];\n    if(elm && elm.score >= 0){\n      somma = somma + elm.score;\n    }\n  }\n  return somma;\n};\nregisterFunction(\"calcPAINAD\",calcPAINAD);\n\nviewData.scalaDolore =[\n  {\"code\":\"op00\", \"value\":0,\"score\":0},\n  {\"code\":\"op01\", \"value\":1,\"score\":1},\n  {\"code\":\"op02\", \"value\":2,\"score\":2},\n  {\"code\":\"op03\", \"value\":3,\"score\":3},\n  {\"code\":\"op04\", \"value\":4,\"score\":4},\n  {\"code\":\"op05\", \"value\":5,\"score\":5},\n  {\"code\":\"op06\", \"value\":6,\"score\":6},\n  {\"code\":\"op07\", \"value\":7,\"score\":7},\n  {\"code\":\"op08\", \"value\":8,\"score\":8},\n  {\"code\":\"op09\", \"value\":9,\"score\":9},\n  {\"code\":\"op10\", \"value\":10,\"score\":10}\n];\n\n\nvar calcNRS = function(){\n  formData.scoreNRS = formData.valutaDolore.score;  \n};\nregisterFunction(\"calcNRS\",calcNRS);\n\n\nvar selectedRadio = function(event){  \n  if(event.target.localName ===\"input\" && event.target.type === \"radio\"){\n    var score=null;\n    score = calcPAINAD(formData);\n    formData.scorePAINAD = score;\n  }\n};\nregisterFunction(\"selectedRadio\",selectedRadio);\n\n\n\n",
+  "css": ".divider-dashed{\n  border-top:1px dashed #e9e9e9;;\n}\n.divider-solid{\n  border-top:1px solid #e9e9e9;;\n}\n\n.input-massimo-sm {\n  max-width:100px;\n}\n.input-massimo-xs{\n  max-width: 50px;\n}",
+  "version": 1,
+  "status": "DRAFT",
+  "bundleValues": {
+    "it_IT": {
+      "VALDOLORE_valutaDolore": "",
+      "VALDOLORE_Espressione": "",
+      "VALDOLORE_Vocalizzazione": "",
+      "VALDOLORE_Osservazioni": "",
+      "VALDOLORE_Respirazione": "",
+      "VALDOLORE_Linguaggio": "",
+      "VALDOLORE_Consolazione": ""
+    },
+    "en_GB": {
+      "VALDOLORE_valutaDolore": "",
+      "VALDOLORE_Espressione": "",
+      "VALDOLORE_Vocalizzazione": "",
+      "VALDOLORE_Osservazioni": "",
+      "VALDOLORE_Respirazione": "",
+      "VALDOLORE_Linguaggio": "",
+      "VALDOLORE_Consolazione": ""
+    },
+    "es_ES": {
+      "VALDOLORE_valutaDolore": "",
+      "VALDOLORE_Espressione": "",
+      "VALDOLORE_Vocalizzazione": "",
+      "VALDOLORE_Osservazioni": "",
+      "VALDOLORE_Respirazione": "",
+      "VALDOLORE_Linguaggio": "",
+      "VALDOLORE_Consolazione": ""
+    },
+    "de_DE": {
+      "VALDOLORE_valutaDolore": "",
+      "VALDOLORE_Espressione": "",
+      "VALDOLORE_Vocalizzazione": "",
+      "VALDOLORE_Osservazioni": "",
+      "VALDOLORE_Respirazione": "",
+      "VALDOLORE_Linguaggio": "",
+      "VALDOLORE_Consolazione": ""
+    }
+  },
+  "templateFileName": null,
+  "templateApplications": null,
+  "repositoryEnabled": null,
+  "signatureEnabled": null,
+  "signatureNotMandatory": null,
+  "sendTxtEnabled": null,
+  "sendPrivacyEnabled": null,
+  "cda2Enabled": null,
+  "cda2Xlts": null,
+  "cancellableEnabled": null,
+  "saveAsDraftWhenInvalid": null
+}]

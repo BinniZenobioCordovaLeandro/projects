@@ -1,0 +1,272 @@
+
+  <div class="">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            Informazioni Generali
+          </div>
+          <div class="panel-body" ng-click="selectedeRadio();">
+            <div class="form-horizontal">
+              <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+                  <label class="col-sm-12 col-md-12">Commento</label>
+                  <div class="col-sm-12 col-md-12">
+                    <div class="">
+                      <textarea class="form-control" rows="3" ng-model="formData.commento" > </textarea>
+                      <input class="form-control" type="text" summary="PrevTratDecubiti_commento" ng-model="formData.commento" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Rischio</label>
+                   <div class="col-sm-9 col-md-7">
+                    <select class="form-control" ng-model="formData.rispostaRischio" style="max-width: 300px;" ng-required="true">
+                      <option value="0">Rischio non elevatodi lesioni da decubito</option>
+                      <option value="10">Rischio elevato</option>
+                      <option value="15">Presenza di una piaza</option>
+                      <option value="25">Presenza di 2 o più piaghe</option>
+                    </select>
+                    <input type="text" summary="PrevTratDecubiti_rischio" ng-model="formData.rispostaRischio" ng-show="false">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Condizioni generali</label>
+                   <div class="col-sm-9 col-md-7">
+                    <div class="form-inline ">
+                      <label class="ui-radio" ng-click="formData.scalaExton.condgenerali={code:'opS_1a',score:4}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.condgenerali.code" value="opS_1a"><span>Buone</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.condgenerali={code:'opS_1b',score:3}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.condgenerali.code" value="opS_1b"><span>Discrete</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.condgenerali={code:'opS_1c',score:2}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.condgenerali.code" value="opS_1c"><span>Scadenti</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.condgenerali={code:'opS_1d',score:1}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.condgenerali.code" value="opS_1d"><span>Pessime</span></label>
+                      <input class="form-control" type="text" summary="PrevTratDecubiti_GS1" ng-model="formData.scalaExton.condgenerali.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+                  <div class="divider divider-dashed divider-md"></div>
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Stato Mentale</label>
+                   <div class="col-sm-9 col-md-7">
+                    <div class="form-inline">
+                      <label class="ui-radio" ng-click="formData.scalaExton.statoMentale={code:'opS_2a',score:4}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.statoMentale.code" value="opS_2a"><span>Lucido</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.statoMentale={code:'opS_2b',score:3}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.statoMentale.code" value="opS_2b"><span>Confuso</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.statoMentale={code:'opS_2c',score:2}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.statoMentale.code" value="opS_2c"><span>Apatico</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.statoMentale={code:'opS_2d',score:1}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.statoMentale.code" value="opS_2d"><span>Stuporoso</span></label>
+                      <input class="form-control" type="text" summary="PrevTratDecubiti_GS2" ng-model="formData.scalaExton.statoMentale.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+                  <div class="divider divider-dashed divider-md"></div>
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Attività</label>
+                   <div class="col-sm-9 col-md-7">
+                    <div class="form-inline">
+                      <label class="ui-radio" ng-click="formData.scalaExton.attivita={code:'opS_3a',score:4}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.attivita.code" value="opS_3a"><span>Normale</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.attivita={code:'opS_3b',score:3}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.attivita.code" value="opS_3b"><span>Cammina con aiuto</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.attivita={code:'opS_3c',score:2}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.attivita.code" value="opS_3c"><span>Costretto in sedia</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.attivita={code:'opS_3d',score:1}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.attivita.code" value="opS_3d"><span>Immobile</span></label>
+                      <input class="form-control" type="text" summary="PrevTratDecubiti_GS3" ng-model="formData.scalaExton.attivita.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+                  <div class="divider divider-dashed divider-md"></div>
+                <div class="form-group">
+                   <label class="col-sm-3 col-md-5">Mobilità</label>
+                  <div class="col-sm-9 col-md-7">
+                    <div class="form-inline">
+                      <label class="ui-radio" ng-click="formData.scalaExton.mobilita={code:'opS_4a',score:4}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.mobilita.code" value="opS_4a"><span>Normale</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.mobilita={code:'opS_4b',score:3}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.mobilita.code" value="opS_4b"><span>Leggermente limitata</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.mobilita={code:'opS_4c',score:2}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.mobilita.code" value="opS_4c"><span>Molto limitata</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.mobilita={code:'opS_4d',score:1}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.mobilita.code" value="opS_4d"><span>Immobile</span></label>
+                      <input class="form-control" type="text" summary="PrevTratDecubiti_GS4" ng-model="formData.scalaExton.mobilita.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+                  <div class="divider divider-dashed divider-md"></div>
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Incontinenza</label>
+                  <div class="col-sm-9 col-md-7">
+                    <div class="form-inline">
+                      <label class="ui-radio" ng-click="formData.scalaExton.incontinenza={code:'opS_5a',score:4}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.incontinenza.code" value="opS_5a"><span>No</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.incontinenza={code:'opS_5b',score:3}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.incontinenza.code" value="opS_5b"><span>Occasionale</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.incontinenza={code:'opS_5c',score:2}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.incontinenza.code" value="opS_5c"><span>Urinaria abiltuale</span></label>
+                      <label class="ui-radio" ng-click="formData.scalaExton.incontinenza={code:'opS_5d',score:1}"><input type="radio" ng-required="true" name="" ng-model="formData.scalaExton.incontinenza.code" value="opS_5d"><span>Incontinenza doppia</span></label>
+                      <input class="form-control" type="text" summary="PrevTratDecubiti_GS5" ng-model="formData.scalaExton.incontinenza.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            Per valutare il rischio di lesioni da decubito verificare anche l'esistenza di:</div>
+          <div class="panel-body" ng-click="selectedeRadio();">
+            <div class="form-horizontal">
+              <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Diagnosi clinica di diabete</label>
+                  <div class="col-sm-9 col-md-7">
+                    <div class="form-inline ">
+                      <label class="ui-radio" ng-click="formData.valutazione.diagnDiabete={code:'opV_1a',score:1}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.diagnDiabete.code" value="opV_1a"><span>Si</span></label>
+                      <label class="ui-radio" ng-click="formData.valutazione.diagnDiabete={code:'opV_1b',score:0}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.diagnDiabete.code" value="opV_1b"><span>No</span></label>
+                      <input class="form-control" type="text" summary="Decubiti_GV1" ng-model="formData.valutazione.diagnDiabete.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+                  <div class="divider divider-dashed divider-md"></div>
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Diagnosi clinica di ipertensione arteriosa</label>
+                  <div class="col-sm-9 col-md-7">
+                    <div class="form-inline">
+                      <label class="ui-radio" ng-click="formData.valutazione.diagnIpertensione={code:'opV_2a',score:1}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.diagnIpertensione.code" value="opV_2a"><span>Si</span></label>
+                      <label class="ui-radio" ng-click="formData.valutazione.diagnIpertensione={code:'opV_2b',score:0}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.diagnIpertensione.code" value="opV_2b"><span>No</span></label>
+                      <input class="form-control" type="text" summary="Decubiti_GV2" ng-model="formData.valutazione.diagnIpertensione.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+                  <div class="divider divider-dashed divider-md"></div>
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Ematocrito basso ( &#60;41% maschi, &#60;36 % femmine)</label>
+                  <div class="col-sm-9 col-md-7">
+                    <div class="form-inline">
+                      <label class="ui-radio" ng-click="formData.valutazione.ematocrritoBasso={code:'opV_3a',score:1}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.ematocrritoBasso.code" value="opV_3a"><span>Si</span></label>
+                      <label class="ui-radio" ng-click="formData.valutazione.ematocrritoBasso={code:'opV_3b',score:0}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.ematocrritoBasso.code" value="opV_3b"><span>No</span></label>
+                      <input class="form-control" type="text" summary="Decubiti_GV3" ng-model="formData.valutazione.ematocrritoBasso.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+                  <div class="divider divider-dashed divider-md"></div>
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Albuminemia &#60;3.3 g/dl</label>
+                  <div class="col-sm-9 col-md-7">
+                    <div class="form-inline">
+                      <label class="ui-radio" ng-click="formData.valutazione.albuminemia={code:'opV_4a',score:1}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.albuminemia.code" value="opV_4a"><span>Si</span></label>
+                      <label class="ui-radio" ng-click="formData.valutazione.albuminemia={code:'opV_4b',score:0}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.albuminemia.code" value="opV_4b"><span>No</span></label>
+                      <input class="form-control" type="text" summary="Decubiti_GV4" ng-model="formData.valutazione.albuminemia.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+                  <div class="divider divider-dashed divider-md"></div>
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Temperatura corporea &#62; 37.6 °C</label>
+                  <div class="col-sm-9 col-md-7">
+                    <div class="form-inline">
+                      <label class="ui-radio" ng-click="formData.valutazione.tempCorporea={code:'opV_5a',score:1}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.tempCorporea.code" value="opV_5a"><span>Si</span></label>
+                      <label class="ui-radio" ng-click="formData.valutazione.tempCorporea={code:'opV_5b',score:0}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.tempCorporea.code" value="opV_5b"><span>No</span></label>
+                      <input class="form-control" type="text" summary="Decubiti_GV5" ng-model="formData.valutazione.tempCorporea.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+                  <div class="divider divider-dashed divider-md"></div>
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Uso di 5 o più farmaci</label>
+                  <div class="col-sm-9 col-md-7">
+                    <div class="form-inline">
+                      <label class="ui-radio" ng-click="formData.valutazione.usodFarmaci={code:'opV_6a',score:1}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.usodFarmaci.code" value="opV_6a"><span>Si</span></label>
+                      <label class="ui-radio" ng-click="formData.valutazione.usodFarmaci={code:'opV_6b',score:0}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.usodFarmaci.code" value="opV_6b"><span>No</span></label>
+                      <input class="form-control" type="text" summary="Decubiti_GV6" ng-model="formData.valutazione.usodFarmaci.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+                  <div class="divider divider-dashed divider-md"></div>
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Modificazione dello stato mentale nelle ultime 24h con confusione o letargia</label>
+                  <div class="col-sm-9 col-md-7">
+                    <div class="form-inline">
+                      <label class="ui-radio" ng-click="formData.valutazione.confusioneOletargia={code:'opV_7a',score:1}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.confusioneOletargia.code" value="opV_7a"><span>Si</span></label>
+                      <label class="ui-radio" ng-click="formData.valutazione.confusioneOletargia={code:'opV_7b',score:0}"><input type="radio" ng-required="true" name="" ng-model="formData.valutazione.confusioneOletargia.code" value="opV_7b"><span>No</span></label>
+                      <input class="form-control" type="text" summary="Decubiti_GV7" ng-model="formData.valutazione.confusioneOletargia.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+          </div>
+          <div class="panel-body">
+              <div class="form-horizontal">
+              <div class="col-sm-12 col-md-12 has-error">
+                <div class="form-group">
+                  <label class="col-sm-3 col-md-5">Valutazione prevenzione trattamento decubiti</label>
+                  <div class="col-sm-9 col-md-7">
+                    <div class="form-inline list-radio">
+                      <label class="ui-radio" ng-click="formData.rischio={code:'opR_1a',score:5}"><input type="radio" ng-required="true"  name="" ng-model="formData.rischio.code" value="opR_1a"><span>Rischio non elevato di lesioni da decubito (Exton Smith &#62;10)</span></label>
+                      <label class="ui-radio" ng-click="formData.rischio={code:'opR_1b',score:10}"><input type="radio" ng-required="true" class="" name="" ng-model="formData.rischio.code" value="opR_1b"><span>Rischio elevato (Exton Smith &#60;= 10) o arrossamento o abrasione superficiale (gradi I e II)</span></label>
+                      <label class="ui-radio" ng-click="formData.rischio={code:'opR_1c',score:15}"><input type="radio" ng-required="true" class="" name="" ng-model="formData.rischio.code" value="opR_1c"><span>Presenza di 1 piaga (con interessamento del tessuto sottocutaneo - gradi III e IV)</span></label>
+                      <label class="ui-radio" ng-click="formData.rischio={code:'opR_1d',score:25}"><input type="radio" ng-required="true" class="" name="" ng-model="formData.rischio.code" value="opR_1d"><span>Presenza di 2 o più piaghe (almeno 2 con interessamento del tessuto sottocutaneo - gradi III e IV)</span></label>
+                      <input class="form-control" type="text" summary concept="scorePREVTRATDECUBITITrischio" ng-model="formData.rischio.score" ng-show="false" >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="panel panel-primary">
+		  <div class="panel-heading">
+            Indici di valutazione
+          </div>
+
+          <div class="panel-body">
+            <div class="form-group">
+              <label class="col-sm-3">Indice di Norton Exton-Smith</label>
+              <div class="col-sm-9">
+                <div class="form-inline">
+                  <input class="form-control" summary concept="scorePREVTRATDECUBITITotal" ng-model="formData.scoreTotal" readonly style="max-width:100px;">
+                  <input class="form-control" ng-model="formData.indiceNortonExtonStato" readonly>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3">Indice di Norton (Plus)</label>
+              <div class="col-sm-9">
+                <div class="form-inline">
+                  <input class="form-control" summary concept="scoreDECUBITINortonPlus" ng-model="formData.scoreTotalPlus" readonly style="max-width:100px;">
+                  <input class="form-control" ng-model="formData.indiceNortonPlusStato" readonly>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="form-horizontal">
+              <div class="">
+                <div class="form-group">
+                  <label class="col-sm-3">Osservazioni</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" ng-model="formData.osservazioni" rows="5"></textarea>
+                    <input class="form-control" type="text" summary="PrevTratDecubiti_note" ng-model="formData.infogenerale.commento" ng-show="false">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <h3 class="ml-5"><p><b>Legenda</b></p></h3>
+            <ul>
+              <li>Valore  &#62; 16 : NESSUN RISCHIO</li>
+              <li>14 &#60;= valore &#60; 16 : RISCHIO BASSO</li>
+              <li>12 &#60;= valore &#60; 14 : RISCHIO MEDIO </li>
+              <li>10 &#60;= valore &#60; 12 : RISCHIO ALTO</li>
+              <li>Valore &#60; 10 : RISCHIO ALTISSIMO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

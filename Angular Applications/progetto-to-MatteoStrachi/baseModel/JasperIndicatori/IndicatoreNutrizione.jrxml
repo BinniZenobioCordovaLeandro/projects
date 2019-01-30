@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final utlizzo versione della libreria JasperReports6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="base" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="894d881e-e761-40d6-9d8b-17e3c036d24e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="baseModel\dataAdapter\connectDb.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="581"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="405"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="192"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="801"/>
+	<style name="Style.tittle_stampa" hTextAlign="Center" hImageAlign="Center" vTextAlign="Middle" vImageAlign="Middle" pattern="" isBlankWhenNull="true" fontSize="20">
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+	</style>
+	<style name="Style.tittle_principale" mode="Opaque" backcolor="#E5E7E9" hTextAlign="Left" vTextAlign="Middle" markup="html" isBlankWhenNull="true" fontSize="14" isBold="true">
+		<box topPadding="2" leftPadding="5" bottomPadding="3" rightPadding="5"/>
+	</style>
+	<style name="Style.tittle_secondary" mode="Opaque" backcolor="#F2F3F4" hTextAlign="Justified" vTextAlign="Middle" markup="html" isBlankWhenNull="true" fontSize="12" isBold="true">
+		<box topPadding="2" leftPadding="5" bottomPadding="2" rightPadding="5"/>
+	</style>
+	<style name="Style.testo_domanda" mode="Opaque" backcolor="#F8F9F9" fill="Solid" hTextAlign="Justified" vTextAlign="Middle" markup="html" isBlankWhenNull="true" fontSize="11">
+		<box topPadding="2" leftPadding="5" bottomPadding="2" rightPadding="5">
+			<pen lineWidth="1.0" lineColor="#F8F9F9"/>
+		</box>
+	</style>
+	<style name="Style.testo_risposta" fill="Solid" hTextAlign="Right" vTextAlign="Middle" markup="none" isBlankWhenNull="true">
+		<box topPadding="2" leftPadding="5" bottomPadding="2" rightPadding="5">
+			<pen lineWidth="1.0" lineColor="#F8F9F9"/>
+		</box>
+	</style>
+	<parameter name="P_dataDa" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").parse("01/"+MONTH(new Date())+"/"+YEAR(new Date()))]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_dataFinoA" class="java.util.Date">
+		<defaultValueExpression><![CDATA[DATE(YEAR(new Date()),MONTH(new Date()),DAYSINMONTH(new Date()))]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_idOrganization" class="java.lang.Long"/>
+	<queryString>
+		<![CDATA[
+		select
+(
+  select 1 as "persone con disminuzione non pianificata di peso >= 5%"
+),(
+  select count(*) as "persone presenti da 3 messi dal giorno indice"
+    from persons p
+    join contracts c on c.id_contractee = p.id
+    join services s on s.id = c.id_service and upper(s.name) = 'RSA'
+   where p.fl_patient = true
+      and (valid_from between (TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') - interval '3 months') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+       or (valid_from <= (TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') - interval '3 months')
+      and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+  between (TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') - interval '3 months') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')))
+),(
+  select 3 as "rischio nutrizionale"
+),(
+  select count(*) as "PAI effetuati"
+    from pais
+   where date_definition >= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+     and date_definition <= TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')
+     and id_form_parameter in
+    	 (
+    	 	 select id
+    		   from form_parameters
+    		  where id_organization = $P{P_idOrganization}
+    	 )
+     and state = 2
+),(
+  select 5 as "persone malnutrite che assumono integratori"
+),(
+  select count(distinct(id_person)) as "persone malnutrite per scala Mini Nutritional Assesment"
+    from forms f
+   where external_id in
+       (
+         select forminstanceid
+           from dwh_schedamininutritionalassesment
+          where forminstanceid = f.external_id
+       )
+     and id_contract in
+       (
+         select id
+           from contracts
+          where (valid_to is null or valid_to <= TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+            and id = f.id_contract
+       )
+     and insert_date between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')
+     and id_form_parameter in
+       (
+         select id
+           from form_parameters
+          where id_organization = $P{P_idOrganization}
+            and id = f.id_form_parameter
+       )
+),(
+  select count(distinct(id_person)) as "persone malnutrite per scala MUST"
+    from forms f
+   where external_id in
+       (
+         select forminstanceid
+           from dwh_schedavalutazionemust
+          where forminstanceid = f.external_id
+       )
+     and id_contract in
+       (
+       	 select id
+       	   from contracts
+       	  where (valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+             or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+            and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+        between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')))
+            and id = f.id_contract
+       )
+     and insert_date between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')
+     and id_form_parameter in
+       (
+         select id
+           from form_parameters
+          where id_organization = $P{P_idOrganization}
+            and id = f.id_form_parameter
+       )
+),(
+  select count(distinct(id_person)) as "persone disfagiche"
+    from forms
+   where external_id in
+       (
+         select forminstanceid
+    	     from dwh_test_acqua
+    	    where fd_fd_somministrazione::int = 3
+       )
+     and id_contract in
+       (
+         select id
+           from contracts
+          where (valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+             or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+            and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+        between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')))
+       )
+),(
+  select count(*) as "persone presenti nel periodo mensile secondo il giorno"
+    from persons p
+   where id in
+       (
+         select id_contractee
+  	     from contracts
+  	    where (valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+           or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+          and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+      between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')))
+  		    and id_contractee = p.id
+       )
+),(
+  select count(*) as "persone con PEG nel giorno indice"
+	from persons p
+	where id in (
+		select
+		id_person
+		from forms f
+		where id_person = p.id
+  		and external_id in (
+    			select forminstanceid
+      			from dwh_schedavalutazionesanitaria fd
+    		   where forminstanceid = f.external_id
+    		     and fd_fd_sondinonasogastrico_score = 10
+  		)
+  		and date_definition = (
+  			select max(date_definition)
+        from forms
+  			where id_person = f.id_person
+  		)
+      and id_contract in (
+    		select
+  			id
+  			from contracts c
+  			where id = f.id_contract
+  			  and id not in (
+  			  	select
+  		  		id_contract
+  		  		from contract_history
+  		  		where classification_id not in (
+  		  			select id
+  	  				from classifications
+  	  				where lower(description) like '%sollievo%'
+  		  		)
+  			  )
+  			  and (valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+           or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+          and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+      between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')))
+    	)
+	)
+),(
+  select count(*) as "persone nel giorno indice"
+  from persons p
+  join contracts c on c.id_contractee = p.id
+  join services s on s.id = c.id_service and upper(s.name) = 'RSA'
+  where p.fl_patient = true
+    and (valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+     or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+    and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')))
+),(
+  select 1 as "PEG posizionate a seguito di processo"
+),(
+  select count(distinct(id_person)) as "person con PEG"
+    from forms
+   where external_id in
+       (
+         select forminstanceid
+      		 from dwh_schedavalutazionesanitaria
+      		where fd_fd_sondinonasogastrico_code = 'op6a'
+       )
+     and id in
+       (
+         select max(id)
+           from forms f
+          where external_id in
+              (
+                select forminstanceid
+                  from dwh_schedavalutazionesanitaria
+                 where forminstanceid = f.external_id
+              )
+          group by id_person
+       )
+    and id_contract in
+      (
+        select id
+          from contracts
+         where (valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+            or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+           and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+       between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')))
+      )
+)]]>
+	</queryString>
+	<field name="persone con disminuzione non pianificata di peso &gt;= 5%" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label">
+			<![CDATA[persone con disminuzione non pianificata di peso >= 5%]]>
+		</property>
+	</field>
+	<field name="persone presenti da 3 messi dal giorno indice" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="persone presenti da 3 messi dal giorno indice"/>
+	</field>
+	<field name="rischio nutrizionale" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="rischio nutrizionale"/>
+	</field>
+	<field name="PAI effetuati" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="PAI effetuati"/>
+	</field>
+	<field name="persone malnutrite che assumono integratori" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="persone malnutrite che assumono integratori"/>
+	</field>
+	<field name="persone malnutrite per scala Mini Nutritional Assesment" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="persone malnutrite per scala Mini Nutritional Assesment"/>
+	</field>
+	<field name="persone malnutrite per scala MUST" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="persone malnutrite per scala MUST"/>
+	</field>
+	<field name="persone disfagiche" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="persone disfagiche"/>
+	</field>
+	<field name="persone presenti nel periodo mensile secondo il giorno" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="persone presenti nel periodo mensile secondo il giorno"/>
+	</field>
+	<field name="persone con PEG nel giorno indice" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="persone con PEG nel giorno indice"/>
+	</field>
+	<field name="persone nel giorno indice" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="persone nel giorno indice"/>
+	</field>
+	<field name="PEG posizionate a seguito di processo" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="PEG posizionate a seguito di processo"/>
+	</field>
+	<field name="person con PEG" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="person con PEG"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<textField>
+				<reportElement style="Style.tittle_stampa" x="150" y="15" width="395" height="40" uuid="e3d0f8ce-852d-467d-9610-28aa10d86448"/>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Dolore"]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="140" height="70" uuid="5dd851dc-b53d-4df2-8633-3164ad12bc97"/>
+				<imageExpression><![CDATA["logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="20" uuid="fbcbf72f-43e6-4d8e-bfb6-adbd30d04e76"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Dati da : "+DATEFORMAT($P{P_dataDa},"dd-MM-YYYY") +"\t fino a :"+ DATEFORMAT($P{P_dataFinoA},"dd-MM-YYYY")]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="180" splitType="Stretch">
+			<textField>
+				<reportElement style="Style.tittle_principale" x="0" y="10" width="555" height="25" uuid="ac3681ae-98bf-4e71-8940-3ce6659c24fa"/>
+				<textFieldExpression><![CDATA["INDICATORI AREA CADUTE"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="39" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.1 Perdita di peso significativa"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="39" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[$F{persone presenti da 3 messi dal giorno indice} != 0 ? $F{persone con disminuzione non pianificata di peso >= 5%}/$F{persone presenti da 3 messi dal giorno indice} : 0]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="63" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.2 Valutazione rischio nutrizionale"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="63" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[$F{PAI effetuati} != 0 ? $F{rischio nutrizionale}/$F{PAI effetuati} : 0]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="87" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.3 Assunzione integratori naturali"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="87" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[$F{persone malnutrite per scala Mini Nutritional Assesment} != 0 && $F{persone malnutrite per scala MUST} != 0 ?
+$F{persone malnutrite che assumono integratori}/($F{persone malnutrite per scala Mini Nutritional Assesment} + $F{persone malnutrite per scala MUST}) : 0]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="111" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.4 Persone con disfagia"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="111" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[$F{persone presenti nel periodo mensile secondo il giorno} != 0 ? $F{persone disfagiche}/$F{persone presenti nel periodo mensile secondo il giorno} :0]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="136" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.5 prevalenza PEG"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="136" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[$F{persone presenti nel periodo mensile secondo il giorno} != 0 ? $F{persone con PEG nel giorno indice}/$F{persone presenti nel periodo mensile secondo il giorno} : 0]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="160" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.6 Percorso di applicazione della PEG"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="160" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[$F{person con PEG} != 0 ? $F{PEG posizionate a seguito di processo}/$F{person con PEG} : 0]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="450" y="0" width="70" height="20" uuid="43d0d047-a7f3-4976-89cf-0e5fe550717c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Pagina " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="520" y="0" width="35" height="20" uuid="3f2d85ab-8ac6-4b44-8f3c-260b43e62eb7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" di " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

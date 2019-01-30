@@ -1,0 +1,250 @@
+<stampaAttivitaPazienti>
+	<testata>
+		<daCartella>N</daCartella>
+    <logo>C:\Users\u08849\projects\to_Paolo\test stampe\logo.png</logo>
+		<dataDal>23/10/2017 00:00</dataDal>
+		<dataAl>29/10/2017 23:59</dataAl>
+		<tipo>Tutte</tipo>
+		<aree>
+			<area><descrizione>Alimentazione</descrizione><codice>ffd500</codice></area>
+			<area><descrizione>Infermieristica</descrizione><codice>03fa30</codice></area>
+			<area><descrizione>Medica</descrizione><codice>f51e1e</codice></area>
+			<area><descrizione>Mobilità</descrizione><codice>00bbff</codice></area>
+			<area><descrizione>Psicologica</descrizione><codice>c91ea1</codice></area>
+		</aree>
+		<gruppo>Tutti</gruppo>
+		<operatore>RSA AMMINISTRATORE</operatore>
+		<stati>
+			<stato>
+				<descrizione>Pianificato</descrizione>
+				<codice>INCIDENT_STATE_PLANNED</codice>
+			</stato>
+			<stato>
+				<descrizione>Annullato</descrizione>
+				<codice>INCIDENT_STATE_PLANNED</codice>
+			</stato>
+			<stato>
+				<descrizione>Confermato</descrizione>
+				<codice>INCIDENT_STATE_PLANNED</codice>
+			</stato>
+			<stato>
+				<descrizione>Rilevato Bozza</descrizione>
+				<codice>INCIDENT_STATE_RILE_DRAFT</codice>
+			</stato>
+		</stati>
+		<includiNonAssegnate>Y</includiNonAssegnate>
+		<includiEliminate>Y</includiEliminate>
+		<assistiti>Tutti</assistiti>
+		<dataOggi>24/10/2017</dataOggi>
+	</testata>
+		<listaAttivita>
+			<attivita>
+				<pazienti>BIANCHI MARIA - 06/05/1926&lt;br/&gt;</pazienti>
+				<stato>Rilevato Bozza</stato>
+				<tipologia>Alimentazione -colazione (A)</tipologia>
+				<aree>Infermieristica</aree>
+				<nota>TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TESTTEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TESTTEST TEST TEST TEST TEST TEST TESTTEST TEST</nota>
+				<dataOra>29/10/2017&lt;br/&gt;12:00 - 20:00</dataOra>
+				<assegnata>RSA AMMINISTRATORE&lt;br/&gt;</assegnata>
+				<eliminata>Y</eliminata>
+			</attivita>
+			<attivita>
+				<pazienti>ROSSINI GIULIANA - 06/08/1925&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Alimentazione -	cena</tipologia>
+				<aree>Medica&lt;br/&gt;Mobilità</aree>
+				<nota>TEST 2:
+					Percorso: Cartella Bianchi Maria > Tab Attività
+					Impostare i filtri di ricerca di default "Dal" e "Al" in modo tale da poter
+					visualizzare le attività dei prossimi 7 giorni.TEST 2:
+					Percorso: Cartella Bianchi Maria > Tab Attività
+					Impostare i filtri di ricerca di default "Dal" e "Al" in modo tale da poter
+					visualizzare le attività dei prossimi 7 giorni.TEST 2:
+					Percorso: Cartella Bianchi Maria > Tab Attività
+					Impostare i filtri di ricerca di default "Dal" e "Al" in modo tale da poter
+					visualizzare le attività dei prossimi 7
+					giorni.</nota>
+				<dataOra>29/10/2017&lt;br/&gt;12:00 - 14:00</dataOra>
+				<assegnata>AGOSTA FRANCESCA&lt;br/&gt;INFERMIERE GPI&lt;br/&gt;RSA	AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+			<attivita>
+				<pazienti>TOPOLINO IL TOP - 31/10/2017&lt;br/&gt;STRACCHI MATTEO - 04/02/1904&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Alimentazione -	cena</tipologia>
+				<aree>Alimentazione&lt;br/&gt;Medica</aree>
+				<nota>TEST PIANIFICAZIONE DA CARTELLA</nota>
+				<dataOra>29/10/2017&lt;br/&gt;07:00 - 13:00</dataOra>
+				<assegnata>RSA AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+			<attivita>
+				<pazienti>BIANCHI MARIA - 06/05/1926&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Visita Medica</tipologia>
+				<aree>Medica</aree>
+				<nota>TEST TEST TEST TEST
+					TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST
+					TEST TEST
+					TEST TEST TEST TEST TEST TEST TEST TEST TEST
+					TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST
+					TEST TEST TEST TEST TEST TEST TEST
+					TEST TEST</nota>
+				<dataOra>28/10/2017&lt;br/&gt;12:00 - 20:00</dataOra>
+				<assegnata>RSA AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+			<attivita>
+				<pazienti>ROSSINI GIULIANA - 06/08/1925&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Alimentazione -	cena</tipologia>
+				<aree>Medica&lt;br/&gt;Mobilità</aree>
+				<nota>TEST 2:
+					Percorso: Cartella Bianchi Maria > Tab Attività
+					Impostare i filtri di ricerca di default "Dal" e "Al" in modo tale da poter
+					visualizzare le attività dei prossimi 7 giorni.TEST 2:
+					Percorso: Cartella Bianchi Maria > Tab Attività
+					Impostare i filtri di ricerca di default "Dal" e "Al" in modo tale da poter
+					visualizzare le attività dei prossimi 7 giorni.TEST 2:
+					Percorso: Cartella Bianchi Maria > Tab Attività
+					Impostare i filtri di ricerca di default "Dal" e "Al" in modo tale da poter
+					visualizzare le attività dei prossimi 7
+					giorni.</nota>
+				<dataOra>28/10/2017&lt;br/&gt;12:00 - 14:00</dataOra>
+				<assegnata>AGOSTA FRANCESCA&lt;br/&gt;INFERMIERE GPI&lt;br/&gt;RSA
+					AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+			<attivita>
+				<pazienti>TOPOLINO IL TOP - 31/10/2017&lt;br/&gt;STRACCHI MATTEO -
+					04/02/1904&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Alimentazione -
+					cena</tipologia>
+				<aree>Alimentazione&lt;br/&gt;Medica</aree>
+				<nota>TEST PIANIFICAZIONE DA CARTELLA</nota>
+				<dataOra>28/10/2017&lt;br/&gt;07:00 -
+					13:00</dataOra>
+				<assegnata>RSA AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+			<attivita>
+				<pazienti>BIANCHI MARIA -
+					06/05/1926&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Visita Medica</tipologia>
+				<aree>Medica</aree>
+				<nota>TEST TEST TEST TEST
+					TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST
+					TEST TEST
+					TEST TEST TEST TEST TEST TEST TEST TEST TEST
+					TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST
+					TEST TEST TEST TEST TEST TEST TEST
+					TEST TEST</nota>
+				<dataOra>27/10/2017&lt;br/&gt;12:00 - 20:00</dataOra>
+				<assegnata>RSA
+					AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+			<attivita>
+				<pazienti>ROSSINI GIULIANA -
+					06/08/1925&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Alimentazione -
+					cena</tipologia>
+				<aree>Medica&lt;br/&gt;Mobilità</aree>
+				<nota>TEST 2:
+					Percorso: Cartella Bianchi Maria > Tab Attività
+					Impostare i filtri di ricerca di default "Dal" e "Al" in modo tale da poter
+					visualizzare le attività dei prossimi 7 giorni.TEST 2:
+					Percorso: Cartella Bianchi Maria > Tab Attività
+					Impostare i filtri di ricerca di default "Dal" e "Al" in modo tale da poter
+					visualizzare le attività dei prossimi 7 giorni.TEST 2:
+					Percorso: Cartella Bianchi Maria > Tab Attività
+					Impostare i filtri di ricerca di default "Dal" e "Al" in modo tale da poter
+					visualizzare le attività dei prossimi 7
+					giorni.</nota>
+				<dataOra>27/10/2017&lt;br/&gt;12:00 - 14:00</dataOra>
+				<assegnata>AGOSTA FRANCESCA&lt;br/&gt;INFERMIERE GPI&lt;br/&gt;RSA
+					AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+			<attivita>
+				<pazienti>TOPOLINO IL TOP - 31/10/2017&lt;br/&gt;STRACCHI MATTEO -
+					04/02/1904&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Alimentazione -
+					cena</tipologia>
+				<aree>Alimentazione&lt;br/&gt;Medica</aree>
+				<nota>TEST PIANIFICAZIONE DA CARTELLA</nota>
+				<dataOra>27/10/2017&lt;br/&gt;07:00 -
+					13:00</dataOra>
+				<assegnata>RSA AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+			<attivita>
+				<pazienti>ROSSINI GIULIANA -
+					06/08/1925&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Alimentazione -
+					cena</tipologia>
+				<aree>Medica&lt;br/&gt;Mobilità</aree>
+				<nota>TEST 2:
+					Percorso: Cartella Bianchi Maria > Tab Attività
+					Impostare i filtri di ricerca di default "Dal" e "Al" in modo tale da poter
+					visualizzare le attività dei prossimi 7 giorni.TEST 2:
+					Percorso: Cartella Bianchi Maria > Tab Attività
+					Impostare i filtri di ricerca di default "Dal" e "Al" in modo tale da poter
+					visualizzare le attività dei prossimi 7 giorni.TEST 2:
+					Percorso: Cartella Bianchi Maria > Tab Attività
+					Impostare i filtri di ricerca di default "Dal" e "Al" in modo tale da poter
+					visualizzare le attività dei prossimi 7
+					giorni.</nota>
+				<dataOra>26/10/2017&lt;br/&gt;12:00 - 14:00</dataOra>
+				<assegnata>AGOSTA FRANCESCA&lt;br/&gt;INFERMIERE GPI&lt;br/&gt;RSA
+					AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+			<attivita>
+				<pazienti>000 000 -
+					01/05/2016&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Lavaggio</tipologia>
+				<aree>Infermieristica</aree>
+				<nota>Lavaggio/doccia/spu
+					gnature</nota>
+				<dataOra>26/10/2017&lt;br/&gt;08:00 - 08:30</dataOra>
+				<assegnata>RSA
+					AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+			<attivita>
+				<pazienti>TOPOLINO IL TOP - 31/10/2017&lt;br/&gt;STRACCHI MATTEO - 04/02/1904&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Alimentazione -
+					cena</tipologia>
+				<aree>Alimentazione&lt;br/&gt;Medica</aree>
+				<nota>TEST PIANIFICAZIONE DA CARTELLA</nota>
+				<dataOra>26/10/2017&lt;br/&gt;07:00 -
+					13:00</dataOra>
+				<assegnata>RSA AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+			<attivita>
+				<pazienti>FEDRIZZI LUISA -
+					28/05/1984&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Attività Teatrale (A)</tipologia>
+				<aree>Sociale</aree>
+				<nota>gioco
+					animazione teatro</nota>
+				<dataOra>25/10/2017&lt;br/&gt;20:00 - 22:00</dataOra>
+				<assegnata>RSA
+					AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+			<attivita>
+				<pazienti>BIANCHI MARIA - 06/05/1926&lt;br/&gt;</pazienti>
+				<stato>Pianificato</stato>
+				<tipologia>Visita Medica</tipologia>
+				<aree>Medica</aree>
+				<nota>TEST TEST TEST TEST
+					TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST
+					TEST TEST
+					TEST TEST TEST TEST TEST TEST TEST TEST TEST
+					TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST
+					TEST TEST TEST TEST TEST TEST TEST
+					TEST TEST</nota>
+				<dataOra>25/10/2017&lt;br/&gt;12:00 - 20:00</dataOra>
+				<assegnata>RSA AMMINISTRATORE&lt;br/&gt;</assegnata>
+			</attivita>
+		</listaAttivita>
+</stampaAttivitaPazienti>

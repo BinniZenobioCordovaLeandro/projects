@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final utlizzo versione della libreria JasperReports6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="base" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="894d881e-e761-40d6-9d8b-17e3c036d24e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="baseModel\dataAdapter\connectDb.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="451"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="535"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="192"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="801"/>
+	<style name="Style.tittle_stampa" hTextAlign="Center" hImageAlign="Center" vTextAlign="Middle" vImageAlign="Middle" pattern="" isBlankWhenNull="true" fontSize="20">
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+	</style>
+	<style name="Style.tittle_principale" mode="Opaque" backcolor="#E5E7E9" hTextAlign="Left" vTextAlign="Middle" markup="html" isBlankWhenNull="true" fontSize="14" isBold="true">
+		<box topPadding="2" leftPadding="5" bottomPadding="3" rightPadding="5"/>
+	</style>
+	<style name="Style.tittle_secondary" mode="Opaque" backcolor="#F2F3F4" hTextAlign="Justified" vTextAlign="Middle" markup="html" isBlankWhenNull="true" fontSize="12" isBold="true">
+		<box topPadding="2" leftPadding="5" bottomPadding="2" rightPadding="5"/>
+	</style>
+	<style name="Style.testo_domanda" mode="Opaque" backcolor="#F8F9F9" fill="Solid" hTextAlign="Justified" vTextAlign="Middle" markup="html" isBlankWhenNull="true" fontSize="11">
+		<box topPadding="2" leftPadding="5" bottomPadding="2" rightPadding="5">
+			<pen lineWidth="1.0" lineColor="#F8F9F9"/>
+		</box>
+	</style>
+	<style name="Style.testo_risposta" fill="Solid" hTextAlign="Right" vTextAlign="Middle" markup="none" isBlankWhenNull="true">
+		<box topPadding="2" leftPadding="5" bottomPadding="2" rightPadding="5">
+			<pen lineWidth="1.0" lineColor="#F8F9F9"/>
+		</box>
+	</style>
+	<parameter name="P_dataDa" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").parse("01/"+MONTH(new Date())+"/"+YEAR(new Date()))]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_dataFinoA" class="java.util.Date">
+		<defaultValueExpression><![CDATA[DATE(YEAR(new Date()),MONTH(new Date()),DAYSINMONTH(new Date()))]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_idOrganization" class="java.lang.Long"/>
+	<parameter name="P_idPerson" class="java.lang.Long"/>
+	<parameter name="backP_validator_P_id_Person" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[($P{P_idPerson} != null ? "id_person = "+ $P{P_idPerson} : "id_person is not null")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select
+(
+  select count(distinct(id_person)) as "persone con lesione"
+    from forms f
+   where id_contract in
+     	 (
+     	   select id
+           from contracts c
+          where ((valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+             or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+            and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+        between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))))
+            and id = f.id_contract
+            and id_contractee in
+            	 (
+            	  select id
+            	    from subjects_cr
+            	   where id_organization = $P{P_idOrganization}
+            	     and id = c.id_contractee
+            	 )
+     	 )
+     and external_id in
+       (
+         select forminstanceid
+           from dwh_scheda_presenza_lesione_decubito
+          where forminstanceid = f.external_id
+       )
+),
+(
+  select count(*) as "persone presenti"
+    from persons p
+    join contracts c on c.id_contractee = p.id
+    join services s on s.id = c.id_service and upper(s.name) = 'RSA'
+    where p.fl_patient = true
+      and s.id_organization = $P{P_idOrganization}
+      and (c.valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+       or (c.valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+      and (c.valid_to is null or NULLIF(c.valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')) between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')))
+),
+(
+  select count(distinct(id_person)) as "persone con lesione al primo stadio"
+    from forms f
+   where id_contract in
+       (
+         select id
+           from contracts c
+          where ((valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+             or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+            and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+        between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))))
+            and id = f.id_contract
+            and id_contractee in
+            	 (
+            	   select id
+            	     from subjects_cr
+            	    where id_organization = $P{P_idOrganization}
+            	      and id = c.id_contractee
+            	 )
+       )
+     and external_id in
+       (
+         select forminstanceid
+           from dwh_scheda_presenza_lesione_decubito
+          where fd_fd_sectiontre_gradoLesione_code = 'opL_2a'
+            and forminstanceid = f.external_id
+       )
+),
+(
+  select count(distinct(id_person)) as "persone con lesione al secondo stadio"
+    from forms f
+   where id_contract in
+       (
+         select id
+           from contracts c
+          where ((valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+             or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+            and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+        between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))))
+            and id = f.id_contract
+            and id_contractee in
+            	 (
+            	   select id
+            	     from subjects_cr
+            	    where id_organization = $P{P_idOrganization}
+            	      and id = c.id_contractee
+            	 )
+       )
+     and external_id in
+       (
+         select forminstanceid
+           from dwh_scheda_presenza_lesione_decubito
+          where fd_fd_sectiontre_gradoLesione_code = 'opL_2b'
+            and forminstanceid = f.external_id
+       )
+),
+(
+  select count(distinct(id_person)) as "persone con lesione al terzo stadio"
+    from forms f
+   where id_contract in
+       (
+         select id
+           from contracts c
+          where ((valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+             or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+            and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+        between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))))
+            and id = f.id_contract
+            and id_contractee in
+            	 (
+            	   select id
+            	     from subjects_cr
+            	    where id_organization = $P{P_idOrganization}
+            	      and id = c.id_contractee
+            	 )
+       )
+     and external_id in
+       (
+         select forminstanceid
+           from dwh_scheda_presenza_lesione_decubito
+          where fd_fd_sectiontre_gradoLesione_code = 'opL_2c'
+            and forminstanceid = f.external_id
+       )
+),
+(
+  select count(distinct(id_person)) as "persone con lesione al quarto stadio"
+    from forms f
+   where id_contract in
+       (
+         select id
+           from contracts c
+          where ((valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+             or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+            and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+        between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))))
+            and id = f.id_contract
+            and id_contractee in
+            	 (
+            	   select id
+            	     from subjects_cr
+            	    where id_organization = $P{P_idOrganization}
+            	      and id = c.id_contractee
+            	 )
+       )
+     and external_id in
+       (
+         select forminstanceid
+           from dwh_scheda_presenza_lesione_decubito
+          where fd_fd_sectiontre_gradoLesione_code = 'opL_2d'
+            and forminstanceid = f.external_id
+       )
+),
+(
+  select count(*) as "totale lesioni da pressione"
+    from forms f
+   where id_contract in
+       (
+         select id
+           from contracts c
+          where (valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+             or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+            and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+        between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd')))
+            and id = f.id_contract
+            and id_contractee in
+               (
+                 select id
+                   from subjects_cr
+                  where id_organization = $P{P_idOrganization}
+                    and id = c.id_contractee
+               )
+       )
+     and external_id in
+       (
+         select forminstanceid
+           from dwh_scheda_presenza_lesione_decubito
+          where fd_fd_sectiontre_gradoLesione_code is not null
+            and forminstanceid = f.external_id
+       )
+),
+(
+  select count(distinct(id_person)) as "persone a RSA con almeno 1 lesione (i)"
+    from forms f
+   where id_contract in
+     	 (
+       	 	 select id
+      		   from contracts
+      		  where id_service in
+      		 	    (
+      		 	      select id
+      		       	  from services
+      		      	 where upper(name) = 'RSA'
+      		 	    )
+      		    and ((valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+               or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+              and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+          between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))))
+              and id = f.id_contract
+              and id_contractee in
+            	  (
+            	    select id
+            	      from subjects_cr
+            	     where id_organization = $P{P_idOrganization}
+            	       and id = c.id_contractee
+            	  )
+     	 )
+     and external_id in
+       (
+         select forminstanceid
+           from dwh_scheda_presenza_lesione_decubito
+          where fd_fd_sectiontre_gradoLesione_code is not null
+            and forminstanceid = f.external_id
+       )
+     and id_contract not in
+       (
+         select id
+           from contracts c
+          where valid_from between $P{P_dataDa} and '30/11/2018'
+            and id_contractee in
+          	  (
+          	    select id
+          	      from subjects_cr
+          	     where id_organization = $P{P_idOrganization}
+          	       and id = c.id_contractee
+          	  )
+       )
+     and id_form_parameter in
+       (
+         select id
+      		 from form_parameters
+      		where id_service = 2
+            and id = f.id_form_parameter
+       )
+),
+(
+  select count(*) as "nuovi ingressi nel periodo di riferimento"
+    from contracts c
+   where valid_from between $P{P_dataDa} and '30/11/2018'
+     and id_contractee in
+     	 (
+     	   select id
+     	     from subjects_cr
+     	    where id_organization = $P{P_idOrganization}
+     	      and id = c.id_contractee
+     	 )
+),
+4 as "persone che hanno sviluppato lesione",
+4 as "giorni effetiva presenza",
+(
+  select
+    case
+      when abs(SUM(CEIL((EXTRACT(epoch from age(valid_from, valid_to)) / 86400))::int)) is not null
+      then abs(SUM(CEIL((EXTRACT(epoch from age(valid_from, valid_to)) / 86400))::int))
+      else 0
+    end
+    as "giorni effetiva presenza"
+    from contracts
+    where
+      valid_from between '30/09/2018' and '04/12/2018'
+      and valid_to between '30/10/2018' and '04/12/2018'
+),
+2 as "persone con rischio di sviluppo di lesioni",
+1 as "persone di basso rischio",
+(
+  select count(*) as "persone con 2 o più lesioni"
+    from persons p
+   where 1 =
+   	 (
+   	 	select
+           case
+             when count(id_person) >= 2
+             then 1
+             else 0
+           end
+      from forms f
+     where id_person = p.id
+       and id_contract in
+       	 (
+       	   select id
+             from contracts c
+            where ((valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+               or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+              and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+          between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))))
+              and id = f.id_contract
+              and id_contractee in
+              	 (
+              	  select id
+              	    from subjects_cr
+              	   where id_organization = $P{P_idOrganization}
+              	     and id = c.id_contractee
+              	 )
+       	 )
+       and external_id in
+         (
+           select forminstanceid
+             from dwh_scheda_presenza_lesione_decubito
+            where
+                (
+                  fd_fd_sectiontre_gradoLesione_code = 'opL_2a'
+                  or fd_fd_sectiontre_gradoLesione_code = 'opL_2b'
+                  or fd_fd_sectiontre_gradoLesione_code = 'opL_2c'
+                  or fd_fd_sectiontre_gradoLesione_code = 'opL_2d'
+                )
+              and forminstanceid = f.external_id
+         )
+   	 )
+),
+(
+  select count(*) as "persone con 1 o più lesioni"
+    from persons p
+   where 1 =
+     (
+         select
+                case
+                 when count(id_person) >= 1
+                 then 1
+                 else 0
+                end
+           from forms f
+          where id_person = p.id
+            and id_contract in
+              (
+                select id
+                  from contracts c
+                 where ((valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+                    or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+                   and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+               between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))))
+                   and id = f.id_contract
+                   and id_contractee in
+                      (
+                       select id
+                         from subjects_cr
+                        where id_organization = $P{P_idOrganization}
+                          and id = c.id_contractee
+                      )
+              )
+            and external_id in
+              (
+                select forminstanceid
+                  from dwh_scheda_presenza_lesione_decubito
+                 where
+                     (
+                       fd_fd_sectiontre_gradoLesione_code = 'opL_2a'
+                       or fd_fd_sectiontre_gradoLesione_code = 'opL_2b'
+                       or fd_fd_sectiontre_gradoLesione_code = 'opL_2c'
+                       or fd_fd_sectiontre_gradoLesione_code = 'opL_2d'
+                     )
+                   and forminstanceid = f.external_id
+              )
+     )
+),
+1 as "persone con lesione, malnutrite, intervento nutrizionale (energetica - proteica)",
+(
+  select count(*) as "persone con lesione da pressione e malnutriti"
+    from persons p
+    where id in
+        (
+          select id_person
+            from forms f
+           where external_id in
+               (
+                 select forminstanceid
+                   from schedavalutazionerischiodecubiti
+                  where forminstanceid = f.external_id
+               )
+             and id_person = p.id
+             and id_contract in
+             	 (
+             	   select id
+                   from contracts c
+                  where ((valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+                     or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+                    and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+                between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))))
+                    and id = f.id_contract
+                    and id_contractee in
+                    	(
+                        select id
+                    	    from subjects_cr
+                    	   where id_organization = $P{P_idOrganization}
+                    	     and id = c.id_contractee
+                    	 )
+             	 )
+        )
+      and id in (
+        select id_person
+          from forms f
+         where external_id in
+             (
+               select forminstanceid
+                 from schedamininutritionalassesment
+                where
+                      (fd_fd_totalescreening <= 7 and fd_fd_resultatototale = 0)
+                   or
+                      (fd_fd_totalescreening <= 11 and fd_fd_resultatototale <= 17)
+                  and forminstanceid = f.external_id
+             )
+           and id_contract in
+           	 (
+           	   select id
+                 from contracts c
+                where ((valid_from between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+                   or (valid_from <= TO_DATE($P{P_dataDa}, 'YYYY-MM-dd')
+                  and (valid_to is null or NULLIF(valid_to, TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))
+              between TO_DATE($P{P_dataDa}, 'YYYY-MM-dd') and TO_DATE($P{P_dataFinoA}, 'YYYY-MM-dd'))))
+                  and id = f.id_contract
+                  and id_contractee in
+                	  (
+                	    select id
+                	      from subjects_cr
+                	     where id_organization = $P{P_idOrganization}
+                	       and id = c.id_contractee
+                	  )
+           	 )
+      )
+)
+]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<textField>
+				<reportElement style="Style.tittle_stampa" x="150" y="15" width="395" height="40" uuid="e3d0f8ce-852d-467d-9610-28aa10d86448"/>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Dolore"]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="140" height="70" uuid="5dd851dc-b53d-4df2-8633-3164ad12bc97"/>
+				<imageExpression><![CDATA["logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="20" uuid="fbcbf72f-43e6-4d8e-bfb6-adbd30d04e76"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Dati da : "+DATEFORMAT($P{P_dataDa},"dd-MM-YYYY") +"\t fino a :"+ DATEFORMAT($P{P_dataFinoA},"dd-MM-YYYY")]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="300" splitType="Stretch">
+			<textField>
+				<reportElement style="Style.tittle_principale" x="0" y="10" width="555" height="25" uuid="ac3681ae-98bf-4e71-8940-3ce6659c24fa"/>
+				<textFieldExpression><![CDATA["INDICATORI LESIONI DA PRESSIONE"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="39" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.1 Lesioni da pressione - prevalenza"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="39" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="63" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.1.1 Lesione da pressione Stadio I"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="63" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="87" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.1.2 Lesione da pressione Stadio II"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="87" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="111" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.1.3 Lesioni da pressione Stadio III"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="111" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="136" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.1.4 Lesioni da pressione stadio IV"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="136" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="160" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.2 Persone accolte in RSA con ulcere da pressione"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="160" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="184" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.3 Lesioni da pressione - incidenza"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="184" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="208" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.4 Lesioni da pressionoe - processo di presa in carico"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="208" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="232" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.5 Sviluppo nuove lesioni da pressione"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="232" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="256" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.6 Lesioni multiple"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="256" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style.testo_domanda" x="0" y="280" width="370" height="20" uuid="bb755c7d-3df1-44d7-b9b7-d94941a977c5"/>
+				<textFieldExpression><![CDATA["1.7 Interventi nutrizionali specifici"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.## %">
+				<reportElement style="Style.testo_risposta" x="370" y="280" width="185" height="20" uuid="547f22d2-b67a-4444-892f-717c7a0fb2f7"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="450" y="0" width="70" height="20" uuid="43d0d047-a7f3-4976-89cf-0e5fe550717c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Pagina " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="520" y="0" width="35" height="20" uuid="3f2d85ab-8ac6-4b44-8f3c-260b43e62eb7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" di " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

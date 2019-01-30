@@ -1,0 +1,65 @@
+[{
+  "id": null,
+  "insertUserId": 4,
+  "insertUser": "Katie Wilson",
+  "insertTimeUTC": 1538557094511,
+  "insertTime": 1538557094511,
+  "updateUserId": 4,
+  "updateUser": "Katie Wilson",
+  "updateTimeUTC": 1539779330121,
+  "updateTime": 1539779330121,
+  "organizationId": 2,
+  "valid": true,
+  "cancellationTime": null,
+  "cancellationUser": null,
+  "cancellationUserId": null,
+  "cancellationTimeUTC": null,
+  "name": "Valutazione rischio malnutrizione (MUST)",
+  "code": "schedaValutazioneMUST",
+  "html": "<div class=\"panel panel\">\n    <div class=\"panel-body\">\n        <div class=\"form-horizontal\" ng-click=\"selectedRadio($event);\">\n            <div class=\"form-group\">\n                <label class=\"col-sm-6 col-md-6 col-lg-5\">Step 1 - BMI</label>\n                <div class=\"col-sm-6 col-md-6 col-lg-7\">\n                    <label class=\"ui-radio\"><input type=\"radio\" ng-change=\"formData.step1={code:'op1a',score:0}\" ng-model=\"formData.step1.code\" value=\"op1a\"><span> &#62 20 (&#62 30 obeso)</span></label>\n                    <label class=\"ui-radio\"><input type=\"radio\" ng-change=\"formData.step1={code:'op1b',score:1}\" ng-model=\"formData.step1.code\" value=\"op1b\"><span>18,5 - 20</span></label>\n                    <label class=\"ui-radio\"><input type=\"radio\" ng-change=\"formData.step1={code:'op1c',score:2}\" ng-model=\"formData.step1.code\" value=\"op1c\"><span> &#60 18.5</span></label>\n                    <input type=\"number\" summary=\"MUSTStep1\" ng-model=\"formData.step1.score\" ng-show=\"false\">\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label class=\"col-sm-6 col-md-6 col-lg-5\">Step 2 - % perdita di peso involontaria nei 3-6 mesi\n                    precedenti</label>\n                <div class=\"col-sm-6 col-md-6 col-lg-7\">\n                    <label class=\"ui-radio\"><input type=\"radio\" ng-change=\"formData.step2={code:'op2a',score:2}\" ng-model=\"formData.step2.code\" value=\"op2a\"><span>&#62 10 %</span></label>\n                    <label class=\"ui-radio\"><input type=\"radio\" ng-change=\"formData.step2={code:'op2b',score:0}\" ng-model=\"formData.step2.code\" value=\"op2b\"><span>&#60 5%</span></label>\n                    <label class=\"ui-radio\"><input type=\"radio\" ng-change=\"formData.step2={code:'op2c',score:1}\" ng-model=\"formData.step2.code\" value=\"op2c\"><span>5% - 10%</span> </label>\n                  <input type=\"number\" summary=\"MUSTStep2\" ng-model=\"formData.step2.score\" ng-show=\"false\">\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label class=\"col-sm-6 col-md-6 col-lg-5\">Step 3 - Effetto della malattia acuta - Il soggetto ha una malattia acuta e vi è stata o vi sarà una assenza di nutrizione per più di 5 giorni ?</label>\n                <div class=\"col-sm-6 col-md-6 col-lg-7\">\n                    <label class=\"ui-radio\"><input type=\"radio\" ng-change=\"formData.step3={code:'op3a',score:2}\" ng-model=\"formData.step3.code\" value=\"op3a\"><span>SI</span></label>\n                    <label class=\"ui-radio\"><input type=\"radio\" ng-change=\"formData.step3={code:'op3b',score:0}\" ng-model=\"formData.step3.code\" value=\"op3b\"><span>NO</span></label>\n                  <input type=\"number\" summary=\"MUSTStep3\" ng-model=\"formData.step3.score\" ng-show=\"false\">\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label class=\"col-sm-6 col-md-6 col-lg-5\">Step 4 - Valutare il rischio (vedi indice)</label>\n                <div class=\"col-md-6 col-lg-5\">\n                    <input class=\"form-control\" summary=\"MUSTStep4\" ng-model=\"formData.step4\" type=\"text\">\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label class=\"col-sm-6 col-md-6 col-lg-5\">Step 5 - Gestione (vedi note gestionali in rapporto\n                    all'indice di rischio)</label>\n                <div class=\"col-md-6 col-lg-5\">\n                    <input class=\"form-control\" summary=\"MUSTStep5\" ng-model=\"formData.step5\" type=\"text\">\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label class=\"col-sm-6 col-md-6 col-lg-5\">PUNTEGGIO</label>\n                <div class=\"col-md-6 col-lg-5\">\n                    <div class=\"col-md-3\">\n                        <div class=\"form-group\">\n                            <input class=\"form-control\" concept=\"scoreMUSTTotal\" summary ng-model=\"formData.scoreMUSTTotal\" type=\"number\" readonly>\n                        </div>\n                    </div>\n                    <div class=\"col-md-9\">\n                        <div class=\"form-group\">\n                            <input class=\"form-control\" ng-model=\"formData.Indice\" type=\"text\" readonly>    \n                        </div>\n                    </div>\n                </div>\n            </div>\n             <div class=\"form-group\">\n                <label class=\"col-sm-12 col-md-12 col-lg-12\">LEGENDA</label>\n                <div class=\"col-md-12 col-lg-12\">\n                    <div class=\"row\">\n                        <div class=\"col-md-12\">\n                            <div class=\"form-group\">\n                                <ul>\n                                <li>Punti 0 = Basso rischio. Attenzione clinica routinaria. Ripetere lo screening mensilmente.</li>\n                                <li>Punti 1 = Rischio medio. Documentare introito nutrizionale per 3 giorni. Se l'introito è adeguato ripetere lo screening almeno mensilmente. Se l'introito è ricorrere alle linee guida specifiche.</li>\n                                <li>Punti 2 o più = Alto rischio. Consultare il dietista e il team di supporto nutrizionale o implementare le linee guida, perfezionale l'intake nutrizionale. Monitorare e rivedere il piano di cura mensilmente.</li>\n                            </ul>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n  \n</div>",
+  "javascript": "\nvar calcoloTotale= function(){\n  var element=null, somma=null, msg=\"\";\n  for(var i in formData){\n  \telement=formData[i];\n    if(element && element.score >= 0){\n      somma=somma+element.score;\n    }\n  }\n if(somma == 0) msg='Basso rischio - Attenzione clinica routinaria';\n if(somma == 1) msg='Rischio medio - Tenere in osservazione';\n if(somma >= 2) msg='Alto rischio';\n \n  formData.scoreMUSTTotal=somma;\n  formData.Indice=msg;\n};\n\nregisterFunction(\"calcoloTotale\",calcoloTotale);\n\nvar selectedRadio = function(event){  \n  if(event.target.localName ===\"input\" && event.target.type === \"radio\"){\n    calcoloTotale();\n  }\n};\nregisterFunction(\"selectedRadio\",selectedRadio);",
+  "css": null,
+  "version": 1,
+  "status": "DRAFT",
+  "bundleValues": {
+    "it_IT": {
+      "MUSTStep2": "",
+      "MUSTStep1": "",
+      "MUSTStep4": "",
+      "MUSTStep3": "",
+      "MUSTStep5": ""
+    },
+    "en_GB": {
+      "MUSTStep2": "",
+      "MUSTStep1": "",
+      "MUSTStep4": "",
+      "MUSTStep3": "",
+      "MUSTStep5": ""
+    },
+    "es_ES": {
+      "MUSTStep2": "",
+      "MUSTStep1": "",
+      "MUSTStep4": "",
+      "MUSTStep3": "",
+      "MUSTStep5": ""
+    },
+    "de_DE": {
+      "MUSTStep2": "",
+      "MUSTStep1": "",
+      "MUSTStep4": "",
+      "MUSTStep3": "",
+      "MUSTStep5": ""
+    }
+  },
+  "templateFileName": null,
+  "templateApplications": null,
+  "repositoryEnabled": null,
+  "signatureEnabled": null,
+  "signatureNotMandatory": null,
+  "sendTxtEnabled": null,
+  "sendPrivacyEnabled": null,
+  "cda2Enabled": null,
+  "cda2Xlts": null,
+  "cancellableEnabled": null,
+  "saveAsDraftWhenInvalid": null
+}]

@@ -1,0 +1,447 @@
+[{
+  "id": "5bfd71a9cfc1041af2519d38",
+  "insertUserId": 328,
+  "insertUser": "FRANCESCO MICELI",
+  "insertTimeUTC": "2018-11-27T16:32:41.344+0000",
+  "insertTime": "2018-11-27T16:32:41.344+0000",
+  "updateUserId": 1679,
+  "updateUser": "gloria.trento ",
+  "updateTimeUTC": "2018-11-27T16:49:12.744+0000",
+  "updateTime": "2018-11-27T16:49:12.744+0000",
+  "organizationId": 4,
+  "valid": true,
+  "cancellationTime": null,
+  "cancellationUser": null,
+  "cancellationUserId": null,
+  "cancellationTimeUTC": null,
+  "formInstanceId": "5bfd71a9cfc1041af2519d37",
+  "formDocument": {
+    "initData": {
+      "requestDate": "27/11/2018",
+      "generalData": {
+        "userId": "1679",
+        "userFullName": "gloria.trento ",
+        "userLanguage": "de_DE",
+        "currentDateTime": "27/11/2018 17:49:12",
+        "userHealthCareProvider": null,
+        "userProfile": "Gloria amministratore",
+        "username": "gloria.trento",
+        "userHealthCareFirstName": null,
+        "userHealthCareLastName": null,
+        "userHealthCareTaxCode": null
+      },
+      "encounter": {
+        "id": 1820,
+        "counter": "E2018001772",
+        "type": "VISIT",
+        "entryDate": "27/11/2018 17:32:21",
+        "admissionDate": null,
+        "priority": "D-Differibile",
+        "entryReason": "",
+        "clinicalSpeciality": "",
+        "treatmentType": "",
+        "clinicalQuestion": "",
+        "diagnosis": "",
+        "bed": "",
+        "room": "",
+        "agreement": "",
+        "priceList": "",
+        "priceListId": null,
+        "servicePoint": "IST Chirurgia Generale OSP BZ",
+        "servicePointCode": "3180",
+        "servicePointMedicalSpecializationCode": "BZ_CHGEN",
+        "servicePointMedicalSpecializationDescription": "Chirurgia Generale",
+        "organizationUnit": "BZH Chirurgia Generale",
+        "organizationUnitCode": "300059",
+        "organizationUnitAddress": " ",
+        "organizationUnitZipCode": null,
+        "organizationUnitMunicipality": "",
+        "organizationUnitCountry": "",
+        "patientSource": null,
+        "facility": null,
+        "ward": null,
+        "category": null,
+        "note": null,
+        "assessmentDiagnosis": "",
+        "assessmentOutcome": "",
+        "assessmentIntervention": "",
+        "assessmentActivityRecord": "",
+        "dischargeDate": "",
+        "dischargeDoctorCode": "",
+        "dischargeDoctorName": "",
+        "dischargeMethodCode": "",
+        "dischargeMethodDescription": "",
+        "dischargeAutopsyReport": "",
+        "dischargePostRecoverySupportCode": "",
+        "dischargePostRecoverySupportDescription": "",
+        "servicePointCustomParameters": {
+
+        },
+        "organizationUnitCustomParameters": {
+
+        },
+        "transferDate": null,
+        "transferLocation": null
+      },
+      "patient": {
+        "patientId": "92",
+        "taxCode": "LSSGNI32L64L033O",
+        "patientFirstName": "GINA",
+        "patientSecondName": "",
+        "patientThirdName": "",
+        "patientLastName": "ALESSANDRINI",
+        "sex": "F",
+        "birthdate": "24/07/1932",
+        "age": "86 anni",
+        "birthPlace": "Taio",
+        "legalAddressMunicipality": "Merano .Meran.",
+        "legalAddressProvince": "",
+        "legalAddressStreet": "VIA PARROCCHIA 2 ",
+        "legalAddressZipCode": "39012",
+        "legalAddressCountry": "ITALIA",
+        "phone": "079846465",
+        "mobilePhone": "333-56789",
+        "email": "ginaginettagmail.com",
+        "healthDistrict": "OVEST MERANO",
+        "generalPractitioner": "RIVA ROBERTO",
+        "contactName": "",
+        "contactPhone": "",
+        "contactEmail": "",
+        "maritalStatus": "Sconosciuto",
+        "education": "",
+        "profession": "",
+        "problemSummary": "Diagnosi: \n   250.01, DIABETE MELLITO,TIPO I (DIABETE GIOVANILE),NON DEFINITO SE SCOMPENSATO,SENZA MENZIONE DI COMPLICAZIONI, DIABETE corretta, apr 2018\n   074.0, HERPANGINA, HERPANGINA, Cronico\n   719.7, ZOPPIA, ZOPPIA\n   414.8, ALTRE FORME SPECIFICATE DI CARDIOPATIA ISCHEMICA CRONICA, stabile koronare Herzkrankheit, derzeit keine Stenokardien., Cronico\n   719.7, ZOPPIA, ZOPPIA\n   427.31, FIBRILLAZIONE ATRIALE, FIBRILLAZIONE ATRIALE, mar 2018\n   719.7, ZOPPIA, ZOPPIA, set 2018\n   250.10, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO,NON DEFINITO SE SCOMPENSATO, DIABETE CON CHETOACIDOSI,TIPO II O NON  diag cccc, Sospetto\n   250.10, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO,NON DEFINITO SE SCOMPENSATO, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO,\n   009.2, DIARREA INFETTIVA, DIARREA INFETTIVA\n   250.10, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO,NON DEFINITO SE SCOMPENSATO, ALTRE FORME SPECIFICATE DI CARDIOPAT xxxx, gen 2018\n   427.31, FIBRILLAZIONE ATRIALE, FIBRILLAZIONE ATRIALE NON GRAVE\n   250.10, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO,NON DEFINITO SE SCOMPENSATO, DIABETE CON CHETOACIDOSI,TIPO   CORRETTO DIAGNOSI, Sospetto\n   427.31, FIBRILLAZIONE ATRIALE, Cronica permanente, FIBRILLAZIONE ATRIALE eccoci\n   250.10, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO,NON DEFINITO SE SCOMPENSATO, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO, Sospetto\n   427.31, FIBRILLAZIONE ATRIALE, Pre diagnosi, FIBRILLAZIONE ATRIALE DOVREBBE ESSERE OK\n   491.21, BRONCHITE CRONICA OSTRUTTIVA,CON ESACERBAZIONE (ACUTA), BRONCHITE CRONICA OSTRUTTIVA,CON ESACERBAZIONE (ACUTA), gen 2018\n   427.31, FIBRILLAZIONE ATRIALE, Persistente, FIBRILLAZIONE ATRIALE ANDATA, Sospetto\n   427.31, FIBRILLAZIONE ATRIALE, Parossistica accertata, FIBRILLAZIONE ATRIALE NON SPECIFICATA, Sospetto, gen 2013\n   428.1, INSUFFICIENZA DEL CUORE SINISTRO (SCOMPENSO CARDIACO SINISTRO), colera, Sospetto, gen 2003\n   056.71, ARTRITE DA ROSOLIA, ARTRITE DA ROSOLIA\n   518.81, INSUFFICIENZA RESPIRATORIA, INSUFFICIENZA RESPIRATORIA, Cronico, ago 2017\n   571.2, CIRROSI EPATICA ALCOLICA, CIRROSI EPATICA ALCOLICA - prova de\n   518.81, INSUFFICIENZA RESPIRATORIA, INSUFFICIENZA RESPIRATORIA, Sospetto, mag 2018\n   402.11, CARDIOPATIA IPERTENSIVA BENIGNA CON INSUFFICIENZA CARDIACA, CARDIOPATIA IPERTENSIVA BENIGNA CON INSUFFICIENZA CARDIACA, Cronico, gen 2016\n   414.8, ALTRE FORME SPECIFICATE DI CARDIOPATIA ISCHEMICA CRONICA, instabile Angina pectoris, Cronico, nov 2006\n   197.7, TUMORI MALIGNI SECONDARI DEL FEGATO,SPECIFICATI COME METASTATICI, TUMORI MALIGNI SECONDARI DEL FEGATO,SPECIFICATI CO, gen 2018\n   111.9, DERMATOMICOSI NON SPECIFICATE, CIRROSI EPATICA ALCOLI, Cronico, gen 2018\n   714.0, ARTRITE REUMATOIDE, ARTRITE REUMATOIDE, gen 2018\n   001.1, COLERA DA VIBRIO CHOLERAE EL TOR, COLERA DA VIBRIO CHOLERAE EL TOR, gen 2018\n   250.22, DIABETE CON IPEROSMOLARITÀ ,TIPO II O NON SPECIFICATO,SCOMPENSATO, DIABETE CON IPEROSMOLARITÀ ,  vvvvv, Sospetto, gen 2018\n   250.42, DIABETE TIPO II O NON SPECIFICATO,SCOMPENSATO,CON COMPLICAZIONI RENALI, DIABETE TIPO II O NON SPECIFICATO,SCOMPENSATO,CON COMPLICAZIO, gen 2018\n   415.19, ALTRE FORME DI EMBOLIA POLMONARE E INFARTO POLMONARE, embolia, gen 2018\n   577.0, PANCREATITE ACUTA, PANCREATITE ACUTA, Sospetto, feb 2018\n   482.9, POLMONITE BATTERICA,NON SPECIFICATA, POLMONITE BATTERICA,NON SPECIFICATA, feb 2018\n   532.90, ULCERA DUODENALE NON SPECIFICATA COME ACUTA O CRONICA,SENZA MENZIONE DI EMORRAGIA O PERFORAZIONE, SENZA MENZIONE DI OSTRUZIONE, Verdacht auf Ulkus duodeni, Sospetto, feb 2018\n   482.9, POLMONITE BATTERICA,NON SPECIFICATA, POLMONITE BATTERICA,NON SPECIFICATA, mar 2018\n   416.1, CARDIOPATIA CIFOSCOLIOTICA, CARDIOPATIA CIFOSCOLIOTICA, apr 2018\n   416.1, CARDIOPATIA CIFOSCOLIOTICA, CARDIOPATIA CIFOSCOLIOTICA  Test Test, apr 2018\n   416.1, CARDIOPATIA CIFOSCOLIOTICA, CARDIOPATIA CIFOSCOLIOTICA Meine Test Notiz zu der Diagnose, apr 2018\n   402.00, CARDIOPATIA IPERTENSIVA MALIGNA SENZA INSUFFICIENZA CARDIACA, CARDIOPATIA IPERTENSIVA MALIGNA SENZA INSUFFICIENZA CARDIACA, Cronico, apr 2018\n   429.9, CARDIOPATIA NON SPECIFICATA, CARDIOPATIA NON SPECIFICATA Test, apr 2018\n   011.45, FIBROSI TUBERCOLARE DEL POLMONE,ESAME BATTERIOLOGICO NEGATIVO,MA TUBERCOLOSI CONFERMATA ISTOLOGICAMENTE, FIBROSI TUBERCOLARE DEL POLMONE,ESAME BATTERIOLOGICO NEGATIVO,MA TUBERCOLOSI CONFERMATA ISTOLOGICAMENTE, apr 2018\n   260., KWASHIORKOR, KWASHIORKOR---ttttt, apr 2018\n   585.4, MALATTIA RENALE CRONICA, STADIO IV (GRAVE), MALATTIA RENALE CRONICA, STADIO IV (GRAVE), Cronico, apr 2018\n   130.3, MIOCARDITE DA TOXOPLASMA, MIOCARDITE DA TOXOPLASMA, apr 2018\n   461.2, SINUSITE ACUTA ETMOIDALE, SINUSITE ACUTA ETMOIDALE, Sospetto, apr 2018\n   429.9, CARDIOPATIA NON SPECIFICATA, uuuuuuuuu, apr 2018\n   564.1, COLON IRRITABILE, Verdacht auf Colon Irritabile, Sospetto, apr 2018\n   599.0, INFEZIONE DEL SISTEMA URINARIO,SITO NON SPECIFICATO, INFEZIONE DEL SISTEMA URINARIO,SITO NON SPECIFICATO, apr 2018\n   V10.43, ANAMNESI PERSONALE DI TUMORE MALIGNO DELL'OVAIO, ANAMNESI PERSONALE DI TUMORE MALIGNO DELL'OVAIO, Sospetto, mag 2018\n   056.71, ARTRITE DA ROSOLIA, ARTRITE DA\n   404.90, CARDIONEFROPATIA IPERTENSIVA NON SPECIFICATA SENZA INSUFFICIENZA CARDIACA E CON PATOLOGIA RENALE, CARDIONEFROPATIA IPERTENSIVA NON SPECIFICATA SENZA INSUFFICIENZA CARDIACA E CON PATOLOGIA RENALE Zusatzinfo, Sospetto\n   402.00, CARDIOPATIA IPERTENSIVA MALIGNA SENZA INSUFFICIENZA CARDIACA, CARDIOPATIA IPERTENSIVA MALIGNA SENZA INSUFFICIENZA CARDIACA, Sospetto\n   571.2, CIRROSI EPATICA ALCOLICA, CIRROSI EPATICA ALCOLICA, Sospetto\n   522.8, CISTI RADICOLARE, CISTI RADICOLARE, Cronico\n   242.21, GOZZO MULTINODULARE TOSSICO CON CRISI TIREOTOSSICA, DEPRESSIONE MAGGIORE,EPISODIO RICORRENTE,GRAVE,CON COMPORTAMENTO PSICOTICO\n   789.06, DOLORE ADDOMINALE EPIGASTRICO, DOLORE ADDOMINALE EPIGASTRICO\n   789.06, DOLORE ADDOMINALE EPIGASTRICO, DOLORE ADDOMINALE EPIGASTRICO, Cronico\n   242.81, TIREOTOSSICOSI DI ALTRA ORIGINE SPECIFICATA CON CRISI TIREOTOSSICA, gozzo multinodulare, Cronico\n   123.0, INFESTAZIONE DA TENIA SOLIUM,FORMA INTESTINALE, INFESTAZIONE DA TENIA SOLIUM,FORMA INTESTINALE\n   V60.1, ABITAZIONE INADEGUATA, gpi spa\n   123.1, CISTICERCOSI, CISTICERCOSI - diagnosi di prova inserita oggi\n   123.1, CISTICERCOSI, CISTICERCOSI, mar 2018\n   123.1, CISTICERCOSI, CISTICERCOSI, mar 2018\n   123.1, CISTICERCOSI, CISTICERCOSI, mar 2018\n   428.21,  INSUFFICIENZA CARDIACA SISTOLICA ACUTA,  INSUFFICIENZA CARDIACA SISTOLICA ACUTA\n   635.11, ABORTO INDOTTO LEGALMENTE COMPLICATO DA EMORRAGIA TARDIVA O ECCESSIVA,INCOMPLETO, ABORTO INDOTTO LEGALMENTE COMPLICATO DA EMORRAGIA TARDIVA ,INCOMPLETO\n   540.9, APPENDICITE ACUTA SENZA MENZIONE DI PERITONITE,PERFORAZIONE O ROTTURA, APPENDICITE ACUTA SENZA MENZIONE DI PERITONITE,PERFORAZIONE O ROTTURA\n   712.84, ALTRE ARTROPATIE DA MICROCRISTALLI,CARPO,METACARPO ED ARTICOLAZIONI INTERFALANGEE DELLA MANO, ALTRE ARTROPATIE DA MICROCRISTALLI,CARPO,METACARPO ED ARTICOLAZIONI INTERFALANGEE DELLA MANO, Cronico\n   454.9, VARICI DEGLI ARTI INFERIORI ASINTOMATICHE, lorem ipsum, Sospetto\n   080., TIFO [EPIDEMICO] DA PIDOCCHI, TIFO [EPIDEMICO] DA PIDOCCHI, Cronico\n   002.1, PARATIFO A, PARATIFO A, Sospetto, mag 2018\n   123.1, CISTICERCOSI, CISTICERCOSI\n   240.9, GOZZO NON SPECIFICATO, GOZZO NON SPECIFICATO, Sospetto\n   240.9, GOZZO NON SPECIFICATO, GOZZO NON SPECIFICATO, Sospetto\n   083.0, FEBBRE Q, FEBBRE Q, Sospetto\n   240.0, GOZZO SPECIFICATO COME SEMPLICE, GOZZO SPECIFICATO COME SEMPLICE\n   124., TRICHINOSI, TRICHINOSI inserita 12/07\n   093.1, AORTITE SIFILITICA, cambiata SIFILITICA CAMBIO ANCORA, Sospetto, gen 2012\n   784.3, AFASIA, AFASIA - 12/07 aaaaa\n   245.0, TIROIDITE ACUTA, TIROIDITE ACUTA\n   365.51, GLAUCOMA FACOLITICO, GLAUCOMA FACOLITICO ANCHE QUESTO OK\n   560.89, ALTRA OCCLUSIONE SPECIFICATA DELL'INTESTINO, ALTRA OCCLUSIONE SPECIFICATA DELL'INTESTINO, ago 2018\n   568.0, ADERENZE PERITONEALI (POSTOPERATORIE) (POSTINFETTIVE), ADERENZE PERITONEALI (POSTOPERATORIE) (POSTINFETTIVE), ago 2018\n   079.6, VIRUS RESPIRATORIO SINCIZIALE, VIRUS RESPIRATORIO SINCIZIALE, ago 2018\n   584.5, INSUFFICIENZA RENALE ACUTA,CON NECROSI TUBULARE, INSUFFICIENZA RENALE ACUTA,CON NECROSI TUBULARE, ago 2018\n   587., SCLEROSI RENALE,NON SPECIFICATA, SCLEROSI RENALE, inserita ora\n   001.0, COLERA DA VIBRIO CHOLERAE, COLERA, Cronico, ago 2018\n   458.9, IPOTENSIONE NON SPECIFICATA, IPOTENSIONE NON SPECIFICATA\n   789.61, RILASSAMENTO ADDOMINALE DEL QUADRANTE SUPERIORE DESTRO, RILASSAMENTO ADDOMINALE DEL QUADRANTE SUPERIORE DESTRO, Cronico\n   006.9, AMEBIASI NON SPECIFICATA, AMEBIASI NON SPECIFICATA\n   226., TUMORI BENIGNI DELLA GHIANDOLA TIROIDE, TUMORI BENIGNI DELLA GHIANDOLA TIROIDE, Sospetto, gen 2013\n   586., INSUFFICIENZA RENALE,NON SPECIFICATA, INSUFFICIENZA RENALE,NON SPECIFICATA, set 2018\n   540.9, APPENDICITE ACUTA SENZA MENZIONE DI PERITONITE,PERFORAZIONE O ROTTURA, APPENDICITE ACUTA SENZA MENZIONE DI PERITONITE,PERFORAZIONE O ROTTURA, Sospetto\n   586., INSUFFICIENZA RENALE,NON SPECIFICATA, INSUFFICIENZA RENALE,NON SPECIFICATA\n   636.61, ABORTO ILLEGALE COMPLICATO DA EMBOLIA,INCOMPLETO, ABORTO ILLEGALE COMPLICATO DA EMBOLIA,INCOMPLETO\n   636.12, ABORTO ILLEGALE COMPLICATO DA EMORRAGIA TARDIVA O ECCESSIVA,COMPLETO, ABORTO ILLEGALE COMPLICATO DA EMORRAGIA TARDIVA O ECCESSIVA,COMPLETO\n   562.13, DIVERTICOLITE DEL COLON CON EMORRAGIA, DIVERTICOLITE DEL COLON CON EMORRAGIA, Sospetto, set 2018\n   356.9, NEUROPATIA PERIFERICA IDIOPATICA NON SPECIFICATA, NEUROPATIA PERIFERICA IDIOPATICA NON SPECIFICATA, Sospetto\n   003.8, ALTRE INFEZIONI SPECIFICHE DA SALMONELLA, Salmonellose\n   286.5, DISTURBO EMORRAGICO DA ANTICOAGULANTI CIRCOLANTI INTRINSECI, DISTURBO EMORRAGICO DA ANTICOAGULANTI CIRCOLANTI INTRINSECI, mag 2018\n   636.22, ABORTO ILLEGALE COMPLICATO DA DANNO AGLI ORGANI O TESSUTI PELVICI,COMPLETO, ABORTO ILLEGALE COMPLICATO DA DANNO AGLI ORGANI O TESSUTI PELVICI,COMPLETO\n   127.2, STRONGILOIDIASI, STRONGILOIDIASI di prova, set 2018\n   122.4, INFESTAZIONE NON SPECIFICATA DA ECHINOCOCCUS GRANULOSUS, INFESTAZIONE NON SPECIFICATA DA ECHINOCOCCUS GRANULOSUS di prova\n   137.4, POSTUMI DELLA TUBERCOLOSI DI ALTRI ORGANI SPECIFICATI, POSTUMI DELLA TUBERCOLOSI DI ALTRI ORGANI SPECIFICATI, giu 2018\n   290.11, DEMENZA PRESENILE CON DELIRIUM, DEMENZA PRESENILE CON DELIRIUM, Sospetto\n   032.84, CISTITE DIFTERICA, CISTITE DIFTERICA\n   294.0, DISTURBO AMNESICO IN MANIFESTAZIONI CLASSIFICATE ALTROVE, DISTURBO AMNESICO IN MANIFESTAZIONI CLASSIFICATE ALTROVE, Sospetto\n   015.01, TUBERCOLOSI DELLA COLONNA VERTEBRALE,ESAME BATTERIOLOGICO O ISTOLOGICO NON EFFETTUATO, TUBERCOLOSI DELLA COLONNA VERTEBRALE,ESAME BATTERIOLOGICO O ISTOLOGICO NON EFFETTUATO\n   011.20, TUBERCOLOSI DEL POLMONE CAVITARIA,NON SPECIFICATA, TUBERCOLOSI DEL POLMONE CAVITARIA,NON SPECIFICATA\n   730.25, OSTEOMIELITE NON SPECIFICATA,OSSA BACINO E FEMORE, OSTEOMIELITE NON SPECIFICATA,OSSA BACINO E FEMORE\n   130.3, MIOCARDITE DA TOXOPLASMA, MIOCARDITE DA TOXOPLASMA diagnosi test, giu 2018\n   136.3, PNEUMOCISTOSI, test diagnosi, nov 2018\n   695.4, LUPUS ERITEMATOSO, LUPUS ERITEMATOSO\n   128.0, TOXOCARIASI, TOXOCARIASI\n   669.60, ESTRAZIONE PODALICA,SENZA MENZIONE DELL'INDICAZIONE,EPISODIO DI CURA NON SPECIFICATO, ESTRAZIONE PODALICA,SENZA MENZIONE DELL'INDICAZIONE,EPISODIO DI CURA NON SPECIFICATO test nuova versione correttiva 21/11, Sospetto\n   240.9, GOZZO NON SPECIFICATO, GOZZO NON SPECIFICATO test nuova versione correttiva del 21/11\n   240.9, GOZZO NON SPECIFICATO, GOZZO NON SPECIFICATO test nuova versione correttiva del 21/11\n   111.9, DERMATOMICOSI NON SPECIFICATE, DERMATOMICOSI NON SPECIFICATE test 22/11\n   074.22, ENDOCARDITE DA COXSACKIE, ENDOCARDITE DA COXSACKIE test 22/11 b, Sospetto\n   110.2, DERMATOFITOSI DELLA MANO, DERMATOFITOSI DELLA MANO TEST 22/11\n   074.22, ENDOCARDITE DA COXSACKIE, ENDOCARDITE DA COXSACKIE\n   117.3, ASPERGILLOSI, ASPERGILLOSI, Sospetto, 22/11/2018\n   728.11, MIOSITE OSSIFICANTE PROGRESSIVA, MIOSITE OSSIFICANTE PROGRESSIVA - MODIFICA\n   358.8, ALTRI SPECIFICATI DISTURBI NEUROMUSCOLARI, MODIFICA TOTALE, Cronico, mag 2015\n   187.7, TUMORI MALIGNI DELLO SCROTO, TUMORI MALIGNI DELLO SCROTO, Sospetto\n   789.63, RILASSAMENTO ADDOMINALE DEL QUADRANTE INFERIORE DESTRO, modifica valutazione diagnosi - modificata due volte\n   542., ALTRE FORME DI APPENDICITE, ALTRE FORME DI APPENDICITE\n\nValutazione clinica:\n<b>Diagnosi riferita alla visita</b>\n<br/>* MODIFICA TOTALE\n<br/>\n<br/><b>Anamnesi familiare e sociale</b>\n<br/>22/11/2018 la paziente ha sintomi di depressione -- modificato\n<br/>\n<br/><b>Esami effettuati</b>\n<br/>* Supporto telefonico\n<br/>\n<br/>",
+        "allergiesSummary": [{
+            "tipoAllergia": "ALIMENTARE",
+            "allergenePrincipioAttivo": "Spezie",
+            "provenienza": "Referto",
+            "gravita": null,
+            "nota": "ALLERGIA TEST",
+            "dataChisura": "",
+            "notaChiusura": null
+          },
+          {
+            "tipoAllergia": "PROFESSIONALI",
+            "allergenePrincipioAttivo": "Anidride ftalica",
+            "provenienza": "Referto",
+            "gravita": null,
+            "nota": "ALLERGIA TESTO - modificato",
+            "dataChisura": "",
+            "notaChiusura": null
+          }
+        ],
+        "allergiesSummaryFormatted": "Spezie (ALLERGIA TEST)\nAnidride ftalica (ALLERGIA TESTO - modificato)\n",
+        "diagnosisSummary": [{
+            "codiceDiagnosi": "728.11",
+            "descrizioneDiagnosi": "MIOSITE OSSIFICANTE PROGRESSIVA",
+            "stadioDiagnosi": "",
+            "statoDiagnosi": "",
+            "tipoDiagnosi": "Medico",
+            "dataInsorgenza": ""
+          },
+          {
+            "codiceDiagnosi": "358.8",
+            "descrizioneDiagnosi": "ALTRI SPECIFICATI DISTURBI NEUROMUSCOLARI",
+            "stadioDiagnosi": "",
+            "statoDiagnosi": "Cronico",
+            "tipoDiagnosi": "Medico",
+            "dataInsorgenza": "mag 2015"
+          },
+          {
+            "codiceDiagnosi": "187.7",
+            "descrizioneDiagnosi": "TUMORI MALIGNI DELLO SCROTO",
+            "stadioDiagnosi": "",
+            "statoDiagnosi": "Sospetto",
+            "tipoDiagnosi": "Medico",
+            "dataInsorgenza": ""
+          },
+          {
+            "codiceDiagnosi": "789.63",
+            "descrizioneDiagnosi": "RILASSAMENTO ADDOMINALE DEL QUADRANTE INFERIORE DESTRO",
+            "stadioDiagnosi": "",
+            "statoDiagnosi": "",
+            "tipoDiagnosi": "Medico",
+            "dataInsorgenza": ""
+          },
+          {
+            "codiceDiagnosi": "542.",
+            "descrizioneDiagnosi": "ALTRE FORME DI APPENDICITE",
+            "stadioDiagnosi": "",
+            "statoDiagnosi": "",
+            "tipoDiagnosi": "Medico",
+            "dataInsorgenza": ""
+          }
+        ],
+        "diagnosisSummaryFormatted": " - MIOSITE OSSIFICANTE PROGRESSIVA \nmag 2015 - ALTRI SPECIFICATI DISTURBI NEUROMUSCOLARI \n - TUMORI MALIGNI DELLO SCROTO \n - RILASSAMENTO ADDOMINALE DEL QUADRANTE INFERIORE DESTRO \n - ALTRE FORME DI APPENDICITE \n",
+        "homeTherapiesSummary": [{
+            "nomeFarmaco": "PLACENTEX*CREMA 25G 0,08%",
+            "formaFarmacologica": "CREMA",
+            "posologia": "1 - 0 - 1 - 0",
+            "dataInizio": "",
+            "note": "testo",
+            "dataSospensione": "nov 2018",
+            "noteSospensione": ""
+          },
+          {
+            "nomeFarmaco": "MOMENT*12CPR RIV 200MG",
+            "formaFarmacologica": "COMPRESSE RIVESTITE",
+            "posologia": "0 - 1 - 0 - 1",
+            "dataInizio": "",
+            "note": "",
+            "dataSospensione": "nov 2018",
+            "noteSospensione": ""
+          },
+          {
+            "nomeFarmaco": "FARMACO NON PRESENTE",
+            "formaFarmacologica": "",
+            "posologia": "0 - 0 - 0 - 0",
+            "dataInizio": "",
+            "note": "prova testo farmaco non presente",
+            "dataSospensione": "nov 2018",
+            "noteSospensione": ""
+          },
+          {
+            "nomeFarmaco": "DIBASE*IM OS 2F 1ML 300000UI/M",
+            "formaFarmacologica": "SOLUZIONE INIETTABILE",
+            "posologia": "Al bisogno",
+            "dataInizio": "",
+            "note": "ogni tanto",
+            "dataSospensione": "nov 2018",
+            "noteSospensione": ""
+          },
+          {
+            "nomeFarmaco": "EFFERALGAN*16CPR EFF 1000MG",
+            "formaFarmacologica": "COMPRESSE EFFERVESCENTI",
+            "posologia": "0 - 0 - 0 - 0",
+            "dataInizio": "",
+            "note": "da assumere al bisogno con molta acqua",
+            "dataSospensione": "nov 2018",
+            "noteSospensione": ""
+          },
+          {
+            "nomeFarmaco": "PLASIL*24CPR 10MG",
+            "formaFarmacologica": "COMPRESSE",
+            "posologia": "0 - 0 - 0 - 0",
+            "dataInizio": "",
+            "note": "al bisogno",
+            "dataSospensione": "nov 2018",
+            "noteSospensione": ""
+          }
+        ],
+        "homeTherapiesFormatted": "PLACENTEX*CREMA 25G 0,08% CREMA 1 - 0 - 1 - 0 testo \nMOMENT*12CPR RIV 200MG COMPRESSE RIVESTITE 0 - 1 - 0 - 1\nFARMACO NON PRESENTE  0 - 0 - 0 - 0 prova testo farmaco non presente \nDIBASE*IM OS 2F 1ML 300000UI/M SOLUZIONE INIETTABILE Al bisogno ogni tanto \nEFFERALGAN*16CPR EFF 1000MG COMPRESSE EFFERVESCENTI 0 - 0 - 0 - 0 da assumere al bisogno con molta acqua \nPLASIL*24CPR 10MG COMPRESSE 0 - 0 - 0 - 0 al bisogno \n",
+        "anamnesisSummary": [{
+            "dataInserimento": "22/11/2018",
+            "utenteInserimento": "FRANZISKA EBNER",
+            "tipologia": "",
+            "descrizione": "la paziente ha sintomi di depressione -- modificato"
+          },
+          {
+            "dataInserimento": "22/11/2018",
+            "utenteInserimento": "FRANZISKA EBNER",
+            "tipologia": "",
+            "descrizione": "la paziente ha un serpente in casa --- un boa"
+          }
+        ],
+        "anamnesisSummaryFormatted": "Anamnesi familiare e sociale\n\n22/11/2018 - la paziente ha sintomi di depressione -- modificato\n22/11/2018 - la paziente ha un serpente in casa --- un boa\n\n\n",
+        "language": "de_DE"
+      },
+      "orders": [{
+        "orderEventExamId": "1799",
+        "startDate": "27/11/2018",
+        "endDate": "",
+        "seenDate": "",
+        "doctor": null,
+        "reportingDoctor": {
+          "id": 1315,
+          "version": 0,
+          "className": "it.gpi.his.commons.dtos.catalogs.DoctorDto",
+          "code": "543435",
+          "description": "FRANCESCO MICELI",
+          "language": null,
+          "roleTypes": null,
+          "valid": true,
+          "codeLang1": "de_DE",
+          "descriptionLang1": "FRANCESCO MICELI",
+          "descriptions": null,
+          "title": "Dott.",
+          "role": "DOCTOR",
+          "categories": [],
+          "taxCode": "MCLFNC56C19A494U",
+          "pinCode": null,
+          "firstName": null,
+          "lastName": null
+        },
+        "sovpSummary": "<b>Diagnosi riferita alla visita</b>\n<br/>* MODIFICA TOTALE\n<br/>\n<br/><b>Anamnesi familiare e sociale</b>\n<br/>22/11/2018 la paziente ha sintomi di depressione -- modificato\n<br/>\n<br/><b>Esami effettuati</b>\n<br/>* Supporto telefonico\n<br/>\n<br/>",
+        "totalAmount": "0.0",
+        "additionalPrescriptions": "",
+        "counter": "O2018001773",
+        "externalIdentifier": "",
+        "servicePoint": "IST Chirurgia Generale OSP BZ",
+        "servicePointCode": "3180",
+        "servicePointMedicalSpecializationCode": "BZ_CHGEN",
+        "servicePointMedicalSpecializationDescription": "Chirurgia Generale",
+        "organizationUnit": "BZH Chirurgia Generale",
+        "organizationUnitCode": "300059",
+        "organizationUnitAddress": " ",
+        "organizationUnitZipCode": null,
+        "organizationUnitMunicipality": "",
+        "organizationUnitCountry": "",
+        "servicePointCustomParameters": {
+
+        },
+        "organizationUnitCustomParameters": {
+
+        },
+        "problemEvents": [],
+        "subjectiveNote": null,
+        "objectiveNote": null,
+        "clinicalQuestion": "",
+        "transportationMode": "",
+        "note": "",
+        "priorityCode": "10",
+        "priorityDescription": "D-Differibile",
+        "diagnoseCode": null,
+        "diagnoseDescription": null,
+        "exams": [{
+          "exam": {
+            "id": 3853,
+            "version": 2,
+            "className": "it.gpi.his.commons.dtos.catalogs.ExamDto",
+            "code": "SUPP_TELEFONICO",
+            "description": "Supporto telefonico",
+            "language": null,
+            "roleTypes": null,
+            "valid": true,
+            "codeLang1": "de_DE",
+            "descriptionLang1": "Supporto telefonico",
+            "descriptions": null,
+            "type": "PROBLEM_ORIENTED",
+            "examMedicalSpecializationCode": null,
+            "preparationTime": 0,
+            "durationTime": 5,
+            "releaseTime": 0,
+            "examInitDetection": null,
+            "needAmbiguous": false,
+            "needSerologicalEquivalent": false,
+            "prescriptionStepEnabled": false,
+            "context": null,
+            "cyclicalEnabled": false,
+            "notes": null
+          },
+          "medicalSpecialization": "",
+          "examsDescription": "Supporto telefonico",
+          "doctorName": "FRANCESCO MICELI",
+          "price": null,
+          "quantity": null,
+          "note": null
+        }],
+        "surgicalOperation": {
+          "id": 1384,
+          "uniqueIdentifier": null,
+          "roomEntranceDate": null,
+          "roomExitDate": null,
+          "anesthesiaStartDate": null,
+          "anesthesiaEndDate": null,
+          "procedureStartDate": null,
+          "procedureEndDate": null,
+          "painStartDate": null,
+          "guideWireStartDate": null,
+          "resultsReport": null,
+          "members": []
+        }
+      }],
+      "folder": {
+        "counter": "F2018001309",
+        "openDate": "27/11/2018 17:32:21",
+        "closeDate": "",
+        "notes": "",
+        "closureNotes": "",
+        "referringDoctor": "",
+        "vitalSignsDetections": []
+      }
+    },
+    "formData": {
+      "EcocolorDopplerVasiCollo": {
+        "QuesitoClinico": "Fibrillazione atriale",
+        "dx": {
+          "tuttoRegolareDx": false,
+          "artCarotideEsterna": {
+            "stato": "Regolare",
+            "osservazioni": null
+          },
+          "artCarotideInterna": {
+            "stato": "Non indagato",
+            "osservazioni": null
+          },
+          "artCarotideComune": {
+            "stato": "Regolare",
+            "osservazioni": null
+          },
+          "artVertebrale": {
+            "stato": "Irregolare",
+            "osservazioni": null
+          }
+        },
+        "sx": {
+          "tuttoRegolareSx": false,
+          "artCarotideEsterna": {
+            "stato": "Non indagato",
+            "osservazioni": null
+          },
+          "artCarotideInterna": {
+            "stato": "Irregolare",
+            "osservazioni": null
+          },
+          "artCarotideComune": {
+            "stato": "Regolare",
+            "osservazioni": null
+          },
+          "artVertebrale": {
+            "stato": "Non indagato",
+            "osservazioni": null
+          }
+        },
+        "Altro": "Necessario ulteriore controllo per approfondire i problemi incontrati. Nel complesso la salute della paziente è buona."
+      }
+    },
+    "summaryFieldsData": null,
+    "conceptFieldsData": null,
+    "metaData": null
+  },
+  "version": 1,
+  "status": "NEW",
+  "patient": {
+    "insertUserId": null,
+    "insertUser": null,
+    "insertTimeUTC": null,
+    "insertTime": null,
+    "updateUserId": null,
+    "updateUser": null,
+    "updateTimeUTC": null,
+    "updateTime": null,
+    "organizationId": null,
+    "valid": true,
+    "cancellationTime": null,
+    "cancellationUser": null,
+    "cancellationUserId": null,
+    "cancellationTimeUTC": null,
+    "firstName": "GINA",
+    "lastName": "ALESSANDRINI",
+    "sex": "F",
+    "birthDate": "1932-07-24T11:00:00.000+0000",
+    "uniqueIdentifier": "627",
+    "phone": "079846465",
+    "mobilePhone": "333-56789",
+    "email": "ginaginettagmail.com",
+    "language": "de_DE",
+    "deathDate": null,
+    "isDead": false,
+    "patientId": "92",
+    "accountNumber": "LSSGNI32L64L033O",
+    "birthPlace": "Taio",
+    "citizenship": "ITALIA"
+  },
+  "dischargeDate": "",
+  "transferDate": null,
+  "transferLocation": null
+}]

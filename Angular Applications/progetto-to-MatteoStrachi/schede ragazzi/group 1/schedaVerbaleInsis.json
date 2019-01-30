@@ -1,0 +1,69 @@
+[{
+  "id": null,
+  "insertUserId": 4,
+  "insertUser": "Katie Wilson",
+  "insertTimeUTC": 1537344243455,
+  "insertTime": 1537344243455,
+  "updateUserId": 15,
+  "updateUser": "Config FM3",
+  "updateTimeUTC": 1539260364297,
+  "updateTime": 1539260364297,
+  "organizationId": 2,
+  "valid": true,
+  "cancellationTime": null,
+  "cancellationUser": null,
+  "cancellationUserId": null,
+  "cancellationTimeUTC": null,
+  "name": "Verbale NSIS",
+  "code": "schedaVerbaleInsis",
+  "html": "<div class=\"panel-body\" ng-click=\"selectRadio();\">\n\n  <div class=\"row\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\">\n          Informazioni Generali\n        </div>\n        <div class=\"panel-body\">\n          <div class=\"form-horizontal\">\n            <div class=\"col-xs-12 col-sm-12 col-md-12\">\n              <div class=\"form-group\">\n\n                <label class=\"col-sm-12 col-sm-12 col-lg-12\">Commento</label>\n                <div class=\"col-sm-12 col-sm-12 col-lg-12\">\n                  <textarea ng-model=\"formData.commento\" class=\"form-control\" type=\"text\" rows=\"4\"></textarea>\n                  <input class=\"form-control\" summary=\"INSISCommento\" ng-model=\"formData.commento\" ng-show=\"false\" type=\"text\">\n                </div>\n              </div>\n              <div class=\"form-group\">\n                <label class=\"col-xs-12 col-sm-4 col-lg-2\">Tipo valutazione</label>\n                <div class=\"col-xs-12 col-sm-8 col-lg-10\">\n                  <label class=\"ui-radio\" ng-click=\"formData.tipoValutazione={code:'op1a',score:1}\"><input type=\"radio\" value=\"op1a\" ng-model=\"formData.tipoValutazione.code\"><span>Ammissione</span></label>\n                  <label class=\"ui-radio\" ng-click=\"formData.tipoValutazione={code:'op1b',score:3}\"><input type=\"radio\" value=\"op1b\" ng-model=\"formData.tipoValutazione.code\"><span>Straordinaria</span></label>\n                  <label class=\"ui-radio\" ng-click=\"formData.tipoValutazione={code:'op1c',score:2}\"><input type=\"radio\" value=\"op1c\" ng-model=\"formData.tipoValutazione.code\"><span>Periodica</span></label>\n                  <input class=\"form-control\" summary=\"INSISTipoValutazione\" ng-model=\"formData.tipoValutazione.score\" ng-show=\"false\" type=\"text\">\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n     <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\">\n          AREA TRATTAMENTI SPECIALISTICI\n        </div>\n        <div class=\"panel-body\">\n          <div class=\"form-group\">\n            <label class=\"col-xs-12 col-sm-4 col-lg-2\">Respiratorie / Ventilazione assistita</label>\n            <div class=\"col-xs-12 col-sm-8 col-lg-10\">\n              <label class=\"ui-radio\" ng-click=\"formData.ventilazione={code:'op2a',score:1}\"><input type=\"radio\" value=\"op2a\" ng-model=\"formData.ventilazione.code\"><span>SI</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.ventilazione={code:'op2b',score:0}\"><input type=\"radio\" value=\"op2b\" ng-model=\"formData.ventilazione.code\"><span>NO</span></label>\n              <input class=\"form-control\" summary=\"INSISVentilazione\" ng-model=\"formData.ventilazione.score\" ng-show=\"false\" type=\"text\">\n            </div>\n          </div>\n          <div class=\"form-group\">\n           <label class=\"col-xs-12 col-sm-4 col-lg-2\">Dialisi</label>\n            <div class=\"col-xs-12 col-sm-8 col-lg-10\">\n              <label class=\"ui-radio\" ng-click=\"formData.dialesi={code:'op3a',score:1}\"><input type=\"radio\" value=\"op3a\" ng-model=\"formData.dialesi.code\"><span>SI</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.dialesi={code:'op3b',score:0}\"><input type=\"radio\" value=\"op3b\" ng-model=\"formData.dialesi.code\"><span>NO</span></label>\n              <input class=\"form-control\" summary=\"INSISDialesi\" ng-model=\"formData.dialesi.score\" ng-show=\"false\" type=\"text\">\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\t </div>\n    <div class=\"row\">\n\t<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\">\n          AREA SOCIALE\n        </div>\n        <div class=\"panel-body\">\n          <div class=\"form-group\">\n            <label class=\"col-xs-12 col-sm-4 col-lg-2\">Area sociale</label>\n            <div class=\"col-xs-12 col-sm-8 col-lg-10\">\n              <label class=\"ui-radio\" ng-click=\"formData.areaSociale={code:'op4a',score:1}\"><input type=\"radio\" value=\"op4a\" ng-model=\"formData.areaSociale.code\"><span>Presenza</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.areaSociale={code:'op4b',score:2}\"><input type=\"radio\" value=\"op4b\" ng-model=\"formData.areaSociale.code\"><span>Parziale e/o temporanea</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.areaSociale={code:'op4c',score:3}\"><input type=\"radio\" value=\"op4c\" ng-model=\"formData.areaSociale.code\"><span>Assenza</span></label>\n              <input class=\"form-control\" summary=\"INSISAreaSociale\" ng-model=\"formData.areaSociale.score\" ng-show=\"false\" type=\"text\">\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\">\n          AREA FINANZIARIA\n        </div>\n        <div class=\"panel-body\">\n          <div class=\"form-group\">\n            <label class=\"col-xs-12 col-sm-4 col-lg-2\">Area finanziaria</label>\n            <div class=\"col-xs-12 col-sm-8 col-lg-10\">\n              <label class=\"ui-radio\" ng-click=\"formData.areaFinanziaria={code:'op5a',score:1}\"><input type=\"radio\" value=\"op5a\" ng-model=\"formData.areaFinanziaria.code\"><span>Autonomo finanziariamente</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.areaFinanziaria={code:'op5b',score:2}\"><input type=\"radio\" value=\"op5b\" ng-model=\"formData.areaFinanziaria.code\"><span>A carico totale o parziale dei familiari</span></label>\n              <label class=\"ui-radio\" ng-click=\"formData.areaFinanziaria={code:'op5c',score:3}\"><input type=\"radio\" value=\"op5c\" ng-model=\"formData.areaFinanziaria.code\"><span>A carico totale o parziale del comune</span></label>\n              <input class=\"form-control\" summary=\"INSISAreaFinanziaria\" ng-model=\"formData.areaFinanziaria.score\" ng-show=\"false\" type=\"text\">\n            </div>\n          </div>\n\n        </div>\n      </div>\n    </div>\n    \t </div>\n    <div class=\"row\">\n\t<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\">\n          Totali\n        </div>\n        <div class=\"panel-body\">\n          <div class=\"form-horizontal\">\n            <div class=\"col-sm-12 col-md-12\">\n              <div class=\"form-group\">\n\n                <label class=\"col-xs-12 col-sm-3 col-lg-2\" style=\"padding-top: 5px\">Punteggio</label>\n                <div class=\"col-xs-5 col-md-3 col-lg-2\">\n                  <input class=\"form-control\" concept=\"scoreINSISTotal\" summary ng-model=\"formData.scoreTotale\" type=\"text\" readonly>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n</div>\n",
+  "javascript": " var calcoloTotalePunteggio = function () {\n        var somma = null;\n        if (formData.tipoValutazione != undefined && formData.tipoValutazione.score > 0)\n            somma += formData.tipoValutazione.score;\n        if (formData.ventilazione != undefined && formData.ventilazione.score > 0)\n            somma += formData.ventilazione.score;\n        if (formData.dialesi != undefined && formData.dialesi.score > 0)\n            somma += formData.dialesi.score;\n        if (formData.areaSociale != undefined && formData.areaSociale.score > 0)\n            somma += formData.areaSociale.score;\n        if (formData.areaFinanziaria != undefined && formData.areaFinanziaria.score > 0)\n            somma += formData.areaFinanziaria.score;\n        formData.scoreTotale = somma;\n    };\n\n    registerFunction(\"calcoloTotalePunteggio\", calcoloTotalePunteggio);\n\n    var selectRadio = function (event) {\n        calcoloTotalePunteggio();\n    };\n    registerFunction(\"selectRadio\", selectRadio);",
+  "css": null,
+  "version": 1,
+  "status": "DRAFT",
+  "bundleValues": {
+    "it_IT": {
+      "INSISTipoValutazione": "",
+      "INSISVentilazione": "",
+      "INSISAreaSociale": "",
+      "INSISDialesi": "",
+      "INSISAreaFinanziaria": "",
+      "INSISCommento": ""
+    },
+    "en_GB": {
+      "INSISTipoValutazione": "",
+      "INSISVentilazione": "",
+      "INSISAreaSociale": "",
+      "INSISDialesi": "",
+      "INSISAreaFinanziaria": "",
+      "INSISCommento": ""
+    },
+    "es_ES": {
+      "INSISTipoValutazione": "",
+      "INSISVentilazione": "",
+      "INSISAreaSociale": "",
+      "INSISDialesi": "",
+      "INSISAreaFinanziaria": "",
+      "INSISCommento": ""
+    },
+    "de_DE": {
+      "INSISTipoValutazione": "",
+      "INSISVentilazione": "",
+      "INSISAreaSociale": "",
+      "INSISDialesi": "",
+      "INSISAreaFinanziaria": "",
+      "INSISCommento": ""
+    }
+  },
+  "templateFileName": null,
+  "templateApplications": null,
+  "repositoryEnabled": null,
+  "signatureEnabled": null,
+  "signatureNotMandatory": null,
+  "sendTxtEnabled": null,
+  "sendPrivacyEnabled": null,
+  "cda2Enabled": null,
+  "cda2Xlts": null,
+  "cancellableEnabled": null,
+  "saveAsDraftWhenInvalid": null
+}]

@@ -1,0 +1,179 @@
+<div class="panel panel-primary">
+  <div class="panel-body" ng-click="selectRadio();">
+    <div class="row">
+      <div class="col-sm-4 col-md-12">
+        <div class="form-group">
+          <label class="col-sm-12">Commento</label>
+          <div class="col-sm-12">
+            <textarea class="form-control" type="text" rows="5" ng-model="formData.commento"> </textarea>
+            <input class="form-control" type="text" summary="ICPCCommento" ng-model="formData.commento" ng-show="false">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-12">
+        <div class="form-group">
+          <label class="col-sm-3">Categoria prima patologia*</label>
+          <div class="col-sm-9">
+            <select class="form-control" ng-model="formData.primapatologia" ng-change="formData.ICPCPat1 = undefined;" ng-required="true">
+              <option value="MALATTIE GENERALI">MALATTIE GENERALI</option>
+              <option value="SANGUE / LNFATICI / MILZA">SANGUE / LNFATICI / MILZA</option>
+              <option value="SISTEMA DIGERENTE">SISTEMA DIGERENTE</option>
+              <option value="OCCHIO">OCCHIO</option>
+              <option value="ORECCHIO">ORECCHIO</option>
+              <option value="SISTEMA CARDIOCIRCOLATORIO">SISTEMA CARDIOCIRCOLATORIO</option>
+              <option value="SISTEMA MUSCOLOSCHELETRICO">SISTEMA MUSCOLOSCHELETRICO</option>
+              <option value="SISTEMA NERVOSO">SISTEMA NERVOSO</option>
+              <option value="DISTURBI MENTALI / PSICOLOGICI">DISTURBI MENTALI / PSICOLOGICI</option>
+              <option value="SISTEMA RESPIRATORIO">SISTEMA RESPIRATORIO</option>
+              <option value="CUTE E ANNESSI">CUTE E ANNESSI</option>
+              <option value="SISTEMA ENDOCRINO METABOLICO E NUTRIZIONE">SISTEMA ENDOCRINO METABOLICO E NUTRIZIONE</option>
+              <option value="SISTEMA URINARIO">SISTEMA URINARIO</option>
+              <option value="SISTEMA GENITALE FEMMINILE">SISTEMA GENITALE FEMMINILE</option>
+              <option value="SISTEMA GENITALE MASCHILE">SISTEMA GENITALE MASCHILE</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-12">
+        <div class="form-group">
+          <label class="col-sm-3">Codice ICPC prima patologia*</label>
+          <div class="col-sm-9">
+            <select class="form-control" ng-model="formData.ICPCPat1" ng-required="true">
+              <option ng-repeat="option in viewData.basic_menu[formData.primapatologia]" value="{{option.code}}">{{option.code}} - {{option.testo}}</option>
+            </select>
+            <input type="text" ng-model="formData.ICPCPat1" summary="ICPCPat1" style="display: none;">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-12">
+        <div class="form-group">
+          <label class="col-sm-3">Gravità prima patologia*</label>
+          <div class="col-sm-9">
+            <div ng-class="[{'g-color':formData.gravitaPrimaPatologia.code},{'r-color':!formData.gravitaPrimaPatologia.code}]">
+              <label class="ui-radio" ng-click="formData.gravitaPrimaPatologia={code:'op1a', value:'Non presente', score:0}"><input type="radio" ng-required="true" value="op1a" ng-model="formData.gravitaPrimaPatologia.code"><span>Non presente</span></label>
+              <label class="ui-radio" ng-click="formData.gravitaPrimaPatologia={code:'op1b', value:'Lieve', score:1}"><input type="radio" ng-required="true" value="op1b" ng-model="formData.gravitaPrimaPatologia.code"><span>Lieve</span></label>
+              <label class="ui-radio" ng-click="formData.gravitaPrimaPatologia={code:'op1c', value:'Moderata', score:2}"><input type="radio" ng-required="true" value="op1c" ng-model="formData.gravitaPrimaPatologia.code"><span>Moderata</span></label>
+              <label class="ui-radio" ng-click="formData.gravitaPrimaPatologia={code:'op1d', value:'Grave', score:3}"><input type="radio" ng-required="true" value="op1d" ng-model="formData.gravitaPrimaPatologia.code"><span>Grave</span></label>
+              <label class="ui-radio" ng-click="formData.gravitaPrimaPatologia={code:'op1e', value:'Molto Grave', score:4}"><input type="radio" ng-required="true" value="op1e" ng-model="formData.gravitaPrimaPatologia.code"><span>Molto Grave</span></label>
+              <input class="form-control" type="text" summary="ICPCGravPat1" ng-model="formData.gravitaPrimaPatologia.score" ng-show="false">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 col-md-12">
+        <div class="form-group">
+          <label class="col-sm-3">Categoria seconda patologia*</label>
+          <div class="col-sm-9">
+            <select class="form-control" ng-model="formData.secondapatologia" ng-change="formData.ICPCPat2 = undefined;">
+              <option value="MALATTIE GENERALI">MALATTIE GENERALI</option>
+              <option value="SANGUE / LNFATICI / MILZA">SANGUE / LNFATICI / MILZA</option>
+              <option value="SISTEMA DIGERENTE">SISTEMA DIGERENTE</option>
+              <option value="OCCHIO">OCCHIO</option>
+              <option value="ORECCHIO">ORECCHIO</option>
+              <option value="SISTEMA CARDIOCIRCOLATORIO">SISTEMA CARDIOCIRCOLATORIO</option>
+              <option value="SISTEMA MUSCOLOSCHELETRICO">SISTEMA MUSCOLOSCHELETRICO</option>
+              <option value="SISTEMA NERVOSO">SISTEMA NERVOSO</option>
+              <option value="DISTURBI MENTALI / PSICOLOGICI">DISTURBI MENTALI / PSICOLOGICI</option>
+              <option value="SISTEMA RESPIRATORIO">SISTEMA RESPIRATORIO</option>
+              <option value="CUTE E ANNESSI">CUTE E ANNESSI</option>
+              <option value="SISTEMA ENDOCRINO METABOLICO E NUTRIZIONE">SISTEMA ENDOCRINO METABOLICO E NUTRIZIONE</option>
+              <option value="SISTEMA URINARIO">SISTEMA URINARIO</option>
+              <option value="SISTEMA GENITALE FEMMINILE">SISTEMA GENITALE FEMMINILE</option>
+              <option value="SISTEMA GENITALE MASCHILE">SISTEMA GENITALE MASCHILE</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-12">
+        <div class="form-group">
+          <label class="col-sm-3">Codice ICPC seconda patologia</label>
+          <div class="col-sm-9">
+            <select class="form-control" ng-model="formData.ICPCPat2">
+              <option ng-repeat="option in viewData.basic_menu[formData.secondapatologia]" value="{{option.code}}">{{option.code}} - {{option.testo}}</option>
+            </select>
+            <input type="text" ng-model="formData.ICPCPat2" summary="ICPCPat2" style="display: none;">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-12">
+        <div class="form-group">
+          <label class="col-sm-3">Gravità seconda patologia</label>
+          <div class="col-sm-9">
+            <div class="form-inline">
+              <label class="ui-radio" ng-click="formData.gravitaSecondaPatologia={code:'op2a', value:'Non presente', score:0}"><input type="radio" value="op2a" ng-model="formData.gravitaSecondaPatologia.code"><span>Non presente</span></label>
+              <label class="ui-radio" ng-click="formData.gravitaSecondaPatologia={code:'op2b', value:'Lieve', score:1}"><input type="radio" value="op2b" ng-model="formData.gravitaSecondaPatologia.code"><span>Lieve</span></label>
+              <label class="ui-radio" ng-click="formData.gravitaSecondaPatologia={code:'op2c', value:'Moderata', score:2}"><input type="radio" value="op2c" ng-model="formData.gravitaSecondaPatologia.code"><span>Moderata</span></label>
+              <label class="ui-radio" ng-click="formData.gravitaSecondaPatologia={code:'op2d', value:'Grave', score:3}"><input type="radio" value="op2d" ng-model="formData.gravitaSecondaPatologia.code"><span>Grave</span></label>
+              <label class="ui-radio" ng-click="formData.gravitaSecondaPatologia={code:'op2e', value:'Molto Grave', score:4}"><input type="radio" value="op2e" ng-model="formData.gravitaSecondaPatologia.code"><span>Molto Grave</span></label>
+              <input class="form-control" type="text" summary="ICPCGravPat2" ng-model="formData.gravitaSecondaPatologia.score" ng-show="false">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 col-md-12">
+        <div class="form-group">
+          <label class="col-sm-3">Categoria terza patologia*</label>
+          <div class="col-sm-9">
+            <select class="form-control" ng-model="formData.terzapatologia" ng-change="formData.ICPCPat3 = undefined;">
+              <option value="MALATTIE GENERALI">MALATTIE GENERALI</option>
+              <option value="SANGUE / LNFATICI / MILZA">SANGUE / LNFATICI / MILZA</option>
+              <option value="SISTEMA DIGERENTE">SISTEMA DIGERENTE</option>
+              <option value="OCCHIO">OCCHIO</option>
+              <option value="ORECCHIO">ORECCHIO</option>
+              <option value="SISTEMA CARDIOCIRCOLATORIO">SISTEMA CARDIOCIRCOLATORIO</option>
+              <option value="SISTEMA MUSCOLOSCHELETRICO">SISTEMA MUSCOLOSCHELETRICO</option>
+              <option value="SISTEMA NERVOSO">SISTEMA NERVOSO</option>
+              <option value="DISTURBI MENTALI / PSICOLOGICI">DISTURBI MENTALI / PSICOLOGICI</option>
+              <option value="SISTEMA RESPIRATORIO">SISTEMA RESPIRATORIO</option>
+              <option value="CUTE E ANNESSI">CUTE E ANNESSI</option>
+              <option value="SISTEMA ENDOCRINO METABOLICO E NUTRIZIONE">SISTEMA ENDOCRINO METABOLICO E NUTRIZIONE</option>
+              <option value="SISTEMA URINARIO">SISTEMA URINARIO</option>
+              <option value="SISTEMA GENITALE FEMMINILE">SISTEMA GENITALE FEMMINILE</option>
+              <option value="SISTEMA GENITALE MASCHILE">SISTEMA GENITALE MASCHILE</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-12">
+        <div class="form-group">
+          <label class="col-sm-3">Codice ICPC terza patologia</label>
+          <div class="col-sm-9">
+            <select class="form-control" ng-model="formData.ICPCPat3">
+              <option ng-repeat="option in viewData.basic_menu[formData.terzapatologia]" value="{{option.code}}">{{option.code}} - {{option.testo}}</option>
+            </select>
+            <input type="text" ng-model="formData.ICPCPat3" summary="ICPCPat3" style="display: none;">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-12">
+        <div class="form-group">
+          <label class="col-sm-3">Gravità terza patologia</label>
+          <div class="col-sm-9">
+            <div class="form-inline">
+              <label class="ui-radio" ng-click="formData.gravitaTerzaPatologia={code:'op3a', value:'Non presente', score:0}"><input type="radio" value="op3a" ng-model="formData.gravitaTerzaPatologia.code"><span>Non presente</span></label>
+              <label class="ui-radio" ng-click="formData.gravitaTerzaPatologia={code:'op3b', value:'Lieve', score:1}"><input type="radio" value="op3b" ng-model="formData.gravitaTerzaPatologia.code"><span>Lieve</span></label>
+              <label class="ui-radio" ng-click="formData.gravitaTerzaPatologia={code:'op3c', value:'Moderata', score:2}"><input type="radio" value="op3c" ng-model="formData.gravitaTerzaPatologia.code"><span>Moderata</span></label>
+              <label class="ui-radio" ng-click="formData.gravitaTerzaPatologia={code:'op3d', value:'Grave', score:3}"><input type="radio" value="op3d" ng-model="formData.gravitaTerzaPatologia.code"><span>Grave</span></label>
+              <label class="ui-radio" ng-click="formData.gravitaTerzaPatologia={code:'op3e', value:'Molto Grave', score:4}"><input type="radio" value="op3e" ng-model="formData.gravitaTerzaPatologia.code"><span>Molto Grave</span></label>
+              <input class="form-control" type="text" summary="ICPCGravPat3" ng-model="formData.gravitaTerzaPatologia.score" ng-show="false">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12">
+        <div class="form-group">
+          <label class="col-sm-6 col-md-3">Punteggio Totale</label>
+          <div class="col-sm-6 col-md-2">
+            <input class="form-control" type="number" summary concept="scoreICPCTotal" ng-model="formData.scoreTotale" readonly>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

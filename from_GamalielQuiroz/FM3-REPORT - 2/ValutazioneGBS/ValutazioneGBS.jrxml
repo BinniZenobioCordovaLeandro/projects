@@ -1,0 +1,1575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final utlizzo versione della libreria JasperReports5.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ValutazioneGBS" pageWidth="595" pageHeight="842" columnWidth="567" leftMargin="14" rightMargin="14" topMargin="21" bottomMargin="21" uuid="e3ba40d0-e7e2-4766-b339-60c9733e6b43">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="GBS"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="510"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="476"/>
+	<subDataset name="Operatori" uuid="7265e965-9a1a-4866-ac13-e912b1758530">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FM3_new_report_json\data\DataAdapterMiniMental.xml"/>
+		<queryString language="json">
+			<![CDATA[]]>
+		</queryString>
+		<field name="name" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="name"/>
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="figuraProfessionale" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="figuraProfessionale"/>
+			<fieldDescription><![CDATA[figuraProfessionale]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Firme" uuid="e1436784-bb8d-4b61-bc5c-6c588bda6172">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="cnx_miniMentalShort"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="391"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="595"/>
+		<queryString language="json">
+			<![CDATA[printAddInfoJson.signatures]]>
+		</queryString>
+		<field name="name" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="name"/>
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="data" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="data"/>
+			<fieldDescription><![CDATA[data]]></fieldDescription>
+		</field>
+		<field name="url" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="url"/>
+			<fieldDescription><![CDATA[url]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="dstPrueva" uuid="8c18aa60-f825-4164-8fd2-07a499d8185c">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="cnx_miniMentalShort"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="343"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="643"/>
+		<queryString language="json">
+			<![CDATA[formInstanceValue.formDocument.initData.patient]]>
+		</queryString>
+		<field name="patientId" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="patientId"/>
+			<fieldDescription><![CDATA[patientId]]></fieldDescription>
+		</field>
+		<field name="firstName" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="firstName"/>
+			<fieldDescription><![CDATA[firstName]]></fieldDescription>
+		</field>
+		<field name="lastName" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lastName"/>
+			<fieldDescription><![CDATA[lastName]]></fieldDescription>
+		</field>
+		<field name="sex" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="sex"/>
+			<fieldDescription><![CDATA[sex]]></fieldDescription>
+		</field>
+		<field name="birthDate" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="birthDate"/>
+			<fieldDescription><![CDATA[birthDate]]></fieldDescription>
+		</field>
+		<field name="uniqueIdentifier" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="uniqueIdentifier"/>
+			<fieldDescription><![CDATA[uniqueIdentifier]]></fieldDescription>
+		</field>
+		<field name="phone" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="phone"/>
+			<fieldDescription><![CDATA[phone]]></fieldDescription>
+		</field>
+		<field name="mobilePhone" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="mobilePhone"/>
+			<fieldDescription><![CDATA[mobilePhone]]></fieldDescription>
+		</field>
+		<field name="email" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="email"/>
+			<fieldDescription><![CDATA[email]]></fieldDescription>
+		</field>
+		<field name="language" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="language"/>
+			<fieldDescription><![CDATA[language]]></fieldDescription>
+		</field>
+		<field name="deathDate" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="deathDate"/>
+			<fieldDescription><![CDATA[deathDate]]></fieldDescription>
+		</field>
+		<field name="isDead" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="isDead"/>
+			<fieldDescription><![CDATA[isDead]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Patient" uuid="cdf6d075-c569-4c6f-8263-5ab900b7c71f">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CDS"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="465"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="521"/>
+		<queryString language="json">
+			<![CDATA[]]>
+		</queryString>
+		<field name="patientId" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.patientId]]></fieldDescription>
+		</field>
+		<field name="firstName" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.firstName]]></fieldDescription>
+		</field>
+		<field name="lastName" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.lastName]]></fieldDescription>
+		</field>
+		<field name="sex" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.sex]]></fieldDescription>
+		</field>
+		<field name="birthDate" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.birthDate]]></fieldDescription>
+		</field>
+		<field name="uniqueIdentifier" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.uniqueIdentifier]]></fieldDescription>
+		</field>
+		<field name="phone" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.phone]]></fieldDescription>
+		</field>
+		<field name="mobilePhone" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.mobilePhone]]></fieldDescription>
+		</field>
+		<field name="email" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.email]]></fieldDescription>
+		</field>
+		<field name="language" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.language]]></fieldDescription>
+		</field>
+		<field name="deathDate" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.deathDate]]></fieldDescription>
+		</field>
+		<field name="isDead" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.isDead]]></fieldDescription>
+		</field>
+		<field name="tesseraSanitaria" class="java.lang.String">
+			<fieldDescription><![CDATA[printAddInfoJson.patient.tesseraSanitaria]]></fieldDescription>
+		</field>
+		<field name="dataValutazione" class="java.lang.String">
+			<fieldDescription><![CDATA[printAddInfoJson.dataValutazione]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="includeSignatures" class="java.lang.String">
+		<fieldDescription><![CDATA[printAddInfoJson.includeSignatures]]></fieldDescription>
+	</field>
+	<field name="logo" class="java.lang.String">
+		<fieldDescription><![CDATA[printAddInfoJson.logo]]></fieldDescription>
+	</field>
+	<field name="userLogin" class="java.lang.String">
+		<fieldDescription><![CDATA[printAddInfoJson.userLogin]]></fieldDescription>
+	</field>
+	<field name="DMotorio" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FMtorie.DMotorio.value]]></fieldDescription>
+	</field>
+	<field name="DMotorioCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FMtorie.DMotorioCommento]]></fieldDescription>
+	</field>
+	<field name="IMotoria" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FMtorie.IMotoria.value]]></fieldDescription>
+	</field>
+	<field name="IMotoriaCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FMtorie.IMotoriaCommento]]></fieldDescription>
+	</field>
+	<field name="AFCompromessa" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FMtorie.AFCompromessa.value]]></fieldDescription>
+	</field>
+	<field name="AFCompromessaCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FMtorie.AFCompromessaCommento]]></fieldDescription>
+	</field>
+	<field name="DMSpontanea" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FMtorie.DMSpontanea.value]]></fieldDescription>
+	</field>
+	<field name="DMSpontaneaCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FMtorie.DMSpontaneaCommento]]></fieldDescription>
+	</field>
+	<field name="DMPersonale" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FMtorie.DMPersonale.value]]></fieldDescription>
+	</field>
+	<field name="DMPersonaleCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FMtorie.DMPersonaleCommento]]></fieldDescription>
+	</field>
+	<field name="CVIntestino" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FMtorie.CVIntestino.value]]></fieldDescription>
+	</field>
+	<field name="CVIntestinoCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FMtorie.CVIntestinoCommento]]></fieldDescription>
+	</field>
+	<field name="scoreGBSfMtorie" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.scoreGBSfMtorie]]></fieldDescription>
+	</field>
+	<field name="COSpaziale" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.COSpaziale.value]]></fieldDescription>
+	</field>
+	<field name="COSpazialeCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.COSpazialeCommento]]></fieldDescription>
+	</field>
+	<field name="COTemporale" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.COTemporale.value]]></fieldDescription>
+	</field>
+	<field name="COTemporaleCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.COTemporaleCommento]]></fieldDescription>
+	</field>
+	<field name="COPersonale" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.COPersonale.value]]></fieldDescription>
+	</field>
+	<field name="COPersonaleCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.COPersonaleCommento]]></fieldDescription>
+	</field>
+	<field name="CMRecente" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.CMRecente.value]]></fieldDescription>
+	</field>
+	<field name="CMRecenteCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.CMRecenteCommento]]></fieldDescription>
+	</field>
+	<field name="CMRemota" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.CMRemota.value]]></fieldDescription>
+	</field>
+	<field name="CMRemotaCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.CMRemotaCommento]]></fieldDescription>
+	</field>
+	<field name="CVigilanza" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.CVigilanza.value]]></fieldDescription>
+	</field>
+	<field name="CVigilanzaCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.CVigilanzaCommento]]></fieldDescription>
+	</field>
+	<field name="CConcentrazione" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.CConcentrazione.value]]></fieldDescription>
+	</field>
+	<field name="CConcentrazioneCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.CConcentrazioneCommento]]></fieldDescription>
+	</field>
+	<field name="IAVelocitaAzioni" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.IAVelocitaAzioni.value]]></fieldDescription>
+	</field>
+	<field name="IAVelocitaAzioniCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.IAVelocitaAzioniCommento]]></fieldDescription>
+	</field>
+	<field name="Astrazione" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.Astrazione.value]]></fieldDescription>
+	</field>
+	<field name="AstrazioneCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.AstrazioneCommento]]></fieldDescription>
+	</field>
+	<field name="AFCInutili" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.AFCInutili.value]]></fieldDescription>
+	</field>
+	<field name="AFCInutiliCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.AFCInutiliCommento]]></fieldDescription>
+	</field>
+	<field name="Distraibilita" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.Distraibilita.value]]></fieldDescription>
+	</field>
+	<field name="DistraibilitaCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.DistraibilitaCommento]]></fieldDescription>
+	</field>
+	<field name="RCRApropriate" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.RCRApropriate.value]]></fieldDescription>
+	</field>
+	<field name="RCRApropriateCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.RCRApropriateCommento]]></fieldDescription>
+	</field>
+	<field name="LEmotiva" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.LEmotiva.value]]></fieldDescription>
+	</field>
+	<field name="LEmotivaCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.LEmotivaCommento]]></fieldDescription>
+	</field>
+	<field name="RMotivazione" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.RMotivazione.value]]></fieldDescription>
+	</field>
+	<field name="RMotivazioneCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.FIntellettive.RMotivazioneCommento]]></fieldDescription>
+	</field>
+	<field name="scoreGBSfIntellettive" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.scoreGBSfIntellettive]]></fieldDescription>
+	</field>
+	<field name="Confusione" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SVCRNDemenza.Confusione.value]]></fieldDescription>
+	</field>
+	<field name="ConfusioneCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SVCRNDemenza.ConfusioneCommento]]></fieldDescription>
+	</field>
+	<field name="Irritabilita" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SVCRNDemenza.Irritabilita.value]]></fieldDescription>
+	</field>
+	<field name="IrritabilitaCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SVCRNDemenza.IrritabilitaCommento]]></fieldDescription>
+	</field>
+	<field name="Ansia" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SVCRNDemenza.Ansia.value]]></fieldDescription>
+	</field>
+	<field name="AnsiaCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SVCRNDemenza.AnsiaCommento]]></fieldDescription>
+	</field>
+	<field name="Angoscia" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SVCRNDemenza.Angoscia.value]]></fieldDescription>
+	</field>
+	<field name="AngosciaCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SVCRNDemenza.AngosciaCommento]]></fieldDescription>
+	</field>
+	<field name="DUmore" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SVCRNDemenza.DUmore.value]]></fieldDescription>
+	</field>
+	<field name="DUmoreCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SVCRNDemenza.DUmoreCommento]]></fieldDescription>
+	</field>
+	<field name="Irrequietezza" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SVCRNDemenza.Irrequietezza.value]]></fieldDescription>
+	</field>
+	<field name="IrrequietezzaCommento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.SVCRNDemenza.IrrequietezzaCommento]]></fieldDescription>
+	</field>
+	<field name="scoreGBSsVCRNDemenza" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.scoreGBSsVCRNDemenza]]></fieldDescription>
+	</field>
+	<field name="scoreGBSTotal" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.scoreGBSTotal]]></fieldDescription>
+	</field>
+	<field name="scoreGBScala" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.scoreGBScala]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="150" splitType="Stretch">
+			<image onErrorType="Icon">
+				<reportElement x="1" y="0" width="131" height="48" uuid="0b9474c1-30e2-45f8-a328-c7647b8bdf79"/>
+				<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="132" y="0" width="434" height="48" uuid="127f379b-1bf2-4cab-ab18-0699bc0ed50d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valutazione psico comportamentale del Paziente anziano (GBS)]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="0" y="60" width="567" height="90" uuid="7da14737-6631-4685-8622-e62f14b3babe">
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Patient" uuid="76754c44-6dd8-499d-a144-93a80ef88afc">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="90" width="567">
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="120" y="58" width="190" height="15" uuid="ce675e03-4b77-4245-85d2-7758a4b86238"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[($F{phone} != null ? $F{phone} : "" )]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="310" y="41" width="80" height="15" uuid="11171290-3bf7-4d07-a6bb-ac874ea02caa"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Data di Nascita]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="120" y="24" width="190" height="15" uuid="6911145e-faea-40a1-b27e-c08936dab432"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{lastName}+ " "+ $F{firstName}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="24" width="120" height="15" uuid="7e8e81a7-10e1-449e-93f9-627975e495c4"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Nome e Cognome]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="310" y="24" width="80" height="15" uuid="6399a7ff-1af3-4d02-9784-0829cb7dc572"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Codice fiscale]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="390" y="24" width="177" height="15" uuid="f7b489b7-3eb7-437f-81b9-8aa5cf71ad4c"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{uniqueIdentifier}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="58" width="120" height="15" uuid="4da4ef4d-f666-41a1-976d-f615867172f8"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Contatto telefonico]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="390" y="58" width="177" height="15" uuid="40a5d1a6-c5b1-4f02-b605-857fd54bbc9b"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{sex}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="1" width="148" height="20" uuid="f73aec28-903e-4eb2-b20d-9f27e4022989"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="10" isBold="true"/>
+							</textElement>
+							<text><![CDATA[ANAGRAFICA ASSISTITO]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="0" y="41" width="120" height="15" uuid="6e64797d-f651-463b-840e-4c3826024ef2"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Tessera Sanitaria]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="310" y="58" width="80" height="15" uuid="9df8b5d7-99ca-4510-b13b-7e286e70f182"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Sesso]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="390" y="41" width="177" height="15" uuid="9b4fbbc5-5d23-455f-8e11-4b69a6868cfa"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd").parse($F{birthDate})]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="120" y="41" width="190" height="15" uuid="13c77021-b032-433b-adc9-c1dee57133ba"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{tesseraSanitaria}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="75" width="120" height="15" uuid="846d21f7-d407-4ca8-94de-d26edb4516cf"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Data di valutazione]]></text>
+						</staticText>
+						<textField isBlankWhenNull="true">
+							<reportElement x="120" y="75" width="190" height="15" uuid="63cd7b0e-cfb9-49d3-aa4e-f29890efcb12"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyy").format( new SimpleDateFormat("dd/MM/yyy HH:mm").parse($F{dataValutazione}))]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</title>
+	<detail>
+		<band height="88">
+			<staticText>
+				<reportElement x="0" y="4" width="170" height="20" uuid="79658799-b657-4d38-95c9-f8e9948e931d"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Informazioni Generali]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="30" width="210" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="04e72f19-8486-4c4a-8a96-0007d64afd4b"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#2D4262"/>
+					<topPen lineWidth="0.5" lineColor="#2D4262"/>
+					<leftPen lineWidth="0.5" lineColor="#2D4262"/>
+					<bottomPen lineWidth="0.5" lineColor="#2D4262"/>
+					<rightPen lineWidth="0.5" lineColor="#2D4262"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Operatore]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="210" y="30" width="357" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="c8c728b7-d319-439d-b3a8-b3cd435407ac"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#2D4262"/>
+					<topPen lineWidth="0.5" lineColor="#2D4262"/>
+					<leftPen lineWidth="0.5" lineColor="#2D4262"/>
+					<bottomPen lineWidth="0.5" lineColor="#2D4262"/>
+					<rightPen lineWidth="0.5" lineColor="#2D4262"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Figura professionale]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="0" y="45" width="567" height="20" uuid="b52ce3cf-a948-4038-b053-8c7d4021ba11"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Operatori" uuid="f64d3f43-ffad-41e2-a680-39214056feeb">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("printAddInfoJson.operators")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="20" width="567">
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="210" y="0" width="357" height="20" uuid="1744ee0a-89a9-45a4-8fb5-8f8a6438fc8d"/>
+							<box topPadding="3" leftPadding="5">
+								<pen lineColor="#2D4262"/>
+								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+							</box>
+							<textFieldExpression><![CDATA[$F{figuraProfessionale}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="210" height="20" uuid="71e74567-a5f8-4e69-9de0-8c74a01bc413"/>
+							<box topPadding="3" leftPadding="5">
+								<pen lineColor="#2D4262"/>
+								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+							</box>
+							<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="190">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="1" width="567" height="20" forecolor="#FFFFFF" backcolor="#2D4262" uuid="a5fbc24c-bf8f-4294-84b8-344ea2901599"/>
+				<box leftPadding="2">
+					<pen lineColor="#2D4262"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[FUNZIONI MOTORIE
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="150" width="491" height="20" uuid="b01c60a6-41cf-4910-9f2f-beda7453a12a"/>
+				<box bottomPadding="0" rightPadding="5">
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[G.B.S. - Funzioni Motorie
+]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="492" y="150" width="73" height="20" uuid="47cfe2aa-78ac-4767-bf6a-fe084ea3844f"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{scoreGBSfMtorie}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="Float" x="0" y="41" width="567" height="20" uuid="3bfe5edd-0fdb-4a07-8c8c-409dbb069825"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="817f1a46-624d-495b-8999-dd0ad7da051a"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{IMotoria} !="" && $F{IMotoria} !=null) && ($F{IMotoriaCommento} !="" && $F{IMotoriaCommento} !=null) ? $F{IMotoria} +"\n- "+$F{IMotoriaCommento}:
+($F{IMotoria}!="" && $F{IMotoria}!=null?$F{IMotoria}:"")+($F{IMotoriaCommento}!="" && $F{IMotoriaCommento}!=null?""+$F{IMotoriaCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="e78cb2e5-3e96-4e62-acf1-f2b6df3ff3ff"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Insufficienza motoria nell'assunzione del Cibo"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="61" width="567" height="20" uuid="2f2bbe90-f8de-4a6c-8abd-cc7162a1fdd4"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="a55edc4b-9624-4012-819e-925259264f8b"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{AFCompromessa} !="" && $F{AFCompromessa} !=null) && ($F{AFCompromessaCommento} !="" && $F{AFCompromessaCommento} !=null) ? $F{AFCompromessa} +"\n- "+$F{AFCompromessaCommento}:
+($F{AFCompromessa}!="" && $F{AFCompromessa}!=null?$F{AFCompromessa}:"")+($F{AFCompromessaCommento}!="" && $F{AFCompromessaCommento}!=null?""+$F{AFCompromessaCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="5f9f0c78-845f-4da7-8c3b-a0a421cd4e38"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Attività fisica compromessa"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="81" width="567" height="20" uuid="6db45a2c-ce21-44b4-af9f-354468392bfe"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="903f233e-061b-4b86-9044-c06d0387eab1"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{DMSpontanea} !="" && $F{DMSpontanea} !=null) && ($F{DMSpontaneaCommento} !="" && $F{DMSpontaneaCommento} !=null) ? $F{DMSpontanea} +"\n- "+$F{DMSpontaneaCommento}:
+($F{DMSpontanea}!="" && $F{DMSpontanea}!=null?$F{DMSpontanea}:"")+($F{DMSpontaneaCommento}!="" && $F{DMSpontaneaCommento}!=null?""+$F{DMSpontaneaCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="83d4c9a8-6383-4881-b5fc-b8761b927580"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Deficit della motilità spontanea"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="101" width="567" height="20" uuid="8a2a6aab-e2a9-4716-b877-ed50a14a10a9"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="0d16d6cc-201d-4a86-9251-10092be07f34"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{DMPersonale} !="" && $F{DMPersonale} !=null) && ($F{DMPersonaleCommento} !="" && $F{DMPersonaleCommento} !=null) ? $F{DMPersonale} +"\n- "+$F{DMPersonaleCommento}:
+($F{DMPersonale}!="" && $F{DMPersonale}!=null?$F{DMPersonale}:"")+($F{DMPersonaleCommento}!="" && $F{DMPersonaleCommento}!=null?""+$F{DMPersonaleCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="5ed7e9bc-d370-4dcf-8429-92121698c583"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Difficoltà motoria a provvedere all'igene Personale"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="121" width="567" height="20" uuid="90ca3c3a-e449-4fc2-8f77-ac40bd507d23"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="fe3b4110-e872-407d-ad38-001d8f5f2f7b"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{CVIntestino} !="" && $F{CVIntestino} !=null) && ($F{CVIntestinoCommento} !="" && $F{CVIntestinoCommento} !=null) ? $F{CVIntestino} +"\n- "+$F{CVIntestinoCommento}:
+($F{CVIntestino}!="" && $F{CVIntestino}!=null?$F{CVIntestino}:"")+($F{CVIntestinoCommento}!="" && $F{CVIntestinoCommento}!=null?""+$F{CVIntestinoCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="c87feee6-1876-410c-ae6c-6ee158596068"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Compromesso controllo della vescica e Dell'intestino"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="21" width="567" height="20" uuid="9cbe0632-0eee-4924-912e-5e67927bed19"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="21dddffa-b09e-4934-b1cf-4e56ecb25551"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{DMotorio} !="" && $F{DMotorio} !=null) && ($F{DMotorioCommento} !="" && $F{DMotorioCommento} !=null) ? $F{DMotorio} +
+"\n- "+$F{DMotorioCommento}:($F{DMotorio}!="" && $F{DMotorio}!=null?$F{DMotorio}:"")+($F{DMotorioCommento}!="" && $F{DMotorioCommento}!=null?""+$F{DMotorioCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="dea09713-e2b9-4db3-9b73-1077fb103eb2"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Deficit motorio nello svestirsi e vestirsi"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="351">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="1" width="567" height="20" forecolor="#FFFFFF" backcolor="#2D4262" uuid="4d717200-a358-4859-9b0b-7fcf75163977"/>
+				<box leftPadding="2">
+					<pen lineColor="#2D4262"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[FUNZIONI INTELLETTIVE]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="0" y="41" width="567" height="20" uuid="91d6893a-3f35-4df1-9aba-d1e01651a6bc"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="798f07dc-6517-4d3d-8af4-a6f85f6eaa09"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{COTemporale} !="" && $F{COTemporale} !=null) && ($F{COTemporaleCommento} !="" && $F{COTemporaleCommento} !=null) ? $F{COTemporale} +
+"\n- "+$F{COTemporaleCommento}:($F{COTemporale}!="" && $F{COTemporale}!=null?$F{COTemporale}:"")+($F{COTemporaleCommento}!="" && $F{COTemporaleCommento}!=null?""+$F{COTemporaleCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="0974e47a-a17d-4f3b-988b-77bffb88b2fb"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Compromesso orientamento temporale"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="101" width="567" height="20" uuid="4813f3dc-cdf1-49e0-9187-6a3681edfa2e"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="90d711dc-8d60-4c23-84a2-c43d30e614d0"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{CMRemota} !="" && $F{CMRemota} !=null) && ($F{CMRemotaCommento} !="" && $F{CMRemotaCommento} !=null) ? $F{CMRemota} +
+"\n- "+$F{CMRemotaCommento}:($F{CMRemota}!="" && $F{CMRemota}!=null?$F{CMRemota}:"")+($F{CMRemotaCommento}!="" && $F{CMRemotaCommento}!=null?""+$F{CMRemotaCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="6bb290ce-7ca9-4a03-931f-a0ff616480e0"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Compromessa memoria remota"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="61" width="567" height="20" uuid="c18a9ef8-ae0b-45ba-b8b7-f34e87628390"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="f0cc485d-6460-4145-94b9-689c6abe773b"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{COPersonale} !="" && $F{COPersonale} !=null) && ($F{COPersonaleCommento} !="" && $F{COPersonaleCommento} !=null) ? $F{COPersonale} +
+"\n- "+$F{COPersonaleCommento}:($F{COPersonale}!="" && $F{COPersonale}!=null?$F{COPersonale}:"")+($F{COPersonaleCommento}!="" && $F{COPersonaleCommento}!=null?""+$F{COPersonaleCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="4d736d76-c772-430d-9b0f-9a70c881adaf"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Compromesso orientamento personale"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="21" width="567" height="20" uuid="2d7b884a-234a-4359-9aad-e0d5f01b7ea9"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="c817f64f-5086-4219-893f-15ecd5681ac0"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{COSpaziale} !="" && $F{COSpaziale} !=null) && ($F{COSpazialeCommento} !="" && $F{COSpazialeCommento} !=null) ? $F{COSpaziale} +
+"\n- "+$F{COSpazialeCommento}:($F{COSpaziale}!="" && $F{COSpaziale}!=null?$F{COSpaziale}:"")+($F{COSpazialeCommento}!="" && $F{COSpazialeCommento}!=null?""+$F{COSpazialeCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="7c862439-d7fe-4ede-b484-6b19b94f079e"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Compromesso orientamento spaziale"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="121" width="567" height="20" uuid="c7d58cc7-204c-43f3-8128-4fe8ec9b1cf9"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="7e405d27-7cb9-438a-8c41-c75031ac44bc"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{CVigilanza} !="" && $F{CVigilanza} !=null) && ($F{CVigilanzaCommento} !="" && $F{CVigilanzaCommento} !=null) ? $F{CVigilanza} +
+"\n- "+$F{CVigilanzaCommento}:($F{CVigilanza}!="" && $F{CVigilanza}!=null?$F{CVigilanza}:"")+($F{CVigilanzaCommento}!="" && $F{CVigilanzaCommento}!=null?""+$F{CVigilanzaCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="0b9cb713-78cf-4be3-a69d-f6b642a9c0b3"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Compromessa vigilanza"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="81" width="567" height="20" uuid="d92af821-ed92-48a1-9bce-5af4e7d37b13"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="2edd3275-33cc-4e48-823e-559183090668"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{CMRecente} !="" && $F{CMRecente} !=null) && ($F{CMRecenteCommento} !="" && $F{CMRecenteCommento} !=null) ? $F{CMRecente} +
+"\n- "+$F{CMRecenteCommento}:($F{CMRecente}!="" && $F{CMRecente}!=null?$F{CMRecente}:"")+($F{CMRecenteCommento}!="" && $F{CMRecenteCommento}!=null?""+$F{CMRecenteCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="abecb7e6-fc4d-406a-b4f4-0818fd59145f"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Compromessa memoria recente"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="492" y="313" width="73" height="20" uuid="62f02cc3-2977-40d3-9345-3b3cbc81b54b"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{scoreGBSfIntellettive}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="313" width="491" height="20" uuid="44d42d67-457f-4f64-b808-834aada30c41"/>
+				<box bottomPadding="0" rightPadding="5">
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[G.B.S. - Funzioni Intellettive
+]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="0" y="161" width="567" height="20" uuid="817d7093-d0ab-477a-b587-9d204d508177"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="cfe792e0-b2b6-447c-bcad-8440b3b7a1ae"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{IAVelocitaAzioni} !="" && $F{IAVelocitaAzioni} !=null) && ($F{IAVelocitaAzioniCommento} !="" && $F{IAVelocitaAzioniCommento} !=null) ? $F{IAVelocitaAzioni} +
+"\n- "+$F{IAVelocitaAzioniCommento}:($F{IAVelocitaAzioni}!="" && $F{IAVelocitaAzioni}!=null?$F{IAVelocitaAzioni}:"")+($F{IAVelocitaAzioniCommento}!="" && $F{IAVelocitaAzioniCommento}!=null?""+$F{IAVelocitaAzioniCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="003bca8a-afe1-4fb4-90f8-66791436c165"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Incapacità di aumentare la velocità delle Azioni"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="221" width="567" height="20" uuid="82998079-3b14-454e-85fb-6595582b30c0"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="9159467f-e17e-467e-8999-76d9533801e3"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{Distraibilita} !="" && $F{Distraibilita} !=null) && ($F{DistraibilitaCommento} !="" && $F{DistraibilitaCommento} !=null) ? $F{Distraibilita} +
+"\n- "+$F{DistraibilitaCommento}:($F{Distraibilita}!="" && $F{Distraibilita}!=null?$F{Distraibilita}:"")+($F{DistraibilitaCommento}!="" && $F{DistraibilitaCommento}!=null?""+$F{DistraibilitaCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="fbc95a6e-6810-4468-b09b-bc341af711ef"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Distraibilità"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="181" width="567" height="20" uuid="3607ea93-8025-4b20-8cd9-f8aa008fbe39"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="a7c6d94d-d9c3-42e1-94b0-a66bae3f557c"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{Astrazione} !="" && $F{Astrazione} !=null) && ($F{AstrazioneCommento} !="" && $F{AstrazioneCommento} !=null) ? $F{Astrazione} +
+"\n- "+$F{AstrazioneCommento}:($F{Astrazione}!="" && $F{Astrazione}!=null?$F{Astrazione}:"")+($F{AstrazioneCommento}!="" && $F{AstrazioneCommento}!=null?""+$F{AstrazioneCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="92793125-f3c1-4974-9fe4-84a3a9eb9507"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Astrazione"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="141" width="567" height="20" uuid="995b2562-ffbf-494f-8e2e-7ce118e1a254"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="b8a33677-bdb8-47c2-8ed0-1455150f218a"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{CConcentrazione} !="" && $F{CConcentrazione} !=null) && ($F{CConcentrazioneCommento} !="" && $F{CConcentrazioneCommento} !=null) ? $F{CConcentrazione} +
+"\n- "+$F{CConcentrazioneCommento}:($F{CConcentrazione}!="" && $F{CConcentrazione}!=null?$F{CConcentrazione}:"")+($F{CConcentrazioneCommento}!="" && $F{CConcentrazioneCommento}!=null?""+$F{CConcentrazioneCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="adc40ee4-8e20-4396-bbd2-fc2dfd3c1702"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Compromessa concentrazione"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="241" width="567" height="20" uuid="a59b5171-2a48-4643-bc20-2215f6d208ea"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="6a60bcac-112c-431f-ab8e-36587f3e6443"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{RCRApropriate} !="" && $F{RCRApropriate} !=null) && ($F{RCRApropriateCommento} !="" && $F{RCRApropriateCommento} !=null) ? $F{RCRApropriate} +
+"\n- "+$F{RCRApropriateCommento}:($F{RCRApropriate}!="" && $F{RCRApropriate}!=null?$F{RCRApropriate}:"")+($F{RCRApropriateCommento}!="" && $F{RCRApropriateCommento}!=null?""+$F{RCRApropriateCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="d1d2313f-43d3-4081-b703-4188bc07b792"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Ridotta capacità di avere relazioni emotive appropriate"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="201" width="567" height="20" uuid="ec288375-c221-434c-abd1-07c2f5bd799a"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="1a51d65e-e27a-45da-a12b-46083520673c"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{AFCInutili} !="" && $F{AFCInutili} !=null) && ($F{AFCInutiliCommento} !="" && $F{AFCInutiliCommento} !=null) ? $F{AFCInutili} +
+"\n- "+$F{AFCInutiliCommento}:($F{AFCInutili}!="" && $F{AFCInutili}!=null?$F{AFCInutili}:"")+($F{AFCInutiliCommento}!="" && $F{AFCInutiliCommento}!=null?""+$F{AFCInutiliCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="72c034c6-8bce-4cf9-b8a8-808f06ec0ffc"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Aumentata frequenza di circonlocuzioni inutili"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="261" width="567" height="20" uuid="5d53dbf4-4dfc-48b5-aacf-aae7da08021b"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="fecfd190-7326-4427-960f-fe36696336f3"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{LEmotiva} !="" && $F{LEmotiva} !=null) && ($F{LEmotivaCommento} !="" && $F{LEmotivaCommento} !=null) ? $F{LEmotiva} +
+"\n- "+$F{LEmotivaCommento}:($F{LEmotiva}!="" && $F{LEmotiva}!=null?$F{LEmotiva}:"")+($F{LEmotivaCommento}!="" && $F{LEmotivaCommento}!=null?""+$F{LEmotivaCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="a47597a0-87dc-4b42-8b0c-f716a5cdff8a"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Labilità emotiva"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="281" width="567" height="20" uuid="06e62d78-c405-4619-8b31-8c75126c8a0c"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="1ee21402-0401-42b1-ac11-270d73673420"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{RMotivazione} !="" && $F{RMotivazione} !=null) && ($F{RMotivazioneCommento} !="" && $F{RMotivazioneCommento} !=null) ? $F{RMotivazione} +
+"\n- "+$F{RMotivazioneCommento}:($F{RMotivazione}!="" && $F{RMotivazione}!=null?$F{RMotivazione}:"")+($F{RMotivazioneCommento}!="" && $F{RMotivazioneCommento}!=null?""+$F{RMotivazioneCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="4e4390b9-d122-4954-a64b-47449894a37f"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Ridotta motivazione"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="212">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="1" width="567" height="20" forecolor="#FFFFFF" backcolor="#2D4262" uuid="1aebf3e6-e90e-4da6-b17c-8b710b6c523e"/>
+				<box leftPadding="2">
+					<pen lineColor="#2D4262"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[SINTOMI VARI DI COMUNE RISCONTRO NELLA DEMENZA]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="0" y="21" width="567" height="20" uuid="b28926bd-2513-4d00-bdda-a8f5c17fa468"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="ef62520f-bdc8-4529-b489-5bb8a785b1ff"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{Confusione} !="" && $F{Confusione} !=null) && ($F{ConfusioneCommento} !="" && $F{ConfusioneCommento} !=null) ? $F{Confusione} +
+"\n- "+$F{ConfusioneCommento}:($F{Confusione}!="" && $F{Confusione}!=null?$F{Confusione}:"")+($F{ConfusioneCommento}!="" && $F{ConfusioneCommento}!=null?""+$F{ConfusioneCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="a686ab2c-6a53-499b-9150-98847aba5d56"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Confusione"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="121" width="567" height="20" uuid="658df2e2-3450-4d9a-8763-1a09f34a0b20"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="6580999c-7024-4ca6-8a1e-83375081930a"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{Irrequietezza} !="" && $F{Irrequietezza} !=null) && ($F{IrrequietezzaCommento} !="" && $F{IrrequietezzaCommento} !=null) ? $F{Irrequietezza} +"\n- "+$F{IrrequietezzaCommento}:
+($F{Irrequietezza}!="" && $F{Irrequietezza}!=null?$F{Irrequietezza}:"")+($F{IrrequietezzaCommento}!="" && $F{IrrequietezzaCommento}!=null?""+$F{IrrequietezzaCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="46512ee8-d430-4203-9ed8-74921f48874e"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Irrequietezza"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="101" width="567" height="20" uuid="e431dcd3-4acf-4801-918b-35470101e9c4"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="9efc346b-5b48-412f-8e9a-644f127609d8"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{DUmore} !="" && $F{DUmore} !=null) && ($F{DUmoreCommento} !="" && $F{DUmoreCommento} !=null) ? $F{DUmore} +"\n- "+$F{DUmoreCommento}:
+($F{DUmore}!="" && $F{DUmore}!=null?$F{DUmore}:"")+($F{DUmoreCommento}!="" && $F{DUmoreCommento}!=null?""+$F{DUmoreCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="63cf6444-748c-49b5-bf41-b144f3b128f3"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Depressione dell'umore"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="61" width="567" height="20" uuid="b19afc04-4b13-4d86-a299-24aa627c2fac"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="85a6da4f-43e2-431d-b3cb-b6e5a3136391"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{Ansia} !="" && $F{Ansia} !=null) && ($F{AnsiaCommento} !="" && $F{AnsiaCommento} !=null) ? $F{Ansia} +"\n- "+$F{AnsiaCommento}:
+($F{Ansia}!="" && $F{Ansia}!=null?$F{Ansia}:"")+($F{AnsiaCommento}!="" && $F{AnsiaCommento}!=null?""+$F{AnsiaCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="ccbd84ab-cfbf-448c-9167-81ac9897cbb7"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Ansia"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="150" width="491" height="20" uuid="0baa1107-87ab-4b60-a18a-55553f3c6a4b"/>
+				<box bottomPadding="0" rightPadding="5">
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[G.B.S. - Sintomi comuni delle demenze
+]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="0" y="81" width="567" height="20" uuid="de38f99c-2d6c-4b92-91da-1fe1ff44d992"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="70238a36-e201-4a9d-84e8-1fd96235de58"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{Angoscia} !="" && $F{Angoscia} !=null) && ($F{AngosciaCommento} !="" && $F{AngosciaCommento} !=null) ? $F{Angoscia} +"\n- "+$F{AngosciaCommento}:
+($F{Angoscia}!="" && $F{Angoscia}!=null?$F{Angoscia}:"")+($F{AngosciaCommento}!="" && $F{AngosciaCommento}!=null?""+$F{AngosciaCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="13878daa-01a1-4e3a-9df6-49a8c9733567"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Angoscia"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="492" y="150" width="73" height="20" uuid="0d69ccd3-fc61-4b23-a167-0759b8c74eea"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{scoreGBSsVCRNDemenza}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="Float" x="0" y="41" width="567" height="20" uuid="7acafdc0-656d-4484-9a95-b367bd2e1994"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="198" y="0" width="369" height="20" uuid="fb048d1f-e724-4ead-81e4-70469cdc9be6"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[(($F{Irritabilita} !="" && $F{Irritabilita} !=null) && ($F{IrritabilitaCommento} !="" && $F{IrritabilitaCommento} !=null) ? $F{Irritabilita} +"\n- "+$F{IrritabilitaCommento}:
+($F{Irritabilita}!="" && $F{Irritabilita}!=null?$F{Irritabilita}:"")+($F{IrritabilitaCommento}!="" && $F{IrritabilitaCommento}!=null?""+$F{IrritabilitaCommento}:""))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="198" height="20" uuid="10651639-ac3b-4b3d-bb9b-71adb944be3d"/>
+					<box leftPadding="5" rightPadding="5">
+						<pen lineColor="#2D4262"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#2D4262"/>
+					</box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Irritabilità"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="138">
+			<staticText>
+				<reportElement x="20" y="0" width="200" height="20" uuid="e19010f1-0610-4f51-933d-6aca23231922"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PUNTEGGIO CALCOLATO]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="20" y="20" width="40" height="20" uuid="0366e8f4-3d74-4b6f-be3c-5832e29a1252"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{scoreGBSTotal}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="60" y="20" width="340" height="20" uuid="b34f6acf-bb71-4173-ba51-7f1061b86f74"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{scoreGBScala}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="59" width="200" height="20" uuid="0f953313-67b1-4fb8-b452-e8c24c4beccd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[G.B.S. :
+
+]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="20" y="79" width="318" height="20" uuid="52fbc44d-ce84-4af0-89bf-91e7e1216935"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["0 - 1,79 assenza di deterioramento \n"+
+"1,8 - 2,49 deterioramento lieve \n"+
+"2,5 - 4 deterioramento medio \n"+
+"4,01 - 6 deterioramento grave \n"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="99">
+			<printWhenExpression><![CDATA[$F{includeSignatures}  =="true"]]></printWhenExpression>
+			<staticText>
+				<reportElement x="321" y="2" width="62" height="20" uuid="6c1903c0-1094-4079-8a66-4e4a2f8f6da1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firme:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="319" y="15" width="248" height="84" uuid="a4eac71a-f5b1-4a00-a6a6-da83f2f7768a"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Firme" uuid="2d0254f8-7090-4a45-90c8-724a85669024">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("printAddInfoJson.signatures")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="84" width="248">
+						<image scaleImage="FillFrame">
+							<reportElement x="62" y="8" width="185" height="58" uuid="7fc18bf8-51ee-45d6-98ac-49ad12ebf26f">
+								<printWhenExpression><![CDATA[$F{url} != null || $F{url} != ""]]></printWhenExpression>
+							</reportElement>
+							<imageExpression><![CDATA[$F{url}]]></imageExpression>
+						</image>
+						<textField>
+							<reportElement x="62" y="23" width="185" height="26" uuid="73d05fe0-e2c1-4f8e-8083-31edabc1f930">
+								<printWhenExpression><![CDATA[$F{url} == null || $F{url} == ""]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Right" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="0" y="68" width="247" height="16" uuid="1b5e644b-9603-4bbc-9871-39cc3640c52f"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{name} + " - " + $F{data}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="191" y="19" width="290" height="19" uuid="4cfdf963-a51c-4e33-88dd-d515185ece62"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Valutazione psico comportamentale del Paziente anziano (GBS)"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="299" height="19" uuid="dcc47c50-f470-4001-92b8-1bcc0547f72f"/>
+				<textElement verticalAlignment="Bottom" markup="styled">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userLogin} !=""  && $F{userLogin} !=null?  "Generato da "+$F{userLogin} +"\n": ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="19" width="53" height="19" uuid="6d82be0b-5dc8-464d-b020-3b4c5c2d0ec0"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pagina  "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="537" y="19" width="14" height="19" uuid="0a1cdfda-3b56-4c0b-9086-0b921ece0528"/>
+				<textElement verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" di "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="552" y="19" width="15" height="19" uuid="a6d235f2-876f-43a2-a50a-05826396e025"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="19" width="190" height="19" uuid="9b93a501-67a7-43de-a831-d44df3a628b6"/>
+				<textElement verticalAlignment="Top" markup="styled">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Generato il "+ new SimpleDateFormat("dd/MM/yyyy HH:mm").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

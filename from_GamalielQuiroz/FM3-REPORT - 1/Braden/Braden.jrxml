@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final utlizzo versione della libreria JasperReports6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Braden" pageWidth="595" pageHeight="842" columnWidth="567" leftMargin="14" rightMargin="14" topMargin="21" bottomMargin="21" uuid="56309c7c-5317-4861-96d5-3f919f0f797b">
+	<property name="ireport.zoom" value="1.652892561983472"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="2009"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Braden"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="463"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="523"/>
+	<subDataset name="Firme" uuid="38f79e76-1bd2-41a1-b7ec-43d4c9fd736d">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="data\Braden.xml"/>
+		<queryString language="JSON">
+			<![CDATA[]]>
+		</queryString>
+		<field name="url" class="java.lang.String">
+			<fieldDescription><![CDATA[url]]></fieldDescription>
+		</field>
+		<field name="name" class="java.lang.String">
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="data" class="java.lang.String">
+			<fieldDescription><![CDATA[data]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Operatori" uuid="1843f3d6-c309-4b4d-b8f1-6ec9768b6632">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FM3_new_report_json\data\DataAdapterMiniMental.xml"/>
+		<queryString language="json">
+			<![CDATA[]]>
+		</queryString>
+		<field name="name" class="java.lang.String">
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="figuraProfessionale" class="java.lang.String">
+			<fieldDescription><![CDATA[figuraProfessionale]]></fieldDescription>
+		</field>
+		<field name="nome" class="java.lang.String">
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="figprof" class="java.lang.String">
+			<fieldDescription><![CDATA[figuraProfessionale]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Patient" uuid="2a929b3e-dc84-4136-b1da-df3ea933c7bf">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CDS"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="465"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="521"/>
+		<queryString language="json">
+			<![CDATA[]]>
+		</queryString>
+		<field name="patientId" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.patientId]]></fieldDescription>
+		</field>
+		<field name="firstName" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.firstName]]></fieldDescription>
+		</field>
+		<field name="lastName" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.lastName]]></fieldDescription>
+		</field>
+		<field name="sex" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.sex]]></fieldDescription>
+		</field>
+		<field name="birthDate" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.birthDate]]></fieldDescription>
+		</field>
+		<field name="uniqueIdentifier" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.uniqueIdentifier]]></fieldDescription>
+		</field>
+		<field name="phone" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.phone]]></fieldDescription>
+		</field>
+		<field name="mobilePhone" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.mobilePhone]]></fieldDescription>
+		</field>
+		<field name="email" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.email]]></fieldDescription>
+		</field>
+		<field name="language" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.language]]></fieldDescription>
+		</field>
+		<field name="deathDate" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.deathDate]]></fieldDescription>
+		</field>
+		<field name="isDead" class="java.lang.String">
+			<fieldDescription><![CDATA[formInstanceValue.formDocument.initData.patient.isDead]]></fieldDescription>
+		</field>
+		<field name="tesseraSanitaria" class="java.lang.String">
+			<fieldDescription><![CDATA[printAddInfoJson.patient.tesseraSanitaria]]></fieldDescription>
+		</field>
+		<field name="dataValutazione" class="java.lang.String">
+			<fieldDescription><![CDATA[printAddInfoJson.dataValutazione]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="Commento" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.informasioniGenerali.commento]]></fieldDescription>
+	</field>
+	<field name="percSens4" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.percezioneSensoriale.code]]></fieldDescription>
+	</field>
+	<field name="umid4" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.umidita.code]]></fieldDescription>
+	</field>
+	<field name="att4" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.attivita.code]]></fieldDescription>
+	</field>
+	<field name="nutr4" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.nutrizione.code]]></fieldDescription>
+	</field>
+	<field name="friz3" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.attritoFrizione.code]]></fieldDescription>
+	</field>
+	<field name="tot" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.scoreTotal]]></fieldDescription>
+	</field>
+	<field name="includeSignatures" class="java.lang.String">
+		<fieldDescription><![CDATA[printAddInfoJson.includeSignatures]]></fieldDescription>
+	</field>
+	<field name="logo" class="java.lang.String">
+		<fieldDescription><![CDATA[printAddInfoJson.logo]]></fieldDescription>
+	</field>
+	<field name="userLogin" class="java.lang.String">
+		<fieldDescription><![CDATA[printAddInfoJson.userLogin]]></fieldDescription>
+	</field>
+	<field name="mobilita" class="java.lang.String">
+		<fieldDescription><![CDATA[formInstanceValue.formDocument.formData.mobilita.code]]></fieldDescription>
+	</field>
+	<title>
+		<band height="57" splitType="Stretch">
+			<rectangle>
+				<reportElement x="136" y="0" width="431" height="48" uuid="c552fbf6-e7b7-4318-b567-f5e5eebded84"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="136" y="0" width="431" height="48" uuid="7bee89af-a22e-4ec2-a91a-5caaaeb22895"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BRADEN]]></text>
+			</staticText>
+			<image onErrorType="Icon">
+				<reportElement x="1" y="0" width="131" height="48" uuid="227f935b-bad1-4001-899d-d0a8045a3947"/>
+				<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="90" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="567" height="90" uuid="871c42f3-c469-416e-9528-336d781bed05">
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Patient" uuid="f196ec24-a4a3-492c-b3c6-5494d07cc65e">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="90" width="567">
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="120" y="58" width="190" height="15" uuid="06a99bc3-ce76-4cd7-abb5-00ace06e4ac4"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{phone} != null ? $F{phone} : "" ]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="310" y="41" width="80" height="15" uuid="0704c103-1b0e-4298-9847-6e4c818c7e7e"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Data di Nascita]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="120" y="24" width="190" height="15" uuid="b2bce42b-13ec-448b-b555-5566140c7031"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{lastName}+ " "+ $F{firstName}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="24" width="120" height="15" uuid="1df22f9b-a784-454a-883d-4b1432f7da15"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Nome e Cognome]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="310" y="24" width="80" height="15" uuid="f81eab0f-3656-455e-9ca5-a4955a213a2b"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Codice fiscale]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="390" y="24" width="177" height="15" uuid="e2afa020-2626-4a20-93ec-e5b29cd2712c"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{uniqueIdentifier}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="58" width="120" height="15" uuid="9224f796-bf9a-4ed6-8a7f-f87502c6d13b"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Contatto telefonico]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="390" y="58" width="177" height="15" uuid="7188752d-d6f4-49ca-a173-845623a6270d"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{sex}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="1" width="148" height="20" uuid="c931f9e9-6cae-470a-89b0-e6ba3316e560"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="10" isBold="true"/>
+							</textElement>
+							<text><![CDATA[ANAGRAFICA ASSISTITO]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="0" y="41" width="120" height="15" uuid="01cf4adb-f0f0-4029-a11e-1f66cfa8a20c"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Tessera Sanitaria]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="310" y="58" width="80" height="15" uuid="dee3a529-1a0c-45be-a0a8-9737b53bf855"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Sesso]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="390" y="41" width="177" height="15" uuid="412737a4-7d03-4ea6-bac6-4c6ac192cbd8"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd").parse($F{birthDate})]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement x="120" y="41" width="190" height="15" uuid="0ffe714f-d6c1-429a-969f-7dae4faf86b1"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{tesseraSanitaria}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="75" width="120" height="15" uuid="4f80b70e-f607-4fdc-b0ff-488350849a2c"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Data di valutazione]]></text>
+						</staticText>
+						<textField isBlankWhenNull="true">
+							<reportElement x="120" y="75" width="190" height="15" uuid="8e33f86a-b3e5-41bf-abbd-da5ea0934d01"/>
+							<box leftPadding="2"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyy").format( new SimpleDateFormat("dd/MM/yyy HH:mm").parse($F{dataValutazione}))]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="72">
+			<staticText>
+				<reportElement x="0" y="0" width="170" height="20" uuid="e3ffc6eb-9b54-4cb4-9f4c-27d00e72960f"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Informazioni Generali]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="57" width="170" height="15" uuid="864dc051-7498-486f-aabf-17db044774b1"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Commento]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="170" y="57" width="397" height="15" uuid="172ab65b-335d-413c-894a-44a4d8373279"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Commento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="20" width="210" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="fb61194d-44ec-4882-aa80-b69209a61f46"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#2D4262"/>
+					<topPen lineWidth="0.5" lineColor="#2D4262"/>
+					<leftPen lineWidth="0.5" lineColor="#2D4262"/>
+					<bottomPen lineWidth="0.5" lineColor="#2D4262"/>
+					<rightPen lineWidth="0.5" lineColor="#2D4262"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Operatore]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="210" y="20" width="357" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="dd0854b5-b73e-414b-bd4e-47fd533af758"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#2D4262"/>
+					<topPen lineWidth="0.5" lineColor="#2D4262"/>
+					<leftPen lineWidth="0.5" lineColor="#2D4262"/>
+					<bottomPen lineWidth="0.5" lineColor="#2D4262"/>
+					<rightPen lineWidth="0.5" lineColor="#2D4262"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Figura professionale]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="0" y="35" width="567" height="20" uuid="92a04db4-0053-469e-8ddd-8687f3c72aae"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Operatori" uuid="bcdfea27-7fa8-4cec-b4de-8d8cc7398e80">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("printAddInfoJson.operators")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="20" width="567">
+						<textField>
+							<reportElement x="0" y="0" width="210" height="20" uuid="4fbfe7b3-56b3-4313-b03a-a71058c67f33"/>
+							<box leftPadding="2">
+								<pen lineWidth="0.25"/>
+								<topPen lineWidth="0.25"/>
+								<leftPen lineWidth="0.25"/>
+								<bottomPen lineWidth="0.25"/>
+								<rightPen lineWidth="0.25"/>
+							</box>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="210" y="0" width="357" height="20" uuid="04bcc081-2004-4453-abb9-069ff5940a53"/>
+							<box leftPadding="2">
+								<pen lineWidth="0.25"/>
+								<topPen lineWidth="0.25"/>
+								<leftPen lineWidth="0.25"/>
+								<bottomPen lineWidth="0.25"/>
+								<rightPen lineWidth="0.25"/>
+							</box>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{figprof}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="714">
+			<rectangle>
+				<reportElement x="409" y="595" width="10" height="10" uuid="ce13a9d0-e345-4bfd-be08-041b8ddd2af7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="152" y="595" width="10" height="10" uuid="b49b2983-f751-40d1-8f66-f5be9310778b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="276" y="595" width="10" height="10" uuid="4e8dc9ff-8c03-4fca-9d21-73ca99216f86"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="276" y="426" width="10" height="10" uuid="dba1d951-cad3-4a47-9bc4-01b7818669a0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="409" y="426" width="10" height="10" uuid="9d3471c7-9301-4a76-8ad8-e29dccb0ecb8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="152" y="426" width="10" height="10" uuid="01a372a6-e5eb-4153-b980-d1d6b2d4b3b7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="28" y="426" width="10" height="10" uuid="5d38a50e-abba-406f-b7eb-d9b9c9b6a2f8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="153" y="257" width="10" height="10" uuid="358483cd-0e73-48fd-864d-5ebc488a3b20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="28" y="257" width="10" height="10" uuid="3ea2a128-4f2d-45ec-b520-66abb679f255"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="409" y="257" width="10" height="10" uuid="73a92726-e6ad-4476-aaf8-a827ce692da4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="408" y="42" width="10" height="10" uuid="ec954d55-8241-45e0-b3ac-5aabcc4284db"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="276" y="42" width="10" height="10" uuid="e1864dd1-211b-48cd-8e94-2914409e46cc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="152" y="42" width="10" height="10" uuid="5c493a8d-e07f-4e7b-a40f-d2e4e809a742"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="28" y="42" width="10" height="10" uuid="078a1da8-0cb8-49c4-a96f-b266517cd668"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="152" y="42" width="10" height="10" uuid="abb9afed-832e-4c9c-a8e9-3c4bd646d47a">
+					<printWhenExpression><![CDATA[$F{percSens4}.equals("op1b")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="42" width="10" height="10" uuid="47c77504-e160-42e4-8c15-a925b246ca4f">
+					<printWhenExpression><![CDATA[$F{percSens4}.equals("op1a")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="336" height="15" uuid="3c652c81-2085-4a72-ac58-de8d38d72edb"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Abilità a rispondere in modo corretto alla sensazione di disagio correlata alla posizione]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="40" width="105" height="15" uuid="78d7de0f-a600-4b60-8270-31dd4f9f38aa"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Molto limitata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="40" width="105" height="15" uuid="f6b99c39-ad83-445c-b2e1-68448028dc97"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Non limitata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="567" height="20" forecolor="#FFFFFF" backcolor="#2D4262" uuid="e669e314-d158-47a4-9273-a993c53ab440"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERCEZIONE SENSORIALE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="42" width="10" height="10" uuid="75ea7084-12eb-4287-bd11-5e75ab85f5a6">
+					<printWhenExpression><![CDATA[$F{percSens4}.equals("op1c")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="42" width="10" height="10" uuid="d1d2fffe-b96a-42e5-9952-6aef46244686">
+					<printWhenExpression><![CDATA[$F{percSens4}.equals("op1d")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="40" width="115" height="15" uuid="a5053265-ef81-4f69-ae66-42f596454514"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Leggermente limitata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="40" width="115" height="15" uuid="0c8e7025-e67a-4d4c-8630-fd034088f575"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Nessuna limitazione]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="67" width="100" height="15" uuid="63ab413b-eff2-45d9-ba19-24b8a823f1a9"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Legenda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="82" width="100" height="30" uuid="b5318590-4e15-4d54-a7de-a7d62fc23320"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Non limitata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="82" width="465" height="30" uuid="b3418dc6-1f89-4af6-9219-9f9a6a096b11"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Assenza di risposta (non geme, non si contrae o afferra) agli stimoli dolorosi dovuta alla riduzione dello stato di coscienza o a sedazione, OPPURE, limitata capacità di avvertire glistimoli dolorosi su gran parte della superficie corporea]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="112" width="465" height="30" uuid="b5b80049-30a7-42f0-8da9-0a19f8f9c034"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Risponde solamente agli stimoli dolorosi. Non è in grado di comunicare il suo disagio se nongemendo e agitandosi, OPPURE, ha un danno sensorila che limita la capacità di percepire il dolore e il disagio sul 50% della superficie corporea]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="112" width="100" height="30" uuid="90dbfd01-f11b-4a92-b301-7b4514f7fb2e"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Molto limitata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="142" width="100" height="45" uuid="d93b7b2d-073c-4e1b-b216-c8cfb23be705"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Leggermente limitata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="142" width="465" height="45" uuid="e2cd4930-1fea-4304-953f-4d920cd39531"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Risponde ai comandi verbali, ma non riesce a comunicare sempre il suo disagio oppure necessita di essere routato, OPPURE, ha qualche limitazione sensoriale che limita la sua capacità di percepire il dolore o il disagio in una o due estremità]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="187" width="100" height="15" uuid="46e0d384-5794-4a19-8b52-2430c801deda"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nessuna limitazione]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="187" width="465" height="15" uuid="61c01ef1-b93c-477d-968d-f1544d1a87cc"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Risponde ai comandi verbale. Non ha deficit sensoriali che limitano la capacità di percepire il dolore o il disagio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="297" width="465" height="30" uuid="830333c2-8a16-4026-9308-f0d4dd708009"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[La cute è costantemente umida a causa della sudorazione, delle urine, etc. L'umidità viene riscontrata ogni volta che il soggetto viene mosso o ruotato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="257" width="10" height="10" uuid="3d8011b9-c9c7-43d1-9804-c74e05c7eca5">
+					<printWhenExpression><![CDATA[$F{umid4}.equals("op2a")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="257" width="10" height="10" uuid="6920dd1e-2f3d-4eb6-b93b-4b744bb9497e">
+					<printWhenExpression><![CDATA[$F{umid4}.equals("op2b")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="297" width="100" height="30" uuid="c52be02d-3c27-456a-8336-1649396bda0d"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Costantemente Umida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="237" width="336" height="15" uuid="ad94e015-2831-4339-9335-f8b0cf6c04ef"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado di esposizione della pelle all'umidità]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="341" width="100" height="15" uuid="5e8bf265-5fc3-4702-869e-31b231b91dad"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Occasionalmente umida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="356" width="100" height="15" uuid="ebd9cad5-f56c-488c-b02b-e52aa8d0cbc2"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Raramente umida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="341" width="465" height="15" uuid="b4828a1e-5eb4-4a83-8e34-4e66aaa2bab8"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[La cute è occasionalmente umida, è richiesto un cambio della biancheria circa una volta al giorno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="282" width="100" height="15" uuid="4bbfd106-bdd1-41ef-9bc2-4d3d75fb844f"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Legenda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="215" width="567" height="20" forecolor="#FFFFFF" backcolor="#2D4262" uuid="321e15f4-97d5-4896-bff4-fc108e1d36a9"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UMIDITA']]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="255" width="105" height="15" uuid="bb6e49fd-58ef-4588-b1ae-f1b8e187f482"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Costantemente Umida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="327" width="100" height="15" uuid="d069727b-4e3a-4879-9cd6-d9cb4a95b3f9"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Molto umida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="255" width="115" height="15" uuid="71bb34cd-fee5-43e4-b157-3f1da311d9e1"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Occasionalmente umida]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="277" y="257" width="10" height="10" uuid="c6ec79f9-5686-44f6-8f68-a8f7a1e29c2e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="101" y="327" width="465" height="15" uuid="89f8ea39-7eea-4f38-ba36-64b9377969bc"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[La cute è spesso, ma non sempre umida. Il pannolone o la biancheria viene cambiata almeno una volta per turno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="257" width="10" height="10" uuid="a7ea9f32-cd55-4466-be4e-c22635a02c54">
+					<printWhenExpression><![CDATA[$F{umid4}.equals("op2c")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="255" width="115" height="15" uuid="40e3bb80-3195-400b-8d58-5c8513835a7d"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Raramente umida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="255" width="105" height="15" uuid="8c64c1f3-e4f4-4f5c-93dc-b736098a04c0"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Molto umida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="257" width="10" height="10" uuid="616d510b-904d-48ab-924a-0138fabe2258">
+					<printWhenExpression><![CDATA[$F{umid4}.equals("op2d")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="356" width="465" height="15" uuid="a57dc037-0864-4515-8d0a-7fdf4a70b2f1"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[La cute è normalemente asciutta, la biancheria viene cambiata secondo gli intervalli abituali in uso.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="424" width="115" height="15" uuid="2aea9744-9586-4365-aded-91f797581af3"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Cammina Occasionalmente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="426" width="10" height="10" uuid="7e6c713e-531d-4e7f-86a6-20c9bc79051f">
+					<printWhenExpression><![CDATA[$F{att4}.equals("op3c")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="426" width="10" height="10" uuid="66a2ece4-f10a-45e1-8eb4-6ebd91d1a88d">
+					<printWhenExpression><![CDATA[$F{att4}.equals("op3d")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="426" width="10" height="10" uuid="9a57c300-4bc9-4bb7-871b-7cd469605045">
+					<printWhenExpression><![CDATA[$F{att4}.equals("op3b")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="424" width="105" height="15" uuid="b449e7a2-6aa2-46e1-b572-4984682efc67"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Allettato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="525" width="100" height="15" uuid="e4ec6ace-3ccd-48ca-99fd-19a09dfa1a99"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Raramente umida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="406" width="336" height="15" uuid="889ceaeb-c9b3-4929-bf6b-074e4e1e67fb"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado di attività Fisica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="510" width="465" height="15" uuid="cd7c1574-2dd5-427d-a50a-7cb80fb97bcc"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[La cute è occasionalmente umida, è richiesto un cambio della biancheria circa una volta al giorno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="426" width="10" height="10" uuid="6d5e56c7-f64d-4f62-9e5f-4cf52cd7e3ab">
+					<printWhenExpression><![CDATA[$F{att4}.equals("op3a")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="451" width="100" height="15" uuid="e712378c-2cfe-44f4-9d93-50aff8d9c504"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Legenda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="424" width="105" height="15" uuid="7d23ceed-ceef-4a56-8086-9713218c2efc"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Cammina di Frequente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="466" width="465" height="30" uuid="7b65f81f-3358-4ba4-9e68-fbff573af3ba"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[La cute è costantemente umida a causa della sudorazione, delle urine, etc. L'umidità viene riscontrata ogni volta che il soggetto viene mosso o ruotato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="525" width="465" height="15" uuid="abbf7068-bd39-43c9-a7e1-3507adc3c624"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[La cute è normalemente asciutta, la biancheria viene cambiata secondo gli intervalli abituali in uso.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="510" width="100" height="15" uuid="a3b1a0d7-1778-4cc4-9564-52f1ff6ce0ec"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Occasionalmente umida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="384" width="567" height="20" forecolor="#FFFFFF" backcolor="#2D4262" uuid="fc593762-ad87-4860-92a5-f8371e90c71e"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ATTIVITA']]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="496" width="100" height="15" uuid="889680a6-3180-4522-883c-40fbf9507fd6"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Molto umida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="496" width="465" height="15" uuid="89a0865e-0588-40f0-ac32-0cde9513b3fe"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[La cute è spesso, ma non sempre umida. Il pannolone o la biancheria viene cambiata almeno una volta per turno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="466" width="100" height="30" uuid="5327c54d-c3dd-4fa5-af39-bf5828c52ecd"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Costantemente Umida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="424" width="105" height="15" uuid="5378957d-30a4-437e-8b4e-77e51cbc7d59"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[In poltrona
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="575" width="336" height="15" uuid="e307023d-9b87-4daf-a106-c5beeb6a99ce"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado di attività Fisica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="595" width="10" height="10" uuid="1206938d-8dc5-4ea0-a11d-a000401f2c1b">
+					<printWhenExpression><![CDATA[$F{mobilita}.equals("op4b")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="553" width="567" height="20" forecolor="#FFFFFF" backcolor="#2D4262" uuid="dc59ac80-f263-45b8-be1e-14b463d720d7"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MOBILITA']]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="635" width="100" height="15" uuid="ae96bf33-05a2-47f7-b502-76070106b6af"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Completamente Immobile]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="595" width="10" height="10" uuid="06a563f6-25c9-4eb3-b8f9-913cb2c06f44">
+					<printWhenExpression><![CDATA[$F{mobilita}.equals("op4d")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="620" width="100" height="15" uuid="380599d8-9d1f-424e-9457-48477abb0488"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Legenda]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="28" y="595" width="10" height="10" uuid="41f2811d-e244-4bfc-b3be-271887aad40e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="168" y="593" width="105" height="15" uuid="d693afbe-f5c4-49f0-a798-37cec1400c60"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Molto limitata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="679" width="100" height="15" uuid="eab0866f-f184-4966-a819-48ac1c018c08"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Parzialmente limitata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="593" width="105" height="15" uuid="3707764f-a1ba-46b6-8610-6148d027a8c7"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Limitazioni assenti]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="650" width="100" height="30" uuid="50cf2a4c-f918-4b2b-9a92-08056c621801"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Molto limitata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="593" width="115" height="15" uuid="0c926b18-bb92-4cdf-bc40-8a33f86e63be"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Parzialmente limitata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="679" width="465" height="15" uuid="30c59ebc-1588-4488-8cae-613957d0efac"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Cambia frequentemente la posizione con minimi spostamenti del corpo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="595" width="10" height="10" uuid="b89360a8-454a-4e29-8041-67d91d8da609">
+					<printWhenExpression><![CDATA[$F{mobilita}.equals("op4c")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="694" width="465" height="15" uuid="415a62c3-b14c-46ca-8593-5cb7fc731927"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Si sposta frequentemente e senza assistenza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="595" width="10" height="10" uuid="5ba9d84f-08f5-4081-bbe4-b65028ac731c">
+					<printWhenExpression><![CDATA[$F{mobilita}.equals("op4a")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="635" width="465" height="15" uuid="2e1049fb-e3ca-4bf7-b860-b347ea510ce4"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Non riesce a produrre neppure piccoli movimenti del corpo e delle estremità senza assistenza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="694" width="100" height="15" uuid="0d56ec4b-891e-4d2b-886f-2d34130a2a6e"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Limitazioni assenti]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="593" width="105" height="15" uuid="730251d3-8412-4ce0-bedc-387b95618cbb"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Completamente Immobile]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="650" width="465" height="30" uuid="d826403d-b50c-4f79-af75-1f929b375428"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Riesce occasionalmente a fare piccoli moviemnti corporei o delle estremità, ma non riesce a realizzare frequenti o significativi movimenti in modo indipendente]]></text>
+			</staticText>
+		</band>
+		<band height="498">
+			<rectangle>
+				<reportElement x="409" y="42" width="10" height="10" uuid="bb5caaa2-823d-49ae-abb2-e849d3f36b0a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="28" y="227" width="10" height="10" uuid="52471b8d-1507-4818-bad8-d894a0e7bf41"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="22" width="336" height="15" uuid="d850cfde-ab63-42aa-88e4-fd1447052545"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Assunziona usuale di Cibo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="141" width="100" height="15" uuid="4d37d045-d7d4-4c11-a797-ac6d19f42cd2"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adeguata]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="28" y="42" width="10" height="10" uuid="6b7f586e-0f95-4aca-b134-ade05b9473ab"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="168" y="40" width="105" height="15" uuid="4cde00d3-497e-4349-bb1e-86a248c4b017"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Probabilmente Inadeguata
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="156" width="100" height="15" uuid="93d143d6-cb46-4c74-8074-aa9aef310bd1"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Eccellente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="82" width="100" height="30" uuid="ce011639-0d0a-49f6-809d-2219e7697102"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Molto Povera:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="40" width="105" height="15" uuid="56987995-d207-4550-8a8f-595033b482d0"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Eccellente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="40" width="115" height="15" uuid="a2c65eed-d4d5-4bb9-b073-e47d85b1ce78"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Adeguata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="42" width="10" height="10" uuid="76a79949-fad5-4a83-b9fd-30bd1586ff23">
+					<printWhenExpression><![CDATA[$F{nutr4}.equals("op5d")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="276" y="42" width="10" height="10" uuid="39fc7f17-3e3a-40b2-b0ec-adeba71631f8"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="112" width="100" height="30" uuid="5bd7fe8d-bcb7-40c1-b24e-e8074c1ad6e8"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Probabilmente Inadeguata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="67" width="100" height="15" uuid="b728ae8c-3e9c-475d-bf37-59e56dfae409"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Legenda]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="152" y="42" width="10" height="10" uuid="4f08ffee-9424-416a-aa7e-08eedd2af7b5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="100" y="82" width="465" height="30" uuid="48b33a95-634c-47ce-9904-5abb77d95c2f"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Non mangia mai un pasto completo. Raramente mangia pià di 1/3 di qualsiasi cibo offerto. Duo o meno porzioni di proteine al giorno. Assume pochi liquidi e nessun integratore, OPPURE, E' a digiuno o sostenuto solamente con fleboclisi o a dieta esclusivamente idrica per più di 5 giorni]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="42" width="10" height="10" uuid="1f5191c3-d99e-4443-a9ec-766872c0dbce">
+					<printWhenExpression><![CDATA[$F{nutr4}.equals("op5c")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="141" width="465" height="15" uuid="45ccc31e-1dc1-4ba4-96cf-cb3978e6d00e"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Mangia più della metà dei pasti. 4 o più porzioni di proteine al giorno. Assume normalmente integratori, OPPURE, si alimenta artificialmente (via SNG/ PEG), assumendo il quantitativo nutrizionale necessario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="42" width="10" height="10" uuid="4874acfa-0065-424c-a935-071296dbe88d">
+					<printWhenExpression><![CDATA[$F{nutr4}.equals("op5b")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="156" width="465" height="15" uuid="348d3439-b175-4e7e-a6bb-2803e3f700f5"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Mangia la maggio parte del cibo. Non rifiura mai un pasto. talvolta mangia tra i pasti, Non ha necessità di integratori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="40" width="105" height="15" uuid="7ff5e3dd-a367-45e5-99dd-9d96066ea4b6"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Molto Povera
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="567" height="20" forecolor="#FFFFFF" backcolor="#2D4262" uuid="60bcf19d-65e3-47d1-abb2-375401f040fa"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NUTRIZIONE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="42" width="10" height="10" uuid="a74edf3d-b4ea-4b31-881f-39fd6ef9f989">
+					<printWhenExpression><![CDATA[$F{nutr4}.equals("op5a")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="112" width="465" height="30" uuid="3675bfe6-3cc5-4677-b60a-b3cee270de14"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Raramente mangia un pasto completo, generalmente mangia la metà dei cibi offerti. Le proteine assunte includono 3 porzioni di carne o latticini al giorno, occasionalmente integratori alimentari, OPPURE, Riceve una quantità scarsa rispetto a quanto prevista come dieta liquida enterale ( via SNG o PEG )]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="276" y="227" width="10" height="10" uuid="244598ed-2318-4c98-b2d0-5f4070cbbf3b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="168" y="225" width="105" height="15" uuid="9c2a2f77-edb2-45ae-a6fb-c81c8ae2f529"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Problema Potenziale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="341" width="100" height="30" uuid="a44e1cd1-96ae-4bac-bf23-ffd3845d69e9"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Senza problemi apparenti]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="225" width="105" height="15" uuid="ffad4ad8-34b4-428c-a18a-d5ffd6e379b0"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Problema]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="267" width="100" height="45" uuid="3d717888-d542-4d5e-a418-2d3abab90531"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Problema]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="267" width="465" height="45" uuid="4cb7e156-063a-4299-9292-f71447426cd7"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Richiede da moderata a completa assistenza nei movimenti. Scivola di frequente nel letto o nella poltrona. Spesso richiede riposizionamentocon assistenza. Sono presenti spasticità, contratture, agitazione, che causanocostante attrito control il piano del letto o della poltrona]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="252" width="100" height="15" uuid="f5ff84da-af34-45ca-b14c-77b2b422ebe0"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Legenda]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="152" y="227" width="10" height="10" uuid="249fc912-7480-410c-bce5-632543f9bf26"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="312" width="100" height="30" uuid="53d2a349-5c59-495f-96be-8cbba3027651"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Problema Potenziale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="312" width="465" height="30" uuid="abd23bb7-d556-416b-a1dd-b08161654290"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Si muove poco e necessita di una minima assistenza. Durante lo spostamentom la cute fa attrito con le lenzuola o con il piano della poltrona, occasionalmente può slittare]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="341" width="465" height="30" uuid="ed3c421f-2e9e-4c3b-b038-a88f697f07e4"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Si sposta nel letto e sulla sedia in modo autonomo ed ha sufficiente forza muscolare per sollevarsi completamente durante i movimenti]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="185" width="567" height="20" forecolor="#FFFFFF" backcolor="#2D4262" uuid="68698e1c-1c04-49c5-b45f-07ba47ca6966"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ATTRITO E FRIZIONE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="227" width="10" height="10" uuid="5a250d0f-fd96-4a88-85f7-49bd87d68b9f">
+					<printWhenExpression><![CDATA[$F{friz3}.equals("op6a")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="227" width="10" height="10" uuid="2a33b693-92f1-4c40-a966-6b09b640a9b7">
+					<printWhenExpression><![CDATA[$F{friz3}.equals("op6b")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="225" width="115" height="15" uuid="f7844cf0-e0e5-4921-9121-71b1b691bff5"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Senza problemi apparenti]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="227" width="10" height="10" uuid="52204dd1-c5db-451a-9b96-6ae82bd9076f">
+					<printWhenExpression><![CDATA[$F{friz3}.equals("op6c")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="207" width="336" height="15" uuid="b0205ac6-2d13-4934-bebb-3b774ed2fb1e"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Attrito e Frizione]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="400" width="100" height="15" uuid="cb6f3d57-0b5c-4b2c-b929-3bf665e21cc1"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Punteggio Totale]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement x="118" y="400" width="44" height="15" uuid="786ec28b-e4ab-4f85-bfc6-29a36ca70837"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tot}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="451" width="250" height="15" uuid="9a484229-eae2-4703-a5d7-968f855c44c2"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Punteggio da 13 a 16 - Paziente a rischio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="466" width="250" height="15" uuid="41373d3b-38b7-4237-871b-54510c871265"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Punteggio < 13 - Paziente ad alto rischio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="436" width="250" height="15" uuid="87e37c12-9e88-488b-b06e-bd9de259d701"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Punteggio > 16 - Paziente non a rischio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="421" width="250" height="15" uuid="b7f9b6a4-94e5-44d5-ae71-2bf1b0b4d5f6"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Legenda]]></text>
+			</staticText>
+		</band>
+		<band height="98">
+			<printWhenExpression><![CDATA[$F{includeSignatures}.equals("true")]]></printWhenExpression>
+			<staticText>
+				<reportElement x="320" y="0" width="62" height="20" uuid="ff066080-64b7-421b-bc7d-1ae62477e036"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firme:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="319" y="13" width="248" height="84" uuid="64e247b3-d970-4ef1-acd4-93644e275b17"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Firme" uuid="37b7f02d-2ebc-440a-bc58-4495d40992f6">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("printAddInfoJson.signatures")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="84" width="248">
+						<image scaleImage="FillFrame">
+							<reportElement x="62" y="8" width="185" height="58" uuid="93f1769b-b7c8-498b-a11b-a75932ef3cbb">
+								<printWhenExpression><![CDATA[$F{url} != null || $F{url} != ""]]></printWhenExpression>
+							</reportElement>
+							<imageExpression><![CDATA[$F{url}]]></imageExpression>
+						</image>
+						<textField>
+							<reportElement x="62" y="23" width="185" height="26" uuid="14a0efdd-9203-4c79-a45a-f91e2d3248ed">
+								<printWhenExpression><![CDATA[$F{url} == null || $F{url} == ""]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Right" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="0" y="68" width="247" height="16" uuid="1153aca7-fa36-45e9-ad61-27851ec1e289"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{name} + " - " + $F{data}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="38">
+			<textField evaluationTime="Report">
+				<reportElement x="552" y="19" width="15" height="19" uuid="ef6e9f58-99a6-4c79-9317-7acdd812d999"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="19" width="290" height="19" uuid="7f05c231-109b-4809-8a1f-0cf350fa756b"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Braden"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="537" y="19" width="14" height="19" uuid="f6fa9861-0d87-43ed-abd7-8576c59e9665"/>
+				<textElement verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" di "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="19" width="53" height="19" uuid="1b0d78ec-2408-495e-93af-69f633707f55"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pagina  "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="19" width="190" height="19" uuid="cc01d847-7757-4d90-b423-69848240a5eb"/>
+				<textElement verticalAlignment="Top" markup="styled">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Generato il "+ new SimpleDateFormat("dd/MM/yyyy HH:mm").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="299" height="19" uuid="446e5641-3a6b-416e-92ae-0fea6693cb1c"/>
+				<textElement verticalAlignment="Bottom" markup="styled">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userLogin} !=""  && $F{userLogin} !=null?  "Generato da "+$F{userLogin} +"\n": ""]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

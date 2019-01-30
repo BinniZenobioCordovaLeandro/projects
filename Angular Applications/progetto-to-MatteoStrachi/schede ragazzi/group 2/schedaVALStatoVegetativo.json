@@ -1,0 +1,61 @@
+[{
+  "id": null,
+  "insertUserId": 4,
+  "insertUser": "Katie Wilson",
+  "insertTimeUTC": 1538553039380,
+  "insertTime": 1538553039380,
+  "updateUserId": 15,
+  "updateUser": "Config FM3",
+  "updateTimeUTC": 1539612313288,
+  "updateTime": 1539612313288,
+  "organizationId": 2,
+  "valid": true,
+  "cancellationTime": null,
+  "cancellationUser": null,
+  "cancellationUserId": null,
+  "cancellationTimeUTC": null,
+  "name": "Valutazione Stato Vegetativo - Glasgow Coma Scale (GCS)",
+  "code": "schedaVALStatoVegetativo",
+  "html": "<div class=\"panel panel-primary\">\n    <div class=\"panel-heading\">\n        Questionario\n    </div>\n    <div class=\"panel-body\">\n      <div class=\"form-horizontal\">\n            <div class=\"form-group\">\n                <label class=\"col-xs-12 col-md-3 col-lg-3\">A. Apertura degli occhi</label>\n                <div class=\"col-xs-6 col-md-4 col-lg-4\">\n                    <div class=\"ui-select\">\n                      <select ng-change=\"calcoloPunteggio();\" ng-model=\"formData.AOcchi\" ng-options=\"item.value for item in viewData.listAOcchi track by item.code\">\n                      </select>\n                    </div>\n                  <input type=\"number\"  summary=\"GSCADOcchi\" ng-model=\"formData.AOcchi.score\" ng-show=\"false\">\n                </div>\n                <div class=\"col-xs-6 col-md-5 col-lg-5\">\n                    <input class=\"form-control\" ng-model=\"formData.AOcchiCommento\" type=\"text\">\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label class=\"col-xs-12 col-md-3 col-lg-3\">B. Risposta verbale</label>\n                <div class=\"col-xs-6 col-md-4 col-lg-4\">\n                    <div class=\"ui-select\">\n                        <select ng-change=\"calcoloPunteggio();\" ng-model=\"formData.RVerbale\" ng-options=\"item.value for item in viewData.listRVerbale track by item.code\"></select>\n                    </div>\n                </div>\n              <input type=\"number\"  summary=\"GSCRVerbale\" ng-model=\"formData.RVerbale.score\" ng-show=\"false\">\n                <div class=\"col-xs-6 col-md-5 col-lg-5\">\n                    <input class=\"form-control\" ng-model=\"formData.RVerbaleCommento\" type=\"text\">\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label class=\"col-xs-12 col-md-3 col-lg-3\">C. Risposta motoria</label>\n                <div class=\"col-xs-6 col-md-4 col-lg-4\">\n                    <div class=\"ui-select\">\n                        <select ng-change=\"calcoloPunteggio();\" ng-model=\"formData.RMotoria\" ng-options=\"item.value for item in viewData.listRMotoria track by item.code\"></select>\n                    </div>\n                </div>\n              <input type=\"number\"  summary=\"GSCRMotoria\" ng-model=\"formData.RMotoriaRMotoria.score\" ng-show=\"false\">\n                <div class=\"col-xs-6 col-md-5 col-lg-5\">\n                    <input class=\"form-control\" ng-model=\"formData.RMotoriaCommento\" type=\"text\">\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label class=\"col-xs-12 col-md-3 col-lg-3\">Osservazioni</label>\n                <div class=\"col-xs-12 col-md-9 col-lg-9\">\n                    <textarea class=\"form-control\" ng-model=\"formData.Osservazioni\" rows=\"5\"></textarea>\n                  <input type=\"text\"  summary=\"GSCOsservazioni\" ng-model=\"formData.Osservazioni\" ng-show=\"false\">\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label class=\"col-xs-12 col-md-12 col-lg-12\">INDICE DI VALUTAZIONE</label>\n              <label class=\"col-xs-12 col-md-3 col-lg-3\">Valutazione Stato Vegetativo - Glasgow Coma Scale (GCS)</label>  \n              <div class=\"col-xs-12 col-md-2 col-lg-2\">\n                    <input class=\"form-control\" concept=\"scoreGCSTotal\" summary ng-model=\"formData.scoreGCSTotal\" type=\"number\" readonly>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>",
+  "javascript": "\nvar calcoloPunteggio = function (){\n  var element = null, somma=null;\n  for (var i in formData){\n    element = formData[i];\n    if (element && element.score >= 0){\n      somma = somma + element.score;\n    }\n  }\n  formData.scoreGCSTotal= somma;\n};\n\nregisterFunction(\"calcoloPunteggio\",calcoloPunteggio);\n\nvar fn;\n\n\nviewData.listAOcchi=[\n  {\"code\":\"op1a\",\"value\":\"Spontanea Farm\",\"score\":4},\n  {\"code\":\"op1b\",\"value\":\"Agli stimoli verbali\",\"score\":3},\n  {\"code\":\"op1c\",\"value\":\"Al dolore\",\"score\":2},\n  {\"code\":\"op1d\",\"value\":\"Nessuna\",\"score\":1}\n];\nviewData.listRVerbale=[\n  {\"code\":\"op2a\",\"value\":\"Orientata, appropriata\",\"score\":5},\n  {\"code\":\"op2b\",\"value\":\"Confusa\",\"score\":4},\n  {\"code\":\"op2c\",\"value\":\"Parole inappropriate\",\"score\":3},\n  {\"code\":\"op2d\",\"value\":\"Suoni incomprensibili\",\"score\":2},\n  {\"code\":\"op2e\",\"value\":\"Nessuna\",\"score\":1}\n];\n\nviewData.listRMotoria=[\n  {\"code\":\"op3a\",\"value\":\"Obbedisce al comando\",\"score\":6},\n  {\"code\":\"op3b\",\"value\":\"Localizza il dolore\",\"score\":5},\n  {\"code\":\"op3c\",\"value\":\"Retrae al dolore\",\"score\":4},\n  {\"code\":\"op3d\",\"value\":\"Flette al dolore\",\"score\":3},\n  {\"code\":\"op3e\",\"value\":\"Estende al dolore\",\"score\":2},\n  {\"code\":\"op3f\",\"value\":\"Nessuna\",\"score\":1}\n];",
+  "css": ".ui-select {\n\twidth:100% !important;\n}\n\n.ui-select>select {\n    text-transform: none !important;\n    font-size: 13px !important;\n}\n\n",
+  "version": 1,
+  "status": "DRAFT",
+  "bundleValues": {
+    "it_IT": {
+      "GSCRMotoria": "",
+      "GSCADOcchi": "",
+      "GSCOsservazioni": "",
+      "GSCRVerbale": ""
+    },
+    "en_GB": {
+      "GSCRMotoria": "",
+      "GSCADOcchi": "",
+      "GSCOsservazioni": "",
+      "GSCRVerbale": ""
+    },
+    "es_ES": {
+      "GSCRMotoria": "",
+      "GSCADOcchi": "",
+      "GSCOsservazioni": "",
+      "GSCRVerbale": ""
+    },
+    "de_DE": {
+      "GSCRMotoria": "",
+      "GSCADOcchi": "",
+      "GSCOsservazioni": "",
+      "GSCRVerbale": ""
+    }
+  },
+  "templateFileName": null,
+  "templateApplications": null,
+  "repositoryEnabled": null,
+  "signatureEnabled": null,
+  "signatureNotMandatory": null,
+  "sendTxtEnabled": null,
+  "sendPrivacyEnabled": null,
+  "cda2Enabled": null,
+  "cda2Xlts": null,
+  "cancellableEnabled": null,
+  "saveAsDraftWhenInvalid": null
+}]

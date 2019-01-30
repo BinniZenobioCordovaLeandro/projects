@@ -1,0 +1,50 @@
+[{
+  "id": null,
+  "insertUserId": 4,
+  "insertUser": "Katie Wilson",
+  "insertTimeUTC": 1536920381811,
+  "insertTime": 1536920381811,
+  "updateUserId": 4,
+  "updateUser": "Katie Wilson",
+  "updateTimeUTC": 1537511813907,
+  "updateTime": 1537511813907,
+  "organizationId": 2,
+  "valid": true,
+  "cancellationTime": null,
+  "cancellationUser": null,
+  "cancellationUserId": null,
+  "cancellationTimeUTC": null,
+  "name": "Valutazione In Sede",
+  "code": "schedaValutazioneInSede",
+  "html": "\n    <div class=\"panel-body\">\n        <div class=\"row\">\n            <div class=\"col-xs-12 col-sm-12 col-md-12\">\n                <div class=\"panel panel-primary\">\n                    <div class=\"panel-heading\">\n                        Attività di base\n                    </div>\n                    <div class=\"panel-body\">\n                        <div class=\"form-horizontal\">\n                            <div class=\"col-sm-12 col-md-12\">\n                                <div class=\"form-group\">\n                                    <label class=\"col-sm-12\">Commento</label>\n                                    <div class=\"col-sm-12\">\n                                        <textarea class=\"form-control\" ng-model=\"formData.commento\" rows=\"7\"></textarea>\n                                      \t<input class=\"form-control\" type=\"text\" summary=\"VALSEDECommento\" ng-model=\"formData.commento\" ng-show=\"false\" >\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"col-sm-12 col-md-12\">\n                                <div class=\"form-group\">\n                                    <label class=\"col-sm-12\">Potenziale residuo</label>\n                                    <div class=\"col-sm-12\">\n                                        <div class=\"form-inline\" ng-click=\"selectRadio();\">\n                                            <label class=\"ui-radio\" ng-click=\"formData.potenzialeResiduo={code:'op1a',score:0}\"><input type=\"radio\" value=\"op1a\" ng-model=\"formData.potenzialeResiduo.code\"><span>Poco probabili significativi recuperi di autonomia.</span></label>\n                                            <label class=\"ui-radio\" ng-click=\"formData.potenzialeResiduo={code:'op1b',score:5}\"><input type=\"radio\" value=\"op1b\" ng-model=\"formData.potenzialeResiduo.code\"><span>Vi è la possibilità di recuperare autonomia (punteggio &#60=3) in almeno 1 item del Barthel ADL o MOBILITA</span></label>\n                                            <label class=\"ui-radio\" ng-click=\"formData.potenzialeResiduo={code:'op1c',score:20}\"><input type=\"radio\" value=\"op1c\" ng-model=\"formData.potenzialeResiduo.code\"><span>Buon potenziale residuo (anche in patologia cronico - degenerativa, se presente sindrome ipocinetica da assistenza inadeguata)</span></label>\n                                            <label class=\"ui-radio\" ng-click=\"formData.potenzialeResiduo={code:'op1d',score:25}\"><input type=\"radio\" value=\"op1d\" ng-model=\"formData.potenzialeResiduo.code\"><span>Elevato potenziale residuo dopo evento acuto, con scarsa probabilità di recupero spontaneo</span></label>\n                                            <input class=\"form-control\" type=\"text\" summary=\"VALSEDEPotResiduo\" ng-model=\"formData.potenzialeResiduo.score\" ng-show=\"false\" >\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                          <div class=\"col-sm-12 col-md-12\">\n                              <div class=\"form-group\">\n                                  <label class=\"col-xs-12 col-sm-4 col-md-2\">Punteggio</label>\n                                  <div class=\"col-xs-12 col-sm-8 col-md-2\">\n                                      <input class=\"form-control\" concept=\"scoreVALSEDETotal\" style=\"-max-width: 100px;\" summary ng-model=\"formData.scoreTotale\" type=\"number\" readonly>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n",
+  "javascript": "var calcoloTotalePunteggio =  function(){\n      var somma=null;\n  \t\tif (formData.potenzialeResiduo != undefined && formData.potenzialeResiduo.score >0)\n          somma += formData.potenzialeResiduo.score;\n  \t  formData.scoreTotale=somma;\n};\n\nregisterFunction(\"calcoloTotalePunteggio\",calcoloTotalePunteggio);\n\nvar selectRadio = function(event){\n    calcoloTotalePunteggio();\n};\nregisterFunction(\"selectRadio\",selectRadio);",
+  "css": null,
+  "version": 1,
+  "status": "DRAFT",
+  "bundleValues": {
+    "it_IT": {
+      "VALSEDEPotResiduo": "",
+      "VALSEDECommento": ""
+    },
+    "en_GB": {
+      "VALSEDEPotResiduo": ""
+    },
+    "es_ES": {
+      "VALSEDEPotResiduo": ""
+    },
+    "de_DE": {
+      "VALSEDEPotResiduo": ""
+    }
+  },
+  "templateFileName": null,
+  "templateApplications": null,
+  "repositoryEnabled": null,
+  "signatureEnabled": null,
+  "signatureNotMandatory": null,
+  "sendTxtEnabled": null,
+  "sendPrivacyEnabled": null,
+  "cda2Enabled": null,
+  "cda2Xlts": null,
+  "cancellableEnabled": null,
+  "saveAsDraftWhenInvalid": null
+}]

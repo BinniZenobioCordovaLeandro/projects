@@ -1,0 +1,5 @@
+NOTE :
+1.- Devi fare la creazione del concept "scoresongsTotal" dentro di FM3.
+    * la struttura del nome dei concept è score+alcunnome+Total => scodealcunnomeTotal
+
+2.- E anche un bundle per il campo summary chiamato "hoby".

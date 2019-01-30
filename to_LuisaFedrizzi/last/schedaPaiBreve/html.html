@@ -1,0 +1,408 @@
+<div class="panel-body">
+  <div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          FRONTESPIZIO
+        </div>
+        <div class="panel-body">
+          <div class="form-horizontal">
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Commento</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.frontespizio.commento" rows="4"></textarea>
+                  <input class="form-control" summary="PAIBCommento" ng-model="formData.frontespizio.commento" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-4">Documento</label>
+                <div class="col-sm-8">
+                  <div class="form-inline">
+                    <label ng-click="formData.frontespizio.documento={code:'op1a',score:null}" class="ui-radio"><input type="radio" value="op1a" ng-model="formData.frontespizio.documento.code"><span>Documento
+                        iniziale UVM</span></label>
+                    <label ng-click="formData.frontespizio.documento={code:'op1b',score:null}" class="ui-radio"><input type="radio" value="op1b" ng-model="formData.frontespizio.documento.code"><span>Aggiornamento
+                        RSA</span></label>
+                    <input class="form-control" summary="PAIBDocumento" ng-model="formData.frontespizio.documento.value" ng-show="false" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-4">Verifica (mesi)</label>
+                <div class="col-sm-8">
+                  <div class="form-inline">
+                    <label class="ui-radio" ng-click="formData.frontespizio.verifica={code:'op2a',score:1}"><input type="radio" value="op2a" ng-model="formData.frontespizio.verifica.code"><span>1</span></label>
+                    <label class="ui-radio" ng-click="formData.frontespizio.verifica={code:'op2b',score:2}"><input type="radio" value="op2b" ng-model="formData.frontespizio.verifica.code"><span>2</span></label>
+                    <label class="ui-radio" ng-click="formData.frontespizio.verifica={code:'op2c',score:3}"><input type="radio" value="op2c" ng-model="formData.frontespizio.verifica.code"><span>3</span></label>
+                    <label class="ui-radio" ng-click="formData.frontespizio.verifica={code:'op2d',score:4}"><input type="radio" value="op2d" ng-model="formData.frontespizio.verifica.code"><span>4</span></label>
+                    <label class="ui-radio" ng-click="formData.frontespizio.verifica={code:'op2e',score:5}"><input type="radio" value="op2e" ng-model="formData.frontespizio.verifica.code"><span>5</span></label>
+                    <label class="ui-radio" ng-click="formData.frontespizio.verifica={code:'op2f',score:6}"><input type="radio" value="op2f" ng-model="formData.frontespizio.verifica.code"><span>6</span></label>
+                    <input class="form-control" summary="PAIBVerifica" ng-model="formData.frontespizio.verifica.score" ng-show="false" type="number">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Il responsabile</label>
+                <div class="col-lg-12 col-sm-12">
+                  <textarea class="form-control" ng-model="formData.frontespizio.responsabile" rows="4"></textarea>
+                  <input class="form-control" summary="PAIBResponsabile" ng-model="formData.frontespizio.responsabile" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          AREA MEDICO - INFERMIERISTICA
+        </div>
+        <div class="panel-body">
+          <div class="form-horizontal">
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group" ng-click="selectRadio()">
+                <label class="col-sm-4">Risultati attesi</label>
+                <div class="col-sm-8">
+                  <div class="form-inline">
+                    <label class="ui-radio" ng-click="formData.areaMedico.risultatiAttessi={code:'op3a',score:0}"><input type="radio" value="op3a" ng-model="formData.areaMedico.risultatiAttessi.code" ng-required="true"><span>Contenere pegg.to</span></label>
+                    <label class="ui-radio" ng-click="formData.areaMedico.risultatiAttessi={code:'op3b',score:1}"><input type="radio" value="op3b" ng-model="formData.areaMedico.risultatiAttessi.code" ng-required="true"><span>Mantenimento</span></label>
+                    <label class="ui-radio" ng-click="formData.areaMedico.risultatiAttessi={code:'op3c',score:2}"><input type="radio" value="op3c" ng-model="formData.areaMedico.risultatiAttessi.code" ng-required="true"><span>Miglioramento</span></label>
+                    <input class="form-control" summary="MEDRisultatiAttessi" ng-model="formData.areaMedico.risultatiAttessi.score" ng-show="false" type="number">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Indicazioni sintetiche</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaMedico.indicazioniSintetiche" rows="3"></textarea>
+                  <input class="form-control" summary="MEDRIndSintetiche" ng-model="formData.areaMedico.indicazioniSintetiche" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Obiettivo principale</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaMedico.obiettivoPrincipale" rows="3"></textarea>
+                  <input class="form-control" summary="MEDObiePrincipale" ng-model="formData.areaMedico.obiettivoPrincipale" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-4">Opportuni interventi specialistici</label>
+                <div class="col-sm-8">
+                  <div class="form-inline">
+                    <label class="ui-radio" ng-click="formData.areaMedico.opportuniInterventi={code:'op4a',score:0}"><input type="radio" value="op4a" ng-model="formData.areaMedico.opportuniInterventi.code" ng-required="true"><span>SI</span></label>
+                    <label class="ui-radio" ng-click="formData.areaMedico.opportuniInterventi={code:'op4b',score:0}"><input type="radio" value="op4b" ng-model="formData.areaMedico.opportuniInterventi.code" ng-required="true"><span>NO</span></label>
+                    <input class="form-control" summary="MEDOpInterventi" ng-model="formData.areaMedico.opportuniInterventi.code" ng-show="false" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Soggetti da attivare</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaMedico.soggettiAttivare" rows="3"></textarea>
+                  <input class="form-control" summary="MEDSoggAttivare" ng-model="formData.areaMedico.soggettiAttivare" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          AREA COGNITIVO COMPORTAMENTALE
+        </div>
+        <div class="panel-body">
+          <div class="form-horizontal">
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group" ng-click="selectRadio()">
+                <label class="col-sm-4">Risultati attesi</label>
+                <div class="col-sm-8">
+                  <div class="form-inline">
+                    <label class="ui-radio" ng-click="formData.areaCognitivo.risultatiAttessi={code:'op5a',score:0}"><input type="radio" value="op5a" ng-model="formData.areaCognitivo.risultatiAttessi.code" ng-required="true"><span>Contenere
+                        pegg.to</span></label>
+                    <label class="ui-radio" ng-click="formData.areaCognitivo.risultatiAttessi={code:'op5b',score:1}"><input type="radio" value="op5b" ng-model="formData.areaCognitivo.risultatiAttessi.code" ng-required="true"><span>Mantenimento</span></label>
+                    <label class="ui-radio" ng-click="formData.areaCognitivo.risultatiAttessi={code:'op5c',score:2}"><input type="radio" value="op5c" ng-model="formData.areaCognitivo.risultatiAttessi.code" ng-required="true"><span>Miglioramento</span></label>
+                    <input class="form-control" summary="COGRisultatiAttessi" ng-model="formData.areaCognitivo.risultatiAttessi.score" ng-show="false" type="number">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Indicazioni sintetiche</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaCognitivo.indicazioniSintetiche" rows="3"></textarea>
+                  <input class="form-control" summary="COGRIndSintetiche" ng-model="formData.areaCognitivo.indicazioniSintetiche" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Obiettivo principale</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaCognitivo.obiettivoPrincipale" rows="3"></textarea>
+                  <input class="form-control" summary="COGObiePrincipale" ng-model="formData.areaCognitivo.obiettivoPrincipale" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-4">Opportuni interventi specialistici</label>
+                <div class="col-sm-8">
+                  <div class="form-inline">
+                    <label class="ui-radio" ng-click="formData.areaCognitivo.opportuniInterventi={code:'op6a',score:0}"><input type="radio" value="op6a" ng-model="formData.areaCognitivo.opportuniInterventi.code" ng-required="true"><span>SI</span></label>
+                    <label class="ui-radio" ng-click="formData.areaCognitivo.opportuniInterventi={code:'op6b',score:0}"><input type="radio" value="op6b" ng-model="formData.areaCognitivo.opportuniInterventi.code" ng-required="true"><span>NO</span></label>
+                    <input class="form-control" summary="COGOpInterventi" ng-model="formData.areaCognitivo.opportuniInterventi.code" ng-show="false" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Soggetti da attivare</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaCognitivo.soggettiAttivare" rows="3"></textarea>
+                  <input class="form-control" summary="COGSoggAttivare" ng-model="formData.areaCognitivo.soggettiAttivare" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          AREA ATTIVITÀ DI BASE
+        </div>
+        <div class="panel-body">
+          <div class="form-horizontal">
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group" ng-click="selectRadio()">
+                <label class="col-sm-4">Risultati attesi</label>
+                <div class="col-sm-8">
+                  <div class="form-inline">
+                    <label class="ui-radio" ng-click="formData.areaAttivitaBas.risultatiAttessi={code:'op7a',score:0}"><input type="radio" value="op7a" ng-model="formData.areaAttivitaBas.risultatiAttessi.code" ng-required="true"><span>Contenere
+                        pegg.to</span></label>
+                    <label class="ui-radio" ng-click="formData.areaAttivitaBas.risultatiAttessi={code:'op7b',score:1}"><input type="radio" value="op7b" ng-model="formData.areaAttivitaBas.risultatiAttessi.code" ng-required="true"><span>Mantenimento</span></label>
+                    <label class="ui-radio" ng-click="formData.areaAttivitaBas.risultatiAttessi={code:'op7c',score:2}"><input type="radio" value="op7c" ng-model="formData.areaAttivitaBas.risultatiAttessi.code" ng-required="true"><span>Miglioramento</span></label>
+                    <input class="form-control" summary="ATTRisultatiAttessi" ng-model="formData.areaAttivitaBas.risultatiAttessi.score" ng-show="false" type="number">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Indicazioni sintetiche</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaAttivitaBas.indicazioniSintetiche" rows="3"></textarea>
+                  <input class="form-control" summary="ATTRIndSintetiche" ng-model="formData.areaAttivitaBas.indicazioniSintetiche" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Obiettivo principale</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaAttivitaBas.obiettivoPrincipale" rows="3"></textarea>
+                  <input class="form-control" summary="ATTObiePrincipale" ng-model="formData.areaAttivitaBas.obiettivoPrincipale" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-4">Opportuni interventi specialistici</label>
+                <div class="col-sm-8">
+                  <div class="form-inline">
+                    <label class="ui-radio" ng-click="formData.areaAttivitaBas.opportuniInterventi={code:'op8a',score:0}"><input type="radio" value="op8a" ng-model="formData.areaAttivitaBas.opportuniInterventi.code" ng-required="true"><span>SI</span></label>
+                    <label class="ui-radio" ng-click="formData.areaAttivitaBas.opportuniInterventi={code:'op8b',score:0}"><input type="radio" value="op8b" ng-model="formData.areaAttivitaBas.opportuniInterventi.code" ng-required="true"><span>NO</span></label>
+                    <input class="form-control" summary="ATTOpInterventi" ng-model="formData.areaAttivitaBas.opportuniInterventi.code" ng-show="false" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Soggetti da attivare</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaAttivitaBas.soggettiAttivare" rows="3"></textarea>
+                  <input class="form-control" summary="ATTSoggAttivare" ng-model="formData.areaAttivitaBas.soggettiAttivare" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          AREA MOBILITÀ
+        </div>
+        <div class="panel-body">
+          <div class="form-horizontal">
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group" ng-click="selectRadio()">
+                <label class="col-sm-4">Risultati attesi</label>
+                <div class="col-sm-8">
+                  <div class="form-inline">
+                    <label class="ui-radio" ng-click="formData.areaMobilita.risultatiAttessi={code:'op9a',score:0}"><input type="radio" value="op9a" ng-model="formData.areaMobilita.risultatiAttessi.code" ng-required="true"><span>Contenere
+                        pegg.to</span></label>
+                    <label class="ui-radio" ng-click="formData.areaMobilita.risultatiAttessi={code:'op9b',score:1}"><input type="radio" value="op9b" ng-model="formData.areaMobilita.risultatiAttessi.code" ng-required="true"><span>Mantenimento</span></label>
+                    <label class="ui-radio" ng-click="formData.areaMobilita.risultatiAttessi={code:'op9c',score:2}"><input type="radio" value="op9c" ng-model="formData.areaMobilita.risultatiAttessi.code" ng-required="true"><span>Miglioramento</span></label>
+                    <input class="form-control" summary="MOBRisultatiAttessi" ng-model="formData.areaMobilita.risultatiAttessi.score" ng-show="false" type="number">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Indicazioni sintetiche</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaMobilita.indicazioniSintetiche" rows="3"></textarea>
+                  <input class="form-control" summary="MOBRIndSintetiche" ng-model="formData.areaMobilita.indicazioniSintetiche" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Obiettivo principale</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaMobilita.obiettivoPrincipale" rows="3"></textarea>
+                  <input class="form-control" summary="MOBObiePrincipale" ng-model="formData.areaMobilita.obiettivoPrincipale" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-4">Opportuni interventi specialistici</label>
+                <div class="col-sm-8">
+                  <div class="form-inline">
+                    <label class="ui-radio" ng-click="formData.areaMobilita.opportuniInterventi={code:'op10a',score:0}"><input type="radio" value="op10a" ng-model="formData.areaMobilita.opportuniInterventi.code" ng-required="true"><span>SI</span></label>
+                    <label class="ui-radio" ng-click="formData.areaMobilita.opportuniInterventi={code:'op10b',score:0}"><input type="radio" value="op10b" ng-model="formData.areaMobilita.opportuniInterventi.code" ng-required="true"><span>NO</span></label>
+                    <input class="form-control" summary="MOBOpInterventi" ng-model="formData.areaMobilita.opportuniInterventi.code" ng-show="false" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Soggetti da attivare</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaMobilita.soggettiAttivare" rows="3"></textarea>
+                  <input class="form-control" summary="MOBSoggAttivare" ng-model="formData.areaMobilita.soggettiAttivare" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          AREA ASPETTI SOCIALI / ASOCIALIZZAZIONE
+        </div>
+        <div class="panel-body">
+          <div class="form-horizontal">
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group" ng-click="selectRadio()">
+                <label class="col-sm-4">Risultati attesi</label>
+                <div class="col-sm-8">
+                  <div class="form-inline">
+                    <label class="ui-radio" ng-click="formData.areaAAsociale.risultatiAttessi={code:'op11a',score:0}"><input type="radio" value="op11a" ng-model="formData.areaAAsociale.risultatiAttessi.code" ng-required="true"><span>Contenere
+                        pegg.to</span></label>
+                    <label class="ui-radio" ng-click="formData.areaAAsociale.risultatiAttessi={code:'op11b',score:1}"><input type="radio" value="op11b" ng-model="formData.areaAAsociale.risultatiAttessi.code" ng-required="true"><span>Mantenimento</span></label>
+                    <label class="ui-radio" ng-click="formData.areaAAsociale.risultatiAttessi={code:'op11c',score:2}"><input type="radio" value="op11c" ng-model="formData.areaAAsociale.risultatiAttessi.code" ng-required="true"><span>Miglioramento</span></label>
+                    <input class="form-control" summary="ASOCRisultatiAttessi" ng-model="formData.areaAAsociale.risultatiAttessi.score" ng-show="false" type="number">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Indicazioni sintetiche</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaAAsociale.indicazioniSintetiche" rows="3"></textarea>
+                  <input class="form-control" summary="ASOCRIndSintetiche" ng-model="formData.areaAAsociale.indicazioniSintetiche" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Obiettivo principale</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaAAsociale.obiettivoPrincipale" rows="3"></textarea>
+                  <input class="form-control" summary="ASOCObiePrincipale" ng-model="formData.areaAAsociale.obiettivoPrincipale" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-4">Opportuni interventi specialistici</label>
+                <div class="col-sm-8">
+                  <div class="form-inline">
+                    <label class="ui-radio" ng-click="formData.areaAAsociale.opportuniInterventi={code:'op12a',score:0}"><input type="radio" value="op12a" ng-model="formData.areaAAsociale.opportuniInterventi.code" ng-required="true"><span>SI</span></label>
+                    <label class="ui-radio" ng-click="formData.areaAAsociale.opportuniInterventi={code:'op12b',score:0}"><input type="radio" value="op12b" ng-model="formData.areaAAsociale.opportuniInterventi.code" ng-required="true"><span>NO</span></label>
+                    <input class="form-control" summary="ASOCOpInterventi" ng-model="formData.areaAAsociale.opportuniInterventi.code" ng-show="false" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label class="col-sm-12">Soggetti da attivare</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" ng-model="formData.areaAAsociale.soggettiAttivare" rows="3"></textarea>
+                  <input class="form-control" summary="ASOCSoggAttivare" ng-model="formData.areaAAsociale.soggettiAttivare" ng-show="false" type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          Totali
+        </div>
+        <div class="panel-body">
+          <div class="form-horizontal">
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+
+                <label class="col-xs-12 col-md-2 col-lg-2">Totale</label>
+                <div class="col-xs-5 col-md-3 col-lg-2">
+                  <input class="form-control" concept="scorePAIBreveTotal" summary ng-model="formData.scoreTotale" type="text" readonly>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

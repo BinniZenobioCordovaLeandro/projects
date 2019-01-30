@@ -1,0 +1,183 @@
+{
+	"formInstanceValue": {
+		"id": "5ba0cf9888506e6d2b6e5825",
+		"insertUserId": 16,
+		"insertUser": "FM3",
+		"insertTimeUTC": 1537265560442,
+		"insertTime": 1537265560442,
+		"updateUserId": 16,
+		"updateUser": "FM3",
+		"updateTimeUTC": 1537265577633,
+		"updateTime": 1537265577633,
+		"organizationId": 2,
+		"valid": true,
+		"cancellationTime": null,
+		"cancellationUser": null,
+		"cancellationUserId": null,
+		"cancellationTimeUTC": null,
+		"formInstanceId": "5ba0cf9888506e6d2b6e5824",
+		"formDocument": {
+			"initData": {
+				"patient": {
+					"patientId": "324",
+					"firstName": "MARIA",
+					"lastName": "BIANCHI",
+					"sex": "F",
+					"birthDate": "1926-05-06",
+					"uniqueIdentifier": "324",
+					"phone": "",
+					"mobilePhone": "3405622357",
+					"email": "",
+					"language": "",
+					"deathDate": null,
+					"isDead": false
+				}
+			},
+			"formData":
+{"SCoscienza":{"OSpazio":{"code":"op_1","value":"SI"},"ONTempo":{"code":"op_1","value":"SI"},"VProduzione":{"code":"op_1","value":"SI"},"VCompresione":{"code":"op_1","value":"SI"},"MAlimentazione":{"code":"op_1","value":"per OS (bocca)"},"OSpazioAltro":"1","ONTempoAltro":"2","VProduzioneAltro":"3","VCompresioneAltro":"4","MAlimentazioneAltro":"5"},"RAPrimitivi":{"RMorso":{"code":"op_1","value":"SI"},"RSuzione":{"code":"op_1","value":"SI"},"RMasticazione":{"code":"op_1","value":"SI"},"RMuso":{"code":"op_1","value":"SI"},"RPCardinali":{"code":"op_1","value":"SI"},"RMorsoAltro":"1","RSuzioneAltro":"2","RMasticazioneAltro":"3","RMusoAltro":"4","RPCardinaliAltro":"5"},"Dentizione":{"DNASuperiore":{"code":"op_1","value":"SI"},"DNAInferiore":{"code":"op_1","value":"SI"},"DEASuperriore":{"code":"op_1","value":"SI"},"DEAInferiore":{"code":"op_1","value":"SI"},"DPASuperriore":{"code":"op_1","value":"SI"},"DPAinferiore":{"code":"op_1","value":"SI"},"DNASuperioreAltro":"1","DNAInferioreAltro":"2","DEASuperrioreAltro":"3","DEAInferioreAltro":"4","DPASuperrioreAltro":"5","DPAinferioreAltro":"6"},"IOrale":"Residui di cibo tra guance e denti","Respirazione":{"RNasale":{"code":"op_1","value":"SI"},"RNOrale":{"code":"op_1","value":"SI"},"GRespiratorio":{"code":"op_1","value":"SI"},"NEupnea":{"code":"op_1","value":"SI"},"DEloquio":{"code":"op_1","value":"SI"},"DRiposo":{"code":"op_1","value":"SI"},"DSforzo":{"code":"op_1","value":"SI"},"NASecrezioni":{"code":"op_1","value":"SI"},"Ossigeno":{"code":"op_1","value":"SI"},"PCannula":{"code":"op_1","value":"SI"},"CFinestrata":{"code":"op_1","value":"SI"},"CCuffiata":{"code":"op_1","value":"SI"},"SCannula":{"code":"op_1","value":"SI"},"RNasaleAltro":"1","RNOraleAltro":"2","GRespiratorioAltro":"3","NEupneaAltro":"4","DEloquioAltro":"5","DRiposoAltro":"6","DSforzoAltro":"7","NASecrezioniAltro":"8","OssigenoAltro":"9","PCannulaAltro":"10","CFinestrataAltro":"11","CCuffiataAltro":"12","SCannulaAltro":"13"},"PSecrezioni":{"Secrezioni":"Presenti","SecrezioniAltro":"1","Salivazione":"Scialorrea scarsa a sx","SalivazioneAltro":"2"},"RDeglutizione":{"CRDeglutizione":"Apnea deglutitoria dopo inspirazione","CRDAltro":"1"},"VAFunzionale":{"Labbra":{"PCElastiche":{"code":"op_1","value":"SI"},"PCRetraenti":{"code":"op_1","value":"SI"},"Simmetriche":{"code":"op_1","value":"SI"},"Asimetriche":{"code":"op_1","value":"NO"},"STattile":{"code":"op_1","value":"SI"},"STermica":{"code":"op_1","value":"SI"},"MOLabbra":{"code":"op_1","value":"SI"},"MUCLabbra":{"code":"op_1","value":"SI"},"MODenti":{"code":"op_1","value":"SI"},"MOCDenti":{"code":"op_1","value":"SI"},"PCElasticheAltro":"1","PCRetraentiAltro":"2","SimmetricheAltro":"3","STattileltro":"4","STermicaAltro":"5","MOLabbraAltro":"6","MUCLabbraAltro":"7","MODentiAltro":"8","MOCDentiAltro":"9"},"Mandibola":{"Normale":{"code":"op_1","value":"SI"},"Deviata":{"code":"op_1","value":"SI"},"EFrattura":{"code":"op_1","value":"SI"},"Cadente":{"code":"op_1","value":"SI"},"Trisma":{"code":"op_1","value":"SI"},"Lussazione":{"code":"op_1","value":"SI"},"Sublussazione":{"code":"op_1","value":"SI"},"NormaleAltro":"1","DeviataAltro":"2","EFratturaAltro":"3","CadenteAltro":"4","TrismaAltro":"5","LussazioneAltro":"6","SublussazioneAltro":"7"},"Lingua":{"Asimmetrica":{"code":"op_1","value":"SI"},"PCElastiche":{"code":"op_1","value":"SI"},"PCRetraenti":{"code":"op_1","value":"SI"},"PDiscinesie":{"code":"op_1","value":"SI"},"TRiposo":{"code":"op_1","value":"SI"},"Fascicolazioni":{"code":"op_1","value":"SI"},"RVomito":{"code":"op_1","value":"SI"},"STattSMediano":{"code":"op_1","value":"SI"},"STPPosteriore":{"code":"op_1","value":"SI"},"STattMLaterali":{"code":"op_1","value":"SI"},"STattPunta":{"code":"op_1","value":"SI"},"STSMediano":{"code":"op_1","value":"SI"},"STPosteriore":{"code":"op_1","value":"SI"},"STMLaterali":{"code":"op_1","value":"SI"},"STPunta":{"code":"op_1","value":"SI"},"AsimmetricaAltro":"1","PCElasticheAltro":"2","PCRetraentiAltro":"3","PDiscinesieAltro":"4","TRiposoAltro":"5","FascicolazioniAltro":"6","RVomitoAltro":"7","STattSMedianoAltro":"8","STPPosterioreAltro":"9","STattMLateraliAltro":"10","STattPuntaAltro":"11","STSMedianoAltro":"12","STPosterioreAltro":"13","STMLateraliAltro":"14","STPuntaAltro":"15"},"Guance":{"PCElastiche":{"code":"op_1","value":"SI"},"PCRetraenti":{"code":"op_1","value":"SI"},"GIpotrifiche":{"code":"op_1","value":"SI"},"STattileInterna":{"code":"op_1","value":"SI"},"STattileEsterna":{"code":"op_1","value":"SI"},"STInterna":{"code":"op_1","value":"SI"},"STEsterna":{"code":"op_1","value":"SI"},"PCElasticheAltro":"1","PCRetraentiAltro":"2","GIpotrificheAltro":"3","STattileInternaAltro":"4","STattileEsternaAltro":"5","STInternaAltro":"6","STEsternaAltro":"7"}},"VPalatino":{"Normale":{"code":"op_1","value":"SI"},"ADeviato":{"code":"op_1","value":"SI"},"Prolassato":{"code":"op_1","value":"SI"},"NormaleAltro":"1","ADeviatoAltro":"2","ProlassatoAltro":"3"},"Alimentazione":"Indipendente con eccezioni","RCibo":{"IAlimentari":{"code":"op_1","value":"SI"},"IAlimentariAltro":"1"},"Gusto":{"Normale":{"code":"op_1","value":"SI"},"Alterato":{"code":"op_1","value":"SI"},"Assente":{"code":"op_1","value":"SI"},"ADolci":{"code":"op_1","value":"SI"},"ASalati":{"code":"op_1","value":"SI"},"NormaleAltro":"1","AlteratoAltro":"2","AssenteAltro":"3","ADolciAltro":"4","ASalatiAltro":"5"},"CCPerOs":{"LNAddensati":{"code":"op_1","value":"SI"},"LAddensati":{"code":"op_1","value":"SI"},"SPMorbidi":{"code":"op_1","value":"SI"},"Semisolidi":{"code":"op_1","value":"SI"},"Solidi":{"code":"op_1","value":"SI"},"LNAddensatiAltro":"1","LAddensatiAltro":"2","SPMorbidiAltro":"3","SemisolidiAltro":"4","SolidiAltro":"5"},"Omogeneita":{"Frullato":{"code":"op_1","value":"SI"},"Passato":{"code":"op_1","value":"SI"},"Omogeneizzato":{"code":"op_1","value":"SI"},"Centrifugato":{"code":"op_1","value":"SI"},"Autonoma":{"code":"op_1","value":"SI"},"Ausili":{"code":"op_1","value":"SI"},"PAccorgiment":{"code":"op_1","value":"SI"},"Bicchiere":{"code":"op_1","value":"SI"},"Cucchiaio":{"code":"op_1","value":"SI"},"Forchetta":{"code":"op_1","value":"SI"},"Cucchiaino":{"code":"op_1","value":"SI"},"Siringa":{"code":"op_1","value":"SI"},"FrullatoAltro":"1","PassatoAltro":"2","OmogeneizzatoAltro":"3","CentrifugatoAltro":"4","AutonomaAltro":"5","AusiliAltro":"6","PAccorgimentAltro":"7","BicchiereAltro":"8","CucchiaioAltro":"9","ForchettaAltro":"10","CucchiainoAltro":"11","SiringaAltro":"12"},"PFacilitanti":{"Fisiologica":{"code":"op_1","value":"SI"},"CFAvanti":{"code":"op_1","value":"SI"},"CInclinatoDx":{"code":"op_1","value":"SI"},"CInclinatoSx":{"code":"op_1","value":"SI"},"CRuotatoDx":{"code":"op_1","value":"SI"},"CRuotatoSx":{"code":"op_1","value":"SI"},"Altro":{"code":"op_1","value":"SI"},"FisiologicaAltro":"1","CFAvantiAltro":"2","CInclinatoDxAltro":"3","CInclinatoSxAltro":"4","CRuotatoDxAltro":"5","CRuotatoSxAltro":"6","AltroAltro":"7"},"TAcqua":{"ETAcqua":"Dubbio","Altro":"1","DRTest":"data"},"AODAlimentazione":{"AODAlimentazione":"aaaaaaaaaaaa","PAccorgimenti":"aaaaaaaaaaaddddddddddddddd"}},
+			"summaryFieldsData": [{
+				"key": "ICPCCommento",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCPat1",
+				"value": "test",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat1",
+				"value": 3,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "ICPCPat2",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat2",
+				"value": 4,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "ICPCPat3",
+				"isConcept": false,
+				"bundles": {
+					"it_IT": ""
+				}
+			},
+			{
+				"key": "ICPCGravPat3",
+				"value": 3,
+				"isConcept": false,
+				"bundles": {
+					"it_IT": "",
+					"en_GB": "",
+					"es_ES": "",
+					"de_DE": ""
+				}
+			},
+			{
+				"key": "scoreICPCTotal",
+				"value": 10,
+				"isConcept": true,
+				"bundles": {
+					"it_IT": "Totale",
+					"en_GB": "Totale",
+					"es_ES": "12"
+				}
+			}],
+			"conceptFieldsData": [{
+				"key": "scoreICPCTotal",
+				"value": 10,
+				"bundles": {
+					"it_IT": "Totale",
+					"en_GB": "Totale",
+					"es_ES": "12"
+				}
+			}],
+			"metaData": []
+		},
+		"version": 1,
+		"status": "DRAFT",
+		"patient": {
+			"insertUserId": null,
+			"insertUser": null,
+			"insertTimeUTC": null,
+			"insertTime": null,
+			"updateUserId": null,
+			"updateUser": null,
+			"updateTimeUTC": null,
+			"updateTime": null,
+			"organizationId": null,
+			"valid": true,
+			"cancellationTime": null,
+			"cancellationUser": null,
+			"cancellationUserId": null,
+			"cancellationTimeUTC": null,
+			"firstName": "MARIA",
+			"lastName": "BIANCHI",
+			"sex": "F",
+			"birthDate": -1377734400000,
+			"uniqueIdentifier": "324",
+			"phone": "",
+			"mobilePhone": "3405622357",
+			"email": "",
+			"language": "",
+			"deathDate": null,
+			"isDead": false,
+			"patientId": "324",
+			"accountNumber": null
+		}
+	},
+	"urlInstance": "http://devsrv03.erossi.org:8080/HIS/fm3/#/runtime?application=HIS&extAuthToken=eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.7p8MLXJ6U2sjGKOp8Kem9aTKSYkSwGdKr3ySo-rTy93xUFMN3_oQWg.wu50_mlioYF2tH1T-SqeYg.Rak2CpdbjWOB-otmzgNYRtUhkoe70X_G-VMPf2d_6VXaaG_GzIec8-vl7vr85YfGRBbWy8I_UOXCMdGnrs065QV8qcTY5Wz-10QkRjh8ueiMtmWdKf4BDxUfQOd49pFAiWaL9Uaaw8o1yzC7zMorZlKrU1KcpOaLFHt6LO09F42fHUbu6pN6iZ0UmZodt8lR63LaKyeCQ4EA63srH5oCig.WuO6M5Ha91XjyvUGgeCNCw&formInstanceId=5ba0cf9888506e6d2b6e5824&fm_username=admin_rsa&hidePreviousVersions=true&hideValidation=true&hideTitle=true&hideExportButton=true&notifyParent=true&hidePrintButton=true",
+	"printAddInfoJson": {
+		"includeSignatures": true,
+		"logo": "logo_cavedine.png",
+		"userLogin":"Administratore",
+		"operators": [{
+			"name": "RSA AMMINISTRATORE",
+			"figuraProfessionale": "Amministratore"
+		}],
+		"signatures": [{
+			"name": "RSA AMMINISTRATORE",
+			"data": "dd/MM/YYYY HH:mm",
+			"url": "logo_cavedine.png"
+		}],
+		"patient": {
+			"patientId": "324",
+			"firstName": "MARIA",
+			"lastName": "BIANCHI",
+			"sex": "F",
+			"birthDate": "mag 6, 1926",
+			"uniqueIdentifier": "324",
+			"phone": "",
+			"mobilePhone": "3405622357",
+			"email": "",
+			"language": "",
+			"isDead": false
+		}
+	}
+}
+
+

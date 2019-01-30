@@ -1,0 +1,587 @@
+[{
+  "id": "5b8d234ecfc104605a40e37b",
+  "insertUserId": 959,
+  "insertUser": "angelica.salmaso",
+  "insertTimeUTC": "2018-09-03T12:04:30.229+0000",
+  "insertTime": "2018-09-03T12:04:30.229+0000",
+  "updateUserId": 31,
+  "updateUser": "Marco Marcotto",
+  "updateTimeUTC": "2018-09-13T15:42:18.408+0000",
+  "updateTime": "2018-09-13T15:42:18.408+0000",
+  "organizationId": 4,
+  "valid": true,
+  "cancellationTime": null,
+  "cancellationUser": null,
+  "cancellationUserId": null,
+  "cancellationTimeUTC": null,
+  "formInstanceId": "5b8d234ecfc104605a40e37a",
+  "formDocument": {
+    "initData": {
+      "requestDate": "13/09/2018",
+      "generalData": {
+        "userId": "31",
+        "userFullName": "Marco Marcotto",
+        "userLanguage": "de_DE",
+        "currentDateTime": "13/09/2018 17:42:17",
+        "userHealthCareProvider": null,
+        "userProfile": "marco.marcotto - Amministratore",
+        "username": "marco.marcotto"
+      },
+      "encounter": {
+        "counter": "E2018001259",
+        "type": "VISIT",
+        "entryDate": "03/09/2018 14:03:58",
+        "priority": "P-Programmata",
+        "entryReason": "",
+        "clinicalSpeciality": "",
+        "treatmentType": "",
+        "clinicalQuestion": "",
+        "diagnosis": "",
+        "bed": "",
+        "agreement": "",
+        "priceList": "",
+        "priceListId": null,
+        "servicePoint": "BZH_Medicina Interna",
+        "servicePointCode": "5660",
+        "servicePointMedicalSpecializationCode": "",
+        "servicePointMedicalSpecializationDescription": "",
+        "organizationUnit": "Richiedente BZH_Medicina Interna",
+        "organizationUnitCode": "CUP_OE^IM^5660",
+        "organizationUnitAddress": " ",
+        "organizationUnitZipCode": null,
+        "organizationUnitMunicipality": "",
+        "organizationUnitCountry": "",
+        "patientSource": "",
+        "facility": "",
+        "ward": "",
+        "category": "",
+        "note": "",
+        "assessmentDiagnosis": "",
+        "assessmentOutcome": "",
+        "assessmentIntervention": "",
+        "assessmentActivityRecord": "",
+        "servicePointCustomParameters": {},
+        "organizationUnitCustomParameters": {}
+      },
+      "patient": {
+        "patientId": "92",
+        "taxCode": "LSSGNI32L64L033O",
+        "patientFirstName": "GINA",
+        "patientSecondName": "",
+        "patientThirdName": "",
+        "patientLastName": "ALESSANDRINI",
+        "sex": "F",
+        "birthdate": "24/07/1932",
+        "age": "86 anni",
+        "birthPlace": "Taio",
+        "legalAddressMunicipality": "Merano .Meran.",
+        "legalAddressProvince": "",
+        "legalAddressStreet": "VIA PARROCCHIA 2 ",
+        "legalAddressZipCode": "39012",
+        "legalAddressCountry": "ITALIA",
+        "phone": "079846465",
+        "mobilePhone": "333-56789",
+        "email": "ginaginettagmail.com",
+        "healthDistrict": "OVEST MERANO",
+        "generalPractitioner": "RIVA ROBERTO",
+        "contactName": "",
+        "contactPhone": "",
+        "contactEmail": "",
+        "maritalStatus": "Sconosciuto",
+        "education": "",
+        "profession": "",
+        "problemSummary": "Diagnosi: \n   009.2, DIARREA INFETTIVA, DIARREA INFETTIVA\n   250.01, DIABETE MELLITO,TIPO I (DIABETE GIOVANILE),NON DEFINITO SE SCOMPENSATO,SENZA MENZIONE DI COMPLICAZIONI, DIABETE corretta, apr 2018\n   491.21, BRONCHITE CRONICA OSTRUTTIVA,CON ESACERBAZIONE (ACUTA), BRONCHITE CRONICA OSTRUTTIVA,CON ESACERBAZIONE (ACUTA), gen 2018\n   428.1, INSUFFICIENZA DEL CUORE SINISTRO (SCOMPENSO CARDIACO SINISTRO), colera, Sospetto, gen 2003\n   056.71, ARTRITE DA ROSOLIA, ARTRITE DA ROSOLIA\n   250.10, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO,NON DEFINITO SE SCOMPENSATO, DIABETE CON CHETOACIDOSI,TIPO II O NON  diag cccc, Sospetto\n   518.81, INSUFFICIENZA RESPIRATORIA, INSUFFICIENZA RESPIRATORIA, Cronico, ago 2017\n   571.2, CIRROSI EPATICA ALCOLICA, CIRROSI EPATICA ALCOLICA - prova de\n   518.81, INSUFFICIENZA RESPIRATORIA, INSUFFICIENZA RESPIRATORIA, Sospetto, mag 2018\n   402.11, CARDIOPATIA IPERTENSIVA BENIGNA CON INSUFFICIENZA CARDIACA, CARDIOPATIA IPERTENSIVA BENIGNA CON INSUFFICIENZA CARDIACA, Cronico, gen 2016\n   414.8, ALTRE FORME SPECIFICATE DI CARDIOPATIA ISCHEMICA CRONICA, instabile Angina pectoris, Cronico, nov 2006\n   197.7, TUMORI MALIGNI SECONDARI DEL FEGATO,SPECIFICATI COME METASTATICI, TUMORI MALIGNI SECONDARI DEL FEGATO,SPECIFICATI CO, gen 2018\n   250.10, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO,NON DEFINITO SE SCOMPENSATO, ALTRE FORME SPECIFICATE DI CARDIOPAT xxxx, gen 2018\n   111.9, DERMATOMICOSI NON SPECIFICATE, CIRROSI EPATICA ALCOLI, Cronico, gen 2018\n   714.0, ARTRITE REUMATOIDE, ARTRITE REUMATOIDE, gen 2018\n   001.1, COLERA DA VIBRIO CHOLERAE EL TOR, COLERA DA VIBRIO CHOLERAE EL TOR, gen 2018\n   250.22, DIABETE CON IPEROSMOLARITÀ ,TIPO II O NON SPECIFICATO,SCOMPENSATO, DIABETE CON IPEROSMOLARITÀ ,  vvvvv, Sospetto, gen 2018\n   250.42, DIABETE TIPO II O NON SPECIFICATO,SCOMPENSATO,CON COMPLICAZIONI RENALI, DIABETE TIPO II O NON SPECIFICATO,SCOMPENSATO,CON COMPLICAZIO, gen 2018\n   415.19, ALTRE FORME DI EMBOLIA POLMONARE E INFARTO POLMONARE, embolia, gen 2018\n   577.0, PANCREATITE ACUTA, PANCREATITE ACUTA, Sospetto, feb 2018\n   482.9, POLMONITE BATTERICA,NON SPECIFICATA, POLMONITE BATTERICA,NON SPECIFICATA, feb 2018\n   532.90, ULCERA DUODENALE NON SPECIFICATA COME ACUTA O CRONICA,SENZA MENZIONE DI EMORRAGIA O PERFORAZIONE, SENZA MENZIONE DI OSTRUZIONE, Verdacht auf Ulkus duodeni, Sospetto, feb 2018\n   427.31, FIBRILLAZIONE ATRIALE, FIBRILLAZIONE ATRIALE, mar 2018\n   482.9, POLMONITE BATTERICA,NON SPECIFICATA, POLMONITE BATTERICA,NON SPECIFICATA, mar 2018\n   416.1, CARDIOPATIA CIFOSCOLIOTICA, CARDIOPATIA CIFOSCOLIOTICA, apr 2018\n   416.1, CARDIOPATIA CIFOSCOLIOTICA, CARDIOPATIA CIFOSCOLIOTICA  Test Test, apr 2018\n   416.1, CARDIOPATIA CIFOSCOLIOTICA, CARDIOPATIA CIFOSCOLIOTICA Meine Test Notiz zu der Diagnose, apr 2018\n   402.00, CARDIOPATIA IPERTENSIVA MALIGNA SENZA INSUFFICIENZA CARDIACA, CARDIOPATIA IPERTENSIVA MALIGNA SENZA INSUFFICIENZA CARDIACA, Cronico, apr 2018\n   429.9, CARDIOPATIA NON SPECIFICATA, CARDIOPATIA NON SPECIFICATA Test, apr 2018\n   011.45, FIBROSI TUBERCOLARE DEL POLMONE,ESAME BATTERIOLOGICO NEGATIVO,MA TUBERCOLOSI CONFERMATA ISTOLOGICAMENTE, FIBROSI TUBERCOLARE DEL POLMONE,ESAME BATTERIOLOGICO NEGATIVO,MA TUBERCOLOSI CONFERMATA ISTOLOGICAMENTE, apr 2018\n   260., KWASHIORKOR, KWASHIORKOR---ttttt, apr 2018\n   585.4, MALATTIA RENALE CRONICA, STADIO IV (GRAVE), MALATTIA RENALE CRONICA, STADIO IV (GRAVE), Cronico, apr 2018\n   130.3, MIOCARDITE DA TOXOPLASMA, MIOCARDITE DA TOXOPLASMA, apr 2018\n   461.2, SINUSITE ACUTA ETMOIDALE, SINUSITE ACUTA ETMOIDALE, Sospetto, apr 2018\n   429.9, CARDIOPATIA NON SPECIFICATA, uuuuuuuuu, apr 2018\n   564.1, COLON IRRITABILE, Verdacht auf Colon Irritabile, Sospetto, apr 2018\n   599.0, INFEZIONE DEL SISTEMA URINARIO,SITO NON SPECIFICATO, INFEZIONE DEL SISTEMA URINARIO,SITO NON SPECIFICATO, apr 2018\n   V10.43, ANAMNESI PERSONALE DI TUMORE MALIGNO DELL'OVAIO, ANAMNESI PERSONALE DI TUMORE MALIGNO DELL'OVAIO, Sospetto, mag 2018\n   056.71, ARTRITE DA ROSOLIA, ARTRITE DA\n   404.90, CARDIONEFROPATIA IPERTENSIVA NON SPECIFICATA SENZA INSUFFICIENZA CARDIACA E CON PATOLOGIA RENALE, CARDIONEFROPATIA IPERTENSIVA NON SPECIFICATA SENZA INSUFFICIENZA CARDIACA E CON PATOLOGIA RENALE Zusatzinfo, Sospetto\n   402.00, CARDIOPATIA IPERTENSIVA MALIGNA SENZA INSUFFICIENZA CARDIACA, CARDIOPATIA IPERTENSIVA MALIGNA SENZA INSUFFICIENZA CARDIACA, Sospetto\n   571.2, CIRROSI EPATICA ALCOLICA, CIRROSI EPATICA ALCOLICA, Sospetto\n   522.8, CISTI RADICOLARE, CISTI RADICOLARE, Cronico\n   242.21, GOZZO MULTINODULARE TOSSICO CON CRISI TIREOTOSSICA, DEPRESSIONE MAGGIORE,EPISODIO RICORRENTE,GRAVE,CON COMPORTAMENTO PSICOTICO\n   250.10, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO,NON DEFINITO SE SCOMPENSATO, DIABETE CON CHETOACIDOSI,TIPO   CORRETTO DIAGNOSI, Sospetto\n   250.10, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO,NON DEFINITO SE SCOMPENSATO, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO, Sospetto\n   427.31, FIBRILLAZIONE ATRIALE, Parossistica accertata, FIBRILLAZIONE ATRIALE NON SPECIFICATA, gen 2013\n   789.06, DOLORE ADDOMINALE EPIGASTRICO, DOLORE ADDOMINALE EPIGASTRICO\n   789.06, DOLORE ADDOMINALE EPIGASTRICO, DOLORE ADDOMINALE EPIGASTRICO, Cronico\n   242.81, TIREOTOSSICOSI DI ALTRA ORIGINE SPECIFICATA CON CRISI TIREOTOSSICA, gozzo multinodulare, Cronico\n   123.0, INFESTAZIONE DA TENIA SOLIUM,FORMA INTESTINALE, INFESTAZIONE DA TENIA SOLIUM,FORMA INTESTINALE\n   414.8, ALTRE FORME SPECIFICATE DI CARDIOPATIA ISCHEMICA CRONICA, stabile koronare Herzkrankheit, derzeit keine Stenokardien., Cronico\n   V60.1, ABITAZIONE INADEGUATA, gpi spa\n   123.1, CISTICERCOSI, CISTICERCOSI - diagnosi di prova inserita oggi\n   123.1, CISTICERCOSI, CISTICERCOSI, mar 2018\n   123.1, CISTICERCOSI, CISTICERCOSI, mar 2018\n   123.1, CISTICERCOSI, CISTICERCOSI, mar 2018\n   428.21,  INSUFFICIENZA CARDIACA SISTOLICA ACUTA,  INSUFFICIENZA CARDIACA SISTOLICA ACUTA\n   635.11, ABORTO INDOTTO LEGALMENTE COMPLICATO DA EMORRAGIA TARDIVA O ECCESSIVA,INCOMPLETO, ABORTO INDOTTO LEGALMENTE COMPLICATO DA EMORRAGIA TARDIVA ,INCOMPLETO\n   540.9, APPENDICITE ACUTA SENZA MENZIONE DI PERITONITE,PERFORAZIONE O ROTTURA, APPENDICITE ACUTA SENZA MENZIONE DI PERITONITE,PERFORAZIONE O ROTTURA\n   712.84, ALTRE ARTROPATIE DA MICROCRISTALLI,CARPO,METACARPO ED ARTICOLAZIONI INTERFALANGEE DELLA MANO, ALTRE ARTROPATIE DA MICROCRISTALLI,CARPO,METACARPO ED ARTICOLAZIONI INTERFALANGEE DELLA MANO, Cronico\n   454.9, VARICI DEGLI ARTI INFERIORI ASINTOMATICHE, lorem ipsum, Sospetto\n   080., TIFO [EPIDEMICO] DA PIDOCCHI, TIFO [EPIDEMICO] DA PIDOCCHI, Cronico\n   002.1, PARATIFO A, PARATIFO A, Sospetto, mag 2018\n   123.1, CISTICERCOSI, CISTICERCOSI\n   427.31, FIBRILLAZIONE ATRIALE, FIBRILLAZIONE ATRIALE NON GRAVE\n   240.9, GOZZO NON SPECIFICATO, GOZZO NON SPECIFICATO, Sospetto\n   240.9, GOZZO NON SPECIFICATO, GOZZO NON SPECIFICATO, Sospetto\n   250.10, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO,NON DEFINITO SE SCOMPENSATO, DIABETE CON CHETOACIDOSI,TIPO II O NON SPECIFICATO,, Sospetto, 18/04/2018\n   083.0, FEBBRE Q, FEBBRE Q, Sospetto\n   240.0, GOZZO SPECIFICATO COME SEMPLICE, GOZZO SPECIFICATO COME SEMPLICE\n   124., TRICHINOSI, TRICHINOSI inserita 12/07\n   093.1, AORTITE SIFILITICA, cambiata SIFILITICA CAMBIO ANCORA, Sospetto, gen 2012\n   784.3, AFASIA, AFASIA - 12/07 aaaaa\n   245.0, TIROIDITE ACUTA, TIROIDITE ACUTA, 09/07/2018\n   427.31, FIBRILLAZIONE ATRIALE, Cronica permanente, FIBRILLAZIONE ATRIALE eccoci\n   427.31, FIBRILLAZIONE ATRIALE, Pre diagnosi, FIBRILLAZIONE ATRIALE DOVREBBE ESSERE OK\n   365.51, GLAUCOMA FACOLITICO, GLAUCOMA FACOLITICO ANCHE QUESTO OK\n   427.31, FIBRILLAZIONE ATRIALE, Persistente, FIBRILLAZIONE ATRIALE ANDATA, Sospetto\n   560.89, ALTRA OCCLUSIONE SPECIFICATA DELL'INTESTINO, ALTRA OCCLUSIONE SPECIFICATA DELL'INTESTINO, ago 2018\n   568.0, ADERENZE PERITONEALI (POSTOPERATORIE) (POSTINFETTIVE), ADERENZE PERITONEALI (POSTOPERATORIE) (POSTINFETTIVE), ago 2018\n   079.6, VIRUS RESPIRATORIO SINCIZIALE, VIRUS RESPIRATORIO SINCIZIALE, ago 2018\n   584.5, INSUFFICIENZA RENALE ACUTA,CON NECROSI TUBULARE, INSUFFICIENZA RENALE ACUTA,CON NECROSI TUBULARE, ago 2018\n   587., SCLEROSI RENALE,NON SPECIFICATA, SCLEROSI RENALE, inserita ora\n   001.0, COLERA DA VIBRIO CHOLERAE, COLERA, Cronico, ago 2018\n   458.9, IPOTENSIONE NON SPECIFICATA, IPOTENSIONE NON SPECIFICATA\n   789.61, RILASSAMENTO ADDOMINALE DEL QUADRANTE SUPERIORE DESTRO, RILASSAMENTO ADDOMINALE DEL QUADRANTE SUPERIORE DESTRO, Cronico\n   282.9, ANEMIA EMOLITICA EREDITARIA,NON SPECIFICATA, ANEMIA EMOLITICA EREDITARIA,NON SPECIFICATA, Cronico\n   V72.2, VISITA ODONTOIATRICA, VISITA ODONTOIATRICA\n\nValutazione clinica:\nDiagnosi riferita alla visita\n<br/>* COLERA\n<br/>* FIBRILLAZIONE ATRIALE NON SPECIFICATA\n<br/>\n<br/>Soggettività\n<br/>* Dolore generale o in siti multipli: Sì\n<br/>* Febbre: Sì\n<br/>\n<br/>Anamnesi personale di specialità\n<br/>13/09/2018 Medicina - Ultima anamnesi\n<br/>Anamnesi familiare e sociale\n<br/>13/09/2018 Ultima anamnesi\n<br/>\n<br/>Esame Obiettivo\n<br/>* Presenza di soffio sistolico: Sì\n<br/>\n<br/>Misurazioni e manovre\n<br/>13/09/2018 17:36:42 Temperatura Corporea 35.6 °C (Sede: Timpano) \n<br/>13/09/2018 17:36:42 Altezza 180 cm\n<br/>13/09/2018 17:36:42 Frequenza Cardiaca 120 bpm (Tipo: Ritmico) \n<br/>\n<br/>Esami effettuati\n<br/>* PRIMA VISITA INTERNISTICA\n<br/>\n<br/>Procedere\n<br/>Raccomandazioni\n<br/>\n<br/>",
+        "allergiesSummary": [{
+          "tipoAllergia": "FARMACO",
+          "allergenePrincipioAttivo": "PENICILLAMINA",
+          "provenienza": "Esame Obiettivo",
+          "gravita": null,
+          "nota": "",
+          "dataChisura": "",
+          "notaChiusura": null
+        }, {
+          "tipoAllergia": "AMBIENTALE",
+          "allergenePrincipioAttivo": "Parassiti",
+          "provenienza": "Paziente",
+          "gravita": null,
+          "nota": "",
+          "dataChisura": "",
+          "notaChiusura": null
+        }, {
+          "tipoAllergia": "FARMACO",
+          "allergenePrincipioAttivo": "DICLOFENAC SODICO",
+          "provenienza": "Paziente",
+          "gravita": null,
+          "nota": "PROVARYRTYU",
+          "dataChisura": "",
+          "notaChiusura": null
+        }, {
+          "tipoAllergia": "AMBIENTALE",
+          "allergenePrincipioAttivo": "Veleni di insetto",
+          "provenienza": "Familiare / Care giver",
+          "gravita": null,
+          "nota": "NUOVA ALLERGIA INSERITA 12/07",
+          "dataChisura": "",
+          "notaChiusura": null
+        }],
+        "allergiesSummaryFormatted": "PENICILLAMINA\nParassiti\nDICLOFENAC SODICO (PROVARYRTYU)\nVeleni di insetto (NUOVA ALLERGIA INSERITA 12/07)\n",
+        "diagnosisSummary": [{
+          "codiceDiagnosi": "427.31",
+          "descrizioneDiagnosi": "FIBRILLAZIONE ATRIALE",
+          "stadioDiagnosi": "Parossistica accertata",
+          "statoDiagnosi": "Accertato",
+          "tipoDiagnosi": "Medico",
+          "dataInsorgenza": "gen 2013"
+        }, {
+          "codiceDiagnosi": "083.0",
+          "descrizioneDiagnosi": "FEBBRE Q",
+          "stadioDiagnosi": "",
+          "statoDiagnosi": "Sospetto",
+          "tipoDiagnosi": "Medico",
+          "dataInsorgenza": ""
+        }, {
+          "codiceDiagnosi": "001.0",
+          "descrizioneDiagnosi": "COLERA DA VIBRIO CHOLERAE",
+          "stadioDiagnosi": "",
+          "statoDiagnosi": "Cronico",
+          "tipoDiagnosi": "Medico",
+          "dataInsorgenza": "ago 2018"
+        }, {
+          "codiceDiagnosi": "458.9",
+          "descrizioneDiagnosi": "IPOTENSIONE NON SPECIFICATA",
+          "stadioDiagnosi": "",
+          "statoDiagnosi": "",
+          "tipoDiagnosi": "Medico",
+          "dataInsorgenza": ""
+        }, {
+          "codiceDiagnosi": "789.61",
+          "descrizioneDiagnosi": "RILASSAMENTO ADDOMINALE DEL QUADRANTE SUPERIORE DESTRO",
+          "stadioDiagnosi": "",
+          "statoDiagnosi": "Cronico",
+          "tipoDiagnosi": "Medico",
+          "dataInsorgenza": ""
+        }, {
+          "codiceDiagnosi": "282.9",
+          "descrizioneDiagnosi": "ANEMIA EMOLITICA EREDITARIA,NON SPECIFICATA",
+          "stadioDiagnosi": "",
+          "statoDiagnosi": "Cronico",
+          "tipoDiagnosi": "Medico",
+          "dataInsorgenza": ""
+        }, {
+          "codiceDiagnosi": "V72.2",
+          "descrizioneDiagnosi": "VISITA ODONTOIATRICA",
+          "stadioDiagnosi": "",
+          "statoDiagnosi": "",
+          "tipoDiagnosi": "Medico",
+          "dataInsorgenza": ""
+        }],
+        "diagnosisSummaryFormatted": "gen 2013 - FIBRILLAZIONE ATRIALE \n - FEBBRE Q \nago 2018 - COLERA DA VIBRIO CHOLERAE \n - IPOTENSIONE NON SPECIFICATA \n - RILASSAMENTO ADDOMINALE DEL QUADRANTE SUPERIORE DESTRO \n - ANEMIA EMOLITICA EREDITARIA,NON SPECIFICATA \n - VISITA ODONTOIATRICA \n",
+        "homeTherapiesSummary": [{
+          "nomeFarmaco": "PLASIL*INIET 5F 2ML 10MG/2ML",
+          "formaFarmacologica": "SOLUZIONE INIETTABILE",
+          "posologia": "0 - 1 - 0 - 0",
+          "dataInizio": "mag 2019",
+          "note": "",
+          "dataSospensione": "lug 2018",
+          "noteSospensione": ""
+        }, {
+          "nomeFarmaco": "DELTACORTENE*10CPR 5MG",
+          "formaFarmacologica": "COMPRESSE",
+          "posologia": "1 - 1 - 0 - 0",
+          "dataInizio": "set 2018",
+          "note": "",
+          "dataSospensione": "set 2018",
+          "noteSospensione": ""
+        }, {
+          "nomeFarmaco": "COPAXONE*SC 12SIR 40MG/ML",
+          "formaFarmacologica": "SOLUZIONE INIETTABILE",
+          "posologia": "Al bisogno",
+          "dataInizio": "set 2018",
+          "note": "3 volte alla settimana",
+          "dataSospensione": "set 2018",
+          "noteSospensione": ""
+        }, {
+          "nomeFarmaco": "ARGON",
+          "formaFarmacologica": "",
+          "posologia": "1 - 0 - 0 - 0",
+          "dataInizio": "lug 2018",
+          "note": "INSERITO 12/07",
+          "dataSospensione": "set 2018",
+          "noteSospensione": ""
+        }, {
+          "nomeFarmaco": "VICKS MEDINAIT*SCIR 180ML",
+          "formaFarmacologica": "SCIROPPO",
+          "posologia": "0 - 0 - 0 - 0",
+          "dataInizio": "giu 2018",
+          "note": "",
+          "dataSospensione": "giu 2018",
+          "noteSospensione": ""
+        }],
+        "homeTherapiesFormatted": "PLASIL*INIET 5F 2ML 10MG/2ML SOLUZIONE INIETTABILE 0 - 1 - 0 - 0\nDELTACORTENE*10CPR 5MG COMPRESSE 1 - 1 - 0 - 0\nCOPAXONE*SC 12SIR 40MG/ML SOLUZIONE INIETTABILE Al bisogno 3 volte alla settimana \nARGON  1 - 0 - 0 - 0 INSERITO 12/07 \nVICKS MEDINAIT*SCIR 180ML SCIROPPO 0 - 0 - 0 - 0\n",
+        "anamnesisSummary": [{
+          "dataInserimento": "13/09/2018",
+          "utenteInserimento": "Marco Marcotto",
+          "tipologia": "Medicina",
+          "descrizione": "Ultima anamnesi"
+        }, {
+          "dataInserimento": "13/09/2018",
+          "utenteInserimento": "Marco Marcotto",
+          "tipologia": "",
+          "descrizione": "Ultima anamnesi"
+        }, {
+          "dataInserimento": "13/09/2018",
+          "utenteInserimento": "Federica Fiorese",
+          "tipologia": "Chirurgia Generale",
+          "descrizione": "Vive solo, autonomo per le comuni attività quotidiane"
+        }, {
+          "dataInserimento": "11/09/2018",
+          "utenteInserimento": "MILENA PINTIMALLI",
+          "tipologia": "",
+          "descrizione": "Disoccupata"
+        }, {
+          "dataInserimento": "07/09/2018",
+          "utenteInserimento": "angelica.salmaso ",
+          "tipologia": "",
+          "descrizione": "prova anamnesI"
+        }, {
+          "dataInserimento": "07/08/2018",
+          "utenteInserimento": "STEFAN PATAUNER",
+          "tipologia": "Chirurgia Generale",
+          "descrizione": "ANAMNESI ANAMNESI ANAMNESI ANAMNESI  MEDICA"
+        }, {
+          "dataInserimento": "18/07/2018",
+          "utenteInserimento": "valentina.nizzaro ",
+          "tipologia": "Medicina",
+          "descrizione": "QUESTA INVECE è L'ANAMNESI MEDICA"
+        }, {
+          "dataInserimento": "16/07/2018",
+          "utenteInserimento": "valentina.nizzaro ",
+          "tipologia": "Medicina",
+          "descrizione": "Test wezen 2"
+        }, {
+          "dataInserimento": "31/05/2018",
+          "utenteInserimento": "oriella.pallottino ",
+          "tipologia": "Chirurgia Generale",
+          "descrizione": "colecistectomia"
+        }, {
+          "dataInserimento": "18/05/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Chirurgia Generale",
+          "descrizione": "Test Spze Anamnese"
+        }, {
+          "dataInserimento": "02/05/2018",
+          "utenteInserimento": "Marco Marcotto",
+          "tipologia": "Medicina",
+          "descrizione": "test di anamnesi"
+        }, {
+          "dataInserimento": "02/05/2018",
+          "utenteInserimento": "Marco Marcotto",
+          "tipologia": "Medicina",
+          "descrizione": "dfbgnghghgfhgh"
+        }, {
+          "dataInserimento": "26/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "",
+          "descrizione": "Meine Test Notiz"
+        }, {
+          "dataInserimento": "26/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "Meine Spez"
+        }, {
+          "dataInserimento": "23/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "Eigene Notiz"
+        }, {
+          "dataInserimento": "23/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "Das ost ....."
+        }, {
+          "dataInserimento": "20/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "Anmerkung Elida"
+        }, {
+          "dataInserimento": "18/04/2018",
+          "utenteInserimento": "oriella.pallottino ",
+          "tipologia": "Medicina",
+          "descrizione": "nota anamnesi"
+        }, {
+          "dataInserimento": "13/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "Das ist eine Anmerkung von 14:36"
+        }, {
+          "dataInserimento": "13/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "Test Anmerkung Spez Anamnese"
+        }, {
+          "dataInserimento": "11/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "Arzt Anmerkung zur Spez. Anamnese"
+        }, {
+          "dataInserimento": "11/04/2018",
+          "utenteInserimento": "oriella.pallottino ",
+          "tipologia": "Medicina",
+          "descrizione": "medicina ff"
+        }, {
+          "dataInserimento": "11/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "Anmerkung vom Arzt zur Spez. Anamnese"
+        }, {
+          "dataInserimento": "11/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "Das ist eine Test Anamnese"
+        }, {
+          "dataInserimento": "11/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "Test Anamnese"
+        }, {
+          "dataInserimento": "10/04/2018",
+          "utenteInserimento": "MICHELA CRISTINI",
+          "tipologia": "Medicina",
+          "descrizione": "Il paziente lamenta dispnea ingravescente da circa una settimana con palpitazioni, edemi declivi serali, non febbre"
+        }, {
+          "dataInserimento": "10/04/2018",
+          "utenteInserimento": "MICHELA CRISTINI",
+          "tipologia": "",
+          "descrizione": "muratore in pensione, vive con la moglie\nappetito buono, digestione lenta, alvo e diuresi regolare, vita sessuale poco attiva, \nbeve 3 bicchieri di vino al giorno, non ha mai fumato,\ncammina 30 min al giorno circa"
+        }, {
+          "dataInserimento": "10/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "medicina"
+        }, {
+          "dataInserimento": "10/04/2018",
+          "utenteInserimento": "BERNHARD GUTMANN",
+          "tipologia": "Medicina",
+          "descrizione": "febbre e cefalea da 3 giorni."
+        }, {
+          "dataInserimento": "10/04/2018",
+          "utenteInserimento": "WILHELM KUEHBERGER",
+          "tipologia": "Medicina",
+          "descrizione": "test"
+        }, {
+          "dataInserimento": "10/04/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "test"
+        }, {
+          "dataInserimento": "05/04/2018",
+          "utenteInserimento": "ANDREAS LOCHMANN",
+          "tipologia": "Medicina",
+          "descrizione": "Stenokardie beim Treppensteigen seit mehreren Monaten. Nicht an Intensität und Schweregrad zugenommen"
+        }, {
+          "dataInserimento": "27/03/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "Medicina",
+          "descrizione": "Difficoltà respiratorie, specie la sera."
+        }, {
+          "dataInserimento": "27/03/2018",
+          "utenteInserimento": "Elida Brkic",
+          "tipologia": "",
+          "descrizione": "La paziente vive da sola, lontano dal centro abitato. Familiarità malattie respiratorie."
+        }],
+        "anamnesisSummaryFormatted": "Anamnesi familiare e sociale\n\n13/09/2018 - Ultima anamnesi\n11/09/2018 - Disoccupata\n07/09/2018 - prova anamnesI\n26/04/2018 - Meine Test Notiz\n10/04/2018 - muratore in pensione, vive con la moglie\nappetito buono, digestione lenta, alvo e diuresi regolare, vita sessuale poco attiva, \nbeve 3 bicchieri di vino al giorno, non ha mai fumato,\ncammina 30 min al giorno circa\n27/03/2018 - La paziente vive da sola, lontano dal centro abitato. Familiarità malattie respiratorie.\n\n\nAnamnesi personale di specialità\n\n13/09/2018 Medicina - Ultima anamnesi\n13/09/2018 Chirurgia Generale - Vive solo, autonomo per le comuni attività quotidiane\n07/08/2018 Chirurgia Generale - ANAMNESI ANAMNESI ANAMNESI ANAMNESI  MEDICA\n18/07/2018 Medicina - QUESTA INVECE è L'ANAMNESI MEDICA\n16/07/2018 Medicina - Test wezen 2\n31/05/2018 Chirurgia Generale - colecistectomia\n18/05/2018 Chirurgia Generale - Test Spze Anamnese\n02/05/2018 Medicina - test di anamnesi\n02/05/2018 Medicina - dfbgnghghgfhgh\n26/04/2018 Medicina - Meine Spez\n23/04/2018 Medicina - Eigene Notiz\n23/04/2018 Medicina - Das ost .....\n20/04/2018 Medicina - Anmerkung Elida\n18/04/2018 Medicina - nota anamnesi\n13/04/2018 Medicina - Das ist eine Anmerkung von 14:36\n13/04/2018 Medicina - Test Anmerkung Spez Anamnese\n11/04/2018 Medicina - Arzt Anmerkung zur Spez. Anamnese\n11/04/2018 Medicina - medicina ff\n11/04/2018 Medicina - Anmerkung vom Arzt zur Spez. Anamnese\n11/04/2018 Medicina - Das ist eine Test Anamnese\n11/04/2018 Medicina - Test Anamnese\n10/04/2018 Medicina - Il paziente lamenta dispnea ingravescente da circa una settimana con palpitazioni, edemi declivi serali, non febbre\n10/04/2018 Medicina - medicina\n10/04/2018 Medicina - febbre e cefalea da 3 giorni.\n10/04/2018 Medicina - test\n10/04/2018 Medicina - test\n05/04/2018 Medicina - Stenokardie beim Treppensteigen seit mehreren Monaten. Nicht an Intensität und Schweregrad zugenommen\n27/03/2018 Medicina - Difficoltà respiratorie, specie la sera.\n\n",
+        "language": "it_IT"
+      },
+      "orders": [{
+        "orderEventExamId": "1286",
+        "startDate": "03/09/2018",
+        "endDate": "",
+        "seenDate": "",
+        "doctor": {
+          "id": 1147,
+          "version": 3,
+          "className": "it.gpi.his.commons.dtos.catalogs.DoctorDto",
+          "code": "239706",
+          "description": "LOCHMANN ANDREAS",
+          "language": null,
+          "roleTypes": null,
+          "valid": true,
+          "codeLang1": "de_DE",
+          "descriptionLang1": "LOCHMANN ANDREAS",
+          "descriptions": null,
+          "title": null,
+          "role": "MMG",
+          "categories": [],
+          "taxCode": "LCHNRS54E22E434Q",
+          "pinCode": null
+        },
+        "reportingDoctor": {
+          "id": 1328,
+          "version": 0,
+          "className": "it.gpi.his.commons.dtos.catalogs.DoctorDto",
+          "code": "005858",
+          "description": "MICHELE ADAMI",
+          "language": null,
+          "roleTypes": null,
+          "valid": true,
+          "codeLang1": "de_DE",
+          "descriptionLang1": "MICHELE ADAMI",
+          "descriptions": null,
+          "title": "Dott.",
+          "role": "DOCTOR",
+          "categories": [],
+          "taxCode": "DMAMHL72A16A952X",
+          "pinCode": null
+        },
+        "sovpSummary": "Diagnosi riferita alla visita\n<br/>* COLERA\n<br/>* FIBRILLAZIONE ATRIALE NON SPECIFICATA\n<br/>\n<br/>Soggettività\n<br/>* Dolore generale o in siti multipli: Sì\n<br/>* Febbre: Sì\n<br/>\n<br/>Anamnesi personale di specialità\n<br/>13/09/2018 Medicina - Ultima anamnesi\n<br/>Anamnesi familiare e sociale\n<br/>13/09/2018 Ultima anamnesi\n<br/>\n<br/>Esame Obiettivo\n<br/>* Presenza di soffio sistolico: Sì\n<br/>\n<br/>Misurazioni e manovre\n<br/>13/09/2018 17:36:42 Temperatura Corporea 35.6 °C (Sede: Timpano) \n<br/>13/09/2018 17:36:42 Altezza 180 cm\n<br/>13/09/2018 17:36:42 Frequenza Cardiaca 120 bpm (Tipo: Ritmico) \n<br/>\n<br/>Esami effettuati\n<br/>* PRIMA VISITA INTERNISTICA\n<br/>\n<br/>Procedere\n<br/>Raccomandazioni\n<br/>\n<br/>",
+        "totalAmount": "0.0",
+        "additionalPrescriptions": "",
+        "counter": "1938332",
+        "externalIdentifier": "",
+        "servicePoint": "IST Medicina Interna Accesso Diretto",
+        "servicePointCode": "14195",
+        "servicePointMedicalSpecializationCode": "MEDICINA",
+        "servicePointMedicalSpecializationDescription": "Medicina",
+        "organizationUnit": "BZH Medicina",
+        "organizationUnitCode": "8060",
+        "organizationUnitAddress": " ",
+        "organizationUnitZipCode": null,
+        "organizationUnitMunicipality": "",
+        "organizationUnitCountry": "",
+        "servicePointCustomParameters": {},
+        "organizationUnitCustomParameters": {},
+        "exams": [{
+          "exam": {
+            "id": 1520,
+            "version": 3,
+            "className": "it.gpi.his.commons.dtos.catalogs.ExamDto",
+            "code": "89.7_7",
+            "description": "PRIMA VISITA INTERNISTICA",
+            "language": null,
+            "roleTypes": null,
+            "valid": true,
+            "codeLang1": "de_DE",
+            "descriptionLang1": "PRIMA VISITA INTERNISTICA",
+            "descriptions": null,
+            "type": "PROBLEM_ORIENTED",
+            "examMedicalSpecializationCode": null,
+            "preparationTime": 0,
+            "durationTime": 30,
+            "releaseTime": 0,
+            "examInitDetection": null,
+            "needAmbiguous": false,
+            "needSerologicalEquivalent": false,
+            "prescriptionStepEnabled": false,
+            "context": null,
+            "cyclicalEnabled": false,
+            "notes": null
+          },
+          "medicalSpecialization": "",
+          "examsDescription": "PRIMA VISITA INTERNISTICA",
+          "doctorName": "MICHELE ADAMI",
+          "price": null
+        }],
+        "surgicalOperation": {
+          "id": 985,
+          "uniqueIdentifier": null,
+          "roomEntranceDate": null,
+          "roomExitDate": null,
+          "anesthesiaStartDate": null,
+          "anesthesiaEndDate": null,
+          "procedureStartDate": null,
+          "procedureEndDate": null,
+          "painStartDate": null,
+          "guideWireStartDate": null,
+          "resultsReport": null,
+          "members": []
+        }
+      }],
+      "folder": {
+        "counter": "F2018000865",
+        "openDate": "",
+        "closeDate": "",
+        "notes": "",
+        "closureNotes": "",
+        "referringDoctor": ""
+      }
+    },
+    "formData": {
+      "EcocolorDopplerVasiCollo": {
+        "QuesitoClinico": "Fibrillazione atriale",
+        "dx": {
+          "tuttoRegolareDx": false,
+          "artCarotideEsterna": {
+            "stato": "Regolare",
+            "osservazioni": null
+          },
+          "artCarotideInterna": {
+            "stato": "Non indagato",
+            "osservazioni": "Necessario un controllo alla prossima visita"
+          },
+          "artCarotideComune": {
+            "stato": "Regolare",
+            "osservazioni": "Necessario un controllo alla prossima visita"
+          },
+          "artVertebrale": {
+            "stato": "Irregolare",
+            "osservazioni": "Sono presenti dei problemi da approfondire"
+          }
+        },
+        "sx": {
+          "tuttoRegolareSx": false,
+          "artCarotideEsterna": {
+            "stato": "Non indagato",
+            "osservazioni": null
+          },
+          "artCarotideInterna": {
+            "stato": "Irregolare",
+            "osservazioni": "Necessario ulteriore controllo"
+          },
+          "artCarotideComune": {
+            "stato": "Regolare",
+            "osservazioni": "Indagine effettuata in maniera approfondita"
+          },
+          "artVertebrale": {
+            "stato": "Non indagato",
+            "osservazioni": null
+          }
+        },
+        "Altro": "Necessario ulteriore controllo per approfondire i problemi incontrati. Nel complesso la salute della paziente è buona."
+      }
+    },
+    "summaryFieldsData": null,
+    "conceptFieldsData": null,
+    "metaData": null
+  },
+  "version": 1,
+  "status": "NEW",
+  "patient": {
+    "insertUserId": null,
+    "insertUser": null,
+    "insertTimeUTC": null,
+    "insertTime": null,
+    "updateUserId": null,
+    "updateUser": null,
+    "updateTimeUTC": null,
+    "updateTime": null,
+    "organizationId": null,
+    "valid": true,
+    "cancellationTime": null,
+    "cancellationUser": null,
+    "cancellationUserId": null,
+    "cancellationTimeUTC": null,
+    "firstName": "GINA",
+    "lastName": "ALESSANDRINI",
+    "sex": "F",
+    "birthDate": "1932-07-24T11:00:00.000+0000",
+    "uniqueIdentifier": "627",
+    "phone": "079846465",
+    "mobilePhone": "333-56789",
+    "email": "ginaginettagmail.com",
+    "language": "it_IT",
+    "deathDate": null,
+    "isDead": false,
+    "patientId": "92",
+    "accountNumber": "LSSGNI32L64L033O"
+  }
+}]

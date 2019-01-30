@@ -1,0 +1,70 @@
+null{
+  "insertuser": "Utente Fm3",
+  "fd": {
+    "initdata": {
+      "patient": {
+        "uniqueidentifier": "SPTTST18S55L378R",
+        "sex": "F",
+        "firstname": "TEST",
+        "phone": null,
+        "patientid": "254",
+        "email": null,
+        "language": null,
+        "birthdate": "2018-11-15",
+        "mobilephone": null,
+        "lastname": "OSPITE"
+      }
+    },
+    "formdata": {
+      "scoretotale": "1970-01-01 01:00:00",
+      "temp1": "una settimana fa",
+      "temp2": "sempre",
+      "valutazioni": {
+        "dolore1": "1",
+        "dolore2": "1",
+        "dolore3": "1",
+        "dolore4": "1",
+        "dolore5": "1"
+      },
+      "commento": "tutto- !",
+      "dol1": "algo",
+      "dol2": "todo",
+      "dol3": "nada",
+      "qual1": "sent",
+      "qual2": "male",
+      "radio1": "1",
+      "reg1": "per tutto",
+      "reg3": "tutto",
+      "reg2": "tutto",
+      "val": {
+        "dolori": null
+      },
+      "scoretot": null
+    }
+  },
+  "patient": {
+    "firstname": "TEST",
+    "mobilephone": null,
+    "patientid": "254",
+    "sex": "F",
+    "uniqueidentifier": "SPTTST18S55L378R",
+    "email": null,
+    "phone": null,
+    "lastname": "OSPITE",
+    "birthdate": "2018-01-15 01:00:00",
+    "language": null
+  },
+  "organizationid": "2",
+  "inserttime": "1.542.366.177.410",
+  "insertuserid": "13",
+  "inserttimeutc": "1.542.366.177.410",
+  "updatetimeutc": "2018-06-16 00:00:37",
+  "status": "PUBLISHED",
+  "updatetime": "2018-06-16 00:00:37",
+  "updateuserid": "1970-01-01 01:00:00",
+  "updateuser": "Utente Fm3",
+  "version": "1",
+  "id": "5beea3e11ef54695c5a1eac0",
+  "forminstanceid": "5beea3e11ef54695c5a1eabf",
+  "urlinstance":"https://apsp-operaromani.gpi.it/HIS/fm3/#/runtime?application=HIS&extAuthToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.JEJ.naswXCmaWNjJeKF..-Bmq.zFmaexGP7K0N8Kx5LzE9e7G0aWMw.Hjd3x9bxS6MOeEXWAlxaeQ.s0V5oYvcKWeTU1RmymVpMxHQXBf6AdjKV86slHpHA2e0.pzZbOxKPh4N9OnZ304M3o5euunzO8lbSY2DOZ1S0G7rghieH4EkxpGs3Y7Aty-qs-kpXN--7hwxGqDheP5MuKDWgqjhF4tf1KRkW9A11qLDxMjSglwnABnCRRwyhJqk.rUQxPhfLtyqNTp4.bBxEF3D6khh2mZcKtKwSVnHHEkNPIgGB6EWgXDsaXRET.sEPmte7xrk.9RnxloM.9p7WWHUFhp-O3cfDs5e41U5.HGeyYVIZaenJvdZocGV0OZeFg4WGhNE9c214vFOg4m8.kKqeMcaY2I9SSi0pfA6qPw&formInstanceId=5beea3e11ef54695c5a1eabf&fm.username=utentefm.suitcase&hidePreviousVersions=true&hideValidation=true&hideTitle=true&hideExportButton=true&notifyParent=true&hidePrintButton=true"
+}
