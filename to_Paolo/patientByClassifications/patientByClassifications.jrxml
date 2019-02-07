@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PatientByClassifications" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a7cf165-f898-4704-97b1-a83b0d8590fc">
+	<property name="ireport.zoom" value="1.6528925619834727"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/presenzePerClassificazione]]>
+	</queryString>
+	<field name="logo" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/logo]]></fieldDescription>
+	</field>
+	<field name="dataStampa" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/dataStampa]]></fieldDescription>
+	</field>
+	<field name="dataOggi" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/dataOggi]]></fieldDescription>
+	</field>
+	<field name="servizi" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/servizi]]></fieldDescription>
+	</field>
+	<field name="raggruppaPerSpazio" class="java.lang.String">
+		<fieldDescription><![CDATA[testata/raggruppaPerSpazio]]></fieldDescription>
+	</field>
+	<title>
+		<band height="78" splitType="Stretch">
+			<rectangle>
+				<reportElement x="145" y="1" width="657" height="58" uuid="b9becca8-be95-4521-b1c1-ba44abe85f5e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="156" y="31" width="55" height="18" uuid="4a07adc9-0d71-40b8-a4fc-d60407c918e1"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Servizio:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="216" y="31" width="417" height="18" uuid="e92cc7f2-50a0-4067-90c9-c3156a8fb511"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{servizi}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="145" y="3" width="657" height="18" uuid="b2503095-9e1e-4390-98b2-585f72c4afbc"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Stampa Ospiti suddivisi per classificazione alla data " + $F{dataStampa}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" onErrorType="Icon">
+				<reportElement stretchType="RelativeToBandHeight" x="2" y="0" width="143" height="67" uuid="ed5e22e9-9967-4e4d-911f-1af427476937"/>
+				<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="693" y="31" width="109" height="18" uuid="a441da6d-1035-4dba-9908-d68b83082057"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dataStampa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="633" y="31" width="58" height="18" uuid="eddbe1db-8982-42e1-b94a-f2ce8911bfa7"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alla Data:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="75">
+			<printWhenExpression><![CDATA[$F{raggruppaPerSpazio}.equals( "N" )]]></printWhenExpression>
+			<subreport runToBottom="false">
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="75" uuid="4ca846ce-cd19-4849-ae55-5a1d40004a46"/>
+				<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+				<subreportParameter name="SUBREPORT_DIR"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "patientByClassifications_Classifications.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="75">
+			<printWhenExpression><![CDATA[$F{raggruppaPerSpazio}.equals( "Y" )]]></printWhenExpression>
+			<subreport runToBottom="false">
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="75" uuid="5164c5aa-caf9-48a5-9528-f3c521355853"/>
+				<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+				<subreportParameter name="SUBREPORT_DIR"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "patientByClassifications_ClassificationsBySpaces.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="767" y="21" width="35" height="15" uuid="e18d77f1-3213-4855-aad1-7949624a06b7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" di "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="716" y="21" width="53" height="15" uuid="43ccc7be-9669-40a4-978e-e40464e3538a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="45" y="3" width="285" height="15" uuid="2de5c7bd-8c5c-42a1-a36a-1aca835362cd"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{servizi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="21" width="138" height="15" uuid="a761109f-b272-4418-b7e8-8218d02685c4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Generato il "+ new SimpleDateFormat("dd/MM/yyyy  HH:mm").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="21" width="569" height="15" uuid="98d437ad-ce85-494d-9df2-f47fe9795ba0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Stampa Ospiti suddivisi per classificazione"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="3" width="44" height="15" uuid="27ca50f7-5637-413d-adc8-b7c3f081d5c7"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Servizio:]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

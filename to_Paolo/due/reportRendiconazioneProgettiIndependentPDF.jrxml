@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subjectsLst" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="92cb7ab1-148a-4d41-9459-165a11e16d54">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultadapter" value="RendicontazioneIndipendent.xml"/>
+	<property name="net.sf.jasperreports.export.xls.white.page.background" value="false"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="TableDataset" uuid="ad16a113-2bc1-49d2-b2ac-d5c685a430f2">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="RendicontazioneIndipendent.xml"/>
+		<queryString language="xPath">
+			<![CDATA[/report/rendicontazioneProgetto/rendicontazioneProgetto/progetto]]>
+		</queryString>
+		<field name="Giorno" class="java.lang.String">
+			<fieldDescription><![CDATA[giorno]]></fieldDescription>
+		</field>
+		<field name="StimaDurata" class="java.lang.String">
+			<fieldDescription><![CDATA[stimaDurata]]></fieldDescription>
+		</field>
+		<field name="oreRendicontate" class="java.lang.Double">
+			<fieldDescription><![CDATA[oreRendicontate]]></fieldDescription>
+		</field>
+		<field name="Progetto" class="java.lang.String">
+			<fieldDescription><![CDATA[progettoDet]]></fieldDescription>
+		</field>
+		<field name="TipoProgetto" class="java.lang.String">
+			<fieldDescription><![CDATA[tipoProgetto]]></fieldDescription>
+		</field>
+		<field name="Fase" class="java.lang.String">
+			<fieldDescription><![CDATA[fase]]></fieldDescription>
+		</field>
+		<field name="Operatore" class="java.lang.String">
+			<fieldDescription><![CDATA[operatore]]></fieldDescription>
+		</field>
+		<field name="Cliente" class="java.lang.String">
+			<fieldDescription><![CDATA[cliente]]></fieldDescription>
+		</field>
+		<field name="Committente" class="java.lang.String">
+			<fieldDescription><![CDATA[committente]]></fieldDescription>
+		</field>
+		<field name="oreEffettuate" class="java.lang.Double">
+			<fieldDescription><![CDATA[oreEffettuate]]></fieldDescription>
+		</field>
+		<field name="note" class="java.lang.String">
+			<fieldDescription><![CDATA[note]]></fieldDescription>
+		</field>
+		<field name="oraInizio" class="java.lang.String">
+			<fieldDescription><![CDATA[oraInizio]]></fieldDescription>
+		</field>
+		<field name="oraFine" class="java.lang.String">
+			<fieldDescription><![CDATA[oraFine]]></fieldDescription>
+		</field>
+		<field name="settimana" class="java.lang.String">
+			<fieldDescription><![CDATA[settimana]]></fieldDescription>
+		</field>
+		<field name="attivitaRiga" class="java.lang.String">
+			<fieldDescription><![CDATA[attivitaRiga]]></fieldDescription>
+		</field>
+		<variable name="sommaCliente1" class="java.lang.Double" resetType="Group" resetGroup="cliente" calculation="Sum">
+			<variableExpression><![CDATA[$F{oreRendicontate}]]></variableExpression>
+		</variable>
+		<variable name="sommaCliente2" class="java.lang.Double" resetType="Group" resetGroup="cliente" calculation="Sum">
+			<variableExpression><![CDATA[$F{oreEffettuate}]]></variableExpression>
+		</variable>
+		<variable name="sommaProgetto1" class="java.lang.Double" resetType="Group" resetGroup="progetto" calculation="Sum">
+			<variableExpression><![CDATA[$F{oreRendicontate}]]></variableExpression>
+		</variable>
+		<variable name="sommaProgetto2" class="java.lang.Double" resetType="Group" resetGroup="progetto" calculation="Sum">
+			<variableExpression><![CDATA[$F{oreEffettuate}]]></variableExpression>
+		</variable>
+		<variable name="sommaSettimana1" class="java.lang.Double" resetType="Group" resetGroup="giorno" calculation="Sum">
+			<variableExpression><![CDATA[$F{oreRendicontate}]]></variableExpression>
+		</variable>
+		<variable name="sommaSettimana2" class="java.lang.Double" resetType="Group" resetGroup="giorno" calculation="Sum">
+			<variableExpression><![CDATA[$F{oreEffettuate}]]></variableExpression>
+		</variable>
+		<group name="cliente" isStartNewPage="true" isReprintHeaderOnEachPage="true" keepTogether="true">
+			<groupExpression><![CDATA[$F{Cliente}]]></groupExpression>
+		</group>
+		<group name="progetto" isReprintHeaderOnEachPage="true" keepTogether="true">
+			<groupExpression><![CDATA[$F{Progetto}]]></groupExpression>
+		</group>
+		<group name="giorno" isReprintHeaderOnEachPage="true" keepTogether="true">
+			<groupExpression><![CDATA[$F{settimana}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="xPath">
+		<![CDATA[/report]]>
+	</queryString>
+	<field name="Progetto" class="java.lang.String">
+		<fieldDescription><![CDATA[progetti]]></fieldDescription>
+	</field>
+	<field name="TipoProgetto" class="java.lang.String">
+		<fieldDescription><![CDATA[tipiProgetto]]></fieldDescription>
+	</field>
+	<field name="Fase" class="java.lang.String">
+		<fieldDescription><![CDATA[fasi]]></fieldDescription>
+	</field>
+	<field name="Cliente" class="java.lang.String">
+		<fieldDescription><![CDATA[clienti]]></fieldDescription>
+	</field>
+	<field name="Committente" class="java.lang.String">
+		<fieldDescription><![CDATA[committenti]]></fieldDescription>
+	</field>
+	<field name="DurataRendicontata" class="java.lang.String">
+		<fieldDescription><![CDATA[durataRendicontata]]></fieldDescription>
+	</field>
+	<field name="Operatore" class="java.lang.String">
+		<fieldDescription><![CDATA[operatori]]></fieldDescription>
+	</field>
+	<field name="Dal" class="java.lang.String">
+		<fieldDescription><![CDATA[dal]]></fieldDescription>
+	</field>
+	<field name="Al" class="java.lang.String">
+		<fieldDescription><![CDATA[al]]></fieldDescription>
+	</field>
+	<field name="totaleRendicontate" class="java.lang.String">
+		<fieldDescription><![CDATA[totaleRendicontate]]></fieldDescription>
+	</field>
+	<field name="totaleReali" class="java.lang.String">
+		<fieldDescription><![CDATA[totaleReali]]></fieldDescription>
+	</field>
+	<title>
+		<band height="110">
+			<staticText>
+				<reportElement x="1" y="0" width="801" height="31" uuid="7a4c3cc4-287b-4faf-928a-cbafde103853"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Report Rendicontazione Progetti / Kundennachweissliste]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="31" width="801" height="1" uuid="86717851-15f7-40ca-bf3f-65d5920e870c"/>
+			</line>
+			<staticText>
+				<reportElement x="235" y="86" width="89" height="20" uuid="2fa47c2c-67ff-4f7d-923c-c937575665d1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Nome progetto:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="326" y="86" width="204" height="20" uuid="b588bd4a-0506-4e7e-a483-27741da0b1ad"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Progetto} != null ? $F{Progetto} : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="511" y="65" width="292" height="20" uuid="41341782-d049-4067-80a9-2c6e78e0da01"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TipoProgetto} != null ? $F{TipoProgetto} : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="43" y="86" width="179" height="20" uuid="d1040a1b-10a7-4499-b22a-cd76da06a3ec"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Fase} != null ? $F{Fase} : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="511" y="45" width="292" height="20" uuid="741018cc-3c11-42d9-a13b-3ee84a85cda6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cliente} != null ? $F{Cliente} : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="83" y="65" width="268" height="20" uuid="f64942e4-9d8d-4466-a91b-6d1c20af4cc3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Committente} != null ? $F{Committente} : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="609" y="86" width="193" height="20" isPrintWhenDetailOverflows="true" uuid="1173383b-3d0d-4a07-b04a-50203dcb0695"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Operatore} != null ? $F{Operatore} : ""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="86" width="40" height="20" uuid="97fc76d7-18cc-41c8-9764-65c6391b95df"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Fase:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="65" width="160" height="20" uuid="a6725a6b-971c-4a90-953c-1217838c5141"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tipo Progetto:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="65" width="82" height="20" uuid="ec7c2bcd-b59a-49b7-9ae9-c8ef8a27be0f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Committente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="45" width="160" height="20" uuid="1da9bafa-b5db-4900-8c6d-4d5a15d50c00"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="83" y="45" width="91" height="20" uuid="4c593b34-980a-4c0a-853b-0286d535426c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Dal} != null ? $F{Dal} : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="229" y="45" width="122" height="20" uuid="5be0545a-87fa-42d4-8088-36d6a041397a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Al} != null ? $F{Al} : ""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="45" width="82" height="20" uuid="41002047-cbc0-42a7-9132-66ef158ef2f8"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Dal:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="45" width="55" height="20" uuid="1c3512e9-5a8e-4a87-91f1-c2b75a2acfe7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Al:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="539" y="86" width="70" height="20" uuid="3cbf5117-07bd-40b7-b514-da6577ae33b9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Operatore:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="248" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 1" mode="Transparent" x="0" y="0" width="801" height="132" uuid="96163e7d-1679-416f-a28c-563ce6e24325">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.OrizontalRowLayout"/>
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="TableDataset" uuid="3037402f-01fc-43d4-9344-9e4df4e8c25f">
+						<datasetParameter name="XML_TIME_ZONE">
+							<datasetParameterExpression><![CDATA[$P{XML_TIME_ZONE}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_LOCALE">
+							<datasetParameterExpression><![CDATA[$P{XML_LOCALE}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_NUMBER_PATTERN">
+							<datasetParameterExpression><![CDATA[$P{XML_NUMBER_PATTERN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_DATE_PATTERN">
+							<datasetParameterExpression><![CDATA[$P{XML_DATE_PATTERN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="net.sf.jasperreports.xml.source">
+							<datasetParameterExpression><![CDATA[$P{net.sf.jasperreports.xml.source}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_FILE">
+							<datasetParameterExpression><![CDATA[$P{XML_FILE}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_INPUT_STREAM">
+							<datasetParameterExpression><![CDATA[$P{XML_INPUT_STREAM}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="XML_DATA_DOCUMENT">
+							<datasetParameterExpression><![CDATA[$P{XML_DATA_DOCUMENT}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:columnGroup width="782" uuid="0a1d3244-ca38-490c-87a7-6473018c8329">
+						<jr:groupHeader groupName="cliente">
+							<jr:cell height="41" rowSpan="1">
+								<textField isStretchWithOverflow="true">
+									<reportElement mode="Opaque" x="0" y="5" width="780" height="34" backcolor="#D4D0C8" uuid="3410899e-e631-4483-a3fb-2651a1398612"/>
+									<textElement verticalAlignment="Middle">
+										<font fontName="SansSerif" size="20"/>
+										<paragraph leftIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{Cliente}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="progetto">
+							<jr:cell height="30" rowSpan="1">
+								<textField isStretchWithOverflow="true">
+									<reportElement positionType="Float" x="0" y="0" width="780" height="30" uuid="1c5f7842-da29-42e9-889d-a536de355a78"/>
+									<textElement verticalAlignment="Middle">
+										<font fontName="SansSerif" size="16" isBold="true"/>
+										<paragraph leftIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{Progetto}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="giorno">
+							<jr:cell height="30" rowSpan="1">
+								<textField>
+									<reportElement mode="Opaque" x="0" y="0" width="780" height="30" backcolor="#D4D0C8" uuid="32596ad3-7b8c-43aa-992c-ae305c7e8245"/>
+									<textElement verticalAlignment="Middle">
+										<font size="14" isBold="true"/>
+										<paragraph leftIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{settimana}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:column width="452" uuid="0c80d48d-f2ab-4fce-9b99-838cf7899d09">
+							<jr:tableHeader height="30" rowSpan="1"/>
+							<jr:tableFooter height="30" rowSpan="1"/>
+							<jr:columnHeader height="30" rowSpan="1">
+								<staticText>
+									<reportElement positionType="Float" x="0" y="0" width="452" height="30" uuid="d413725b-08da-4b13-9dc6-e27b81023dc7"/>
+									<textElement verticalAlignment="Middle">
+										<paragraph leftIndent="5"/>
+									</textElement>
+									<text><![CDATA[Attività]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter height="30" rowSpan="1">
+								<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+							</jr:columnFooter>
+							<jr:detailCell height="52" rowSpan="1">
+								<box>
+									<pen lineWidth="0.0"/>
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.0"/>
+									<bottomPen lineWidth="0.25"/>
+									<rightPen lineWidth="0.0"/>
+								</box>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="452" height="26" uuid="559a75ff-d5b3-4d5e-b0e3-d21cd9eeeb7b"/>
+									<textElement textAlignment="Left" verticalAlignment="Middle">
+										<paragraph leftIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{attivitaRiga}]]></textFieldExpression>
+								</textField>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="26" width="452" height="26" uuid="2cc9d9c0-e8b5-4f94-be23-0816517238ee"/>
+									<textElement textAlignment="Left">
+										<paragraph leftIndent="57" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{note}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="151" uuid="4370e5d9-2df4-464d-90c1-16e4622dbf75">
+							<jr:tableHeader height="30" rowSpan="1"/>
+							<jr:tableFooter height="30" rowSpan="1"/>
+							<jr:groupFooter groupName="cliente">
+								<jr:cell height="25" rowSpan="1">
+									<staticText>
+										<reportElement x="0" y="0" width="151" height="25" uuid="ec913c5e-be60-4b28-b928-397442a81568"/>
+										<textElement textAlignment="Right" verticalAlignment="Top">
+											<paragraph rightIndent="2" spacingBefore="10"/>
+										</textElement>
+										<text><![CDATA[totale cliente:]]></text>
+									</staticText>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:groupFooter groupName="progetto">
+								<jr:cell height="26" rowSpan="1">
+									<staticText>
+										<reportElement x="0" y="0" width="151" height="25" uuid="733e81df-e2e8-455a-87df-a5bf8d850b7d"/>
+										<textElement textAlignment="Right">
+											<paragraph rightIndent="2" spacingBefore="10"/>
+										</textElement>
+										<text><![CDATA[totale progetto:]]></text>
+									</staticText>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:groupFooter groupName="giorno">
+								<jr:cell height="26" rowSpan="1">
+									<staticText>
+										<reportElement x="0" y="0" width="151" height="25" uuid="3ab5f8b1-1697-4771-a999-faebbeff3582"/>
+										<textElement textAlignment="Right">
+											<paragraph rightIndent="2" spacingBefore="10"/>
+										</textElement>
+										<text><![CDATA[totale settimana:]]></text>
+									</staticText>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:columnHeader height="30" rowSpan="1">
+								<staticText>
+									<reportElement positionType="Float" x="0" y="0" width="151" height="30" uuid="a98834fb-0d8d-48a9-8f3e-460d2249c518"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[Operatore]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter height="30" rowSpan="1"/>
+							<jr:detailCell height="52" rowSpan="1">
+								<box>
+									<topPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+								</box>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="151" height="52" uuid="7a5e3c87-b189-4d3d-b1a2-ce615a8b07fa"/>
+									<textElement textAlignment="Left">
+										<paragraph spacingBefore="10"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{Operatore}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="90" uuid="dbdecb87-ee70-4afd-9aec-72adb145bd2b">
+							<jr:groupFooter groupName="progetto">
+								<jr:cell height="26" rowSpan="1">
+									<textField pattern="###0.000">
+										<reportElement x="0" y="0" width="90" height="25" uuid="3a2a56d3-5765-4a44-857f-963c02c44e10"/>
+										<textElement textAlignment="Right">
+											<paragraph rightIndent="2" spacingBefore="10"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$V{sommaProgetto1}]]></textFieldExpression>
+									</textField>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:groupFooter groupName="cliente">
+								<jr:cell height="25" rowSpan="1">
+									<textField pattern="###0.000">
+										<reportElement x="0" y="0" width="90" height="25" uuid="cba31919-520d-4b29-9c21-e05cd8371d6c"/>
+										<textElement textAlignment="Right">
+											<paragraph rightIndent="2" spacingBefore="10"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$V{sommaCliente1}]]></textFieldExpression>
+									</textField>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:groupFooter groupName="giorno">
+								<jr:cell height="26" rowSpan="1">
+									<textField pattern="###0.000">
+										<reportElement x="0" y="0" width="90" height="25" uuid="590f7486-f958-49e3-926a-3ab913c5ecbf"/>
+										<textElement textAlignment="Right">
+											<paragraph rightIndent="2" spacingBefore="10"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$V{sommaSettimana1}]]></textFieldExpression>
+									</textField>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:columnHeader height="30" rowSpan="1">
+								<staticText>
+									<reportElement positionType="Float" x="0" y="0" width="90" height="30" uuid="c603617e-0388-47bb-9172-078bfd17305b"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[Ore Rendicontate]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter height="30" rowSpan="1"/>
+							<jr:detailCell height="52" rowSpan="1">
+								<box>
+									<pen lineWidth="0.0"/>
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.0"/>
+									<bottomPen lineWidth="0.25"/>
+									<rightPen lineWidth="0.0"/>
+								</box>
+								<textField isStretchWithOverflow="true" pattern="###0.000" isBlankWhenNull="true">
+									<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="52" isPrintWhenDetailOverflows="true" uuid="5ac7bee1-1365-43c1-8328-7792eec513cb"/>
+									<textElement textAlignment="Left" verticalAlignment="Top">
+										<paragraph rightIndent="2" spacingBefore="10"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{oreRendicontate}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="89" uuid="443773e1-e49a-4686-ab42-e07bc8806a1b">
+							<jr:tableHeader height="30" rowSpan="1"/>
+							<jr:tableFooter height="30" rowSpan="1"/>
+							<jr:groupFooter groupName="progetto">
+								<jr:cell height="26" rowSpan="1">
+									<textField pattern="###0.000">
+										<reportElement x="0" y="0" width="89" height="25" uuid="8f9f4d62-296d-4b9c-9366-f4dbf81a8e37"/>
+										<textElement textAlignment="Right">
+											<paragraph rightIndent="2" spacingBefore="10"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$V{sommaProgetto2}]]></textFieldExpression>
+									</textField>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:groupFooter groupName="cliente">
+								<jr:cell height="25" rowSpan="1">
+									<textField pattern="###0.000">
+										<reportElement x="0" y="0" width="87" height="25" uuid="d6d387c6-0354-44c4-8694-be586ad8ed5c"/>
+										<textElement textAlignment="Right">
+											<paragraph rightIndent="2" spacingBefore="10"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$V{sommaCliente2}]]></textFieldExpression>
+									</textField>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:groupFooter groupName="giorno">
+								<jr:cell height="26" rowSpan="1">
+									<textField pattern="###0.000">
+										<reportElement x="0" y="0" width="87" height="25" uuid="e11a8971-b742-4532-9297-cce49fdd880d"/>
+										<textElement textAlignment="Right">
+											<paragraph rightIndent="2" spacingBefore="10"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$V{sommaSettimana2}]]></textFieldExpression>
+									</textField>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:columnHeader height="30" rowSpan="1">
+								<staticText>
+									<reportElement positionType="Float" x="0" y="0" width="89" height="30" uuid="1c150297-307d-4064-8b1e-e0a1874dd3c2"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[Ore effettuate]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter height="30" rowSpan="1"/>
+							<jr:detailCell height="52" rowSpan="1">
+								<box>
+									<topPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+								</box>
+								<textField isStretchWithOverflow="true" pattern="###0.000" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="87" height="52" uuid="bc989d86-432e-44ed-9f3e-be1be2af4455"/>
+									<textElement textAlignment="Left">
+										<paragraph rightIndent="2" spacingBefore="10"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{oreEffettuate}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:columnGroup>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="21">
+			<textField>
+				<reportElement x="681" y="0" width="80" height="20" uuid="1e196377-e764-4ea3-a1ae-608d1fef972f"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" di"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="762" y="0" width="40" height="20" uuid="bca0d6de-e400-4b6e-9174-1c5cbef3238a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="138" height="20" uuid="995b0eeb-c8cd-4fac-8520-75785dba9f8d"/>
+				<textFieldExpression><![CDATA["Generato il "+ new SimpleDateFormat("dd/MM/yyyy  HH:mm").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="543" height="20" uuid="88f36c88-899e-429e-a6e0-342e62743b48"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Report Rendicontazione Progetti / Kundennachweissliste"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

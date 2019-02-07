@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final utlizzo versione della libreria JasperReports6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="patientByClassifications_ClassificationsBySpaces" pageWidth="802" pageHeight="554" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty" uuid="d6532a10-cb66-4429-995b-7cee6489cc74">
+	<property name="ireport.zoom" value="1.3636363636363635"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="due\patientByClassifications\patientByClassifications.dataAdapter.xml"/>
+	<style name="style1">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{note} == null]]></conditionExpression>
+			<style mode="Opaque" forecolor="#3300FF" backcolor="#CCCCCC" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+				<pen lineWidth="2.0" lineColor="#FF0033"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#333333"/>
+					<topPen lineWidth="0.5" lineColor="#333333"/>
+					<leftPen lineWidth="0.5" lineColor="#333333"/>
+					<bottomPen lineWidth="0.5" lineColor="#333333"/>
+					<rightPen lineWidth="0.5" lineColor="#333333"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="style2">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{esito}!= null]]></conditionExpression>
+			<style mode="Opaque" forecolor="#3333FF" backcolor="#666666" fill="Solid">
+				<pen lineWidth="2.0" lineColor="#FF0000"/>
+				<box>
+					<pen lineWidth="2.5" lineColor="#3300CC"/>
+					<topPen lineWidth="2.5" lineColor="#3300CC"/>
+					<leftPen lineWidth="2.5" lineColor="#3300CC"/>
+					<bottomPen lineWidth="2.5" lineColor="#3300CC"/>
+					<rightPen lineWidth="2.5" lineColor="#3300CC"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="datasetClassificazioni" whenResourceMissingType="Empty" uuid="f361746e-5138-4e1b-9b6d-0fb9f7c0e12c">
+		<queryString language="xPath">
+			<![CDATA[/presenzePerClassificazione/classificazioni/classificazione/]]>
+		</queryString>
+		<field name="descrizione" class="java.lang.String">
+			<fieldDescription><![CDATA[descrizione]]></fieldDescription>
+		</field>
+		<field name="maschi" class="java.lang.String">
+			<fieldDescription><![CDATA[maschi]]></fieldDescription>
+		</field>
+		<field name="femmine" class="java.lang.String">
+			<fieldDescription><![CDATA[femmine]]></fieldDescription>
+		</field>
+		<field name="totale" class="java.lang.String">
+			<fieldDescription><![CDATA[totale]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="datasetPazienti" whenResourceMissingType="Empty" uuid="9722b820-b6aa-4ef4-abb8-b6f1e66ffd6a">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="due\patientByClassifications\patientByClassifications.dataAdapter.xml"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="503"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="487"/>
+		<queryString language="xPath">
+			<![CDATA[/presenzePerClassificazione/classificazioni/classificazione/recordPazienti/recordPaziente]]>
+		</queryString>
+		<field name="edificio" class="java.lang.String">
+			<fieldDescription><![CDATA[edificio]]></fieldDescription>
+		</field>
+		<sortField name="edificio"/>
+		<variable name="control_recurencia" class="java.lang.Boolean" calculation="Count">
+			<variableExpression><![CDATA[$F{edificio}]]></variableExpression>
+			<initialValueExpression><![CDATA[0]]></initialValueExpression>
+		</variable>
+		<group name="edificio" keepTogether="true">
+			<groupExpression><![CDATA[$F{edificio}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="datasetPazientiDue" uuid="9a1e5211-4254-480f-909b-2ea28f8c3947">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="due\patientByClassifications\patientByClassifications.dataAdapter.xml"/>
+		<queryString language="xPath">
+			<![CDATA[/presenzePerClassificazione/classificazioni/classificazione/recordPazienti/recordPaziente/edificio]]>
+		</queryString>
+		<field name="edificio" class="java.lang.String">
+			<property name="net.sf.jasperreports.xpath.field.expression" value="."/>
+			<fieldDescription><![CDATA[.]]></fieldDescription>
+		</field>
+		<group name="edificio">
+			<groupExpression><![CDATA[$F{edificio}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\u07384\\Documents\\Work\\Reports\\Esempio\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/presenzePerClassificazione]]>
+	</queryString>
+	<detail>
+		<band height="232" splitType="Stretch">
+			<componentElement>
+				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="0" width="802" height="190" isPrintInFirstWholeBand="true" uuid="17d0b692-c72f-4977-a233-2e2d735b2d11"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="datasetClassificazioni" uuid="e1f96421-a056-4a31-94ae-6bc4eb1a2d9e">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//classificazioni/classificazione")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="190" width="802">
+						<componentElement>
+							<reportElement x="0" y="30" width="802" height="90" uuid="fd4e7101-8079-44da-b971-384f4e428920"/>
+							<jr:list printOrder="Vertical">
+								<datasetRun subDataset="datasetPazienti" uuid="766fb8bc-5dfe-4829-bbc2-69693c6c12d1">
+									<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/classificazione/recordPazienti/recordPaziente")]]></dataSourceExpression>
+								</datasetRun>
+								<jr:listContents height="90" width="802">
+									<staticText>
+										<reportElement mode="Transparent" x="12" y="0" width="75" height="15" forecolor="#000000" backcolor="#CCCCCC" uuid="a613c4c5-ff5a-4015-bdba-972abf4a5790"/>
+										<box leftPadding="2">
+											<pen lineWidth="0.5" lineColor="#000000"/>
+											<topPen lineWidth="0.5" lineColor="#000000"/>
+											<leftPen lineWidth="0.5" lineColor="#000000"/>
+											<bottomPen lineWidth="0.5" lineColor="#000000"/>
+											<rightPen lineWidth="0.5" lineColor="#000000"/>
+										</box>
+										<textElement textAlignment="Justified" verticalAlignment="Middle">
+											<font size="8" isBold="true"/>
+										</textElement>
+										<text><![CDATA[Edificio]]></text>
+									</staticText>
+									<textField isBlankWhenNull="true">
+										<reportElement x="87" y="0" width="715" height="15" uuid="e4315069-77ae-42a2-a983-7bd6565a3d97"/>
+										<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+											<pen lineWidth="0.5"/>
+											<topPen lineWidth="0.5"/>
+											<leftPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+											<rightPen lineWidth="0.5"/>
+										</box>
+										<textElement textAlignment="Left" verticalAlignment="Middle">
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{edificio}]]></textFieldExpression>
+									</textField>
+								</jr:listContents>
+							</jr:list>
+						</componentElement>
+						<staticText>
+							<reportElement mode="Transparent" x="2" y="2" width="85" height="15" backcolor="#CCCCCC" uuid="6cbc50e9-a6b6-4923-b786-eba2572fb2ed"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Justified" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Classificazione:]]></text>
+						</staticText>
+						<textField>
+							<reportElement mode="Transparent" x="727" y="2" width="75" height="15" backcolor="#CCCCCC" uuid="093647fc-3ebf-44a4-b709-d8889710a94b"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5"/>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA["Femmine: " + $F{femmine}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement mode="Transparent" x="502" y="2" width="150" height="15" backcolor="#CCCCCC" uuid="14df4643-1c67-44ad-a1c5-ef182d7b083c"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5"/>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA["Totale Pazienti: " + $F{totale}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement mode="Transparent" x="652" y="2" width="75" height="15" backcolor="#CCCCCC" uuid="81b2c635-4348-4896-9251-18cd688a5190"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5"/>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA["Maschi: " + $F{maschi}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="87" y="2" width="415" height="15" uuid="2b677649-12c3-4a3d-a949-76ab554ee2f8"/>
+							<box leftPadding="4">
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{descrizione}]]></textFieldExpression>
+						</textField>
+						<componentElement>
+							<reportElement x="0" y="120" width="802" height="70" uuid="77e81128-be3f-42d8-988e-42f14e23d920"/>
+							<jr:list>
+								<datasetRun subDataset="datasetPazientiDue" uuid="60ffce2b-1b87-4294-9780-0a26124d4ed5">
+									<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/classificazione/recordPazienti/recordPaziente")]]></dataSourceExpression>
+								</datasetRun>
+								<jr:listContents height="70" width="802">
+									<textField>
+										<reportElement x="20" y="10" width="260" height="40" uuid="9f4ebafc-ae6b-43ba-9e20-91a4d99d46cc"/>
+										<textElement>
+											<font size="19" isBold="true"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{edificio}]]></textFieldExpression>
+									</textField>
+								</jr:listContents>
+							</jr:list>
+						</componentElement>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

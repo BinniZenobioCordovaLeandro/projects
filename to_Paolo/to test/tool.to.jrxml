@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tool.to" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="97022c1e-9fb5-4232-b837-aa0458e4e524">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="to test\generic.dataAdapter.json.xml"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataAdapter.generico" uuid="7de6c318-f555-4015-a1cc-ce9aa83565a9">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="to test\generic.dataAdapter.json.xml"/>
+		<queryString language="json">
+			<![CDATA[formInstanceValue.formDocument.formData.test]]>
+		</queryString>
+		<field name="codiceRichiesta" class="java.lang.Long">
+			<property name="net.sf.jasperreports.json.field.expression" value="codiceRichiesta"/>
+			<fieldDescription><![CDATA[codiceRichiesta]]></fieldDescription>
+		</field>
+		<field name="nosologico" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="nosologico"/>
+			<fieldDescription><![CDATA[nosologico]]></fieldDescription>
+		</field>
+		<field name="cognome" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="cognome"/>
+			<fieldDescription><![CDATA[cognome]]></fieldDescription>
+		</field>
+		<field name="nome" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="nome"/>
+			<fieldDescription><![CDATA[nome]]></fieldDescription>
+		</field>
+		<field name="dataNascita" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="dataNascita"/>
+			<fieldDescription><![CDATA[dataNascita]]></fieldDescription>
+		</field>
+		<field name="sesso" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="sesso"/>
+			<fieldDescription><![CDATA[sesso]]></fieldDescription>
+		</field>
+		<field name="codice" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="codice"/>
+			<fieldDescription><![CDATA[codice]]></fieldDescription>
+		</field>
+		<field name="nomeCommerciale" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="nomeCommerciale"/>
+			<fieldDescription><![CDATA[nomeCommerciale]]></fieldDescription>
+		</field>
+		<field name="principio" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="principio"/>
+			<fieldDescription><![CDATA[principio]]></fieldDescription>
+		</field>
+		<field name="posologia" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="posologia"/>
+			<fieldDescription><![CDATA[posologia]]></fieldDescription>
+		</field>
+		<field name="dataInizio" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="dataInizio"/>
+			<fieldDescription><![CDATA[dataInizio]]></fieldDescription>
+		</field>
+		<field name="dataFine" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="dataFine"/>
+			<fieldDescription><![CDATA[dataFine]]></fieldDescription>
+		</field>
+		<field name="consumo" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="consumo"/>
+			<fieldDescription><![CDATA[consumo]]></fieldDescription>
+		</field>
+		<field name="dosi" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="dosi"/>
+			<fieldDescription><![CDATA[dosi]]></fieldDescription>
+		</field>
+		<field name="unita" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="unita"/>
+			<fieldDescription><![CDATA[unita]]></fieldDescription>
+		</field>
+		<field name="vie" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="vie"/>
+			<fieldDescription><![CDATA[vie]]></fieldDescription>
+		</field>
+		<field name="durata" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="durata"/>
+			<fieldDescription><![CDATA[durata]]></fieldDescription>
+		</field>
+		<field name="diagnosi" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="diagnosi"/>
+			<fieldDescription><![CDATA[diagnosi]]></fieldDescription>
+		</field>
+		<field name="motivazioni" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="motivazioni"/>
+			<fieldDescription><![CDATA[motivazioni]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString language="JSON">
+		<![CDATA[formInstanceValue]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="48" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="19" splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="d35c24ee-76a0-407d-994d-d235f5e49c71"/>
+				<textFieldExpression><![CDATA["Campo di Testo"]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="10" y="40" width="540" height="30" uuid="25a384a4-a536-4269-8d5e-856a1fc860a8"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataAdapter.generico" uuid="3924b217-50ca-4128-8a22-58eb343bd542">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("test")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="30" width="540">
+						<textField>
+							<reportElement x="400" y="0" width="80" height="20" uuid="85144b88-a8ef-4902-98ac-6b90089109d3"/>
+							<textFieldExpression><![CDATA[$F{dataFine}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="200" y="0" width="80" height="20" uuid="d72aa728-7ab1-4eb0-9de6-3db204260973"/>
+							<textFieldExpression><![CDATA[$F{consumo}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="300" y="0" width="80" height="20" uuid="2c907238-6355-4001-902d-412978888187"/>
+							<textFieldExpression><![CDATA[$F{vie}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="0" y="0" width="80" height="20" uuid="7b81b159-6686-44be-b873-cd771932f2c1"/>
+							<textFieldExpression><![CDATA[$F{durata}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="100" y="0" width="80" height="20" uuid="df1216ff-e4a6-40cb-8752-4e814bbfad7e"/>
+							<textFieldExpression><![CDATA[$F{diagnosi}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

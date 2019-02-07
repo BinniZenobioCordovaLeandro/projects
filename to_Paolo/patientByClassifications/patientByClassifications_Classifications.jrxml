@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="patientByClassifications_Classifications" pageWidth="802" pageHeight="554" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty" uuid="d6532a10-cb66-4429-995b-7cee6489cc74">
+	<property name="ireport.zoom" value="2.4200000000000066"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{note} == null]]></conditionExpression>
+			<style mode="Opaque" forecolor="#3300FF" backcolor="#CCCCCC" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+				<pen lineWidth="2.0" lineColor="#FF0033"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#333333"/>
+					<topPen lineWidth="0.5" lineColor="#333333"/>
+					<leftPen lineWidth="0.5" lineColor="#333333"/>
+					<bottomPen lineWidth="0.5" lineColor="#333333"/>
+					<rightPen lineWidth="0.5" lineColor="#333333"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="style2">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{esito}!= null]]></conditionExpression>
+			<style mode="Opaque" forecolor="#3333FF" backcolor="#666666" fill="Solid">
+				<pen lineWidth="2.0" lineColor="#FF0000"/>
+				<box>
+					<pen lineWidth="2.5" lineColor="#3300CC"/>
+					<topPen lineWidth="2.5" lineColor="#3300CC"/>
+					<leftPen lineWidth="2.5" lineColor="#3300CC"/>
+					<bottomPen lineWidth="2.5" lineColor="#3300CC"/>
+					<rightPen lineWidth="2.5" lineColor="#3300CC"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<subDataset name="datasetClassificazioni" whenResourceMissingType="Empty" uuid="f361746e-5138-4e1b-9b6d-0fb9f7c0e12c">
+		<queryString language="xPath">
+			<![CDATA[/presenzePerClassificazione/classificazioni/classificazione/]]>
+		</queryString>
+		<field name="descrizione" class="java.lang.String">
+			<fieldDescription><![CDATA[descrizione]]></fieldDescription>
+		</field>
+		<field name="maschi" class="java.lang.String">
+			<fieldDescription><![CDATA[maschi]]></fieldDescription>
+		</field>
+		<field name="femmine" class="java.lang.String">
+			<fieldDescription><![CDATA[femmine]]></fieldDescription>
+		</field>
+		<field name="totale" class="java.lang.String">
+			<fieldDescription><![CDATA[totale]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="datasetPazienti" whenResourceMissingType="Empty" uuid="9722b820-b6aa-4ef4-abb8-b6f1e66ffd6a">
+		<queryString language="xPath">
+			<![CDATA[/presenzePerClassificazione/classificazioni/classificazione/recordPazienti/recordPaziente/]]>
+		</queryString>
+		<field name="paziente" class="java.lang.String">
+			<fieldDescription><![CDATA[paziente]]></fieldDescription>
+		</field>
+		<field name="uscita" class="java.lang.String">
+			<fieldDescription><![CDATA[uscita]]></fieldDescription>
+		</field>
+		<field name="edificio" class="java.lang.String">
+			<fieldDescription><![CDATA[edificio]]></fieldDescription>
+		</field>
+		<field name="dataNascita" class="java.lang.String">
+			<fieldDescription><![CDATA[dataNascita]]></fieldDescription>
+		</field>
+		<field name="stanza" class="java.lang.String">
+			<fieldDescription><![CDATA[spazio]]></fieldDescription>
+		</field>
+		<field name="ingresso" class="java.lang.String">
+			<fieldDescription><![CDATA[ingresso]]></fieldDescription>
+		</field>
+		<field name="sesso" class="java.lang.String">
+			<fieldDescription><![CDATA[sesso]]></fieldDescription>
+		</field>
+		<field name="luogoNascita" class="java.lang.String">
+			<fieldDescription><![CDATA[luogoNascita]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\u07384\\Documents\\Work\\Reports\\Esempio\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/presenzePerClassificazione]]>
+	</queryString>
+	<detail>
+		<band height="104" splitType="Stretch">
+			<componentElement>
+				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="0" width="802" height="95" isPrintInFirstWholeBand="true" uuid="17d0b692-c72f-4977-a233-2e2d735b2d11"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="datasetClassificazioni" uuid="e1f96421-a056-4a31-94ae-6bc4eb1a2d9e">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//classificazioni/classificazione")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="95" width="802">
+						<componentElement>
+							<reportElement x="0" y="37" width="802" height="15" uuid="fd4e7101-8079-44da-b971-384f4e428920"/>
+							<jr:list printOrder="Vertical">
+								<datasetRun subDataset="datasetPazienti" uuid="ca11fbac-e6bc-40de-914a-26e75c1e3849">
+									<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/classificazione/recordPazienti/recordPaziente")]]></dataSourceExpression>
+								</datasetRun>
+								<jr:listContents height="15" width="802">
+									<textField isBlankWhenNull="true">
+										<reportElement x="2" y="0" width="180" height="15" uuid="42979deb-9aac-47ac-be30-98baf9bd1e41"/>
+										<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+											<pen lineWidth="0.5"/>
+											<topPen lineWidth="0.5"/>
+											<leftPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+											<rightPen lineWidth="0.5"/>
+										</box>
+										<textElement textAlignment="Left" verticalAlignment="Middle">
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{paziente}]]></textFieldExpression>
+									</textField>
+									<textField isBlankWhenNull="true">
+										<reportElement x="382" y="0" width="120" height="15" uuid="d7009cd8-9ca2-4f42-8d6e-b9922844e650"/>
+										<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+											<pen lineWidth="0.5"/>
+											<topPen lineWidth="0.5"/>
+											<leftPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+											<rightPen lineWidth="0.5"/>
+										</box>
+										<textElement textAlignment="Left" verticalAlignment="Middle">
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{edificio}]]></textFieldExpression>
+									</textField>
+									<textField isBlankWhenNull="true">
+										<reportElement x="502" y="0" width="150" height="15" uuid="8aafa4b1-d6c4-4271-b341-d15d5d61bcb6"/>
+										<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+											<pen lineWidth="0.5"/>
+											<topPen lineWidth="0.5"/>
+											<leftPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+											<rightPen lineWidth="0.5"/>
+										</box>
+										<textElement textAlignment="Left" verticalAlignment="Middle">
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{stanza}]]></textFieldExpression>
+									</textField>
+									<textField isBlankWhenNull="true">
+										<reportElement x="652" y="0" width="150" height="15" uuid="566c78f3-de4c-422c-ab7c-a3dbd876094d"/>
+										<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+											<pen lineWidth="0.5"/>
+											<topPen lineWidth="0.5"/>
+											<leftPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+											<rightPen lineWidth="0.5"/>
+										</box>
+										<textElement textAlignment="Left" verticalAlignment="Middle">
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{luogoNascita}]]></textFieldExpression>
+									</textField>
+									<textField isBlankWhenNull="true">
+										<reportElement x="362" y="0" width="20" height="15" uuid="dbb5b4bf-2537-468c-82db-578b9a4b7e46"/>
+										<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+											<pen lineWidth="0.5"/>
+											<topPen lineWidth="0.5"/>
+											<leftPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+											<rightPen lineWidth="0.5"/>
+										</box>
+										<textElement textAlignment="Center" verticalAlignment="Middle">
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{sesso}]]></textFieldExpression>
+									</textField>
+									<textField isBlankWhenNull="true">
+										<reportElement x="302" y="0" width="60" height="15" uuid="54da6bd3-e0a3-4dcf-a2f6-ed99de67d08e"/>
+										<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+											<pen lineWidth="0.5"/>
+											<topPen lineWidth="0.5"/>
+											<leftPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+											<rightPen lineWidth="0.5"/>
+										</box>
+										<textElement textAlignment="Center" verticalAlignment="Middle">
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{uscita}]]></textFieldExpression>
+									</textField>
+									<textField isBlankWhenNull="true">
+										<reportElement x="242" y="0" width="60" height="15" uuid="f1aead19-fa5f-4f44-87cd-818a38dcd033"/>
+										<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+											<pen lineWidth="0.5"/>
+											<topPen lineWidth="0.5"/>
+											<leftPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+											<rightPen lineWidth="0.5"/>
+										</box>
+										<textElement textAlignment="Center" verticalAlignment="Middle">
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{ingresso}]]></textFieldExpression>
+									</textField>
+									<textField isBlankWhenNull="true">
+										<reportElement x="182" y="0" width="60" height="15" uuid="a85c8503-6f2f-4b23-a7aa-11d1e14cabe9"/>
+										<box topPadding="1" leftPadding="2" bottomPadding="1" rightPadding="2">
+											<pen lineWidth="0.5"/>
+											<topPen lineWidth="0.5"/>
+											<leftPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+											<rightPen lineWidth="0.5"/>
+										</box>
+										<textElement textAlignment="Center" verticalAlignment="Middle">
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{dataNascita}]]></textFieldExpression>
+									</textField>
+								</jr:listContents>
+							</jr:list>
+						</componentElement>
+						<staticText>
+							<reportElement mode="Opaque" x="2" y="22" width="180" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="dbcd7bcd-252c-4c64-b638-eaaf9db55439"/>
+							<box leftPadding="2">
+								<pen lineWidth="0.5" lineColor="#000000"/>
+								<topPen lineWidth="0.5" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineColor="#000000"/>
+								<bottomPen lineWidth="0.5" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Justified" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Nominativo]]></text>
+						</staticText>
+						<staticText>
+							<reportElement mode="Opaque" x="382" y="22" width="120" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="8db8ee91-468f-4665-b7f2-a1ef014315fd"/>
+							<box leftPadding="2">
+								<pen lineWidth="0.5" lineColor="#000000"/>
+								<topPen lineWidth="0.5" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineColor="#000000"/>
+								<bottomPen lineWidth="0.5" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Justified" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Edificio]]></text>
+						</staticText>
+						<staticText>
+							<reportElement mode="Opaque" x="502" y="22" width="150" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="7c07e3f1-5909-4df3-8e0f-e0d0ed56cca6"/>
+							<box leftPadding="2">
+								<pen lineWidth="0.5" lineColor="#000000"/>
+								<topPen lineWidth="0.5" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineColor="#000000"/>
+								<bottomPen lineWidth="0.5" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Justified" verticalAlignment="Middle" rotation="None" markup="none">
+								<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+								<paragraph lineSpacing="Single"/>
+							</textElement>
+							<text><![CDATA[Letto]]></text>
+						</staticText>
+						<staticText>
+							<reportElement mode="Opaque" x="652" y="22" width="150" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="b62eb850-7540-4950-9478-c2bda5f7d963"/>
+							<box leftPadding="2">
+								<pen lineWidth="0.5" lineColor="#000000"/>
+								<topPen lineWidth="0.5" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineColor="#000000"/>
+								<bottomPen lineWidth="0.5" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Justified" verticalAlignment="Middle" rotation="None" markup="none">
+								<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+								<paragraph lineSpacing="Single"/>
+							</textElement>
+							<text><![CDATA[Comune Nasc.]]></text>
+						</staticText>
+						<staticText>
+							<reportElement mode="Transparent" x="2" y="2" width="85" height="15" backcolor="#CCCCCC" uuid="6cbc50e9-a6b6-4923-b786-eba2572fb2ed"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Justified" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Classificazione:]]></text>
+						</staticText>
+						<textField>
+							<reportElement mode="Transparent" x="727" y="2" width="75" height="15" backcolor="#CCCCCC" uuid="093647fc-3ebf-44a4-b709-d8889710a94b"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5"/>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA["Femmine: " + $F{femmine}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement mode="Transparent" x="502" y="2" width="150" height="15" backcolor="#CCCCCC" uuid="14df4643-1c67-44ad-a1c5-ef182d7b083c"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5"/>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA["Totale Pazienti: " + $F{totale}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement mode="Transparent" x="652" y="2" width="75" height="15" backcolor="#CCCCCC" uuid="81b2c635-4348-4896-9251-18cd688a5190"/>
+							<box leftPadding="2" rightPadding="2">
+								<pen lineWidth="0.5"/>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA["Maschi: " + $F{maschi}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement mode="Opaque" x="362" y="22" width="20" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="9d82c1c7-4d76-4cd4-9e82-cd7b2c45ad68"/>
+							<box leftPadding="2">
+								<pen lineWidth="0.5" lineColor="#000000"/>
+								<topPen lineWidth="0.5" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineColor="#000000"/>
+								<bottomPen lineWidth="0.5" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[M/F]]></text>
+						</staticText>
+						<staticText>
+							<reportElement mode="Opaque" x="302" y="22" width="60" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="ebc137e6-fb83-4a38-b073-4e42e73a9127"/>
+							<box leftPadding="2">
+								<pen lineWidth="0.5" lineColor="#000000"/>
+								<topPen lineWidth="0.5" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineColor="#000000"/>
+								<bottomPen lineWidth="0.5" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Uscita]]></text>
+						</staticText>
+						<staticText>
+							<reportElement mode="Opaque" x="242" y="22" width="60" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="2e61a2d7-6814-46a4-a692-6cf5edae91b2"/>
+							<box leftPadding="2">
+								<pen lineWidth="0.5" lineColor="#000000"/>
+								<topPen lineWidth="0.5" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineColor="#000000"/>
+								<bottomPen lineWidth="0.5" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Ingresso]]></text>
+						</staticText>
+						<staticText>
+							<reportElement mode="Opaque" x="182" y="22" width="60" height="15" forecolor="#FFFFFF" backcolor="#2D4262" uuid="26a4cef8-922d-40fd-bc8c-f85d461a9ef1"/>
+							<box leftPadding="2">
+								<pen lineWidth="0.5" lineColor="#000000"/>
+								<topPen lineWidth="0.5" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineColor="#000000"/>
+								<bottomPen lineWidth="0.5" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Nascita]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="87" y="2" width="415" height="15" uuid="2b677649-12c3-4a3d-a949-76ab554ee2f8"/>
+							<box leftPadding="4">
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement verticalAlignment="Middle">
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{descrizione}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>
